@@ -1,6 +1,7 @@
 {
-  "latest": "n01",
+  "latest": "n02",
   "issues": [
+    { "id": "n02", "number": 2, "weekLabel": "semaine du 1er octobre 2026", "fiches": 14 },
     { "id": "n01", "number": 1, "weekLabel": "semaine du 28 septembre 2026", "fiches": 56 }
   ]
 }

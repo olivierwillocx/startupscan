@@ -1,0 +1,301 @@
+{
+  "id": "n02",
+  "number": 2,
+  "weekLabel": "semaine du 1er octobre 2026",
+  "reviewedOn": "3 octobre 2026",
+  "nextIssue": "lundi 12 octobre 2026",
+  "stats": { "fiches": 14, "pays": 11, "innovants": 5, "simples": 6 },
+  "intro": "Cette semaine, l'argent suit deux idées simples : donner accès à ce qu'on ne peut pas acheter, et protéger ce qu'on a déjà construit. Des piles GPU aux satellites, des courtiers en assurance aux clubs de sport — dans des secteurs très différents, la logique est souvent la même.",
+  "idea": {
+    "title": "La prochaine guerre se gagne d'abord dans les serveurs.",
+    "text": "Trois des levées les plus importantes de la semaine viennent de la sécurité et de la défense : Armadin teste les failles avant les pirates, Osavul détecte les menaces géopolitiques avant les attaques, Certo Aerospace construit un avion autonome sans pilote. Ce n'est pas une coïncidence. Depuis quelques mois, les gouvernements et les grandes entreprises réalisent qu'ils n'ont pas les outils pour se défendre à l'ère de l'IA. C'est un marché immense, et il commence à peine."
+  },
+  "levers": {
+    "intro": "Cinq façons différentes de créer de la valeur cette semaine. Certaines sont techniques, d'autres sont presque des astuces de bon sens. Toutes peuvent s'appliquer à un projet qui démarre.",
+    "list": [
+      { "n": 1, "title": "Louer ce que les autres voudraient acheter", "text": "Au lieu de vendre l'infrastructure, on loue l'accès. Le client obtient la puissance sans l'investissement." },
+      { "n": 2, "title": "Remplacer le tableur invisible", "text": "Dans chaque entreprise, il y a un fichier Excel qui tient un processus critique à bout de bras. Quand il craque, il y a un marché." },
+      { "n": 3, "title": "Facturer l'absence d'un problème", "text": "Le client paie pour ce qui ne lui arrive pas. C'est contre-intuitif, mais c'est l'un des business models les plus solides qui soit." },
+      { "n": 4, "title": "Prêter sur le flux, pas sur les biens", "text": "Les banques regardent les actifs. Certaines fintechs regardent les transactions en temps réel — et prêtent là où les banques refusent." },
+      { "n": 5, "title": "Donner aux petits les outils des grands", "text": "Un logiciel conçu pour les grandes chaînes, vendu aux petits clubs. Ce qui était réservé aux riches devient accessible à tous." }
+    ],
+    "cases": [
+      {
+        "name": "PaleBlueDot AI",
+        "place": "États-Unis",
+        "sector": "infrastructure IA",
+        "lever": 1,
+        "chapter": "revenus",
+        "model": "B2B",
+        "desc": "Loue de la capacité de calcul GPU à des entreprises qui veulent utiliser l'IA sans acheter ni gérer leurs propres serveurs. Une place de marché met également en relation clients et fournisseurs tiers de puissance de calcul.",
+        "flow": "Client : paie à la <b>minute ou au mois</b> → PaleBlueDot exploite les clusters → marge sur la différence",
+        "facts": ["Fondée en 2024", "5 Md$ de contrats clients signés au 30 sept.", "Valorisation : 3,2 Md$", "Levée Série C : 200 M$"],
+        "lesson": "Pendant la ruée vers l'or, vendre des pelles. Quand tout le monde veut faire tourner de l'IA, celui qui loue la puissance de calcul récupère une part de chaque dollar dépensé.",
+        "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }]
+      },
+      {
+        "name": "DriveX",
+        "place": "Japon",
+        "sector": "logiciel industriel",
+        "lever": 2,
+        "chapter": "operations",
+        "model": "B2B",
+        "desc": "Remplace les plannings de production gérés dans des fichiers Excel. Le système lit les fichiers existants, tient compte des machines disponibles, des équipes et des contraintes de process, et propose un planning Gantt modifiable.",
+        "flow": "Usine : <b>abandonne Excel</b> → DriveX planifie et apprend des résultats réels → abonnement récurrent",
+        "facts": ["Intégration ERP et MES", "Apprend des résultats réels pour ajuster ses prévisions", "Levée : 150 M¥"],
+        "lesson": "Le tableur invisible est partout. Dans chaque PME industrielle, il y a un fichier Excel qui tient un processus critique. Quand l'entreprise grandit, il craque. DriveX arrive juste à ce moment-là.",
+        "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }]
+      },
+      {
+        "name": "Armadin",
+        "place": "États-Unis",
+        "sector": "cybersécurité",
+        "lever": 3,
+        "chapter": "revenus",
+        "model": "B2B",
+        "desc": "Des essaims d'agents IA testent en permanence les défenses d'une entreprise, cherchent les failles exploitables et remontent des rapports détaillés — avant qu'un vrai pirate ne les trouve.",
+        "flow": "Entreprise : paie pour <b>ne pas être piratée</b> → Armadin lance 26 000 agents → rapport des chemins d'attaque trouvés",
+        "facts": ["Fondé par le fondateur de Mandiant", "Valorisation : +2,5 Md$", "Total levé : 445 M$", "Levée Série B : 255,5 M$"],
+        "lesson": "Vendre ce qui ne se voit pas. Un client qui n'a jamais été piraté ne sait pas s'il est bien protégé. Armadin lui montre les portes ouvertes — et les referme. La preuve du problème est le produit.",
+        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+      },
+      {
+        "name": "Seeds Fincap",
+        "place": "Inde",
+        "sector": "fintech",
+        "lever": 4,
+        "chapter": "marche",
+        "model": "B2C",
+        "desc": "Prête aux très petites entreprises indiennes — vendeurs de rue, artisans, micro-commerçants — sur base de leurs flux de trésorerie réels, pas de leurs bilans comptables qu'ils n'ont souvent pas.",
+        "flow": "Nano-entrepreneur : <b>pas de bilan</b> → Seeds analyse les flux → prêt de 50 000 à 1 M de roupies",
+        "facts": ["164 agences en Inde", "70 000 emprunteurs actifs", "722 crore INR d'actifs", "Rentable", "Levée Série B : ~10,4 M$"],
+        "lesson": "La banque regarde hier. Seeds Fincap regarde aujourd'hui. Quand les données de flux remplacent les bilans, un milliard de personnes deviennent solvables aux yeux d'un prêteur.",
+        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+      },
+      {
+        "name": "1club",
+        "place": "Bulgarie",
+        "sector": "sports",
+        "lever": 5,
+        "chapter": "marche",
+        "model": "B2B + Place de marché",
+        "desc": "Un logiciel tout-en-un pour les petits clubs de sport, studios de yoga et salles de fitness : membres, paiements, planning, marketing, application mobile — plus une marketplace de réservation en ligne (1club.me) qui amène de nouveaux clients.",
+        "flow": "Club : <b>abonnement mensuel</b> → 1club gère tout → marketplace 1club.me amène des clients",
+        "facts": ["Fondé par le créateur de OfficeRnD", "Clients dans 10+ pays", "Utilisateurs dans 40+ pays", "Seed : 2,2 M€"],
+        "lesson": "Les grandes chaînes avaient tout. Les petits clubs bricolaient. 1club donne aux indépendants les outils des franchises — et ajoute un canal d'acquisition de clients qu'ils n'auraient jamais pu se payer seuls.",
+        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+      }
+    ]
+  },
+  "models": {
+    "intro": "Avant le produit, une question décide de tout : à qui vendez-vous ? Le client change le prix, la durée de la vente, la façon de trouver ses clients et le besoin en capital. Chaque fiche de ce numéro porte son modèle en couleur.",
+    "list": [
+      { "key": "b2b", "title": "B2B · aux entreprises", "desc": "On vend à d'autres entreprises un outil, un service ou une matière qui les aide à gagner ou économiser de l'argent.", "prix": "Élevé, souvent un abonnement annuel", "vente": "Lente : plusieurs semaines à plusieurs mois, plusieurs décideurs", "atout": "Peu de clients suffisent pour vivre ; revenus récurrents", "piege": "Dépendre d'un ou deux gros clients", "exemples": "Armadin, DriveX, FRANK, Deepslate, PaleBlueDot AI" },
+      { "key": "b2c", "title": "B2C · aux particuliers", "desc": "On vend directement au consommateur, en ligne ou en magasin. Le bouche-à-oreille et la marque comptent autant que le produit.", "prix": "Bas, beaucoup de petits achats", "vente": "Rapide : décision en quelques minutes", "atout": "Test du marché immédiat, retour client direct", "piege": "Le coût pour attirer chaque client (publicité, réseaux sociaux)", "exemples": "Seeds Fincap" },
+      { "key": "b2g", "title": "B2G · aux pouvoirs publics", "desc": "On vend à des communes, régions, administrations ou armées, le plus souvent par marché public.", "prix": "Contrats importants et stables", "vente": "Très lente : cahier des charges, appel d'offres, budget annuel", "atout": "Client fidèle, solvable, et une référence qui en ouvre d'autres", "piege": "La trésorerie : il faut tenir pendant la procédure et les délais de paiement", "exemples": "Osavul, Certo Aerospace, OSCP, Foundational, Aignosis" },
+      { "key": "market", "title": "Place de marché · mettre en relation", "desc": "On ne vend pas soi-même : on relie ceux qui offrent et ceux qui cherchent, et on prend une commission.", "prix": "Une commission sur chaque transaction", "vente": "Il faut convaincre deux publics à la fois", "atout": "Peu de stock, croissance rapide une fois lancée", "piege": "La poule et l'œuf : sans offre pas de demande, et inversement", "exemples": "1club (marketplace 1club.me)" }
+    ],
+    "others": [
+      { "title": "B2B2G", "text": "Certains vendent à un intermédiaire privé qui revend à un gouvernement. OSCP passe par des intégrateurs de défense avant d'atteindre l'armée." },
+      { "title": "Hybrid cloud", "text": "PaleBlueDot AI combine son propre parc de serveurs avec une marketplace de capacité tierce — deux revenus, un seul produit." }
+    ]
+  },
+  "ai": {
+    "intro": "L'intelligence artificielle ne protège pas seulement des entreprises. Elle commence à défendre des États — et à attaquer des systèmes. Deux faces d'un même marché.",
+    "stats": [
+      { "value": "26 000", "text": "agents IA déployés par Armadin dans une seule mission pour cartographier les failles d'un système d'information." },
+      { "value": "1 Md+", "text": "de points de données analysés chaque mois par Osavul pour détecter des menaces géopolitiques dans plus de 100 pays." }
+    ],
+    "statsSource": { "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" },
+    "points": [
+      { "title": "1. L'IA qui attaque pour mieux défendre", "text": "Armadin envoie des essaims d'agents IA tester les défenses de ses clients avant les vrais pirates. Ce qui était réservé aux grandes équipes de sécurité — les red teams — devient un produit automatisé, accessible à n'importe quelle entreprise.", "takeaway": "les métiers qui demandaient une équipe d'experts humains deviennent des produits. Cherchez dans votre secteur ce qui est encore réservé aux grandes entreprises." },
+      { "title": "2. L'IA spécialisée dans un métier précis", "text": "DriveX ne fait qu'une chose : planifier la production en usine. Deepslate ne fait que de la voix. Gwanak ne s'occupe que des institutions financières. Chacun connaît un métier mieux qu'un assistant généraliste.", "takeaway": "une IA spécialisée bat une IA généraliste dans un métier précis. La spécialisation est une stratégie, pas une limitation." },
+      { "title": "3. La souveraineté comme argument commercial", "text": "Deepslate (Allemagne) propose des déploiements on-premise et air-gapped. OSCP (Canada) fabrique des capteurs ITAR-free, sans restriction d'exportation américaine. La localisation des données devient un argument de vente — surtout en Europe.", "takeaway": "là où les grandes plateformes américaines ou chinoises soulèvent des questions, la localisation crée un marché. C'est une opportunité structurelle pour les startups européennes." }
+    ],
+    "trap": "Le plus gros tour de la semaine — 255 M$ pour Armadin — est aussi une mise en garde. Une startup qui automatise des cyberattaques soulève des questions éthiques et réglementaires que ses investisseurs ont accepté d'ignorer. Quand votre produit peut être utilisé à des fins malveillantes, le cadre légal et éthique doit faire partie du business plan dès le premier jour.",
+    "exercise": {
+      "title": "Essai IA · 30 minutes",
+      "steps": [
+        "Cherchez dans votre secteur un processus encore géré dans un tableur ou par email. Demandez à un assistant IA de vous expliquer pourquoi ce processus n'a pas encore été automatisé — et ce qu'il faudrait pour le faire.",
+        "Prenez un de vos clients ou utilisateurs potentiels et demandez à l'IA de jouer son rôle lors d'un appel de vente : vous devez le convaincre en cinq minutes. Notez ses trois meilleures objections.",
+        "Demandez-lui quels concurrents existent déjà pour votre idée en Europe, puis vérifiez chacun : l'IA invente parfois."
+      ]
+    }
+  },
+  "fichesIntro": "Les chiffres sont ceux annoncés par les entreprises ou leurs investisseurs, repris par la presse. Ce sont des données déclarées, pas des comptes audités. Chaque fiche a été relue contre sa source le 3 octobre 2026.",
+  "fiches": [
+    {
+      "name": "Armadin",
+      "place": "États-Unis",
+      "sector": "cybersécurité",
+      "model": "B2B",
+      "chapter": "revenus",
+      "desc": "Des essaims d'agents IA testent les systèmes d'information d'une entreprise comme le ferait un vrai pirate — et remontent les chemins d'attaque exploitables avant qu'il soit trop tard.",
+      "facts": ["Fondé par le fondateur de Mandiant", "Valorisation : +2,5 Md$", "Total levé : 445 M$", "Levée Série B : 255,5 M$"],
+      "lesson": "Vendre l'absence d'un problème. Un client qui n'a jamais été piraté ne sait pas s'il est bien protégé. Armadin lui montre les portes ouvertes — et les referme.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "États-Unis", "secteur": "Cybersécurité", "levee": "255,5 M$", "mot": "Vendre l'absence d'un problème" }
+    },
+    {
+      "name": "PaleBlueDot AI",
+      "place": "Californie",
+      "sector": "infrastructure IA",
+      "model": "B2B",
+      "chapter": "revenus",
+      "desc": "Loue de la capacité GPU à des entreprises qui veulent utiliser l'IA sans acheter leurs propres serveurs. Une place de marché met également en relation clients et fournisseurs tiers de puissance de calcul.",
+      "facts": ["Fondée en 2024", "5 Md$ de contrats clients signés", "Valorisation : 3,2 Md$", "Levée Série C : 200 M$"],
+      "lesson": "Pendant la ruée vers l'or, vendre des pelles. Quand tout le monde veut faire tourner de l'IA, celui qui loue la puissance de calcul récupère une part de chaque dollar dépensé.",
+      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
+      "recap": { "pays": "États-Unis", "secteur": "IA", "levee": "200 M$", "mot": "Pendant la ruée vers l'or, vendre des pelles" }
+    },
+    {
+      "name": "Osavul",
+      "place": "Luxembourg",
+      "sector": "renseignement",
+      "model": "B2G",
+      "chapter": "marche",
+      "desc": "Une plateforme qui analyse plus d'un milliard de points de données par mois dans plus de 100 pays pour détecter des signaux géopolitiques — mouvements de troupes, désinformation, cybermenaces — avant qu'ils ne deviennent des attaques.",
+      "facts": ["Fondée par des entrepreneurs ukrainiens", "Clients : gouvernements de 10 pays dont des membres de l'OTAN", "Revenus ×4 en un an", "Total levé : ~12 M€", "Levée Série A : 8,5 M€"],
+      "lesson": "Le contexte géopolitique crée des marchés. Depuis 2022, les gouvernements européens cherchent des outils d'anticipation. Osavul a construit le sien depuis l'Ukraine — et l'a vendu depuis le Luxembourg.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Luxembourg", "secteur": "Défense", "levee": "8,5 M€", "mot": "Anticiper avant l'attaque" }
+    },
+    {
+      "name": "Foundational",
+      "place": "Royaume-Uni",
+      "sector": "spatial",
+      "model": "B2G + B2B",
+      "chapter": "financement",
+      "desc": "Construit un réseau commercial de stations de télémétrie laser par satellite — pour positionner les satellites avec une précision millimétrique et suivre les débris spatiaux, à 30 fois moins cher que les méthodes classiques.",
+      "facts": ["Fondée en 2025", "Clients : ESA, gouvernement britannique", "Précision millimétrique à 30x moins cher", "Pré-seed : 9,6 M€"],
+      "lesson": "Un problème bien défini attire les capitaux tôt. Foundational a levé 9,6 M€ avant même d'avoir un service en production, parce que le problème — trop peu de stations de tracking spatial — est documenté, chiffré et coûteux.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Royaume-Uni", "secteur": "Spatial", "levee": "9,6 M€", "mot": "Un problème bien défini attire les capitaux tôt" }
+    },
+    {
+      "name": "Deepslate",
+      "place": "Allemagne",
+      "sector": "voix IA",
+      "model": "B2B",
+      "chapter": "offre",
+      "desc": "Des modèles d'IA vocale entraînés à reproduire le ton, la prosodie et les caractéristiques d'une voix — pour des assistants téléphoniques, des centres d'appels et des applications d'assurance — avec déploiement possible sur les propres serveurs du client.",
+      "facts": ["0,44 seconde jusqu'au premier mot", "250 ms de réponse après la fin de l'interlocuteur", "ISO 27001", "Déploiement on-premise et air-gapped disponible", "Seed : 7,7 M€"],
+      "lesson": "La souveraineté des données est un argument commercial. Les banques et assurances européennes hésitent à envoyer les voix de leurs clients dans des serveurs américains. Deepslate leur offre l'IA sans le risque réglementaire.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Allemagne", "secteur": "IA vocale", "levee": "7,7 M€", "mot": "La souveraineté comme argument commercial" }
+    },
+    {
+      "name": "Seeds Fincap",
+      "place": "Inde",
+      "sector": "fintech",
+      "model": "B2C",
+      "chapter": "marche",
+      "desc": "Prête aux nano-entreprises indiennes — vendeurs de rue, artisans, petits commerçants — sur base de leurs flux de trésorerie réels, sans exiger de bilan comptable. Les prêts vont de 50 000 à 1 million de roupies.",
+      "facts": ["164 agences", "70 000 emprunteurs actifs", "722 crore INR d'actifs sous gestion", "Rentable en FY25 et FY26", "Levée Série B : ~10,4 M$"],
+      "lesson": "Les banques regardent hier, Seeds regarde aujourd'hui. En prêtant sur les flux de trésorerie plutôt que sur les bilans, Seeds ouvre le crédit à ceux que les banques ignorent. En Belgique aussi, des milliers d'indépendants n'ont pas accès au crédit classique.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Inde", "secteur": "Fintech", "levee": "~10,4 M$", "mot": "Prêter sur le flux, pas sur les biens" }
+    },
+    {
+      "name": "FRANK",
+      "place": "Portugal",
+      "sector": "assurance",
+      "model": "B2B",
+      "chapter": "offre",
+      "desc": "Une plateforme IA pour les courtiers en assurance : elle lit les documents, remplit les formulaires, accède aux portails des assureurs et saisit les données à la place du courtier. Résultat : 10 heures administratives économisées par semaine et par courtier.",
+      "facts": ["350+ agences", "1 500 utilisateurs actifs", "70 000 tâches automatisées par mois", "Seed : 2,9 M€"],
+      "lesson": "Le travail ennuyeux est un marché. Les courtiers passent des heures à remplir des formulaires identiques sur des portails différents. FRANK fait ça à leur place — et ils paient pour ne plus le faire.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Portugal", "secteur": "Assurance", "levee": "2,9 M€", "mot": "Le travail ennuyeux est un marché" }
+    },
+    {
+      "name": "1club",
+      "place": "Bulgarie",
+      "sector": "sports",
+      "model": "B2B + Place de marché",
+      "chapter": "marche",
+      "desc": "Un logiciel tout-en-un pour les petits clubs de sport, studios et salles de fitness : membres, paiements, planning, marketing, application mobile — plus une marketplace de réservation en ligne (1club.me) qui amène de nouveaux clients.",
+      "facts": ["Fondé par le créateur de OfficeRnD", "Clients dans 10+ pays", "Utilisateurs dans 40+ pays", "Seed : 2,2 M€"],
+      "lesson": "Donner aux petits les outils des grands. Les grandes chaînes de fitness avaient leurs logiciels sur mesure. 1club les emballe en un abonnement mensuel accessible à un club de quartier — et lui amène des clients en plus.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Bulgarie", "secteur": "Sports", "levee": "2,2 M€", "mot": "Les outils des grands, au prix des petits" }
+    },
+    {
+      "name": "Certo Aerospace",
+      "place": "Royaume-Uni",
+      "sector": "défense",
+      "model": "B2G",
+      "chapter": "strategie",
+      "desc": "Un aéronef autonome à décollage vertical de 600 kg, en vol depuis 2023, pour la logistique militaire, l'évacuation sanitaire, le maritime et la réponse aux catastrophes. Participe aux essais du ministère de la Défense britannique.",
+      "facts": ["En vol depuis 2023", "Autorisé par la Civil Aviation Authority", "Partenariat BAE Systems (programme FalconWorks)", "Levée : 5 M£"],
+      "lesson": "Un produit physique qui vole est plus difficile à copier qu'un logiciel. Certo a trois ans de vols derrière lui. Dans la défense, l'historique de fiabilité vaut autant que la technologie.",
+      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
+      "recap": { "pays": "Royaume-Uni", "secteur": "Défense", "levee": "5 M£", "mot": "Un historique est une barrière à l'entrée" }
+    },
+    {
+      "name": "DriveX",
+      "place": "Japon",
+      "sector": "logiciel industriel",
+      "model": "B2B",
+      "chapter": "operations",
+      "desc": "Remplace les plannings de production gérés dans des fichiers Excel. Le système lit les fichiers existants, tient compte des machines disponibles, des équipes et des contraintes de process, et propose un planning Gantt ajustable.",
+      "facts": ["Intégration ERP et MES", "Apprend des résultats réels pour ajuster ses prévisions", "Levée : 150 M¥ (~1 M$)"],
+      "lesson": "Le tableur invisible est partout. Dans chaque PME industrielle, il y a un fichier Excel qui tient un processus critique. Quand l'entreprise grandit, il craque. DriveX arrive juste à ce moment-là.",
+      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
+      "recap": { "pays": "Japon", "secteur": "Industrie", "levee": "150 M¥", "mot": "Le tableur invisible est partout" }
+    },
+    {
+      "name": "OSCP",
+      "place": "Canada",
+      "sector": "défense",
+      "model": "B2G",
+      "chapter": "strategie",
+      "desc": "Des gyroscopes photoniques qui permettent à des drones et engins militaires de naviguer sans GPS — même quand le signal est brouillé ou coupé. Fabriqués au Canada, certifiés ITAR-free.",
+      "facts": ["Qualification comme fournisseur du programme canadien Defence Drone Initiative", "ITAR-free — sans restrictions d'exportation américaines", "Série A (montant non divulgué, clôturée en août 2026)"],
+      "lesson": "Quand le GPS ne fonctionne plus, ce qui navigue gagne. Les conflits en Ukraine ont montré que le brouillage GPS est désormais courant. OSCP construit la solution au problème que tout le monde a vu mais que peu ont résolu.",
+      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+      "recap": { "pays": "Canada", "secteur": "Défense", "levee": "N.D.", "mot": "Naviguer sans GPS" }
+    },
+    {
+      "name": "Gwanak Research Institute",
+      "place": "Corée du Sud",
+      "sector": "IA financière",
+      "model": "B2B",
+      "chapter": "offre",
+      "desc": "Un moteur de décision IA pour les institutions financières qui croise données structurées (scores, historiques) et données non structurées (notes de conseillers, logs de consultations) pour recommander quels clients prioriser.",
+      "facts": ["Fondé en 2023", "Investisseur : Seoul National University Technology Holdings", "Cible : banques, assureurs, institutions publiques de financement", "Levée : 300 M KRW"],
+      "lesson": "Les notes d'un conseiller valent parfois plus que le score de crédit. Gwanak exploite les données textuelles que les banques ignorent parce qu'elles ne savent pas les analyser. La donnée non structurée est encore un territoire presque vierge.",
+      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
+      "recap": { "pays": "Corée du Sud", "secteur": "Fintech", "levee": "300 M KRW", "mot": "Exploiter la donnée que les autres ignorent" }
+    }
+  ],
+  "pousses": {
+    "intro": "Deux projets nés avec très peu de moyens — l'un sorti de la recherche universitaire, l'autre déployé dans des centres de santé ruraux avec une webcam.",
+    "list": [
+      {
+        "name": "R2Crete",
+        "place": "Melbourne",
+        "sector": "matériaux",
+        "model": "B2B",
+        "chapter": "offre",
+        "desc": "Une technologie issue de l'Université de Melbourne qui sépare le béton de démolition en agrégats réutilisables et en substitut de ciment. 75 % du ciment récupéré, émissions de CO₂ réduites de moitié. L'Australie génère 7 millions de tonnes de béton usagé par an.",
+        "facts": ["Spin-out Université de Melbourne", "Pilote industriel prévu fin 2026", "7 M de tonnes de béton usagé/an en Australie", "Pré-seed : 750 000 A$"],
+        "lesson": "Un déchet bien traité devient une matière première. R2Crete fait pour le béton ce que Too Good To Go fait pour les invendus alimentaires. Et ça aussi, ça peut partir d'une université.",
+        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+        "recap": { "pays": "Australie", "secteur": "Matériaux", "levee": "750 K A$", "mot": "Spin-out universitaire" }
+      },
+      {
+        "name": "Aignosis",
+        "place": "Inde",
+        "sector": "santé",
+        "model": "B2G",
+        "chapter": "marche",
+        "desc": "Un outil de dépistage de l'autisme et des troubles du développement par vision par ordinateur, utilisable sur un simple ordinateur portable avec webcam standard. Déjà déployé dans plus de 20 centres de santé gouvernementaux au Rajasthan.",
+        "facts": ["Certification CDSCO Classe B", "Partenariat Mankind Pharma (1 300 représentants)", "8 000 dépistages réalisés", "Objectif : 100 000 dépistages d'ici fin FY27", "Seed : ~417 K$"],
+        "lesson": "Réduire le coût d'un diagnostic, c'est ouvrir l'accès à des millions de personnes. Aignosis ne remplace pas le médecin — il l'amène là où il n'y en a pas. Et il n'a eu besoin que d'un ordinateur portable pour commencer.",
+        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
+        "recap": { "pays": "Inde", "secteur": "Santé", "levee": "~417 K$", "mot": "Grand impact, petit budget" }
+      }
+    ]
+  }
+}
