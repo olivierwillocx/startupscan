@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarupScan — Les modèles d'affaires qui inspirent</title>
+  <style>
+    :root {
+      --bg: #f5f6fa;
+      --surface: #ffffff;
+      --primary: #1a1a2e;
+      --accent: #e94560;
+      --accent2: #0f3460;
+      --text: #2d2d2d;
+      --muted: #6c757d;
+      --border: #e0e0e0;
+      --tag-b2b: #0f3460;
+      --tag-b2c: #16213e;
+      --tag-b2g: #1a1a2e;
+      --tag-ia: #7b2d8b;
+      --tag-idea: #c0392b;
+      --radius: 10px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .logo-text span { color: var(--accent); }
+    .header-tagline {
+      font-size: 12px;
+      opacity: 0.65;
+      display: none;
+    }
+    @media (min-width: 600px) { .header-tagline { display: block; } }
+
+    /* AI BANNER */
+    .ai-banner {
+      background: #fff3cd;
+      border-bottom: 1px solid #ffc107;
+      padding: 8px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #856404;
+    }
+    .ai-banner strong { font-weight: 600; }
+
+    /* CONTROLS */
+    .controls {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+    }
+    .controls-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .week-select {
+      font-size: 14px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: white;
+      cursor: pointer;
+      color: var(--text);
+    }
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all .15s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pill.all { border-color: var(--accent); color: var(--accent); background: white; }
+    .pill.all.active { background: var(--accent); color: white; }
+    .pill.b2b { border-color: var(--tag-b2b); color: var(--tag-b2b); background: white; }
+    .pill.b2b.active { background: var(--tag-b2b); color: white; }
+    .pill.b2c { border-color: #2980b9; color: #2980b9; background: white; }
+    .pill.b2c.active { background: #2980b9; color: white; }
+    .pill.b2g { border-color: #27ae60; color: #27ae60; background: white; }
+    .pill.b2g.active { background: #27ae60; color: white; }
+    .pill.ia { border-color: var(--tag-ia); color: var(--tag-ia); background: white; }
+    .pill.ia.active { background: var(--tag-ia); color: white; }
+    .pill.idea { border-color: var(--tag-idea); color: var(--tag-idea); background: white; }
+    .pill.idea.active { background: var(--tag-idea); color: white; }
+
+    /* MAIN */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .week-header {
+      margin-bottom: 20px;
+    }
+    .week-header h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .week-header p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* CARDS GRID */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .card-tag {
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .card-tag.b2b { background: var(--tag-b2b); }
+    .card-tag.b2c { background: #2980b9; }
+    .card-tag.b2g { background: #27ae60; }
+    .card-tag.ia { background: var(--tag-ia); }
+    .card-tag.idea { background: var(--tag-idea); }
+
+    .card-body { padding: 16px; flex: 1; }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .card-country {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .card-footer {
+      padding: 10px 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafafa;
+    }
+    .card-model {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .card-link {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* IDEA CARD (special) */
+    .card.idea-card {
+      border: 2px dashed var(--tag-idea);
+    }
+    .idea-bulb {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    /* EMPTY STATE */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      grid-column: 1 / -1;
+    }
+    .empty p { font-size: 16px; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 48px;
+      padding: 24px;
+      background: var(--primary);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      font-size: 13px;
+    }
+    footer strong { color: white; }
+    footer a { color: rgba(255,255,255,0.7); }
+
+    /* LOADING */
+    #loading {
+      text-align: center;
+      padding: 80px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-icon">S</div>
+      <span class="logo-text">Startup<span>Scan</span></span>
+    </a>
+    <span class="header-tagline">Les modèles d'affaires qui inspirent — monde entier</span>
+  </div>
+</header>
+
+<div class="ai-banner">
+  <strong>⚠ Site généré par IA</strong> — Les fiches sont produites automatiquement à partir de sources publiques. Vérifiez avant de partager.
+</div>
+
+<div class="controls">
+  <div class="controls-inner">
+    <select class="week-select" id="weekSelect"></select>
+    <div class="filter-pills">
+      <button class="pill all active" data-cat="all">Tout</button>
+      <button class="pill b2b" data-cat="b2b">B2B</button>
+      <button class="pill b2c" data-cat="b2c">B2C</button>
+      <button class="pill b2g" data-cat="b2g">B2G</button>
+      <button class="pill ia" data-cat="ia">IA</button>
+      <button class="pill idea" data-cat="idea">💡 Idée non réalisée</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="week-header">
+    <h2 id="weekTitle">Chargement…</h2>
+    <p id="weekSubtitle"></p>
+  </div>
+  <div id="loading"><div class="spinner"></div>Chargement des fiches…</div>
+  <div class="cards-grid" id="grid" style="display:none"></div>
+</main>
+
+<footer>
+  <strong>StarupScan</strong> — Une initiative <strong>EPFC</strong> · Olivier Willocx ·
+  <a href="mailto:olwillocx@epfc.eu">olwillocx@epfc.eu</a><br>
+  <small style="opacity:.6">Revue hebdomadaire de modèles d'affaires innovants — monde entier</small>
+</footer>
+
+<script>
+  // ── CONFIG ──────────────────────────────────────────────────
+  const DATA_BASE = './data/';
+
+  // ── STATE ───────────────────────────────────────────────────
+  let allItems = [];
+  let currentCat = 'all';
+
+  // ── UTILS ───────────────────────────────────────────────────
+  function isoWeek(date) {
+    const d = new Date(date);
+    d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
+    const w1 = new Date(d.getFullYear(), 0, 4);
+    const week = 1 + Math.round(((d - w1) / 86400000 - 3 + (w1.getDay() + 6) % 7) / 7);
+    return `${d.getFullYear()}-${String(week).padStart(2, '0')}`;
+  }
+
+  function currentWeekKey() { return isoWeek(new Date()); }
+
+  function weekLabel(key) {
+    const [year, week] = key.split('-');
+    return `Semaine ${week} — ${year}`;
+  }
+
+  // ── FETCH WEEK LIST ─────────────────────────────────────────
+  async function fetchWeekList() {
+    // Try manifest first, fallback to current week only
+    try {
+      const r = await fetch(DATA_BASE + 'manifest.json');
+      if (r.ok) return await r.json();
+    } catch {}
+    return [currentWeekKey()];
+  }
+
+  // ── FETCH WEEK DATA ─────────────────────────────────────────
+  async function fetchWeek(key) {
+    try {
+      const r = await fetch(DATA_BASE + 'week-' + key + '.json');
+      if (!r.ok) return [];
+      return await r.json();
+    } catch { return []; }
+  }
+
+  // ── RENDER ──────────────────────────────────────────────────
+  function tagLabel(cat) {
+    const map = { b2b:'B2B', b2c:'B2C', b2g:'B2G', ia:'IA', idea:'💡 Idée non réalisée' };
+    return map[cat] || cat.toUpperCase();
+  }
+
+  function renderCard(item) {
+    const isIdea = item.cat === 'idea';
+    return `
+      <div class="card${isIdea ? ' idea-card' : ''}" data-cat="${item.cat}">
+        <div class="card-tag ${item.cat}">${tagLabel(item.cat)}</div>
+        <div class="card-body">
+          ${isIdea ? '<div class="idea-bulb">💡</div>' : ''}
+          <div class="card-title">${item.name}</div>
+          <div class="card-country">${item.country || ''}</div>
+          <div class="card-desc">${item.description}</div>
+        </div>
+        <div class="card-footer">
+          <span class="card-model">${item.model || ''}</span>
+          ${item.url ? `<a class="card-link" href="${item.url}" target="_blank" rel="noopener">Voir →</a>` : ''}
+        </div>
+      </div>`;
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById('grid');
+    const filtered = currentCat === 'all'
+      ? allItems
+      : allItems.filter(i => i.cat === currentCat);
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div class="empty"><p>Aucune fiche dans cette catégorie cette semaine.</p></div>';
+    } else {
+      grid.innerHTML = filtered.map(renderCard).join('');
+    }
+  }
+
+  // ── LOAD WEEK ───────────────────────────────────────────────
+  async function loadWeek(key) {
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('grid').style.display = 'none';
+    document.getElementById('weekTitle').textContent = weekLabel(key);
+    document.getElementById('weekSubtitle').textContent = 'Chargement…';
+
+    allItems = await fetchWeek(key);
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('grid').style.display = 'grid';
+    document.getElementById('weekSubtitle').textContent =
+      allItems.length > 0
+        ? `${allItems.length} fiche${allItems.length > 1 ? 's' : ''} · ${allItems.filter(i=>i.cat==='ia').length} IA · ${allItems.filter(i=>i.cat==='idea').length} idée non réalisée`
+        : 'Aucune fiche pour cette semaine.';
+    renderGrid();
+  }
+
+  // ── INIT ────────────────────────────────────────────────────
+  async function init() {
+    const weeks = await fetchWeekList();
+    const sel = document.getElementById('weekSelect');
+    weeks.forEach(w => {
+      const opt = document.createElement('option');
+      opt.value = w;
+      opt.textContent = weekLabel(w);
+      sel.appendChild(opt);
+    });
+    sel.value = weeks[0];
+    sel.addEventListener('change', () => loadWeek(sel.value));
+
+    // Filter pills
+    document.querySelectorAll('.pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        renderGrid();
+      });
+    });
+
+    await loadWeek(weeks[0]);
+  }
+
+  init();
+</script>
+</body>
+</html>
