@@ -1,0 +1,15 @@
+# Compression (JSON incluse : les numéros font 50 à 80 Ko non compressés)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache : les fichiers statiques longtemps, les données du numéro 5 minutes
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType image/svg+xml "access plus 7 days"
+  ExpiresByType application/json "access plus 5 minutes"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+AddType application/json .json

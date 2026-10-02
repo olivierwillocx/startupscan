@@ -295,9 +295,10 @@
 
   async function init() {
     try {
-      const manifest = await (await fetch(B + 'data/manifest.json', { cache: 'no-cache' })).json();
-      const id = SS.issue || manifest.latest;
-      const issue = await (await fetch(B + 'data/issues/' + id + '.json', { cache: 'no-cache' })).json();
+      const manifestP = fetch(B + 'data/manifest.json').then(r => r.json());
+      const id = SS.issue || (await manifestP).latest;
+      const issue = await (await fetch(B + 'data/issues/' + id + '.json')).json();
+      const manifest = await manifestP;
       render(issue);
       renderArchives(manifest);
     } catch (e) {
