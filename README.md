@@ -38,7 +38,7 @@ git push -u origin main
 | Nom | Valeur |
 |-----|--------|
 | `OVH_FTP_SERVER` | (ex: `ftp.cluster129.hosting.ovh.net`) |
-| `OVH_FTP_USERNAME` | (votre login FTP OVH pour startupscan.eu) |
+| `OVH_FTP_USERNAME` | `startuq` |
 | `OVH_FTP_PASSWORD` | (votre mot de passe FTP OVH) |
 
 > **OÃ¹ trouver ces infos ?**  
@@ -47,7 +47,7 @@ git push -u origin main
 ### 4. Configurer le multisite OVH
 
 1. OVH â†’ HÃ©bergements â†’ startupscan.eu â†’ **Multisite**
-2. Ajouter le domaine `startupscan.eu` avec le dossier racine `startupscan` (séparé de `www` qui héberge cityscan.be)
+2. Ajouter le domaine `startupscan.eu` avec le dossier racine `www` (hébergement dédié startuq.cluster129)
 3. Activer le SSL Let's Encrypt
 
 ### 5. VÃ©rifier le dÃ©ploiement

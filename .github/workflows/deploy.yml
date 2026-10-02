@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.OVH_FTP_USERNAME }}
           password: ${{ secrets.OVH_FTP_PASSWORD }}
           local-dir: ./
-          server-dir: startupscan/
+          server-dir: www/
           exclude: |
             **/.git*
             **/.git*/**
