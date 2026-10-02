@@ -1,1 +1,6 @@
-["2026-40"]
+{
+  "latest": "n01",
+  "issues": [
+    { "id": "n01", "number": 1, "weekLabel": "semaine du 28 septembre 2026", "fiches": 56 }
+  ]
+}
