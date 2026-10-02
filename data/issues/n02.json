@@ -4,7 +4,12 @@
   "weekLabel": "semaine du 1er octobre 2026",
   "reviewedOn": "3 octobre 2026",
   "nextIssue": "lundi 12 octobre 2026",
-  "stats": { "fiches": 14, "pays": 11, "innovants": 5, "simples": 6 },
+  "stats": {
+    "fiches": 20,
+    "pays": 13,
+    "innovants": 5,
+    "simples": 6
+  },
   "intro": "Cette semaine, l'argent suit deux idées simples : donner accès à ce qu'on ne peut pas acheter, et protéger ce qu'on a déjà construit. Des piles GPU aux satellites, des courtiers en assurance aux clubs de sport — dans des secteurs très différents, la logique est souvent la même.",
   "idea": {
     "title": "La prochaine guerre se gagne d'abord dans les serveurs.",
@@ -13,11 +18,31 @@
   "levers": {
     "intro": "Cinq façons différentes de créer de la valeur cette semaine. Certaines sont techniques, d'autres sont presque des astuces de bon sens. Toutes peuvent s'appliquer à un projet qui démarre.",
     "list": [
-      { "n": 1, "title": "Louer ce que les autres voudraient acheter", "text": "Au lieu de vendre l'infrastructure, on loue l'accès. Le client obtient la puissance sans l'investissement." },
-      { "n": 2, "title": "Remplacer le tableur invisible", "text": "Dans chaque entreprise, il y a un fichier Excel qui tient un processus critique à bout de bras. Quand il craque, il y a un marché." },
-      { "n": 3, "title": "Facturer l'absence d'un problème", "text": "Le client paie pour ce qui ne lui arrive pas. C'est contre-intuitif, mais c'est l'un des business models les plus solides qui soit." },
-      { "n": 4, "title": "Prêter sur le flux, pas sur les biens", "text": "Les banques regardent les actifs. Certaines fintechs regardent les transactions en temps réel — et prêtent là où les banques refusent." },
-      { "n": 5, "title": "Donner aux petits les outils des grands", "text": "Un logiciel conçu pour les grandes chaînes, vendu aux petits clubs. Ce qui était réservé aux riches devient accessible à tous." }
+      {
+        "n": 1,
+        "title": "Louer ce que les autres voudraient acheter",
+        "text": "Au lieu de vendre l'infrastructure, on loue l'accès. Le client obtient la puissance sans l'investissement."
+      },
+      {
+        "n": 2,
+        "title": "Remplacer le tableur invisible",
+        "text": "Dans chaque entreprise, il y a un fichier Excel qui tient un processus critique à bout de bras. Quand il craque, il y a un marché."
+      },
+      {
+        "n": 3,
+        "title": "Facturer l'absence d'un problème",
+        "text": "Le client paie pour ce qui ne lui arrive pas. C'est contre-intuitif, mais c'est l'un des business models les plus solides qui soit."
+      },
+      {
+        "n": 4,
+        "title": "Prêter sur le flux, pas sur les biens",
+        "text": "Les banques regardent les actifs. Certaines fintechs regardent les transactions en temps réel — et prêtent là où les banques refusent."
+      },
+      {
+        "n": 5,
+        "title": "Donner aux petits les outils des grands",
+        "text": "Un logiciel conçu pour les grandes chaînes, vendu aux petits clubs. Ce qui était réservé aux riches devient accessible à tous."
+      }
     ],
     "cases": [
       {
@@ -29,9 +54,19 @@
         "model": "B2B",
         "desc": "Loue de la capacité de calcul GPU à des entreprises qui veulent utiliser l'IA sans acheter ni gérer leurs propres serveurs. Une place de marché met également en relation clients et fournisseurs tiers de puissance de calcul.",
         "flow": "Client : paie à la <b>minute ou au mois</b> → PaleBlueDot exploite les clusters → marge sur la différence",
-        "facts": ["Fondée en 2024", "5 Md$ de contrats clients signés au 30 sept.", "Valorisation : 3,2 Md$", "Levée Série C : 200 M$"],
+        "facts": [
+          "Fondée en 2024",
+          "5 Md$ de contrats clients signés au 30 sept.",
+          "Valorisation : 3,2 Md$",
+          "Levée Série C : 200 M$"
+        ],
         "lesson": "Pendant la ruée vers l'or, vendre des pelles. Quand tout le monde veut faire tourner de l'IA, celui qui loue la puissance de calcul récupère une part de chaque dollar dépensé.",
-        "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }]
+        "sources": [
+          {
+            "label": "TechStartups, 02/10/2026",
+            "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+          }
+        ]
       },
       {
         "name": "DriveX",
@@ -42,9 +77,18 @@
         "model": "B2B",
         "desc": "Remplace les plannings de production gérés dans des fichiers Excel. Le système lit les fichiers existants, tient compte des machines disponibles, des équipes et des contraintes de process, et propose un planning Gantt modifiable.",
         "flow": "Usine : <b>abandonne Excel</b> → DriveX planifie et apprend des résultats réels → abonnement récurrent",
-        "facts": ["Intégration ERP et MES", "Apprend des résultats réels pour ajuster ses prévisions", "Levée : 150 M¥"],
+        "facts": [
+          "Intégration ERP et MES",
+          "Apprend des résultats réels pour ajuster ses prévisions",
+          "Levée : 150 M¥"
+        ],
         "lesson": "Le tableur invisible est partout. Dans chaque PME industrielle, il y a un fichier Excel qui tient un processus critique. Quand l'entreprise grandit, il craque. DriveX arrive juste à ce moment-là.",
-        "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }]
+        "sources": [
+          {
+            "label": "TechStartups, 02/10/2026",
+            "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+          }
+        ]
       },
       {
         "name": "Armadin",
@@ -55,9 +99,19 @@
         "model": "B2B",
         "desc": "Des essaims d'agents IA testent en permanence les défenses d'une entreprise, cherchent les failles exploitables et remontent des rapports détaillés — avant qu'un vrai pirate ne les trouve.",
         "flow": "Entreprise : paie pour <b>ne pas être piratée</b> → Armadin lance 26 000 agents → rapport des chemins d'attaque trouvés",
-        "facts": ["Fondé par le fondateur de Mandiant", "Valorisation : +2,5 Md$", "Total levé : 445 M$", "Levée Série B : 255,5 M$"],
+        "facts": [
+          "Fondé par le fondateur de Mandiant",
+          "Valorisation : +2,5 Md$",
+          "Total levé : 445 M$",
+          "Levée Série B : 255,5 M$"
+        ],
         "lesson": "Vendre ce qui ne se voit pas. Un client qui n'a jamais été piraté ne sait pas s'il est bien protégé. Armadin lui montre les portes ouvertes — et les referme. La preuve du problème est le produit.",
-        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+        "sources": [
+          {
+            "label": "TechStartups, 01/10/2026",
+            "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+          }
+        ]
       },
       {
         "name": "Seeds Fincap",
@@ -68,9 +122,20 @@
         "model": "B2C",
         "desc": "Prête aux très petites entreprises indiennes — vendeurs de rue, artisans, micro-commerçants — sur base de leurs flux de trésorerie réels, pas de leurs bilans comptables qu'ils n'ont souvent pas.",
         "flow": "Nano-entrepreneur : <b>pas de bilan</b> → Seeds analyse les flux → prêt de 50 000 à 1 M de roupies",
-        "facts": ["164 agences en Inde", "70 000 emprunteurs actifs", "722 crore INR d'actifs", "Rentable", "Levée Série B : ~10,4 M$"],
+        "facts": [
+          "164 agences en Inde",
+          "70 000 emprunteurs actifs",
+          "722 crore INR d'actifs",
+          "Rentable",
+          "Levée Série B : ~10,4 M$"
+        ],
         "lesson": "La banque regarde hier. Seeds Fincap regarde aujourd'hui. Quand les données de flux remplacent les bilans, un milliard de personnes deviennent solvables aux yeux d'un prêteur.",
-        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+        "sources": [
+          {
+            "label": "TechStartups, 01/10/2026",
+            "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+          }
+        ]
       },
       {
         "name": "1club",
@@ -81,36 +146,109 @@
         "model": "B2B + Place de marché",
         "desc": "Un logiciel tout-en-un pour les petits clubs de sport, studios de yoga et salles de fitness : membres, paiements, planning, marketing, application mobile — plus une marketplace de réservation en ligne (1club.me) qui amène de nouveaux clients.",
         "flow": "Club : <b>abonnement mensuel</b> → 1club gère tout → marketplace 1club.me amène des clients",
-        "facts": ["Fondé par le créateur de OfficeRnD", "Clients dans 10+ pays", "Utilisateurs dans 40+ pays", "Seed : 2,2 M€"],
+        "facts": [
+          "Fondé par le créateur de OfficeRnD",
+          "Clients dans 10+ pays",
+          "Utilisateurs dans 40+ pays",
+          "Seed : 2,2 M€"
+        ],
         "lesson": "Les grandes chaînes avaient tout. Les petits clubs bricolaient. 1club donne aux indépendants les outils des franchises — et ajoute un canal d'acquisition de clients qu'ils n'auraient jamais pu se payer seuls.",
-        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }]
+        "sources": [
+          {
+            "label": "TechStartups, 01/10/2026",
+            "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+          }
+        ]
       }
     ]
   },
   "models": {
     "intro": "Avant le produit, une question décide de tout : à qui vendez-vous ? Le client change le prix, la durée de la vente, la façon de trouver ses clients et le besoin en capital. Chaque fiche de ce numéro porte son modèle en couleur.",
     "list": [
-      { "key": "b2b", "title": "B2B · aux entreprises", "desc": "On vend à d'autres entreprises un outil, un service ou une matière qui les aide à gagner ou économiser de l'argent.", "prix": "Élevé, souvent un abonnement annuel", "vente": "Lente : plusieurs semaines à plusieurs mois, plusieurs décideurs", "atout": "Peu de clients suffisent pour vivre ; revenus récurrents", "piege": "Dépendre d'un ou deux gros clients", "exemples": "Armadin, DriveX, FRANK, Deepslate, PaleBlueDot AI" },
-      { "key": "b2c", "title": "B2C · aux particuliers", "desc": "On vend directement au consommateur, en ligne ou en magasin. Le bouche-à-oreille et la marque comptent autant que le produit.", "prix": "Bas, beaucoup de petits achats", "vente": "Rapide : décision en quelques minutes", "atout": "Test du marché immédiat, retour client direct", "piege": "Le coût pour attirer chaque client (publicité, réseaux sociaux)", "exemples": "Seeds Fincap" },
-      { "key": "b2g", "title": "B2G · aux pouvoirs publics", "desc": "On vend à des communes, régions, administrations ou armées, le plus souvent par marché public.", "prix": "Contrats importants et stables", "vente": "Très lente : cahier des charges, appel d'offres, budget annuel", "atout": "Client fidèle, solvable, et une référence qui en ouvre d'autres", "piege": "La trésorerie : il faut tenir pendant la procédure et les délais de paiement", "exemples": "Osavul, Certo Aerospace, OSCP, Foundational, Aignosis" },
-      { "key": "market", "title": "Place de marché · mettre en relation", "desc": "On ne vend pas soi-même : on relie ceux qui offrent et ceux qui cherchent, et on prend une commission.", "prix": "Une commission sur chaque transaction", "vente": "Il faut convaincre deux publics à la fois", "atout": "Peu de stock, croissance rapide une fois lancée", "piege": "La poule et l'œuf : sans offre pas de demande, et inversement", "exemples": "1club (marketplace 1club.me)" }
+      {
+        "key": "b2b",
+        "title": "B2B · aux entreprises",
+        "desc": "On vend à d'autres entreprises un outil, un service ou une matière qui les aide à gagner ou économiser de l'argent.",
+        "prix": "Élevé, souvent un abonnement annuel",
+        "vente": "Lente : plusieurs semaines à plusieurs mois, plusieurs décideurs",
+        "atout": "Peu de clients suffisent pour vivre ; revenus récurrents",
+        "piege": "Dépendre d'un ou deux gros clients",
+        "exemples": "Armadin, DriveX, FRANK, Deepslate, PaleBlueDot AI"
+      },
+      {
+        "key": "b2c",
+        "title": "B2C · aux particuliers",
+        "desc": "On vend directement au consommateur, en ligne ou en magasin. Le bouche-à-oreille et la marque comptent autant que le produit.",
+        "prix": "Bas, beaucoup de petits achats",
+        "vente": "Rapide : décision en quelques minutes",
+        "atout": "Test du marché immédiat, retour client direct",
+        "piege": "Le coût pour attirer chaque client (publicité, réseaux sociaux)",
+        "exemples": "Seeds Fincap"
+      },
+      {
+        "key": "b2g",
+        "title": "B2G · aux pouvoirs publics",
+        "desc": "On vend à des communes, régions, administrations ou armées, le plus souvent par marché public.",
+        "prix": "Contrats importants et stables",
+        "vente": "Très lente : cahier des charges, appel d'offres, budget annuel",
+        "atout": "Client fidèle, solvable, et une référence qui en ouvre d'autres",
+        "piege": "La trésorerie : il faut tenir pendant la procédure et les délais de paiement",
+        "exemples": "Osavul, Certo Aerospace, OSCP, Foundational, Aignosis"
+      },
+      {
+        "key": "market",
+        "title": "Place de marché · mettre en relation",
+        "desc": "On ne vend pas soi-même : on relie ceux qui offrent et ceux qui cherchent, et on prend une commission.",
+        "prix": "Une commission sur chaque transaction",
+        "vente": "Il faut convaincre deux publics à la fois",
+        "atout": "Peu de stock, croissance rapide une fois lancée",
+        "piege": "La poule et l'œuf : sans offre pas de demande, et inversement",
+        "exemples": "1club (marketplace 1club.me)"
+      }
     ],
     "others": [
-      { "title": "B2B2G", "text": "Certains vendent à un intermédiaire privé qui revend à un gouvernement. OSCP passe par des intégrateurs de défense avant d'atteindre l'armée." },
-      { "title": "Hybrid cloud", "text": "PaleBlueDot AI combine son propre parc de serveurs avec une marketplace de capacité tierce — deux revenus, un seul produit." }
+      {
+        "title": "B2B2G",
+        "text": "Certains vendent à un intermédiaire privé qui revend à un gouvernement. OSCP passe par des intégrateurs de défense avant d'atteindre l'armée."
+      },
+      {
+        "title": "Hybrid cloud",
+        "text": "PaleBlueDot AI combine son propre parc de serveurs avec une marketplace de capacité tierce — deux revenus, un seul produit."
+      }
     ]
   },
   "ai": {
     "intro": "L'intelligence artificielle ne protège pas seulement des entreprises. Elle commence à défendre des États — et à attaquer des systèmes. Deux faces d'un même marché.",
     "stats": [
-      { "value": "26 000", "text": "agents IA déployés par Armadin dans une seule mission pour cartographier les failles d'un système d'information." },
-      { "value": "1 Md+", "text": "de points de données analysés chaque mois par Osavul pour détecter des menaces géopolitiques dans plus de 100 pays." }
+      {
+        "value": "26 000",
+        "text": "agents IA déployés par Armadin dans une seule mission pour cartographier les failles d'un système d'information."
+      },
+      {
+        "value": "1 Md+",
+        "text": "de points de données analysés chaque mois par Osavul pour détecter des menaces géopolitiques dans plus de 100 pays."
+      }
     ],
-    "statsSource": { "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" },
+    "statsSource": {
+      "label": "TechStartups, 01/10/2026",
+      "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    },
     "points": [
-      { "title": "1. L'IA qui attaque pour mieux défendre", "text": "Armadin envoie des essaims d'agents IA tester les défenses de ses clients avant les vrais pirates. Ce qui était réservé aux grandes équipes de sécurité — les red teams — devient un produit automatisé, accessible à n'importe quelle entreprise.", "takeaway": "les métiers qui demandaient une équipe d'experts humains deviennent des produits. Cherchez dans votre secteur ce qui est encore réservé aux grandes entreprises." },
-      { "title": "2. L'IA spécialisée dans un métier précis", "text": "DriveX ne fait qu'une chose : planifier la production en usine. Deepslate ne fait que de la voix. Gwanak ne s'occupe que des institutions financières. Chacun connaît un métier mieux qu'un assistant généraliste.", "takeaway": "une IA spécialisée bat une IA généraliste dans un métier précis. La spécialisation est une stratégie, pas une limitation." },
-      { "title": "3. La souveraineté comme argument commercial", "text": "Deepslate (Allemagne) propose des déploiements on-premise et air-gapped. OSCP (Canada) fabrique des capteurs ITAR-free, sans restriction d'exportation américaine. La localisation des données devient un argument de vente — surtout en Europe.", "takeaway": "là où les grandes plateformes américaines ou chinoises soulèvent des questions, la localisation crée un marché. C'est une opportunité structurelle pour les startups européennes." }
+      {
+        "title": "1. L'IA qui attaque pour mieux défendre",
+        "text": "Armadin envoie des essaims d'agents IA tester les défenses de ses clients avant les vrais pirates. Ce qui était réservé aux grandes équipes de sécurité — les red teams — devient un produit automatisé, accessible à n'importe quelle entreprise.",
+        "takeaway": "les métiers qui demandaient une équipe d'experts humains deviennent des produits. Cherchez dans votre secteur ce qui est encore réservé aux grandes entreprises."
+      },
+      {
+        "title": "2. L'IA spécialisée dans un métier précis",
+        "text": "DriveX ne fait qu'une chose : planifier la production en usine. Deepslate ne fait que de la voix. Gwanak ne s'occupe que des institutions financières. Chacun connaît un métier mieux qu'un assistant généraliste.",
+        "takeaway": "une IA spécialisée bat une IA généraliste dans un métier précis. La spécialisation est une stratégie, pas une limitation."
+      },
+      {
+        "title": "3. La souveraineté comme argument commercial",
+        "text": "Deepslate (Allemagne) propose des déploiements on-premise et air-gapped. OSCP (Canada) fabrique des capteurs ITAR-free, sans restriction d'exportation américaine. La localisation des données devient un argument de vente — surtout en Europe.",
+        "takeaway": "là où les grandes plateformes américaines ou chinoises soulèvent des questions, la localisation crée un marché. C'est une opportunité structurelle pour les startups européennes."
+      }
     ],
     "trap": "Le plus gros tour de la semaine — 255 M$ pour Armadin — est aussi une mise en garde. Une startup qui automatise des cyberattaques soulève des questions éthiques et réglementaires que ses investisseurs ont accepté d'ignorer. Quand votre produit peut être utilisé à des fins malveillantes, le cadre légal et éthique doit faire partie du business plan dès le premier jour.",
     "exercise": {
@@ -125,40 +263,32 @@
   "fichesIntro": "Les chiffres sont ceux annoncés par les entreprises ou leurs investisseurs, repris par la presse. Ce sont des données déclarées, pas des comptes audités. Chaque fiche a été relue contre sa source le 3 octobre 2026.",
   "fiches": [
     {
-      "name": "Armadin",
-      "place": "États-Unis",
-      "sector": "cybersécurité",
-      "model": "B2B",
-      "chapter": "revenus",
-      "desc": "Des essaims d'agents IA testent les systèmes d'information d'une entreprise comme le ferait un vrai pirate — et remontent les chemins d'attaque exploitables avant qu'il soit trop tard.",
-      "facts": ["Fondé par le fondateur de Mandiant", "Valorisation : +2,5 Md$", "Total levé : 445 M$", "Levée Série B : 255,5 M$"],
-      "lesson": "Vendre l'absence d'un problème. Un client qui n'a jamais été piraté ne sait pas s'il est bien protégé. Armadin lui montre les portes ouvertes — et les referme.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "États-Unis", "secteur": "Cybersécurité", "levee": "255,5 M$", "mot": "Vendre l'absence d'un problème" }
-    },
-    {
-      "name": "PaleBlueDot AI",
-      "place": "Californie",
-      "sector": "infrastructure IA",
-      "model": "B2B",
-      "chapter": "revenus",
-      "desc": "Loue de la capacité GPU à des entreprises qui veulent utiliser l'IA sans acheter leurs propres serveurs. Une place de marché met également en relation clients et fournisseurs tiers de puissance de calcul.",
-      "facts": ["Fondée en 2024", "5 Md$ de contrats clients signés", "Valorisation : 3,2 Md$", "Levée Série C : 200 M$"],
-      "lesson": "Pendant la ruée vers l'or, vendre des pelles. Quand tout le monde veut faire tourner de l'IA, celui qui loue la puissance de calcul récupère une part de chaque dollar dépensé.",
-      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
-      "recap": { "pays": "États-Unis", "secteur": "IA", "levee": "200 M$", "mot": "Pendant la ruée vers l'or, vendre des pelles" }
-    },
-    {
       "name": "Osavul",
       "place": "Luxembourg",
       "sector": "renseignement",
       "model": "B2G",
       "chapter": "marche",
       "desc": "Une plateforme qui analyse plus d'un milliard de points de données par mois dans plus de 100 pays pour détecter des signaux géopolitiques — mouvements de troupes, désinformation, cybermenaces — avant qu'ils ne deviennent des attaques.",
-      "facts": ["Fondée par des entrepreneurs ukrainiens", "Clients : gouvernements de 10 pays dont des membres de l'OTAN", "Revenus ×4 en un an", "Total levé : ~12 M€", "Levée Série A : 8,5 M€"],
+      "facts": [
+        "Fondée par des entrepreneurs ukrainiens",
+        "Clients : gouvernements de 10 pays dont des membres de l'OTAN",
+        "Revenus ×4 en un an",
+        "Total levé : ~12 M€",
+        "Levée Série A : 8,5 M€"
+      ],
       "lesson": "Le contexte géopolitique crée des marchés. Depuis 2022, les gouvernements européens cherchent des outils d'anticipation. Osavul a construit le sien depuis l'Ukraine — et l'a vendu depuis le Luxembourg.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Luxembourg", "secteur": "Défense", "levee": "8,5 M€", "mot": "Anticiper avant l'attaque" }
+      "sources": [
+        {
+          "label": "TechStartups, 01/10/2026",
+          "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Luxembourg",
+        "secteur": "Défense",
+        "levee": "8,5 M€",
+        "mot": "Anticiper avant l'attaque"
+      }
     },
     {
       "name": "Foundational",
@@ -167,10 +297,25 @@
       "model": "B2G + B2B",
       "chapter": "financement",
       "desc": "Construit un réseau commercial de stations de télémétrie laser par satellite — pour positionner les satellites avec une précision millimétrique et suivre les débris spatiaux, à 30 fois moins cher que les méthodes classiques.",
-      "facts": ["Fondée en 2025", "Clients : ESA, gouvernement britannique", "Précision millimétrique à 30x moins cher", "Pré-seed : 9,6 M€"],
+      "facts": [
+        "Fondée en 2025",
+        "Clients : ESA, gouvernement britannique",
+        "Précision millimétrique à 30x moins cher",
+        "Pré-seed : 9,6 M€"
+      ],
       "lesson": "Un problème bien défini attire les capitaux tôt. Foundational a levé 9,6 M€ avant même d'avoir un service en production, parce que le problème — trop peu de stations de tracking spatial — est documenté, chiffré et coûteux.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Royaume-Uni", "secteur": "Spatial", "levee": "9,6 M€", "mot": "Un problème bien défini attire les capitaux tôt" }
+      "sources": [
+        {
+          "label": "TechStartups, 01/10/2026",
+          "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Royaume-Uni",
+        "secteur": "Spatial",
+        "levee": "9,6 M€",
+        "mot": "Un problème bien défini attire les capitaux tôt"
+      }
     },
     {
       "name": "Deepslate",
@@ -179,22 +324,26 @@
       "model": "B2B",
       "chapter": "offre",
       "desc": "Des modèles d'IA vocale entraînés à reproduire le ton, la prosodie et les caractéristiques d'une voix — pour des assistants téléphoniques, des centres d'appels et des applications d'assurance — avec déploiement possible sur les propres serveurs du client.",
-      "facts": ["0,44 seconde jusqu'au premier mot", "250 ms de réponse après la fin de l'interlocuteur", "ISO 27001", "Déploiement on-premise et air-gapped disponible", "Seed : 7,7 M€"],
+      "facts": [
+        "0,44 seconde jusqu'au premier mot",
+        "250 ms de réponse après la fin de l'interlocuteur",
+        "ISO 27001",
+        "Déploiement on-premise et air-gapped disponible",
+        "Seed : 7,7 M€"
+      ],
       "lesson": "La souveraineté des données est un argument commercial. Les banques et assurances européennes hésitent à envoyer les voix de leurs clients dans des serveurs américains. Deepslate leur offre l'IA sans le risque réglementaire.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Allemagne", "secteur": "IA vocale", "levee": "7,7 M€", "mot": "La souveraineté comme argument commercial" }
-    },
-    {
-      "name": "Seeds Fincap",
-      "place": "Inde",
-      "sector": "fintech",
-      "model": "B2C",
-      "chapter": "marche",
-      "desc": "Prête aux nano-entreprises indiennes — vendeurs de rue, artisans, petits commerçants — sur base de leurs flux de trésorerie réels, sans exiger de bilan comptable. Les prêts vont de 50 000 à 1 million de roupies.",
-      "facts": ["164 agences", "70 000 emprunteurs actifs", "722 crore INR d'actifs sous gestion", "Rentable en FY25 et FY26", "Levée Série B : ~10,4 M$"],
-      "lesson": "Les banques regardent hier, Seeds regarde aujourd'hui. En prêtant sur les flux de trésorerie plutôt que sur les bilans, Seeds ouvre le crédit à ceux que les banques ignorent. En Belgique aussi, des milliers d'indépendants n'ont pas accès au crédit classique.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Inde", "secteur": "Fintech", "levee": "~10,4 M$", "mot": "Prêter sur le flux, pas sur les biens" }
+      "sources": [
+        {
+          "label": "TechStartups, 01/10/2026",
+          "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Allemagne",
+        "secteur": "IA vocale",
+        "levee": "7,7 M€",
+        "mot": "La souveraineté comme argument commercial"
+      }
     },
     {
       "name": "FRANK",
@@ -203,22 +352,25 @@
       "model": "B2B",
       "chapter": "offre",
       "desc": "Une plateforme IA pour les courtiers en assurance : elle lit les documents, remplit les formulaires, accède aux portails des assureurs et saisit les données à la place du courtier. Résultat : 10 heures administratives économisées par semaine et par courtier.",
-      "facts": ["350+ agences", "1 500 utilisateurs actifs", "70 000 tâches automatisées par mois", "Seed : 2,9 M€"],
+      "facts": [
+        "350+ agences",
+        "1 500 utilisateurs actifs",
+        "70 000 tâches automatisées par mois",
+        "Seed : 2,9 M€"
+      ],
       "lesson": "Le travail ennuyeux est un marché. Les courtiers passent des heures à remplir des formulaires identiques sur des portails différents. FRANK fait ça à leur place — et ils paient pour ne plus le faire.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Portugal", "secteur": "Assurance", "levee": "2,9 M€", "mot": "Le travail ennuyeux est un marché" }
-    },
-    {
-      "name": "1club",
-      "place": "Bulgarie",
-      "sector": "sports",
-      "model": "B2B + Place de marché",
-      "chapter": "marche",
-      "desc": "Un logiciel tout-en-un pour les petits clubs de sport, studios et salles de fitness : membres, paiements, planning, marketing, application mobile — plus une marketplace de réservation en ligne (1club.me) qui amène de nouveaux clients.",
-      "facts": ["Fondé par le créateur de OfficeRnD", "Clients dans 10+ pays", "Utilisateurs dans 40+ pays", "Seed : 2,2 M€"],
-      "lesson": "Donner aux petits les outils des grands. Les grandes chaînes de fitness avaient leurs logiciels sur mesure. 1club les emballe en un abonnement mensuel accessible à un club de quartier — et lui amène des clients en plus.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Bulgarie", "secteur": "Sports", "levee": "2,2 M€", "mot": "Les outils des grands, au prix des petits" }
+      "sources": [
+        {
+          "label": "TechStartups, 01/10/2026",
+          "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Portugal",
+        "secteur": "Assurance",
+        "levee": "2,9 M€",
+        "mot": "Le travail ennuyeux est un marché"
+      }
     },
     {
       "name": "Certo Aerospace",
@@ -227,22 +379,25 @@
       "model": "B2G",
       "chapter": "strategie",
       "desc": "Un aéronef autonome à décollage vertical de 600 kg, en vol depuis 2023, pour la logistique militaire, l'évacuation sanitaire, le maritime et la réponse aux catastrophes. Participe aux essais du ministère de la Défense britannique.",
-      "facts": ["En vol depuis 2023", "Autorisé par la Civil Aviation Authority", "Partenariat BAE Systems (programme FalconWorks)", "Levée : 5 M£"],
+      "facts": [
+        "En vol depuis 2023",
+        "Autorisé par la Civil Aviation Authority",
+        "Partenariat BAE Systems (programme FalconWorks)",
+        "Levée : 5 M£"
+      ],
       "lesson": "Un produit physique qui vole est plus difficile à copier qu'un logiciel. Certo a trois ans de vols derrière lui. Dans la défense, l'historique de fiabilité vaut autant que la technologie.",
-      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
-      "recap": { "pays": "Royaume-Uni", "secteur": "Défense", "levee": "5 M£", "mot": "Un historique est une barrière à l'entrée" }
-    },
-    {
-      "name": "DriveX",
-      "place": "Japon",
-      "sector": "logiciel industriel",
-      "model": "B2B",
-      "chapter": "operations",
-      "desc": "Remplace les plannings de production gérés dans des fichiers Excel. Le système lit les fichiers existants, tient compte des machines disponibles, des équipes et des contraintes de process, et propose un planning Gantt ajustable.",
-      "facts": ["Intégration ERP et MES", "Apprend des résultats réels pour ajuster ses prévisions", "Levée : 150 M¥ (~1 M$)"],
-      "lesson": "Le tableur invisible est partout. Dans chaque PME industrielle, il y a un fichier Excel qui tient un processus critique. Quand l'entreprise grandit, il craque. DriveX arrive juste à ce moment-là.",
-      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
-      "recap": { "pays": "Japon", "secteur": "Industrie", "levee": "150 M¥", "mot": "Le tableur invisible est partout" }
+      "sources": [
+        {
+          "label": "TechStartups, 02/10/2026",
+          "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Royaume-Uni",
+        "secteur": "Défense",
+        "levee": "5 M£",
+        "mot": "Un historique est une barrière à l'entrée"
+      }
     },
     {
       "name": "OSCP",
@@ -251,10 +406,24 @@
       "model": "B2G",
       "chapter": "strategie",
       "desc": "Des gyroscopes photoniques qui permettent à des drones et engins militaires de naviguer sans GPS — même quand le signal est brouillé ou coupé. Fabriqués au Canada, certifiés ITAR-free.",
-      "facts": ["Qualification comme fournisseur du programme canadien Defence Drone Initiative", "ITAR-free — sans restrictions d'exportation américaines", "Série A (montant non divulgué, clôturée en août 2026)"],
+      "facts": [
+        "Qualification comme fournisseur du programme canadien Defence Drone Initiative",
+        "ITAR-free — sans restrictions d'exportation américaines",
+        "Série A (montant non divulgué, clôturée en août 2026)"
+      ],
       "lesson": "Quand le GPS ne fonctionne plus, ce qui navigue gagne. Les conflits en Ukraine ont montré que le brouillage GPS est désormais courant. OSCP construit la solution au problème que tout le monde a vu mais que peu ont résolu.",
-      "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-      "recap": { "pays": "Canada", "secteur": "Défense", "levee": "N.D.", "mot": "Naviguer sans GPS" }
+      "sources": [
+        {
+          "label": "TechStartups, 01/10/2026",
+          "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Canada",
+        "secteur": "Défense",
+        "levee": "N.D.",
+        "mot": "Naviguer sans GPS"
+      }
     },
     {
       "name": "Gwanak Research Institute",
@@ -263,10 +432,25 @@
       "model": "B2B",
       "chapter": "offre",
       "desc": "Un moteur de décision IA pour les institutions financières qui croise données structurées (scores, historiques) et données non structurées (notes de conseillers, logs de consultations) pour recommander quels clients prioriser.",
-      "facts": ["Fondé en 2023", "Investisseur : Seoul National University Technology Holdings", "Cible : banques, assureurs, institutions publiques de financement", "Levée : 300 M KRW"],
+      "facts": [
+        "Fondé en 2023",
+        "Investisseur : Seoul National University Technology Holdings",
+        "Cible : banques, assureurs, institutions publiques de financement",
+        "Levée : 300 M KRW"
+      ],
       "lesson": "Les notes d'un conseiller valent parfois plus que le score de crédit. Gwanak exploite les données textuelles que les banques ignorent parce qu'elles ne savent pas les analyser. La donnée non structurée est encore un territoire presque vierge.",
-      "sources": [{ "label": "TechStartups, 02/10/2026", "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/" }],
-      "recap": { "pays": "Corée du Sud", "secteur": "Fintech", "levee": "300 M KRW", "mot": "Exploiter la donnée que les autres ignorent" }
+      "sources": [
+        {
+          "label": "TechStartups, 02/10/2026",
+          "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+        }
+      ],
+      "recap": {
+        "pays": "Corée du Sud",
+        "secteur": "Fintech",
+        "levee": "300 M KRW",
+        "mot": "Exploiter la donnée que les autres ignorent"
+      }
     }
   ],
   "pousses": {
@@ -279,10 +463,25 @@
         "model": "B2B",
         "chapter": "offre",
         "desc": "Une technologie issue de l'Université de Melbourne qui sépare le béton de démolition en agrégats réutilisables et en substitut de ciment. 75 % du ciment récupéré, émissions de CO₂ réduites de moitié. L'Australie génère 7 millions de tonnes de béton usagé par an.",
-        "facts": ["Spin-out Université de Melbourne", "Pilote industriel prévu fin 2026", "7 M de tonnes de béton usagé/an en Australie", "Pré-seed : 750 000 A$"],
+        "facts": [
+          "Spin-out Université de Melbourne",
+          "Pilote industriel prévu fin 2026",
+          "7 M de tonnes de béton usagé/an en Australie",
+          "Pré-seed : 750 000 A$"
+        ],
         "lesson": "Un déchet bien traité devient une matière première. R2Crete fait pour le béton ce que Too Good To Go fait pour les invendus alimentaires. Et ça aussi, ça peut partir d'une université.",
-        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-        "recap": { "pays": "Australie", "secteur": "Matériaux", "levee": "750 K A$", "mot": "Spin-out universitaire" }
+        "sources": [
+          {
+            "label": "TechStartups, 01/10/2026",
+            "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+          }
+        ],
+        "recap": {
+          "pays": "Australie",
+          "secteur": "Matériaux",
+          "levee": "750 K A$",
+          "mot": "Spin-out universitaire"
+        }
       },
       {
         "name": "Aignosis",
@@ -291,10 +490,607 @@
         "model": "B2G",
         "chapter": "marche",
         "desc": "Un outil de dépistage de l'autisme et des troubles du développement par vision par ordinateur, utilisable sur un simple ordinateur portable avec webcam standard. Déjà déployé dans plus de 20 centres de santé gouvernementaux au Rajasthan.",
-        "facts": ["Certification CDSCO Classe B", "Partenariat Mankind Pharma (1 300 représentants)", "8 000 dépistages réalisés", "Objectif : 100 000 dépistages d'ici fin FY27", "Seed : ~417 K$"],
+        "facts": [
+          "Certification CDSCO Classe B",
+          "Partenariat Mankind Pharma (1 300 représentants)",
+          "8 000 dépistages réalisés",
+          "Objectif : 100 000 dépistages d'ici fin FY27",
+          "Seed : ~417 K$"
+        ],
         "lesson": "Réduire le coût d'un diagnostic, c'est ouvrir l'accès à des millions de personnes. Aignosis ne remplace pas le médecin — il l'amène là où il n'y en a pas. Et il n'a eu besoin que d'un ordinateur portable pour commencer.",
-        "sources": [{ "label": "TechStartups, 01/10/2026", "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/" }],
-        "recap": { "pays": "Inde", "secteur": "Santé", "levee": "~417 K$", "mot": "Grand impact, petit budget" }
+        "sources": [
+          {
+            "label": "TechStartups, 01/10/2026",
+            "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+          }
+        ],
+        "recap": {
+          "pays": "Inde",
+          "secteur": "Santé",
+          "levee": "~417 K$",
+          "mot": "Grand impact, petit budget"
+        }
+      }
+    ]
+  },
+  "simples": {
+    "intro": "Pas besoin d'IA ni d'investisseurs pour entreprendre. Ces activités reposent sur un principe ancien : vendre un produit ou un service plus cher qu'il ne coûte, à des clients qui reviennent. Le risque est connu, le métier s'apprend, et beaucoup démarrent avec leurs économies, un prêt ou un simple statut d'indépendant complémentaire.",
+    "list": [
+      {
+        "name": "GAT, le café par un trou dans le mur",
+        "place": "Ixelles",
+        "sector": "café à emporter",
+        "model": "B2C",
+        "chapter": "operations",
+        "desc": "Un local de 10 m² rue Lesbroussart, un mur gris, un QR code pour commander et un trou par lequel sort la boisson. Pas de salle, pas de serveur : une seule personne suffit pour faire tourner le lieu.",
+        "flow": "Client : <b>commande par QR code</b> → une personne prépare → <b>la boisson sort par le trou</b>",
+        "facts": [
+          "Ouvert le 24 mai 2026",
+          "10 m², une seule personne",
+          "Limonades, eau de coco et friandises pour chiens en plus du café"
+        ],
+        "lesson": "Supprimer la salle, c'est supprimer le loyer, le personnel et la vaisselle. Le concept devient le décor : on dessine sur le mur en attendant. Un modèle à copier pour qui a un pas-de-porte minuscule et une recette qui tient dans un gobelet.",
+        "sources": [
+          {
+            "label": "Paris Match Belgique, 27/05/2026",
+            "url": "https://www.parismatch.be/lifestyle/food/2026/05/27/gat-la-nouvelle-adresse-bruxelloise-ou-le-cafe-surgit-dun-trou-un-concept-minimaliste-et-legerement-provocateur-TSO7LA64KZGBRHT5O3LPTKKQKE/"
+          }
+        ],
+        "recap": {
+          "pays": "Belgique",
+          "secteur": "Horeca",
+          "levee": "—",
+          "mot": "Supprimer la salle"
+        }
+      },
+      {
+        "name": "Cotti Coffee, le café à 1 euro",
+        "place": "Bruxelles",
+        "sector": "café en franchise",
+        "model": "B2C",
+        "chapter": "revenus",
+        "desc": "Chaîne chinoise créée en 2022, 18 000 points de vente dans 28 pays. Première boutique dans le quartier européen, puis Grand-Place, Anvers, Gand, Namur : au moins 10 adresses en Belgique fin 2026. Commande sur l'application, petite surface, pas de fauteuils.",
+        "flow": "Client : <b>0,99 à 4 €</b> par boisson → volume élevé, surface réduite → <b>marge par le nombre</b>",
+        "facts": [
+          "Prix de 0,99 à 4 € maximum",
+          "Franchise : le franchisé investit, la marque fournit",
+          "Objectif : 10 boutiques en Belgique fin 2026"
+        ],
+        "lesson": "Un prix cassé n'est tenable que si tout le reste est réduit : surface, personnel, temps passé par client. La franchise permet à un indépendant de démarrer avec une marque connue, contre une redevance et peu de liberté.",
+        "sources": [
+          {
+            "label": "RTBF, 08/06/2026",
+            "url": "https://www.rtbf.be/article/le-cafe-a-un-euro-debarque-en-belgique-certains-vont-ils-boire-la-tasse-11734962"
+          }
+        ],
+        "recap": {
+          "pays": "Belgique",
+          "secteur": "Horeca",
+          "levee": "—",
+          "mot": "Le volume fait la marge"
+        }
+      },
+      {
+        "name": "La boulangerie",
+        "place": "France / Belgique",
+        "sector": "artisanat alimentaire",
+        "model": "B2C",
+        "chapter": "financement",
+        "desc": "Le commerce de proximité par excellence : des clients qui reviennent chaque jour, un produit frais, une marge connue. Mais le ticket d'entrée est lourd : four, pétrin, chambre de pousse, aménagement du local.",
+        "flow": "Client : <b>pain et viennoiseries</b> → matières premières (~32 % du chiffre), personnel (35 à 41 %) → <b>marge</b>",
+        "facts": [
+          "Budget total : 120 000 à 200 000 €",
+          "Matériel : 50 000 à 100 000 €",
+          "Aménagement : ~30 000 €",
+          "Loyer : 600 à 1 500 €/mois",
+          "En franchise : 80 000 à 120 000 €"
+        ],
+        "lesson": "Quand le matériel coûte plus que le chiffre d'affaires de la première année, le point mort se calcule avant de signer le bail. La reprise d'une boulangerie existante, avec son four et sa clientèle, coûte souvent moins cher que la création.",
+        "sources": [
+          {
+            "label": "Square, 22/11/2024",
+            "url": "https://squareup.com/fr/fr/townsquare/budget-ouverture-boulangerie"
+          }
+        ],
+        "recap": {
+          "pays": "France",
+          "secteur": "Artisanat",
+          "levee": "—",
+          "mot": "Calculer le point mort avant le bail"
+        }
+      },
+      {
+        "name": "L'entreprise de titres-services",
+        "place": "Bruxelles",
+        "sector": "aide-ménagère",
+        "model": "B2C + B2G",
+        "chapter": "revenus",
+        "desc": "Le client bruxellois paie 11,40 € le titre pour une heure de ménage ; la Région ajoute 18,54 € d'intervention. L'entreprise agréée encaisse donc près de 30 € par heure prestée et emploie les aides-ménagères.",
+        "flow": "Client : <b>11,40 €</b> + Région : <b>18,54 €</b> → salaire de l'aide-ménagère, encadrement → <b>marge</b>",
+        "facts": [
+          "11,40 € le titre pour les 300 premiers, 14 € ensuite (2026)",
+          "Intervention régionale : 18,54 € par titre",
+          "+0,77 € brut/heure pour les travailleuses depuis l'accord de décembre 2025",
+          "Agrément régional obligatoire"
+        ],
+        "lesson": "Quand l'État paie plus que le client, le vrai client est l'État : la marge dépend d'une décision politique, pas du marché. Un modèle stable tant que le subside tient, fragile le jour où il change.",
+        "sources": [
+          {
+            "label": "DH, 26/12/2025",
+            "url": "https://www.dhnet.be/regions/bruxelles/2025/12/26/titres-services-120-euro-en-plus-pour-les-clients-077-euro-brut-en-plus-pour-les-aides-menageres-VQOV2H27WBHDRMLNCIS6ZBKWSA/"
+          },
+          {
+            "label": "Test Achats, dossier titres-services",
+            "url": "https://www.test-achats.be/famille-prive/droits-des-consommateurs/dossier/titres-services"
+          }
+        ],
+        "recap": {
+          "pays": "Belgique",
+          "secteur": "Services",
+          "levee": "—",
+          "mot": "Le vrai client est l'État"
+        }
+      },
+      {
+        "name": "Le pop-up store",
+        "place": "Bruxelles",
+        "sector": "mode",
+        "model": "B2C",
+        "chapter": "marche",
+        "desc": "La marque liégeoise Sé-ach, lancée en 2016 grâce à un financement participatif et vendue en ligne, a ouvert sa première boutique physique pour neuf jours seulement, rue Dansaert. La collection, six pièces exclusives, et pas de bail.",
+        "flow": "Client : <b>achat en boutique éphémère</b> → location courte, stock limité → <b>test du commerce physique</b>",
+        "facts": [
+          "Neuf jours rue Dansaert",
+          "Marque née en ligne, première collection financée par crowdfunding",
+          "Six pièces exclusives pour créer l'événement"
+        ],
+        "lesson": "Un pop-up répond à la question qui coûte le plus cher en commerce : les gens viennent-ils ? Neuf jours de loyer suffisent pour le savoir. Si oui, on signe un bail ; sinon, on retourne en ligne sans dette.",
+        "sources": [
+          {
+            "label": "ELLE Belgique, 09/10/2018",
+            "url": "https://www.elle.be/fr/235845-le-label-liegeois-se-ach-ouvre-son-pop-up-store-a-bruxelles.html"
+          }
+        ],
+        "recap": {
+          "pays": "Belgique",
+          "secteur": "Commerce",
+          "levee": "—",
+          "mot": "Tester avant de signer un bail"
+        }
+      },
+      {
+        "name": "Le professeur freelance",
+        "place": "Belgique",
+        "sector": "cours particuliers",
+        "model": "B2C + Place de marché",
+        "chapter": "financement",
+        "desc": "Donner des cours, du soutien scolaire ou des formations via des plateformes comme Superprof, ListMinut ou Ring Twice. Zéro investissement : le capital, c'est ce qu'on sait déjà.",
+        "flow": "Élève : <b>paiement par heure</b> → commission de la plateforme → <b>revenu du professeur</b>",
+        "facts": [
+          "Plateformes : Superprof, ListMinut, Ring Twice",
+          "Jusqu'à 7 640 €/an (2024) via l'économie collaborative sans statut d'indépendant",
+          "Au-delà : statut d'indépendant complémentaire"
+        ],
+        "lesson": "La première entreprise de beaucoup d'étudiants : vendre son temps et ses compétences. La plateforme apporte les clients et prend sa commission ; à vous de garder ceux qui reviennent, et de passer au statut d'indépendant quand le plafond est atteint.",
+        "sources": [
+          {
+            "label": "Accountable, 26/11/2024",
+            "url": "https://www.accountable.eu/fr-be/blog/devenir-professeur-freelance/"
+          }
+        ],
+        "recap": {
+          "pays": "Belgique",
+          "secteur": "Formation",
+          "levee": "—",
+          "mot": "Vendre ce que vous savez"
+        }
+      }
+    ]
+  },
+  "breakeven": {
+    "title": "Combien de clients par jour pour couvrir vos frais ?",
+    "defaults": {
+      "fixed": 2500,
+      "price": 3.5,
+      "cost": 0.9,
+      "days": 26
+    },
+    "note": "Valeurs d'exemple inspirées d'un café à emporter comme GAT : 2 500 € de frais fixes (loyer d'un petit local, assurance, électricité, votre salaire), 3,50 € le café, 0,90 € de gobelet et de grains. Remplacez par vos chiffres. Au-dessus du point mort, chaque vente rapporte sa marge."
+  },
+  "quiz": {
+    "intro": "Dix questions tirées des fiches. Répondez, puis corrigez : chaque réponse renvoie à la fiche concernée.",
+    "questions": [
+      {
+        "q": "Que vend PaleBlueDot AI ?",
+        "options": [
+          "Des modèles d'IA",
+          "Des serveurs à acheter",
+          "La location de puissance de calcul GPU",
+          "Des formations à l'IA"
+        ],
+        "answer": 2,
+        "explain": "Pendant la ruée vers l'or, vendre des pelles : PaleBlueDot loue la capacité de calcul au lieu de la vendre.",
+        "ref": "PaleBlueDot AI"
+      },
+      {
+        "q": "Qu'est-ce que DriveX remplace dans les PME industrielles ?",
+        "options": [
+          "Le comptable",
+          "Le fichier Excel qui gère le planning de production",
+          "Les machines",
+          "Le site web"
+        ],
+        "answer": 1,
+        "explain": "Le tableur invisible : un fichier Excel qui tient un processus critique et craque quand l'entreprise grandit.",
+        "ref": "DriveX"
+      },
+      {
+        "q": "Pourquoi dit-on qu'Armadin « facture l'absence d'un problème » ?",
+        "options": [
+          "Parce que ses clients ne paient qu'après une attaque",
+          "Parce que le client paie pour qu'on trouve ses failles avant les pirates",
+          "Parce que le service est gratuit",
+          "Parce qu'Armadin vend des assurances"
+        ],
+        "answer": 1,
+        "explain": "Le client paie pour ce qui ne lui arrive pas : des essaims d'agents IA testent ses défenses avant un vrai pirate.",
+        "ref": "Armadin"
+      },
+      {
+        "q": "Sur quoi Seeds Fincap se base-t-il pour prêter aux micro-commerçants indiens ?",
+        "options": [
+          "Leur bilan comptable",
+          "Leurs garanties immobilières",
+          "Leurs flux de trésorerie réels",
+          "Leur diplôme"
+        ],
+        "answer": 2,
+        "explain": "La banque regarde hier, Seeds regarde aujourd'hui : les flux remplacent les bilans que ces clients n'ont pas.",
+        "ref": "Seeds Fincap"
+      },
+      {
+        "q": "Avec 2 500 € de frais fixes par mois, 2,60 € de marge par café et 26 jours d'ouverture, combien de cafés par jour pour atteindre le point mort ?",
+        "options": [
+          "17",
+          "37",
+          "57",
+          "97"
+        ],
+        "answer": 1,
+        "explain": "2 500 / 2,60 ≈ 962 cafés par mois ; 962 / 26 ≈ 37 par jour.",
+        "ref": "point-mort"
+      },
+      {
+        "q": "Que signifie « B2G » sur la fiche d'Osavul ?",
+        "options": [
+          "Vendre à des grossistes",
+          "Vendre à des pouvoirs publics",
+          "Vendre en ligne",
+          "Vendre à des grands groupes"
+        ],
+        "answer": 1,
+        "explain": "Business to Government : Osavul vend aux gouvernements de dix pays, dont des membres de l'OTAN.",
+        "ref": "modeles"
+      },
+      {
+        "q": "Quel argument commercial Deepslate met-il en avant auprès des banques européennes ?",
+        "options": [
+          "Le prix le plus bas",
+          "La souveraineté des données : l'IA tourne sur les serveurs du client",
+          "Une voix plus naturelle",
+          "Un produit gratuit"
+        ],
+        "answer": 1,
+        "explain": "Déploiement on-premise et air-gapped : les voix des clients ne partent pas sur des serveurs américains.",
+        "ref": "Deepslate"
+      },
+      {
+        "q": "Qui est le « vrai client » d'une entreprise de titres-services à Bruxelles ?",
+        "options": [
+          "Le particulier, qui paie 11,40 €",
+          "La Région, qui paie 18,54 € par titre",
+          "L'aide-ménagère",
+          "Pluxee"
+        ],
+        "answer": 1,
+        "explain": "Quand l'État paie plus que le client, la marge dépend d'une décision politique, pas du marché.",
+        "ref": "L'entreprise de titres-services"
+      },
+      {
+        "q": "Pourquoi Foundational a-t-il pu lever 9,6 M€ avant d'avoir un service en production ?",
+        "options": [
+          "Parce que ses fondateurs sont célèbres",
+          "Parce que le problème — trop peu de stations de suivi spatial — est documenté et chiffré",
+          "Parce que l'ESA est actionnaire",
+          "Par chance"
+        ],
+        "answer": 1,
+        "explain": "Un problème bien défini attire les capitaux tôt.",
+        "ref": "Foundational"
+      },
+      {
+        "q": "Qu'a testé Sé-ach avec son pop-up de neuf jours rue Dansaert ?",
+        "options": [
+          "Un nouveau logo",
+          "Si les clients viennent en boutique physique, sans signer de bail",
+          "Une levée de fonds",
+          "Un nouveau fournisseur"
+        ],
+        "answer": 1,
+        "explain": "Neuf jours de loyer suffisent pour répondre à la question la plus chère du commerce : les gens viennent-ils ?",
+        "ref": "Le pop-up store"
+      }
+    ]
+  },
+  "glossary": {
+    "intro": "Les mots des fiches, expliqués en une phrase.",
+    "terms": [
+      {
+        "term": "Amorçage (seed)",
+        "def": "Première vraie levée de fonds, souvent entre quelques centaines de milliers et quelques millions d'euros, pour construire le produit et trouver les premiers clients."
+      },
+      {
+        "term": "Pré-amorçage (pre-seed)",
+        "def": "Tout premier argent extérieur, souvent de proches, de business angels ou d'un incubateur, avant même un produit fini."
+      },
+      {
+        "term": "Série A, B, C",
+        "def": "Tours de financement successifs. A pour accélérer après les premiers clients, B et C pour grandir, s'étendre à l'étranger ou industrialiser. Chaque lettre correspond en général à des montants plus élevés."
+      },
+      {
+        "term": "Valorisation",
+        "def": "Valeur attribuée à l'entreprise lors d'une levée. « Post-money » : après l'entrée de l'argent neuf. Un investisseur qui met 1 M€ dans une société valorisée 10 M€ post-money en détient 10 %."
+      },
+      {
+        "term": "Business angel",
+        "def": "Particulier, souvent ancien entrepreneur, qui investit son propre argent dans de jeunes sociétés et apporte son réseau."
+      },
+      {
+        "term": "Fonds de capital-risque (VC)",
+        "def": "Société qui gère l'argent d'autres investisseurs et le place dans des startups en échange de parts, en espérant que quelques réussites compensent beaucoup d'échecs."
+      },
+      {
+        "term": "Family office",
+        "def": "Structure qui gère la fortune d'une famille et investit parfois directement dans des entreprises."
+      },
+      {
+        "term": "Venture debt / dette",
+        "def": "Prêt accordé à une startup, à rembourser avec intérêts, sans céder de parts. Souvent combiné à une levée en capital."
+      },
+      {
+        "term": "Tour sursouscrit",
+        "def": "Les investisseurs ont proposé plus d'argent que l'entreprise n'en demandait. Signe de forte demande."
+      },
+      {
+        "term": "ARR / revenus récurrents",
+        "def": "Annual Recurring Revenue : montant des abonnements sur un an. L'indicateur clé des logiciels par abonnement."
+      },
+      {
+        "term": "Chiffre d'affaires (CA)",
+        "def": "Total des ventes sur une période, avant toute déduction de coûts."
+      },
+      {
+        "term": "Rentable",
+        "def": "L'entreprise gagne plus qu'elle ne dépense. Beaucoup de startups ne le sont pas pendant des années ; celles qui le sont lèvent en position de force."
+      },
+      {
+        "term": "Marge",
+        "def": "Différence entre le prix de vente et le coût de ce qui est vendu. La marge sert à payer les frais fixes, puis à faire le bénéfice."
+      },
+      {
+        "term": "Frais fixes",
+        "def": "Dépenses qui tombent chaque mois quelle que soit l'activité : loyer, assurances, salaires, abonnements."
+      },
+      {
+        "term": "Point mort",
+        "def": "Niveau de ventes à partir duquel la marge couvre les frais fixes. En dessous on perd de l'argent, au-dessus on en gagne. Voir l'outil plus haut."
+      },
+      {
+        "term": "Trésorerie",
+        "def": "L'argent réellement disponible sur le compte. On peut être rentable sur le papier et manquer de trésorerie si les clients paient tard."
+      },
+      {
+        "term": "Volume d'affaires (GMV)",
+        "def": "Gross Merchandise Value : total des ventes qui transitent par une place de marché. La plateforme n'en garde qu'une commission ; ce n'est pas son chiffre d'affaires."
+      },
+      {
+        "term": "Place de marché",
+        "def": "Plateforme qui met en relation vendeurs et acheteurs et prend une commission, sans vendre elle-même."
+      },
+      {
+        "term": "B2B, B2C, B2G",
+        "def": "À qui l'on vend : aux entreprises (business), aux particuliers (consumer), aux pouvoirs publics (government). Voir la rubrique « Qui paie ? »."
+      },
+      {
+        "term": "Open source",
+        "def": "Logiciel dont le code est public et réutilisable. L'entreprise gagne de l'argent sur le support, l'hébergement ou des fonctions payantes."
+      },
+      {
+        "term": "Précommande / prévente",
+        "def": "Faire payer le client avant que le produit existe. Le meilleur test de marché qui soit."
+      },
+      {
+        "term": "Pivot",
+        "def": "Changer de produit ou de clientèle en gardant l'équipe et une partie de l'acquis, quand la première idée ne marche pas."
+      },
+      {
+        "term": "Incubateur, accélérateur",
+        "def": "Programme qui héberge et accompagne de jeunes projets, parfois contre une petite part du capital (Y Combinator, par exemple)."
+      },
+      {
+        "term": "Spin-off universitaire",
+        "def": "Entreprise créée pour exploiter une recherche menée dans une université ou un centre de recherche."
+      },
+      {
+        "term": "Marché public / appel d'offres",
+        "def": "Procédure par laquelle une administration choisit un fournisseur. Longue et formelle, mais le client paie et reste."
+      },
+      {
+        "term": "Indépendant complémentaire",
+        "def": "Statut belge qui permet d'exercer une activité à côté d'un emploi salarié ou des études, avec des cotisations réduites sous conditions."
+      },
+      {
+        "term": "B2G",
+        "def": "Business to Government : vendre à des administrations, des armées ou des collectivités, le plus souvent par marché public. Ventes longues, mais contrats durables (Osavul, Certo Aerospace, OSCP)."
+      },
+      {
+        "term": "Red team",
+        "def": "Équipe, humaine ou automatisée, qui attaque les systèmes d'une entreprise pour en trouver les failles avant un vrai pirate. Armadin en fait un produit."
+      },
+      {
+        "term": "On-premise / air-gapped",
+        "def": "Logiciel installé sur les serveurs du client plutôt que dans le cloud du fournisseur ; « air-gapped » : sans aucune connexion à internet. Argument de souveraineté des données (Deepslate)."
+      },
+      {
+        "term": "ITAR-free",
+        "def": "Produit qui ne contient aucun composant soumis aux règles d'exportation américaines (ITAR), donc vendable sans autorisation de Washington. Un atout commercial dans la défense (OSCP)."
+      },
+      {
+        "term": "Spin-out universitaire",
+        "def": "Société créée pour commercialiser une technologie née dans un laboratoire d'université, qui en détient souvent une part (R2Crete)."
+      },
+      {
+        "term": "Franchise",
+        "def": "Un indépendant exploite un point de vente sous la marque et les règles d'un réseau, contre un droit d'entrée et des redevances. Démarrage plus sûr, liberté réduite (Cotti Coffee)."
+      },
+      {
+        "term": "Pop-up store",
+        "def": "Boutique éphémère, louée quelques jours ou semaines, pour tester le commerce physique sans bail."
+      },
+      {
+        "term": "Titres-services",
+        "def": "Chèque régional belge : le client paie une partie de l'heure de ménage, la Région complète, l'entreprise agréée emploie l'aide-ménagère."
+      }
+    ]
+  },
+  "noMoney": {
+    "intro": "Le capital de départ peut être votre temps, votre savoir-faire et votre réseau. La règle d'or : faire payer le client avant de dépenser.",
+    "ideas": [
+      {
+        "title": "Vendre ce que vous savez faire",
+        "text": "Cours particuliers, traduction, graphisme, montage vidéo, gestion de réseaux sociaux pour les commerces du quartier."
+      },
+      {
+        "title": "Rendre service",
+        "text": "Jardinage, petits travaux, aide aux seniors, garde d'animaux, ménage, montage de meubles."
+      },
+      {
+        "title": "Revendre",
+        "text": "Chiner aux brocantes et revendre en ligne. Commencez par vider vos propres armoires."
+      },
+      {
+        "title": "Mettre en relation",
+        "text": "Trouver des clients pour d'autres artisans contre une commission, comme une place de marché à la main."
+      },
+      {
+        "title": "Organiser",
+        "text": "Ateliers, soirées, tournois : on encaisse les inscriptions avant de payer la salle."
+      },
+      {
+        "title": "Créer une marque sans usine",
+        "text": "Faire produire par un fournisseur et vendre d'abord en précommande ou en pop-up, comme Sé-ach rue Dansaert."
+      }
+    ],
+    "steps": [
+      {
+        "title": "1. Prévendre",
+        "text": "Aignosis a convaincu des centres de santé publics avec un simple ordinateur portable et une webcam. Une page, un prix, un bouton : si personne n'achète, vous n'avez rien perdu."
+      },
+      {
+        "title": "2. Louer, emprunter, partager",
+        "text": "PaleBlueDot loue des serveurs à des milliards ; à votre échelle, louez le local, le matériel, le camion. N'achetez qu'une fois la demande prouvée. Un pop-up de neuf jours coûte moins qu'un bail de neuf ans."
+      },
+      {
+        "title": "3. Commencer à côté",
+        "text": "Garder un emploi ou ses études et démarrer le soir ou le week-end. En Belgique, le statut d'indépendant complémentaire existe pour cela ; renseignez-vous sur les cotisations et les règles qui s'appliquent à votre situation."
+      },
+      {
+        "title": "4. Se faire accompagner",
+        "text": "À Bruxelles : le 1819 et hub.brussels pour l'information et le programme YET pour les jeunes, les coopératives d'activités pour tester sans créer de société, et le microcrédit (par exemple microStart) quand un petit montant devient nécessaire."
+      }
+    ],
+    "avoid": "Les formations payantes qui promettent l'argent facile, le stock acheté avant d'avoir des clients, et l'emprunt pour du matériel dont on n'a pas encore prouvé le besoin.",
+    "brussels": {
+      "title": "Une entreprise sur trois créée à Bruxelles l'est par un moins de 30 ans.",
+      "text": "17 175 jeunes indépendants étaient actifs en 2024, avec un âge moyen de 25,6 ans. Leur nombre a augmenté de 25 % depuis 2016. Le programme régional YET (Young Entrepreneurs of Tomorrow) de hub.brussels propose coaching et incubation pour se lancer.",
+      "source": {
+        "label": "hub.brussels, 27/08/2026",
+        "url": "https://hub.brussels/fr/blog/toujours-plus-de-jeunes-entrepreneurs-a-bruxelles/"
+      }
+    }
+  },
+  "parcours": {
+    "intro": "Chaque fiche du numéro est rangée dans un chapitre du business plan. Choisissez le chapitre que vous travaillez : seules les fiches qui l'illustrent restent affichées, dans toutes les rubriques.",
+    "chapters": [
+      {
+        "key": "marche",
+        "label": "Marché et clients"
+      },
+      {
+        "key": "offre",
+        "label": "Offre et produit"
+      },
+      {
+        "key": "revenus",
+        "label": "Modèle de revenus et prix"
+      },
+      {
+        "key": "operations",
+        "label": "Opérations et logistique"
+      },
+      {
+        "key": "equipe",
+        "label": "Équipe et fondateurs"
+      },
+      {
+        "key": "financement",
+        "label": "Financement"
+      },
+      {
+        "key": "strategie",
+        "label": "Stratégie et positionnement"
+      }
+    ],
+    "form": {
+      "title": "Décrivez votre projet comme une fiche StartupScan",
+      "note": "Le texte reste dans votre navigateur. Copiez-le pour le coller dans votre business plan ou l'envoyer."
+    }
+  },
+  "threeQuestions": {
+    "kicker": "À vous de jouer · 20 minutes",
+    "title": "Trois questions pour votre propre projet",
+    "list": [
+      "Quel « tableur invisible » tient un processus à bout de bras dans l'entreprise, l'école ou l'association que vous connaissez le mieux ?",
+      "Quel problème vos futurs clients paieraient-ils pour ne jamais rencontrer, comme ceux d'Armadin paient pour ne pas être piratés ?",
+      "Quel outil réservé aux grandes entreprises de votre secteur pourriez-vous rendre accessible aux petites, comme 1club pour les clubs de sport ?"
+    ]
+  },
+  "ideaToTake": {
+    "kicker": "L'idée à prendre · pas encore réalisée à notre connaissance",
+    "title": "Le « DriveX » des petits commerces bruxellois : un abonnement qui remplace le tableur des horaires et des stocks",
+    "constat": "Dans le quartier, la boulangerie, le salon de coiffure et le café gèrent horaires du personnel, commandes fournisseurs et stocks dans un fichier Excel, un cahier ou la tête du patron. DriveX a montré au Japon que remplacer le tableur invisible des PME industrielles est un marché ; FRANK l'a montré pour les courtiers en assurance.",
+    "existing": "Les logiciels de caisse gèrent les ventes, les grands outils de planning visent les chaînes. Nous n'avons pas trouvé d'offre simple, en français, à moins de 50 € par mois, pensée pour un commerce de quartier de deux à six personnes, qui parte des fichiers existants plutôt que de demander de tout ressaisir.",
+    "model": "Les leviers 2 et 5 réunis : lire le tableur actuel du commerçant, le transformer en planning et en commandes fournisseurs, et le vendre en abonnement mensuel comme 1club le fait pour les clubs de sport.",
+    "flow": "Commerçant : <b>abonnement mensuel</b> → le service lit ses fichiers et propose horaires et commandes → <b>partenariat possible avec un grossiste</b>",
+    "test": [
+      "Demander à dix commerçants de votre rue de vous montrer leur fichier ou leur cahier : s'il n'existe pas, il n'y a pas de marché.",
+      "Refaire à la main, pendant un mois, le planning d'un seul commerce pour comprendre ce qui coince.",
+      "Chercher trois commerçants prêts à payer 30 € par mois avant d'écrire une ligne de code."
+    ],
+    "risks": [
+      "Chaque commerce a ses habitudes : un produit trop général ne convient à personne.",
+      "Les commerçants n'ont pas le temps : l'adoption doit tenir en une heure.",
+      "Les logiciels de caisse peuvent ajouter la fonction et vous écraser."
+    ],
+    "warning": "Avant de vous lancer, vérifiez qu'une offre n'a pas vu le jour entre-temps : c'est le premier travail de tout business plan.",
+    "sources": [
+      {
+        "label": "TechStartups, 02/10/2026 (DriveX)",
+        "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-paleblue-dot-ai-deepslate-seeds-fincap-r2crete-more/"
+      },
+      {
+        "label": "TechStartups, 01/10/2026 (FRANK, 1club)",
+        "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
       }
     ]
   }
