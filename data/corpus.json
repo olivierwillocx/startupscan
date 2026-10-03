@@ -1,0 +1,3060 @@
+{
+ "generated": "2026-10-03",
+ "model": "openai/gpt-oss-120b",
+ "fiches": [
+  {
+   "name": "Vinted",
+   "place": "Lituanie",
+   "sector": "seconde main",
+   "lever": 1,
+   "chapter": "revenus",
+   "model": "Place de marché",
+   "desc": "La plateforme de vêtements d'occasion ne prend rien au vendeur. C'est l'acheteur qui paie des frais de protection, qui le remboursent si l'article n'arrive pas ou ne correspond pas.",
+   "flow": "Vendeur : <b>0 €</b> → Acheteur : prix + <b>frais de protection</b> → Vinted",
+   "facts": [
+    "CA 2025 : 1,1 Md€ (+38 %)",
+    "Volume vendu : 10,8 Md€",
+    "26 pays",
+    "Bénéfice : 62 M€"
+   ],
+   "lesson": "Faites payer celui qui a le plus à perdre. En rendant la vente gratuite, Vinted a attiré une offre énorme. L'acheteur, lui, accepte de payer pour être rassuré.",
+   "sources": [
+    {
+     "label": "Retail Insight Network",
+     "url": "https://www.retail-insight-network.com/features/the-business-model-behind-vinteds-success/"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "plateforme seconde main vêtements frais protection acheteur",
+    "place de marché vêtements d'occasion frais remboursement",
+    "comment monétiser une marketplace sans frais vendeur",
+    "solution paiement frais protection acheteur en ligne",
+    "modèle économique plateforme vente gratuite vendeur",
+    "problème confiance achat vêtement occasion frais assurance",
+    "exemple marketplace vêtements d'occasion frais client",
+    "business model frais protection acheteur site de revente",
+    "secteur seconde main modèle gratuit pour le vendeur"
+   ]
+  },
+  {
+   "name": "Too Good To Go",
+   "place": "Danemark",
+   "sector": "alimentation",
+   "lever": 2,
+   "chapter": "offre",
+   "model": "Place de marché",
+   "desc": "Les invendus du jour des boulangeries, restaurants et supermarchés sont vendus dans un « panier surprise », à environ un tiers du prix, à récupérer sur un créneau précis.",
+   "flow": "Commerçant : récupère de l'argent sur un <b>invendu</b> → Client : <b>-66 %</b> → l'appli prend sa part",
+   "facts": [
+    "135 M de repas vendus en 2024",
+    "CA 2024 : ~97 M€ (725 M DKK)",
+    "Rentable depuis 2023",
+    "Créée en 2015"
+   ],
+   "lesson": "Le client ne choisit pas, et ça marche. La surprise évite au commerçant de trier ses invendus et rend le service simple à utiliser pour lui. Une contrainte peut devenir l'attrait du produit.",
+   "sources": [
+    {
+     "label": "Wikipédia, consulté le 01/10/2026",
+     "url": "https://en.wikipedia.org/wiki/Too_Good_To_Go"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "alimentation panier surprise invendus",
+    "marché place de marché anti-gaspillage alimentaire",
+    "restaurants surplus nourriture à prix réduit",
+    "supermarchés ventes d'invendus jour même",
+    "boulangeries paniers mystère invendus",
+    "solution anti-gaspi client curieux prix bas",
+    "service simple récupération repas non vendus",
+    "vente surprise produits alimentaires à tiers prix",
+    "comment éviter le tri des invendus alimentaires",
+    "modèle économique panier surprise anti gaspillage"
+   ]
+  },
+  {
+   "name": "heata",
+   "place": "Royaume-Uni",
+   "sector": "énergie",
+   "lever": 3,
+   "chapter": "operations",
+   "model": "B2B + B2C",
+   "desc": "Un petit serveur informatique est fixé sur le ballon d'eau chaude d'un particulier. Des entreprises louent sa puissance de calcul, et la chaleur qu'il dégage chauffe l'eau de la maison gratuitement.",
+   "flow": "Entreprise : paie le <b>calcul</b> → Foyer : <b>eau chaude gratuite</b> → heata garde la marge",
+   "facts": [
+    "Jusqu'à 340 £ d'économie par an et par foyer",
+    "-1 tonne de CO₂ par maison par an"
+   ],
+   "lesson": "Cherchez ce que votre activité gaspille. La chaleur était un coût pour les centres de données. heata en a fait un cadeau qui lui ouvre des milliers de foyers.",
+   "sources": [
+    {
+     "label": "heata, 04/07/2025",
+     "url": "https://www.heata.co/post/from-ray-workloads-to-hot-water-the-heata-model-in-action"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "serveur sur ballon d'eau chaude location puissance calcul",
+    "chauffage gratuit eau maison grâce à data center",
+    "entreprises louent chaleur serveur domestique",
+    "solution b2b b2c énergie récupération chaleur informatique",
+    "modèle économique chaleur résiduelle data centre",
+    "réduction coût énergétique grâce à serveur domestique",
+    "business model récupération énergie thermique informatique"
+   ]
+  },
+  {
+   "name": "Swapfiets",
+   "place": "Pays-Bas",
+   "sector": "mobilité",
+   "lever": 4,
+   "chapter": "revenus",
+   "model": "B2C",
+   "desc": "On ne vend pas de vélo : on le loue au mois, entretien et réparations compris. Le vélo est reconnaissable à son pneu avant bleu. En cas de panne, il est réparé ou échangé.",
+   "flow": "Abonné : <b>forfait mensuel</b> → Swapfiets garde la propriété et l'entretien",
+   "facts": [
+    "CA 2023 : 85,3 M€ (+19 %)",
+    "45 villes européennes",
+    "Fondé en 2014"
+   ],
+   "lesson": "Vendez la tranquillité, pas l'objet. Le client ne veut pas un vélo, il veut se déplacer sans souci. Garder la propriété pousse aussi l'entreprise à fabriquer solide.",
+   "sources": [
+    {
+     "label": "The Micromobility Newsletter, 27/03/2025",
+     "url": "https://micromobility.substack.com/p/swapfiets-revenue-up-19-to-853m-in"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "location mensuelle de vélo avec entretien inclus",
+    "service d'abonnement vélo sans souci",
+    "vélo en location tout compris réparation incluse",
+    "solution mobilité b2c location vélo",
+    "comment se déplacer à vélo sans entretien",
+    "abonnement vélo mensuel avec garantie panne",
+    "location de bicyclette avec service après-vente",
+    "mobilité durable location vélo clé en main",
+    "offre de transport à vélo sans achat",
+    "vélo loué mois par mois réparation incluse"
+   ]
+  },
+  {
+   "name": "Quilt",
+   "place": "États-Unis",
+   "sector": "chauffage",
+   "lever": 5,
+   "chapter": "revenus",
+   "model": "B2C",
+   "desc": "Une pompe à chaleur sans rien payer au départ : installation, entretien annuel et garantie sont inclus dans une mensualité sur 10 ans. À la fin, le client peut racheter, renouveler ou changer d'appareil.",
+   "flow": "Client : <b>0 € à l'installation</b> + mensualité → partenaire financier → Quilt",
+   "facts": [
+    "130 installateurs partenaires",
+    "34 États",
+    "Contrat : 10 ans"
+   ],
+   "lesson": "Le prix d'entrée bloque plus que le prix total. Beaucoup de clients ont le budget par mois, pas en une fois. Un partenaire financier peut porter l'investissement à votre place.",
+   "sources": [
+    {
+     "label": "CleanTechnica, 29/05/2026",
+     "url": "https://cleantechnica.com/2026/05/29/heat-pumps-us-startup-quilt-lease-finance/"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "chauffage résidentiel paiement mensuel",
+    "pompe à chaleur location-vente sans apport initial",
+    "solution chauffage b2c financement sur 10 ans",
+    "installer une pompe à chaleur sans frais d'installation",
+    "offre chauffage avec mensualité incluse entretien garantie",
+    "budget mensuel pour chauffage domestique",
+    "financement partenaire pour achat de système de chauffage",
+    "renouveler ou racheter sa pompe à chaleur après location",
+    "problème budget initial chauffage solution financement"
+   ]
+  },
+  {
+   "name": "Le paiement au résultat",
+   "place": "Logiciels",
+   "sector": "tendance 2026",
+   "lever": 6,
+   "chapter": "revenus",
+   "model": "B2B",
+   "desc": "Des éditeurs de logiciels ne facturent plus un abonnement par utilisateur, mais chaque problème client résolu par leur assistant automatique, sans intervention humaine. Salesforce, lui, facture par conversation.",
+   "flow": "Pas résolu : <b>0 €</b> · Résolu : Zendesk <b>2 $</b> · HubSpot <b>0,50 $</b>",
+   "facts": [
+    "Zendesk, HubSpot, Salesforce",
+    "Modèle en forte progression"
+   ],
+   "lesson": "Partager le risque rassure l'acheteur. Si le client ne paie que quand ça marche, il n'a plus de raison de dire non. À vous de bien mesurer ce qui compte comme « résultat ».",
+   "sources": [
+    {
+     "label": "The Pricing Conundrum, 09/06/2026",
+     "url": "https://thepricingconundrum.substack.com/p/outcome-based-pricing-in-practice"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "logiciels b2b paiement au résultat",
+    "modèle économique facturation à la performance logiciel",
+    "édition de logiciels rémunération selon problème résolu",
+    "assistant automatisé facturation par succès client",
+    "paiement uniquement quand le problème est résolu",
+    "solution logicielle risque partagé client",
+    "facturation basée sur résultats pour éditeur de software",
+    "modèle b2b paiement au résultat problème client",
+    "logiciel saas paiement à la performance",
+    "rémunération à l'issue du résultat logiciel"
+   ]
+  },
+  {
+   "name": "Cohabs",
+   "place": "Bruxelles",
+   "sector": "logement",
+   "lever": 7,
+   "chapter": "offre",
+   "model": "B2C",
+   "desc": "Des colocations haut de gamme, entièrement meublées et pensées autour de la vie en communauté, louées comme un service clé en main. 5 % des chambres belges sont proposées à loyer réduit de moitié.",
+   "flow": "Locataire : <b>un loyer, chambre meublée et communauté</b> → Cohabs → propriétaires et investisseurs",
+   "facts": [
+    "Fondée en 2016",
+    "1 550 chambres",
+    "5 villes, dont New York",
+    "Levée : > 100 M€"
+   ],
+   "lesson": "Un vieux produit, un nouvel emballage. La colocation existe depuis toujours. Cohabs l'a transformée en service clé en main, et cette idée est partie de Bruxelles.",
+   "sources": [
+    {
+     "label": "Immobilier 2.0, nov. 2022",
+     "url": "https://immo2.pro/actualite-immobilier/cohabs-leve-plus-de-100-millions-deuros-et-vise-5000-chambres-en-coliving-dici-2026/"
+    }
+   ],
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "colocation haut de gamme service clé en main bruxelles",
+    "location meublée communautaire pour jeunes actifs",
+    "logement partagé tout compris avec loyer réduit moitié",
+    "solution logement abordable pour étudiants à bruxelles",
+    "service de colocation premium location meublée belgique",
+    "colocataire recherche appartement meublé tout inclus",
+    "logement communautaire avec réduction de loyer 50 %",
+    "location clé en main pour colocataires recherchant confort",
+    "colocation service complet meublé prix réduit belgique"
+   ]
+  },
+  {
+   "name": "GovWell",
+   "place": "États-Unis",
+   "sector": "services publics",
+   "model": "B2G",
+   "chapter": "marche",
+   "desc": "Un logiciel qui remplace les vieux systèmes des communes pour les permis et licences. Un module vérifie une demande de permis par rapport au règlement local en quelques secondes au lieu de plusieurs semaines.",
+   "facts": [
+    "130 communes et comtés",
+    "34 États",
+    "0 client perdu",
+    "Vente : ~3 mois",
+    "Levée : 25 M$"
+   ],
+   "lesson": "Le secteur public achète aussi de l'innovation. GovWell remplace des fournisseurs installés depuis longtemps. Une première commune convaincue sert de référence pour les suivantes.",
+   "sources": [
+    {
+     "label": "Citybiz, 14/05/2026",
+     "url": "https://www.citybiz.co/article/846615/govwell-raises-25-million-series-a-to-modernize-local-government-with-ai/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Services publics",
+    "levee": "25,0 M$",
+    "mot": "Référence publique"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel gestion permis municipal",
+    "solution numérique remplacement systèmes anciens communes",
+    "innovation b2g pour services publics locaux",
+    "automatisation des autorisations administratives",
+    "software de traitement rapide des permis de construire",
+    "plateforme digitale pour les administrations locales",
+    "réduction du délai d'instruction des dossiers de permis",
+    "système informatisé de contrôle réglementaire municipal"
+   ]
+  },
+  {
+   "name": "KHOY",
+   "place": "Helsinki",
+   "sector": "meubles",
+   "model": "B2C · vente directe",
+   "chapter": "operations",
+   "desc": "Un canapé-lit emballé sous vide dans un carton compact, qui reprend sa forme à la livraison. Résultat : un meuble encombrant devient expédiable partout en Europe et aux États-Unis.",
+   "facts": [
+    "Lancé juin 2024",
+    "CA 2025 : 4,3 M€ (×13)",
+    "80 % des ventes hors Finlande",
+    "Rentable",
+    "Levée : 2 M€"
+   ],
+   "lesson": "Pas besoin d'IA pour innover. Réduire un coût structurel d'un vieux secteur, ici le transport, peut suffire à créer une entreprise internationale.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Finlande",
+    "secteur": "Meubles",
+    "levee": "2,0 M€",
+    "mot": "Coût structurel"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "canapé-lit compact emballé sous vide",
+    "meuble pliable expédition europe états-unis",
+    "vente directe de canapés-lits en ligne",
+    "solution transport meuble encombrant",
+    "réduction coût logistique mobilier",
+    "meubles livrés en carton compressé",
+    "b2c canapé-lit livraison rapide",
+    "innovation secteur meubles sans ia",
+    "canapé convertible emballage sous vide",
+    "mobilier compact pour expédition internationale"
+   ]
+  },
+  {
+   "name": "Chift",
+   "place": "Bruxelles",
+   "sector": "fintech",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Une « prise universelle » qui relie les logiciels de gestion à plus de 120 systèmes comptables, de facturation et de paiement européens. Un métier invisible, mais indispensable.",
+   "facts": [
+    "150 éditeurs clients",
+    "50 000 PME servies",
+    "CA ×10 depuis 2024",
+    "Levée : 10,5 M€"
+   ],
+   "lesson": "Le « travail de plomberie » est un marché. Là où tout le monde perd du temps à bricoler la même chose, il y a une entreprise à créer. Et elle peut naître à Bruxelles.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Fintech",
+    "levee": "10,5 M€",
+    "mot": "Plomberie"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "fintech b2b intégration logiciels de gestion",
+    "solution d'interfaçage comptable pour entreprises",
+    "prise universelle systèmes de facturation européens",
+    "outil de connexion entre erp et plateformes de paiement",
+    "service de plomberie digitale pour la comptabilité",
+    "intégrateur de logiciels de gestion et comptabilité",
+    "automatisation des flux financiers b2b",
+    "réduction du bricolage informatique en finance d'entreprise",
+    "middleware comptable pour pme et grands comptes",
+    "solution d'interconnexion systèmes comptables européens"
+   ]
+  },
+  {
+   "name": "Ahron",
+   "place": "Munich",
+   "sector": "RH",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Des assistants automatiques qui travaillent dans les outils RH que l'entreprise possède déjà (recrutement, accueil, paie), sans demander de tout remplacer.",
+   "facts": [
+    "Fondée fin 2025",
+    "> 1 M€ de revenus récurrents en 2026",
+    "Levée : 2,2 M€"
+   ],
+   "lesson": "Vendre avant de lever. Moins d'un an après sa création, Ahron avait déjà des clients payants des deux côtés de l'Atlantique. Les investisseurs suivent les clients.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Allemagne",
+    "secteur": "RH",
+    "levee": "2,2 M€",
+    "mot": "Vendre d'abord"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "assistants automatiques pour la gestion rh",
+    "solution b2b d'automatisation des processus rh",
+    "assistant virtuel pour les départements rh en entreprise",
+    "optimisation du recrutement avec ia intégrée aux outils rh",
+    "assistant digital pour le service rh b2b"
+   ]
+  },
+  {
+   "name": "Kyndred",
+   "place": "Roumanie",
+   "sector": "grand public",
+   "model": "B2C",
+   "chapter": "marche",
+   "desc": "Un compagnon numérique avec mémoire, voix et visage. L'idée est née d'un projet de tuteur pour la précédente entreprise des fondateurs, une plateforme de cours particuliers.",
+   "facts": [
+    "150 utilisateurs payants en 3 mois",
+    "Revenus avant le lancement officiel",
+    "Levée : 500 k€"
+   ],
+   "lesson": "Votre prochaine idée est souvent dans votre projet actuel. Et faire payer avant de finir le produit reste le meilleur test de marché.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Roumanie",
+    "secteur": "Grand public",
+    "levee": "0,5 M€",
+    "mot": "Tester en faisant payer"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "compagnon numérique mémoire voix visage grand public",
+    "assistant virtuel b2c pour étudiants",
+    "plateforme éducative personnalisée pour le grand public",
+    "service de tuteur numérique payant à l'avance",
+    "assistant virtuel pour cours particuliers modèle b2c",
+    "produit digital d'apprentissage prépayé pour consommateurs"
+   ]
+  },
+  {
+   "name": "Atomic",
+   "place": "Boston",
+   "sector": "logistique",
+   "model": "B2B",
+   "chapter": "equipe",
+   "desc": "Un logiciel qui décide combien de stock acheter et où le placer. Les fondateurs ont vécu le problème chez Tesla en 2018, quand les tableurs ne suivaient plus la cadence de production.",
+   "facts": [
+    "Clients : DoorDash, HelloFresh",
+    "Revenus ×5 depuis janvier",
+    "Levée : 12,5 M$"
+   ],
+   "lesson": "Résolvez un problème que vous avez subi. Une douleur vécue de l'intérieur donne une connaissance du métier qu'aucun concurrent ne rattrape vite.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Logistique",
+    "levee": "12,5 M$",
+    "mot": "Douleur vécue"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel d'optimisation des stocks pour la logistique b2b",
+    "solution de gestion de stock automatisée pour entreprises",
+    "outil décisionnel achat et placement de stock en logistique",
+    "système de gestion intelligente du réapprovisionnement b2b",
+    "outil de réduction des ruptures de stock pour fabricants"
+   ]
+  },
+  {
+   "name": "Arivihan",
+   "place": "Indore (Inde)",
+   "sector": "éducation",
+   "model": "B2C",
+   "chapter": "marche",
+   "desc": "Un tuteur automatique aligné sur les programmes scolaires indiens, avec leçons, réponses instantanées et préparation aux examens, dans les langues locales.",
+   "facts": [
+    "80 % des abonnés en petites villes et zones rurales",
+    "Levée : 10 M$"
+   ],
+   "lesson": "Servir ceux que les autres oublient. Arivihan vise les élèves loin des grands centres de cours. Un marché négligé est souvent un marché libre.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Éducation",
+    "levee": "10,0 M$",
+    "mot": "Marché oublié"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "tutorat automatisé éducation en inde",
+    "plateforme d'aide aux devoirs b2c inde",
+    "cours en ligne pour élèves éloignés des centres",
+    "solution de soutien scolaire locale langue indienne",
+    "préparation aux examens avec réponses instantanées",
+    "outil éducatif pour zones rurales indiennes",
+    "aide scolaire automatisée pour élèves marginalisés",
+    "programme d'études en langues locales inde"
+   ]
+  },
+  {
+   "name": "Blue Health",
+   "place": "Amsterdam",
+   "sector": "santé",
+   "model": "B2C",
+   "chapter": "offre",
+   "desc": "Un bilan de santé préventif d'une heure, à prix fixe, interprété par du personnel médical et suivi dans une application. Une clinique physique plutôt qu'une simple appli.",
+   "facts": [
+    "Bilan : 299 €",
+    "> 2 000 réservations",
+    "Complet jusqu'en novembre",
+    "Levée : 3,4 M€"
+   ],
+   "lesson": "Un prix clair, une offre simple. Le client sait ce qu'il achète, combien il paie et ce qu'il reçoit. La file d'attente est la meilleure preuve de la demande.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Pays-Bas",
+    "secteur": "Santé",
+    "levee": "3,4 M€",
+    "mot": "Offre simple"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "bilan de santé préventif à prix fixe",
+    "consultation médicale d'une heure en clinique",
+    "offre simple santé prévention tarif unique",
+    "service b2c de dépistage santé amsterdam",
+    "prévention santé avec suivi application mobile",
+    "clinique privée bilan santé complet",
+    "solution santé pour éviter les longues attentes",
+    "programme de santé préventive à prix transparent",
+    "bilans médicaux rapides et abordables pour particuliers",
+    "offre santé claire sans surprise tarifaire"
+   ]
+  },
+  {
+   "name": "ArkeaBio",
+   "place": "Boston",
+   "sector": "climat",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Un vaccin pour réduire le méthane produit par les vaches. Les éleveurs vaccinent déjà leur bétail : le produit s'insère dans une habitude existante.",
+   "facts": [
+    "Objectif : –10 à –15 % de méthane",
+    "Ventes visées : 2028",
+    "Équipe réduite d'un tiers",
+    "Levée : 15 M$"
+   ],
+   "lesson": "Se concentrer pour survivre. L'entreprise a réduit ses effectifs, choisi un seul pays et un seul produit. Faire moins, mais aller jusqu'au premier client.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Climat",
+    "levee": "15,0 M$",
+    "mot": "Concentration"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "vaccin anti-méthane bovin secteur climat",
+    "produit vaccinal pour éleveurs afin de diminuer le méthane",
+    "technologie climatique vaccin contre le méthane du bétail",
+    "réduction du méthane agricole vaccination du bétail",
+    "comment vacciner les vaches pour limiter le méthane",
+    "innovation climat vaccins pour élevage bovin",
+    "méthodes de lutte contre le méthane chez les éleveurs",
+    "business plan vaccin anti-méthane pour fermes"
+   ]
+  },
+  {
+   "name": "Rayon",
+   "place": "Paris",
+   "sector": "design",
+   "model": "B2B",
+   "chapter": "revenus",
+   "desc": "Un logiciel de plans pour architectes d'intérieur, dans le navigateur, où l'équipe dessine ensemble en temps réel au lieu de s'échanger des fichiers.",
+   "facts": [
+    "Fondée en 2021",
+    "Client : Virgin Atlantic",
+    "~10 000 € économisés/mois chez certains clients",
+    "Levée : 10 M€"
+   ],
+   "lesson": "Vendez une économie chiffrée. Rayon ne vend pas « un outil moderne », mais des euros gagnés chaque mois. Un chiffre convainc mieux qu'un adjectif.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "France",
+    "secteur": "Design",
+    "levee": "10,0 M€",
+    "mot": "Économie chiffrée"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel de plans d'intérieur collaboratif b2b",
+    "solution design web pour équipes d'architecture intérieure"
+   ]
+  },
+  {
+   "name": "ANote Music",
+   "place": "Luxembourg",
+   "sector": "musique",
+   "model": "Place de marché",
+   "chapter": "marche",
+   "desc": "Une place de marché où l'on achète et revend des parts de droits d'auteur sur des chansons. Ce qui était réservé aux maisons de disques devient accessible à tous.",
+   "facts": [
+    "100 000 chansons",
+    "52 000 comptes",
+    "28 M€ échangés",
+    "Levée : 2 M€"
+   ],
+   "lesson": "Ouvrir un marché fermé. Rendre accessible à beaucoup ce qui était réservé à quelques-uns reste l'une des idées d'entreprise les plus puissantes.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Luxembourg",
+    "secteur": "Musique",
+    "levee": "2,0 M€",
+    "mot": "Marché ouvert"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "marché des droits d'auteur musicaux",
+    "plateforme d'achat et revente parts de royalties musicales",
+    "comment investir dans les droits d'une chanson",
+    "solution pour démocratiser l'accès aux royalties musicales",
+    "acheter parts de droits d'auteur sur des titres musicaux",
+    "revendre ses parts de revenus de chansons",
+    "ouvrir un marché fermé des droits musicaux",
+    "investissement collectif dans les royalties de musique",
+    "place de négoce des droits d'exploitation musicale"
+   ]
+  },
+  {
+   "name": "Qupital",
+   "place": "Hong Kong",
+   "sector": "fintech",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Prête de la trésorerie aux vendeurs d'Amazon, TikTok Shop ou JD.com en analysant leurs ventes en temps réel plutôt que leurs bilans comptables.",
+   "facts": [
+    "9,5 Md$ prêtés au total",
+    "Rentable depuis 2 ans",
+    "300 M$ d'engagements"
+   ],
+   "lesson": "Utilisez la donnée que les autres ignorent. Les banques regardent les comptes de l'an dernier. Qupital regarde les ventes d'aujourd'hui, et prête là où les banques hésitent.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Hong Kong",
+    "secteur": "Fintech",
+    "levee": "300 M$",
+    "mot": "Utilisez la donnée que les autres ignorent"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "prêt de trésorerie fintech pour vendeurs amazon",
+    "solution b2b financement ventes en temps réel",
+    "crédit aux e‑commerçants basé sur les ventes actuelles",
+    "alternative bancaire pour vendeurs jd.com",
+    "fintech b2b financement flux de trésorerie e‑commerce",
+    "crédit aux vendeurs marketplace sans historique comptable",
+    "prêt commercial fintech utilisant les ventes du jour"
+   ]
+  },
+  {
+   "name": "Tandem Health",
+   "place": "Stockholm",
+   "sector": "santé",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "A commencé par un assistant qui rédige les notes des médecins pendant la consultation, et devient le logiciel central des cabinets médicaux.",
+   "facts": [
+    "10 000 établissements de soins",
+    "Certifié dispositif médical",
+    "Levée : 100 M$"
+   ],
+   "lesson": "Entrer par une petite douleur, puis s'étendre. La prise de notes était une corvée concrète. Une fois installé chez le médecin, Tandem peut lui proposer le reste.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Suède",
+    "secteur": "Santé",
+    "levee": "100 M$",
+    "mot": "Entrer par une petite douleur, puis s'étendre"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel de prise de notes médicales b2b",
+    "outil d'assistance rédaction médicale pour médecins",
+    "programme centralisé de suivi patient secteur santé",
+    "technologie automatisation notes consultation médicale",
+    "solution digitale aide à la documentation médicale b2b"
+   ]
+  },
+  {
+   "name": "Fortaegis",
+   "place": "Amsterdam",
+   "sector": "cybersécurité",
+   "model": "B2B + B2G",
+   "chapter": "strategie",
+   "desc": "Génère des clés de chiffrement à partir des propriétés physiques uniques de chaque puce, au lieu de les stocker. Pour la défense, les satellites, les robots.",
+   "facts": [
+    "> 25 entreprises et États clients",
+    "Production en série : 2027",
+    "Levée : 50 M$"
+   ],
+   "lesson": "Aller là où les autres ne regardent pas. Tout le monde protège les logiciels. Fortaegis protège le matériel, une couche plus bas.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Pays-Bas",
+    "secteur": "Cybersécurité",
+    "levee": "50 M$",
+    "mot": "Aller là où les autres ne regardent pas"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "cybersécurité b2b génération de clés physiques",
+    "sécurité matériel défense satellites robots",
+    "solution chiffrement hardware unique puce",
+    "protection du hardware contre le piratage",
+    "clé cryptographique basée sur propriétés physiques",
+    "sécurisation des systèmes embarqués pour gouvernement",
+    "technologie anti‑vol de données matérielles",
+    "cryptographie physique pour entreprises et administrations",
+    "innovation en sécurité des puces électroniques",
+    "méthode de chiffrement sans stockage de clés"
+   ]
+  },
+  {
+   "name": "Aeon",
+   "place": "Zurich",
+   "sector": "santé préventive",
+   "model": "B2C",
+   "chapter": "strategie",
+   "desc": "Propose des IRM du corps entier et des analyses de sang régulières, lues avec l'aide de l'IA, pour détecter les risques avant les symptômes.",
+   "facts": [
+    "500 anomalies recherchées",
+    "100 marqueurs sanguins",
+    "Seed : plus de 12 M€"
+   ],
+   "lesson": "Racheter plutôt que construire. En rachetant un laboratoire allemand, Aeon a obtenu d'un coup des points de prélèvement et près de 10 000 clients.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Suisse",
+    "secteur": "Santé",
+    "levee": "> 12 M€",
+    "mot": "Racheter plutôt que construire"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "irm corps entier prévention santé",
+    "analyses sanguines régulières ia",
+    "détection risques avant symptômes b2c",
+    "services de dépistage préventif pour particuliers",
+    "laboratoire racheté points de prélèvement",
+    "offre santé préventive zurich",
+    "programme de suivi médical personnalisé",
+    "prévention médicale avec intelligence artificielle",
+    "acquisition laboratoire allemand clientèle santé",
+    "solution de prévention santé individuelle"
+   ]
+  },
+  {
+   "name": "UniqYou",
+   "place": "Bengaluru",
+   "sector": "mode",
+   "model": "B2C",
+   "chapter": "operations",
+   "desc": "Une marque de mode féminine qui utilise l'IA pour repérer les tendances avant de décider quoi produire.",
+   "facts": [
+    "Fondée en 2026",
+    "Levée : 1,65 M$"
+   ],
+   "lesson": "En commerce, une erreur se paie en stock. Un logiciel raté se corrige. Une collection ratée finit en soldes. Prévoir la demande est donc le vrai métier.",
+   "sources": [
+    {
+     "label": "TechStartups, 14/09/2026",
+     "url": "https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Mode",
+    "levee": "1,65 M$",
+    "mot": "En commerce, une erreur se paie en stock"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "mode féminine ia prévision tendance",
+    "logiciel prédiction demande mode b2c",
+    "réduction stock invendu grâce ia fashion",
+    "solution ia pour éviter soldes excessives en habillement",
+    "outil d'analyse de tendances mode femme",
+    "optimisation des collections mode par ia",
+    "prévention surstock vêtements femmes",
+    "technologie prédictive dans l'industrie du vêtement",
+    "business model prévision demande fashion b2c"
+   ]
+  },
+  {
+   "name": "General Intuition",
+   "place": "New York",
+   "sector": "IA",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Entraîne des IA qui comprennent le mouvement et les actions, à partir de milliards de vidéos de jeux vidéo publiées sur la plateforme sœur Medal.",
+   "facts": [
+    "3 Md de vidéos par an",
+    "Valorisation : 6,2 Md$",
+    "Levée : 220 M$"
+   ],
+   "lesson": "Une donnée que personne d'autre n'a. Sa vraie richesse, ce sont ces vidéos. Mais la valorisation précède encore les revenus : un pari, pas une certitude.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "IA",
+    "levee": "220 M$",
+    "mot": "Une donnée que personne d'autre n'a"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "ia pour l'analyse de mouvements dans les jeux vidéo b2b",
+    "données vidéo inédites pour ia industrielle",
+    "solution d'ia compréhension actions joueurs",
+    "plateforme d'apprentissage machine à partir de gameplay",
+    "modèle économique data-driven ia b2b",
+    "problème de reconnaissance de mouvements par ia",
+    "exploitation de milliards de vidéos de jeux pour ia",
+    "service b2b d'entraînement d'algorithmes sur vidéos gaming"
+   ]
+  },
+  {
+   "name": "Gravity",
+   "place": "Inde",
+   "sector": "aménagement intérieur",
+   "model": "B2B",
+   "chapter": "equipe",
+   "desc": "Organise la chaîne d'approvisionnement des entreprises d'aménagement intérieur : fournisseurs, matériaux, pose. Fondée par deux anciens cadres de Livspace.",
+   "facts": [
+    "Levée : 15 M$ (capital et dette)"
+   ],
+   "lesson": "Votre ancien emploi est une école. Les fondateurs ont vu chez leur ancien employeur ce qui casse quand on grandit. Ils construisent exactement cela.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Aménagement",
+    "levee": "15 M$",
+    "mot": "Votre ancien emploi est une école"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "aménagement intérieur chaîne d'approvisionnement b2b",
+    "fournisseurs matériaux pose pour décorateurs",
+    "solution logistique entreprises de design d'intérieur",
+    "optimisation supply chain aménagement intérieur",
+    "gestion fournisseurs mobilier bureau belgique",
+    "problème coordination fournisseurs décoration intérieure",
+    "service b2b approvisionnement projets d'aménagement",
+    "plateforme logistique pour architectes d'intérieur",
+    "réduction coûts chaîne d'approvisionnement décorateur",
+    "outil de gestion matériaux et pose interior design"
+   ]
+  },
+  {
+   "name": "Zenithon",
+   "place": "Londres",
+   "sector": "simulation",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Des modèles d'IA qui simulent la physique extrême (réacteurs à fusion, fusées, puces) bien plus vite que les méthodes classiques. Les fondateurs viennent de la recherche sur la fusion.",
+   "facts": [
+    "1 million de configurations testées au lieu d'une",
+    "Équipe : 11 → 17",
+    "Levée : 10 M$"
+   ],
+   "lesson": "Dites où va chaque euro. Zenithon annonce : moitié en puissance de calcul, moitié en recrutements. Un investisseur aime un plan d'emploi des fonds aussi clair.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Royaume-Uni",
+    "secteur": "Simulation",
+    "levee": "10 M$",
+    "mot": "Dites où va chaque euro"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "simulation physique extrême b2b",
+    "modèles ia pour réacteurs à fusion entreprise",
+    "simulation de fusées par intelligence artificielle",
+    "solutions de simulation haute vitesse pour l'industrie",
+    "services de calcul intensif pour la recherche industrielle",
+    "ia accélérant la modélisation de puces électroniques",
+    "entreprise b2b de simulation physique avancée",
+    "problème de lenteur des simulations classiques solution ia",
+    "modèle économique moitié calcul moitié recrutement",
+    "plan d'investissement clair pour services de simulation"
+   ]
+  },
+  {
+   "name": "Destro AI",
+   "place": "Brooklyn",
+   "sector": "robotique",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Ne fabrique pas de robots : son logiciel fait travailler ensemble, dans un même entrepôt, des robots de marques différentes.",
+   "facts": [
+    "Déjà en production chez Yusen Logistics",
+    "Levée : 8 M$"
+   ],
+   "lesson": "Être neutre peut être un avantage. Un entrepôt ne veut pas dépendre d'un seul fabricant. Celui qui relie tout le monde devient indispensable.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Robotique",
+    "levee": "8 M$",
+    "mot": "Être neutre peut être un avantage"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel d'orchestration robots entrepôt b2b",
+    "plateforme d'intégration robotique multi‑fabricants",
+    "outil logiciel coordination robots dans un entrepôt",
+    "service d'interopérabilité robotique pour entrepôts",
+    "comment éviter la dépendance à un seul fabricant de robots",
+    "logiciel b2b d'agrégation de robots logistiques"
+   ]
+  },
+  {
+   "name": "EDT",
+   "place": "Mumbai",
+   "sector": "électroménager",
+   "model": "B2C",
+   "chapter": "financement",
+   "desc": "Une marque d'électroménager de cuisine au design soigné, qui se lance maintenant dans les appareils de beauté.",
+   "facts": [
+    "Stock constitué avant la saison des fêtes",
+    "Levée : 2,4 M$"
+   ],
+   "lesson": "Choisir ses investisseurs pour leur expérience. EDT a fait entrer des dirigeants de la logistique et du commerce : de l'argent, mais surtout du savoir-faire.",
+   "sources": [
+    {
+     "label": "TechStartups, 30/09/2026",
+     "url": "https://techstartups.com/2026/09/30/startup-funding-news-today-september-30-2026-general-intuition-zenithon-arkeabio-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Électroménager",
+    "levee": "2,4 M$",
+    "mot": "Choisir ses investisseurs pour leur expérience"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "marque électroménager cuisine design soigné",
+    "appareils de beauté maison b2c",
+    "entreprise électroménager lancement produits beauté",
+    "investisseurs logistique commerce expérience",
+    "solution électroménager cuisine pour beauté domestique",
+    "modèle d'affaires b2c électroménager",
+    "produits de cuisine design et appareils de soin personnel",
+    "choisir investisseurs avec savoir-faire logistique",
+    "entreprise belge étude cas électroménager beauté"
+   ]
+  },
+  {
+   "name": "Reverion",
+   "place": "Bavière",
+   "sector": "énergie",
+   "model": "B2B",
+   "chapter": "equipe",
+   "desc": "Des centrales électriques en conteneur, issues de l'Université technique de Munich, qui produisent de l'électricité à partir de biogaz ou d'hydrogène, et fonctionnent aussi à l'envers.",
+   "facts": [
+    "Rendement : 74,2 % contre ~40 %",
+    "Usine de 800 emplois prévue",
+    "Levée : 175 M$"
+   ],
+   "lesson": "Le laboratoire peut mener à l'usine. Une recherche universitaire devient une entreprise industrielle. Les universités belges ont aussi leurs cellules de valorisation.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Allemagne",
+    "secteur": "Énergie",
+    "levee": "175 M$",
+    "mot": "Le laboratoire peut mener à l'usine"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "centrales électriques conteneur énergie b2b",
+    "production d'électricité biogaz hydrogène pour entreprises",
+    "solutions énergétiques modulaires pour industriels",
+    "centrale portable à biogaz pour usines",
+    "technologie de conversion énergie inversée b2b",
+    "installations énergétiques décentralisées pour entreprises",
+    "micro-centrales à hydrogène pour sites industriels",
+    "solution énergétique durable pour le secteur industriel",
+    "innovation universitaire énergie industrielle belgique"
+   ]
+  },
+  {
+   "name": "Aptadir",
+   "place": "Milan",
+   "sector": "biotech",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Développe des molécules d'ARN pour réactiver des gènes éteints, avec un premier candidat contre le syndrome de l'X fragile.",
+   "facts": [
+    "Seed : 40 M€",
+    "Encore au stade préclinique"
+   ],
+   "lesson": "Connaître les besoins en capital de son secteur. En logiciel, un amorçage tourne autour du million. En biotech, il peut atteindre 40 M€. Le business plan doit s'adapter au secteur.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Italie",
+    "secteur": "Biotech",
+    "levee": "40 M€",
+    "mot": "Connaître les besoins en capital de son secteur"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "biotechnologie financement capital élevé",
+    "développement molécules arn réactivation gènes",
+    "traitement syndrome x fragile biotech",
+    "modèle b2b biopharma recherche génétique",
+    "besoin de fonds biotech 40 millions euro",
+    "entreprise biotech milan arn thérapeutique",
+    "solutions génétiques pour maladies rares",
+    "levée de capitaux biotech secteur",
+    "industrie pharmaceutique molécules d'arn",
+    "plan d'affaires biotech capitalisation"
+   ]
+  },
+  {
+   "name": "Marble",
+   "place": "Paris",
+   "sector": "fintech",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Un outil open source pour détecter la fraude et le blanchiment, que les banques paramètrent elles-mêmes sans coder.",
+   "facts": [
+    "100 institutions, 25 pays",
+    "3 Md de transactions par an",
+    "70 % des clients hors de France",
+    "Levée : 6,5 M€"
+   ],
+   "lesson": "Ouvrir son code pour gagner la confiance. Une banque doit pouvoir expliquer chaque décision à son régulateur. Un code ouvert le permet, et rassure.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "France",
+    "secteur": "Fintech",
+    "levee": "6,5 M€",
+    "mot": "Ouvrir son code pour gagner la confiance"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "outil open source détection fraude bancaire",
+    "solution fintech b2b anti-blanchiment",
+    "logiciel libre lutte contre la fraude financière",
+    "plateforme open source conformité bancaire",
+    "détecteur de blanchiment pour banques sans coder",
+    "technologie fintech transparence décision régulateur",
+    "service b2b prévention fraude bancaire open source",
+    "outil open source explicabilité décisions bancaires",
+    "logiciel libre conformité anti-blanchiment banque"
+   ]
+  },
+  {
+   "name": "Quartermaster",
+   "place": "Arlington",
+   "sector": "sécurité maritime",
+   "model": "B2B",
+   "chapter": "marche",
+   "desc": "Installe des mâts de capteurs sur des navires et des bouées pour suivre le trafic maritime mondial et repérer les comportements suspects.",
+   "facts": [
+    "Levée : 140 M$"
+   ],
+   "lesson": "La géopolitique crée des marchés. Les tensions internationales font de la surveillance des mers une priorité. Lire l'actualité, c'est aussi repérer des besoins.",
+   "sources": [
+    {
+     "label": "TechStartups, 28/09/2026",
+     "url": "https://techstartups.com/2026/09/28/venture-capital-startup-funding-roundup-september-28-2026-amplify-partners-fidelity-management-dell-technologies-capital-insight-partners-toyota-ventures-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Sécurité",
+    "levee": "140 M$",
+    "mot": "La géopolitique crée des marchés"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "surveillance maritime b2b suivi trafic navire",
+    "capteurs sur bateaux détection comportements suspects",
+    "solutions de sécurité maritime pour compagnies maritimes",
+    "technologie de suivi des navires et bouées",
+    "marché de la surveillance des mers géopolitique",
+    "système de monitoring maritime pour entreprises",
+    "détection d’activités illicites en mer",
+    "installation de capteurs marins pour flotte commerciale",
+    "services de traçabilité du trafic maritime global",
+    "veille sécuritaire océanique pour armateurs"
+   ]
+  },
+  {
+   "name": "SiMa.ai",
+   "place": "Californie",
+   "sector": "puces",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Des puces d'IA économes en énergie, qui font tourner l'IA directement dans les robots et les drones, sans passer par un centre de données.",
+   "facts": [
+    "Valorisation : 1,45 Md$",
+    "Levée : 150 M$"
+   ],
+   "lesson": "Pas le plus gros, le plus adapté. Tout le monde n'a pas besoin du processeur le plus puissant. Viser un usage précis permet d'exister face aux géants.",
+   "sources": [
+    {
+     "label": "TechStartups, 28/09/2026",
+     "url": "https://techstartups.com/2026/09/28/venture-capital-startup-funding-roundup-september-28-2026-amplify-partners-fidelity-management-dell-technologies-capital-insight-partners-toyota-ventures-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Puces",
+    "levee": "150 M$",
+    "mot": "Pas le plus gros, le plus adapté"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "puces ia basse consommation pour robots",
+    "processeur ia intégré drones b2b",
+    "solutions microchips énergie réduite robotique",
+    "hardware ia économique pour industrie",
+    "technologie puce ia autonome sans cloud",
+    "microprocesseur ia pour systèmes embarqués",
+    "chip ia écoénergétique pour automatisation",
+    "fabricant de puces ia pour entreprises robotiques",
+    "solution ia embarquée faible consommation d’énergie",
+    "puce ia sur mesure usage précis robotique"
+   ]
+  },
+  {
+   "name": "Outmarket",
+   "place": "San Francisco",
+   "sector": "assurance",
+   "model": "Place de marché",
+   "chapter": "marche",
+   "desc": "Automatise devis, comparaison et souscription d'assurances pour les petites entreprises.",
+   "facts": [
+    "2 levées en 4 mois",
+    "Valorisation : 335 M$",
+    "Levée : 34,5 M$"
+   ],
+   "lesson": "Les métiers ennuyeux sont des mines d'or. Les dossiers d'assurance n'intéressent personne, sauf les clients qui y perdent des heures.",
+   "sources": [
+    {
+     "label": "TechStartups, 28/09/2026",
+     "url": "https://techstartups.com/2026/09/28/venture-capital-startup-funding-roundup-september-28-2026-amplify-partners-fidelity-management-dell-technologies-capital-insight-partners-toyota-ventures-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Assurance",
+    "levee": "34,5 M$",
+    "mot": "Les métiers ennuyeux sont des mines d'or"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "assurance pour petites entreprises marketplace",
+    "automatisation devis assurance pme",
+    "comparateur d'assurances en ligne pour tpe",
+    "souscription d'assurance simplifiée petite entreprise",
+    "place de marché assurance automatisée",
+    "solution digitale devis assurance pme",
+    "service en ligne comparaison assurances tpe",
+    "plateforme marketplace assurance pour entrepreneurs",
+    "gain de temps dossiers d'assurance petites entreprises",
+    "outil numérique souscription assurance microentreprise"
+   ]
+  },
+  {
+   "name": "CargoX",
+   "place": "Abu Dhabi",
+   "sector": "livraison",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Un réseau de véhicules de livraison sans chauffeur, en ville et sur autoroute, au Moyen-Orient.",
+   "facts": [
+    "Toyota parmi les investisseurs",
+    "Levée : 250 M$"
+   ],
+   "lesson": "Les grands industriels préparent leur avenir. Quand un constructeur automobile investit dans une startup, il achète une option sur son propre futur. Les grands groupes sont aussi des investisseurs potentiels.",
+   "sources": [
+    {
+     "label": "TechStartups, 28/09/2026",
+     "url": "https://techstartups.com/2026/09/28/venture-capital-startup-funding-roundup-september-28-2026-amplify-partners-fidelity-management-dell-technologies-capital-insight-partners-toyota-ventures-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Émirats arabes unis",
+    "secteur": "Logistique",
+    "levee": "250 M$",
+    "mot": "Les grands industriels préparent leur avenir"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "livraison autonome b2b moyen-orient",
+    "réseau de véhicules sans chauffeur pour entreprises",
+    "solution logistique robotisée en ville",
+    "transport de marchandises automatisé pour industriels",
+    "service de livraison sans conducteur pour sociétés",
+    "logistique urbaine autonome pour clients professionnels",
+    "système de transport de fret sans pilote b2b",
+    "livraison par drones terrestres pour entreprises",
+    "optimisation du dernier kilomètre avec véhicules autonomes",
+    "solution économique de distribution automatisée en ville"
+   ]
+  },
+  {
+   "name": "Kasvu Therapeutics",
+   "place": "Helsinki",
+   "sector": "santé mentale",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Développe un médicament contre la dépression qui viserait les bénéfices des psychédéliques, sans les hallucinations.",
+   "facts": [
+    "Essais cliniques : 2e semestre 2027",
+    "Tour sursouscrit",
+    "Levée : 30 M€"
+   ],
+   "lesson": "L'université peut être un investisseur. Les fonds de l'Université d'Helsinki et l'État finlandais figurent au capital. La recherche publique finance aussi ses entreprises.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Finlande",
+    "secteur": "Biotech",
+    "levee": "30 M€",
+    "mot": "L'université peut être un investisseur"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "entreprise biotech santé mentale vendue aux cliniques b2b",
+    "fonds publics finlandais financement start‑up santé mentale",
+    "partenariat b2b entre hôpitaux et biotech santé mentale"
+   ]
+  },
+  {
+   "name": "Clastix",
+   "place": "Naples",
+   "sector": "cloud",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Un logiciel pour gérer des milliers de serveurs en interne sans dépendre des grands du cloud. Son moteur est en open source.",
+   "facts": [
+    "Clients : NVIDIA, Fastweb",
+    "Première levée : 2,9 M€"
+   ],
+   "lesson": "Un client peut devenir investisseur. Mistral AI utilise Clastix et a investi dedans. Le meilleur argument pour un investisseur : un client satisfait.",
+   "sources": [
+    {
+     "label": "TechStartups, 25/09/2026",
+     "url": "https://techstartups.com/2026/09/25/startup-funding-news-today-september-25-2026-kasvu-therapeutics-clastix-prevision-medicine-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Italie",
+    "secteur": "Cloud",
+    "levee": "2,9 M€",
+    "mot": "Un client peut devenir investisseur"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel de gestion de serveurs internes cloud privé",
+    "outil b2b d'administration de data center interne",
+    "plateforme de contrôle serveur en interne pour entreprises",
+    "logiciel de management de serveurs open source pour it"
+   ]
+  },
+  {
+   "name": "Prevision Medicine",
+   "place": "Zurich",
+   "sector": "cancer",
+   "model": "B2B",
+   "chapter": "marche",
+   "desc": "Teste les cellules vivantes d'une tumeur contre une centaine de traitements en trois jours, pour choisir le bon médicament.",
+   "facts": [
+    "Environ la moitié des patients ne répondent pas au traitement standard",
+    "Levée : 5,4 M$"
+   ],
+   "lesson": "Partir d'un chiffre qui frappe. « Un patient sur deux ne répond pas au traitement » : un problème aussi clair se comprend en une phrase.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Suisse",
+    "secteur": "Santé",
+    "levee": "5,4 M$",
+    "mot": "Partir d'un chiffre qui frappe"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "test de cellules tumorales b2b cancer",
+    "diagnostic thérapeutique rapide pour oncologie",
+    "sélection de traitement anti-cancer en trois jours",
+    "service d'essais de médicaments sur tumeurs vivantes",
+    "comment améliorer la réponse aux thérapies anticancéreuses",
+    "outil de prédiction d'efficacité des chimiothérapies",
+    "analyse personnalisée des tumeurs pour médecins",
+    "réduction du taux d'échec des traitements contre le cancer"
+   ]
+  },
+  {
+   "name": "Pilgrim",
+   "place": "Californie",
+   "sector": "biosécurité",
+   "model": "B2B",
+   "chapter": "marche",
+   "desc": "Analyse l'air et séquence l'ADN qu'il contient pour détecter plus tôt des menaces biologiques.",
+   "facts": [
+    "Valorisation : 150 M$",
+    "Seed : 25 M$"
+   ],
+   "lesson": "Préparer la prochaine crise. Après une pandémie, la détection précoce est devenue un marché. Les crises passées dessinent les besoins futurs.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Biosécurité",
+    "levee": "25 M$",
+    "mot": "Préparer la prochaine crise"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "détection précoce biosécurité b2b",
+    "analyse d'air adn pour menaces biologiques",
+    "solution de surveillance biologique pour entreprises",
+    "technologie de détection des agents pathogènes dans l'air",
+    "marché de la biosécurité post-pandémie",
+    "services de monitoring biologique pour industries",
+    "détecteur d'adn atmosphérique pour risques sanitaires",
+    "prévention des crises biologiques grâce à l'analyse d'air",
+    "système de surveillance environnementale contre menaces bio"
+   ]
+  },
+  {
+   "name": "Puxi Optoelectronics",
+   "place": "Hangzhou",
+   "sector": "semi-conducteurs",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Fabrique des puces de puissance qui résistent à plus de 230 °C, pour l'aérospatial, la robotique et la fusion.",
+   "facts": [
+    "CA 2025 : 230 M RMB",
+    "Déjà rentable"
+   ],
+   "lesson": "Être rentable avant de lever. Une entreprise rentable négocie en position de force : elle lève pour accélérer, pas pour survivre.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Chine",
+    "secteur": "Puces",
+    "levee": "—",
+    "mot": "Être rentable avant de lever"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "fabricant b2b de puces résistantes à 230°c pour aérospatial",
+    "semi-conducteurs pour robotique industrielle haute chaleur",
+    "solutions de puces thermorésistantes pour l'aérospatiale",
+    "puces de puissance robustes b2b marché industriel",
+    "fabrication de semi-conducteurs à haute température"
+   ]
+  },
+  {
+   "name": "Langxi Technology",
+   "place": "Shanghai",
+   "sector": "composants",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Fabrique de minuscules composants électroniques intégrés au cœur des processeurs pour mieux les alimenter en énergie.",
+   "facts": [
+    "Levée : ~200 M RMB"
+   ],
+   "lesson": "Fournir la pièce discrète. Personne ne connaît ces composants, mais chaque processeur en a besoin. On peut bâtir une entreprise solide dans l'ombre.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Chine",
+    "secteur": "Composants",
+    "levee": "~200 M RMB",
+    "mot": "Fournir la pièce discrète"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "composants électroniques miniatures pour processeurs b2b",
+    "fournisseur de pièces discrètes pour microprocesseur",
+    "fabricant de composants d’alimentation interne des puces",
+    "vente en gros de micro-composants pour circuits intégrés",
+    "solution d’énergie pour processeur via composant intégré",
+    "fourniture b2b de pièces essentielles aux cpu",
+    "composants de gestion énergétique pour puces informatiques"
+   ]
+  },
+  {
+   "name": "Wealthcome",
+   "place": "Paris",
+   "sector": "gestion de patrimoine",
+   "model": "B2B",
+   "chapter": "marche",
+   "desc": "Un logiciel pour les conseillers en gestion de patrimoine : suivi des portefeuilles et conformité réglementaire.",
+   "facts": [
+    "800 organisations",
+    "6 000 professionnels",
+    "Levée : 15 M€"
+   ],
+   "lesson": "Équiper les pros plutôt que les remplacer. Au lieu de concurrencer les conseillers, Wealthcome leur vend l'outil qui leur fait gagner du temps.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "France",
+    "secteur": "Fintech",
+    "levee": "15 M€",
+    "mot": "Équiper les pros plutôt que les remplacer"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel de gestion de patrimoine pour conseillers",
+    "outil b2b suivi portefeuille conseiller financier",
+    "solution conformité réglementaire en gestion d'actifs",
+    "software gestion patrimoniale pour professionnels",
+    "application aide conseil en investissement",
+    "système de pilotage portefeuille client professionnel",
+    "technologie support conseiller en finance",
+    "plateforme digitale gestion de fortune b2b",
+    "outil numérique conformité et suivi des actifs"
+   ]
+  },
+  {
+   "name": "50skills",
+   "place": "Reykjavik",
+   "sector": "RH",
+   "model": "B2B + B2G",
+   "chapter": "marche",
+   "desc": "Automatise le recrutement et l'accueil des nouveaux salariés.",
+   "facts": [
+    "4 M d'actions par an",
+    "Clients : Icelandair, Domino's, secteur public",
+    "Levée : 5,3 M€"
+   ],
+   "lesson": "Un petit marché peut servir de rampe. L'Islande compte peu d'habitants. 50skills y a rodé son produit avant de viser l'étranger, comme une startup belge peut le faire.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Islande",
+    "secteur": "RH",
+    "levee": "5,3 M€",
+    "mot": "Un petit marché peut servir de rampe"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "automatisation du recrutement b2b",
+    "solution rh pour l'accueil des nouveaux salariés",
+    "outil d'automatisation du hiring en entreprise",
+    "logiciel de gestion du processus d'embauche b2g",
+    "service d'optimisation du recrutement pour les entreprises",
+    "plateforme d'intégration des employés automatisée",
+    "système de digitalisation du recrutement et onboarding"
+   ]
+  },
+  {
+   "name": "ByteAsk",
+   "place": "San Francisco · Bengaluru",
+   "sector": "code",
+   "model": "B2B",
+   "chapter": "strategie",
+   "desc": "Des assistants de programmation spécialisés dans le C/C++ pour l'aéronautique, la défense, l'automobile et la finance.",
+   "facts": [
+    "Fondée en juin 2026",
+    "Y Combinator",
+    "Pré-amorçage : 1 M$"
+   ],
+   "lesson": "Choisir une niche exigeante. Les outils généralistes sont faibles sur le code critique. ByteAsk s'attaque au plus difficile, là où les clients paient le plus.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "États-Unis",
+    "secteur": "Logiciel",
+    "levee": "1 M$",
+    "mot": "Choisir une niche exigeante"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "assistants de programmation c++ pour l'aéronautique",
+    "outils d'aide au code critique b2b",
+    "solution de codage spécialisé défense automobile finance",
+    "logiciel d'assistance c/c++ secteur aéronautique",
+    "service de support programmeur industriel haut de gamme",
+    "outil de développement pour code sensible en finance",
+    "assistant de codage pour projets critiques",
+    "solution d'optimisation du code c++ pour entreprises",
+    "aide à la programmation spécialisée pour secteurs exigeants"
+   ]
+  },
+  {
+   "name": "AIONA",
+   "place": "Tokyo",
+   "sector": "industrie",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Un assistant d'IA pour les bureaux d'études qui capte le savoir-faire des ingénieurs expérimentés avant leur départ à la retraite.",
+   "facts": [
+    "Fondée en octobre 2024",
+    "140 M¥ (capital + prêts bancaires)"
+   ],
+   "lesson": "Combiner capital et prêt bancaire. AIONA mélange investisseurs et banques locales. Lever des fonds n'est pas la seule option : le prêt bancaire n'oblige pas à céder des parts.",
+   "sources": [
+    {
+     "label": "TechStartups, 24/09/2026",
+     "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Japon",
+    "secteur": "Industrie",
+    "levee": "140 M¥",
+    "mot": "Combiner capital et prêt bancaire"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "assistant ia pour bureaux d'études industrie",
+    "solution ia transfert de savoir-faire ingénieurs",
+    "outil ia capital et prêt bancaire b2b",
+    "sauvegarde du know-how avant retraite ingénierie",
+    "assistant virtuel pour études techniques secteur industriel",
+    "transfert de compétences ia bureau d'études",
+    "solution économique sans dilution parts b2b",
+    "outil ia capital-investissement et crédit bancaire",
+    "système ia préservation du patrimoine technique"
+   ]
+  },
+  {
+   "name": "Backbone",
+   "place": "Bruxelles",
+   "sector": "agroalimentaire",
+   "model": "B2B",
+   "chapter": "financement",
+   "desc": "Un logiciel qui gère la qualité et la conformité des usines alimentaires : fournisseurs, documents, incidents, audits.",
+   "facts": [
+    "Belgique, Royaume-Uni, Pays-Bas",
+    "Objectif : 250 sites en 2028",
+    "Pré-amorçage : 4 M€"
+   ],
+   "lesson": "Faire entrer le secteur dans son capital. Des familles de l'agroalimentaire belge, comme Agristo, ont investi. Les clients deviennent ambassadeurs.",
+   "sources": [
+    {
+     "label": "EU-Startups, 03/09/2026",
+     "url": "https://www.eu-startups.com/2026/09/belgian-food-quality-ai-startup-backbone-raises-e4-million-pre-seed-round/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Agroalimentaire",
+    "levee": "4 M€",
+    "mot": "Faire entrer le secteur dans son capital"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "logiciel gestion qualité agroalimentaire b2b",
+    "outil conformité usines alimentaires fournisseurs",
+    "solution suivi incidents audits secteur agroalimentaire",
+    "software contrôle qualité production alimentaire belgique",
+    "application suivi conformité fournisseurs agroalimentaire",
+    "système management qualité usine agroalimentaire belgique",
+    "outil numérique audit et traçabilité alimentaire",
+    "logiciel b2b gestion risques hygiène alimentaire"
+   ]
+  },
+  {
+   "name": "Simple Energy",
+   "place": "Inde",
+   "sector": "scooters électriques",
+   "model": "B2C",
+   "chapter": "financement",
+   "desc": "Un fabricant indien de deux-roues électriques, qui a bouclé un tour de série C mené par le family office du fondateur de Thyrocare, un réseau de laboratoires médicaux.",
+   "facts": [
+    "Série C : 1 750 crore INR"
+   ],
+   "lesson": "Les entrepreneurs qui ont réussi réinvestissent. Un fondateur devenu investisseur apporte du capital et son expérience. Les « business angels » sont souvent d'anciens créateurs.",
+   "sources": [
+    {
+     "label": "StartupTalky, 30/09/2026",
+     "url": "https://startuptalky.com/news/daily-indian-funding-roundup-key-news-30-september-2026"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Mobilité",
+    "levee": "1 750 Cr INR",
+    "mot": "Les entrepreneurs réinvestissent"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "scooter électrique b2c inde financement business angel",
+    "solution de transport électrique low cost en inde b2c",
+    "entrepreneur devenu investisseur scooter électrique série c"
+   ]
+  },
+  {
+   "name": "bilt.me",
+   "place": "Tallinn",
+   "sector": "applications",
+   "model": "B2C + B2B",
+   "chapter": "equipe",
+   "desc": "Trois fondateurs d'une vingtaine d'années ont créé, en août 2025 au sein de la première cohorte du hacker space ruum à Tallinn, un outil qui fabrique une application mobile à partir d'une simple description écrite. Ils construisent en direct sur Twitch.",
+   "facts": [
+    "Né dans un hacker space",
+    "Revenus ×2 par mois, 3 mois de suite",
+    "6 ingénieurs",
+    "Levée : 615 k€"
+   ],
+   "lesson": "Un lieu suffit pour démarrer. Un hacker space ou un incubateur est un vrai point de départ : on y teste une idée, on y trouve ses associés et parfois ses premiers investisseurs.",
+   "sources": [
+    {
+     "label": "EU-Startups, 28/09/2026",
+     "url": "https://www.eu-startups.com/2026/09/estonias-bilt-me-raises-e615k-with-backing-from-bolt-and-lightyear-founders-to-scale-its-ai-native-mobile-app-builder"
+    }
+   ],
+   "recap": {
+    "pays": "Estonie",
+    "secteur": "Applications",
+    "levee": "0,6 M€",
+    "mot": "Hackathon"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Petite pousse",
+   "kw": [
+    "application mobile générée à partir d'une description texte",
+    "plateforme qui transforme un texte en application mobile",
+    "service de génération d'apps à partir d'une simple phrase",
+    "outil low-code pour fabriquer des apps mobiles rapidement"
+   ]
+  },
+  {
+   "name": "Maurice & Nora",
+   "place": "Anvers, Bruxelles",
+   "sector": "services",
+   "model": "Place de marché + B2B",
+   "chapter": "marche",
+   "desc": "Une plateforme qui met en relation des étudiants avec des seniors et des familles pour des coups de main à domicile : courses, compagnie, transport, jardin, garde d'enfants. Prix Belgium Startup Award 2026.",
+   "facts": [
+    "> 3 000 étudiants sélectionnés",
+    "2 000 familles et seniors",
+    "Lancée en un an",
+    "Levée : 1 M€"
+   ],
+   "lesson": "Relier deux besoins en un seul service. Les étudiants cherchent un revenu, les seniors cherchent de l'aide. Une bonne idée résout parfois deux problèmes à la fois.",
+   "sources": [
+    {
+     "label": "Tech.eu, 06/05/2026",
+     "url": "https://tech.eu/2026/05/06/antwerp-startup-maurice-nora-raises-eur1m-to-address-rising-care-demand/"
+    },
+    {
+     "label": "Forbes Belgique, 03/06/2026",
+     "url": "https://www.forbes.be/fr/belgium-startup-awards-2026-six-bsa-dor-pour-un-ecosysteme-en-quete-dunite/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Services",
+    "levee": "1,0 M€",
+    "mot": "Double besoin"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Petite pousse",
+   "kw": [
+    "service b2b d'entraide entre jeunes et personnes âgées",
+    "place de marché aide aux courses pour seniors par étudiants",
+    "solution d'aide à domicile pour familles avec étudiants",
+    "application d'entraide intergénérationnelle belgique",
+    "site web connexion étudiants aides ménagères seniors",
+    "service économique de petits travaux pour personnes âgées",
+    "plateforme d'emploi étudiant pour services à la personne"
+   ]
+  },
+  {
+   "name": "Tout Bien",
+   "place": "Belgique",
+   "sector": "bière",
+   "model": "B2C · via la grande distribution",
+   "chapter": "operations",
+   "desc": "Trois associés, dont un créateur suivi par plus de 500 000 personnes sur Instagram, ont lancé une pils sans posséder de brasserie. Le premier lot a été écoulé en ligne avant d'entrer en supermarché. Prix Belgium Startup Award 2026.",
+   "facts": [
+    "25 000 canettes vendues en 5 heures",
+    "Prix : 0,99 €",
+    "Lancement : 2022"
+   ],
+   "lesson": "Une communauté vaut une usine. Ils n'ont pas construit d'outil de production : ils avaient un public. On peut sous-traiter la fabrication et garder la marque.",
+   "sources": [
+    {
+     "label": "La Libre, 16/06/2022",
+     "url": "https://www.lalibre.be/economie/entreprises-startup/2022/06/16/tout-bien-une-nouvelle-pils-hype-lancee-par-une-star-belge-dinstagram-PEMDWOKDANH5PBPIRJMC5T6YQI/"
+    },
+    {
+     "label": "Forbes Belgique, 03/06/2026",
+     "url": "https://www.forbes.be/fr/belgium-startup-awards-2026-six-bsa-dor-pour-un-ecosysteme-en-quete-dunite/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Bière",
+    "levee": "—",
+    "mot": "Communauté"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Petite pousse",
+   "kw": [
+    "bière artisanale b2c via grande distribution",
+    "vente de pils en ligne puis supermarchés belgique",
+    "comment lancer une marque de bière sans brasserie",
+    "modèle économique sous-traitance fabrication bière",
+    "utiliser sa communauté instagram pour vendre de la bière",
+    "business plan bière sans usine propre",
+    "distribution de bière via supermarchés et réseaux sociaux",
+    "solution pour créer une bière avec production externalisée",
+    "stratégie marketing bière communautaire belgique"
+   ]
+  },
+  {
+   "name": "Le food truck",
+   "place": "Belgique",
+   "sector": "restauration",
+   "model": "B2C",
+   "chapter": "financement",
+   "desc": "Une cuisine sur roues qui va chercher ses clients là où ils sont : marchés, bureaux, festivals, événements privés.",
+   "flow": "Client : <b>un repas</b> → coût des ingrédients, carburant, emplacement → <b>marge</b>",
+   "facts": [
+    "Camion d'occasion : 25 000 à 60 000 €",
+    "Location : ~50 €/jour",
+    "Équipement : 10 000 à 40 000 €",
+    "Carte de commerce ambulant : 100 à 150 €"
+   ],
+   "lesson": "Louer avant d'acheter. À 50 € la journée, on peut tester sa recette et ses emplacements pendant un mois avant d'engager 60 000 €. Ne pas oublier l'enregistrement à l'AFSCA.",
+   "sources": [
+    {
+     "label": "Lightspeed, mis à jour le 09/08/2026",
+     "url": "https://fr.lightspeedhq.be/blog/lancer-son-food-truck-combien-ca-coute/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Restauration",
+    "levee": "—",
+    "mot": "Louer avant d'acheter"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "food truck restauration mobile belgique",
+    "cuisine sur roues b2c marché festivals bureaux",
+    "location food truck test recette avant achat",
+    "comment tester un food truck avant d'investir 60000 euros",
+    "solution cuisine itinérante pour événements privés",
+    "modèle économique location daily food truck 50€",
+    "problème de localisation client restauration mobile",
+    "loueur de food truck belgique réglementation afsca",
+    "business plan food truck location avant achat",
+    "cuisine mobile marché test location journee"
+   ]
+  },
+  {
+   "name": "La Taverne des Dresseurs",
+   "place": "Uccle",
+   "sector": "boutique de cartes",
+   "model": "B2C",
+   "chapter": "marche",
+   "desc": "Une boutique de cartes Pokémon à collectionner qui organise des tournois et sert de lieu de rencontre pour les joueurs.",
+   "flow": "Joueurs : <b>tournois</b> → ils reviennent → <b>achats de cartes</b> en boutique",
+   "facts": [
+    "Nouveau commerce (2026)",
+    "Avenue Brugmann"
+   ],
+   "lesson": "La communauté fait revenir le client. Un tournoi fait venir les clients chaque semaine. Une boutique qui crée un rendez-vous ne dépend plus du seul passage dans la rue.",
+   "sources": [
+    {
+     "label": "Wolvendael Magazine, 12/06/2026",
+     "url": "https://wolvendael.be/nouveaux-commerces-a-uccle/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Commerce",
+    "levee": "—",
+    "mot": "La communauté fait revenir"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "boutique cartes pokémon communauté",
+    "magasin cartes à collectionner tournoi hebdomadaire",
+    "lieu de rencontre joueurs pokémon uccle",
+    "commerce b2c cartes jeux vidéo événement",
+    "vente cartes pokémon et organisation tournois",
+    "point de rassemblement fans pokémon boutique",
+    "magasin cartes collectionneurs fidélisation par événements",
+    "boutique jeux de cartes stratégie clientèle locale",
+    "activité commerciale cartes pokémon animation communautaire"
+   ]
+  },
+  {
+   "name": "La Cuisine",
+   "place": "Uccle",
+   "sector": "épicerie fine et livres",
+   "model": "B2C",
+   "chapter": "offre",
+   "desc": "Une épicerie fine qui est aussi une librairie de cuisine et un lieu où l'on se retrouve.",
+   "flow": "Client : <b>produits + livres + moments</b> → plusieurs raisons de dépenser",
+   "facts": [
+    "Nouveau commerce (2026)",
+    "Ouvert du mercredi au samedi"
+   ],
+   "lesson": "Deux activités qui se nourrissent. Le livre de recettes donne envie d'acheter le produit, et le produit donne envie du livre. Un commerce hybride multiplie les raisons d'entrer.",
+   "sources": [
+    {
+     "label": "Wolvendael Magazine, 12/06/2026",
+     "url": "https://wolvendael.be/nouveaux-commerces-a-uccle/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Commerce",
+    "levee": "—",
+    "mot": "Deux activités qui se nourrissent"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "épicerie fine et librairie cuisine uccle",
+    "magasin hybride livre de recettes produits alimentaires",
+    "lieu de rencontre épicerie fine b2c",
+    "commerce combiné livres cuisine et produits gourmets",
+    "comment augmenter ventes grâce à livres de recettes",
+    "concept boutique mixte épicerie fine librairie",
+    "stratégie marketing épicerie livre cuisine",
+    "problème d'attraction client résolu par offre hybride",
+    "secteur alimentation et littérature culinaire uccle"
+   ]
+  },
+  {
+   "name": "Best Man Barbershop",
+   "place": "Uccle",
+   "sector": "barbier",
+   "model": "B2C",
+   "chapter": "revenus",
+   "desc": "Un salon de barbier misant sur le savoir-faire et un style actuel, ouvert six jours sur sept, dimanche compris.",
+   "flow": "Client : <b>une coupe</b>, puis la suivante quelques semaines plus tard",
+   "facts": [
+    "Nouveau commerce (2026)",
+    "Ouvert le dimanche"
+   ],
+   "lesson": "Le revenu qui revient tout seul. Une barbe ou une coupe repousse. Un service à répéter crée une clientèle fidèle sans gros investissement de départ, et les horaires élargis captent ceux qui travaillent.",
+   "sources": [
+    {
+     "label": "Wolvendael Magazine, 12/06/2026",
+     "url": "https://wolvendael.be/nouveaux-commerces-a-uccle/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Service",
+    "levee": "—",
+    "mot": "Le revenu qui revient"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "barbier à uccle service quotidien",
+    "salon de coupe barbe horaires élargis",
+    "coiffeur homme ouvert dimanche",
+    "service b2c barbier clientèle fidèle",
+    "modèle revenu récurrent barbier",
+    "savoir-faire barbier style actuel",
+    "boutique de rasage sans gros investissement",
+    "barbershop ouvert six jours sur sept",
+    "solution pour hommes pressés coupe rapide",
+    "salon de coiffure masculine horaires flexibles"
+   ]
+  },
+  {
+   "name": "Tournevie",
+   "place": "Bruxelles",
+   "sector": "outilthèque",
+   "model": "B2C",
+   "chapter": "revenus",
+   "desc": "Une « bibliothèque d'outils » : au lieu d'acheter une perceuse pour un seul usage par an, on l'emprunte. Avec des formations et des conseils.",
+   "flow": "Membre : <b>cotisation</b> → accès à tous les outils et à l'atelier",
+   "facts": [
+    "40 € par an ou 20 € par mois",
+    "~500 membres (au moment de l'article)",
+    "Deux lieux à Bruxelles"
+   ],
+   "lesson": "Une cotisation simple, un usage partagé. Un seul outil sert à des dizaines de personnes. Le modèle de l'abonnement fonctionne aussi pour un projet de quartier, sans technologie compliquée.",
+   "sources": [
+    {
+     "label": "Dot to Dot",
+     "url": "https://dot-to-dot.be/tournevie/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Service",
+    "levee": "—",
+    "mot": "Cotisation simple"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "bibliothèque d'outils à bruxelles",
+    "location d'outils pour particuliers",
+    "abonnement partage outils bricolage",
+    "emprunter perceuse au lieu d'acheter",
+    "service de prêt d'outils b2c",
+    "solution économique outil unique usage multiple",
+    "formation et conseils bricolage en location",
+    "outilthèque abonnement mensuel",
+    "partage d'équipements de chantier pour particuliers",
+    "cotisation simple bibliothèque d'outils"
+   ]
+  },
+  {
+   "name": "Meditații.ro",
+   "place": "Roumanie",
+   "sector": "cours particuliers",
+   "model": "Place de marché",
+   "chapter": "marche",
+   "desc": "Une plateforme qui met en relation des élèves avec des professeurs particuliers. Ses fondateurs ont ensuite créé Kyndred, présentée plus haut.",
+   "flow": "Élève : <b>prix du cours</b> → professeur, la plateforme garde <b>une part</b>",
+   "facts": [
+    "Plus de 15 M€ de cours vendus"
+   ],
+   "lesson": "Commencer par un besoin éternel. Les parents voudront toujours aider leurs enfants à réussir. Un besoin simple et durable peut financer les projets plus ambitieux qui suivent.",
+   "sources": [
+    {
+     "label": "TechStartups, 29/09/2026",
+     "url": "https://techstartups.com/2026/09/29/startup-funding-news-today-september-29-2026-atomic-anote-helix-marble-reverion-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Roumanie",
+    "secteur": "Éducation",
+    "levee": "—",
+    "mot": "Un besoin éternel"
+   },
+   "issue": 1,
+   "issueId": "n01",
+   "issueLabel": "semaine du 28 septembre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "plateforme cours particuliers marché en ligne",
+    "site mise en relation élèves professeurs privés",
+    "place de marché pour le soutien scolaire",
+    "service d'aide aux devoirs pour parents",
+    "solution de tutorat en ligne pour enfants",
+    "marché des cours à domicile",
+    "trouver un professeur particulier via marketplace",
+    "plateforme de soutien scolaire pour étudiants",
+    "mise en relation parent élève prof particulier",
+    "site de cours particuliers avec commission sur réservation"
+   ]
+  },
+  {
+   "name": "PaleBlueDot AI",
+   "place": "États-Unis",
+   "sector": "infrastructure IA",
+   "lever": 1,
+   "chapter": "revenus",
+   "model": "B2B",
+   "desc": "Loue de la capacité de calcul GPU à des entreprises qui veulent utiliser l'IA sans acheter ni gérer leurs propres serveurs. Une place de marché met également en relation clients et fournisseurs tiers de puissance de calcul.",
+   "flow": "Client : paie à la <b>minute ou au mois</b> → PaleBlueDot exploite les clusters → marge sur la différence",
+   "facts": [
+    "Fondée en 2024",
+    "5 Md$ de contrats clients signés au 30 sept.",
+    "Valorisation : 3,2 Md$",
+    "Levée Série C : 200 M$"
+   ],
+   "lesson": "Pendant la ruée vers l'or, vendre des pelles. Quand tout le monde veut faire tourner de l'IA, celui qui loue la puissance de calcul récupère une part de chaque dollar dépensé.",
+   "sources": [
+    {
+     "label": "TechStartups, 02/10/2026",
+     "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+    }
+   ],
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "location capacité gpu pour entreprises",
+    "marché location puissance de calcul ia",
+    "service b2b d'infrastructure ia",
+    "loueur de ressources gpu aux sociétés",
+    "solution externalisation serveur ia",
+    "fournisseur cloud gpu pour business",
+    "comment louer du calcul intensif ia",
+    "plateforme mise en relation fournisseurs gpu",
+    "résoudre besoin de puissance ia sans achat matériel",
+    "location serveurs ia pour entreprises"
+   ]
+  },
+  {
+   "name": "DriveX",
+   "place": "Japon",
+   "sector": "logiciel industriel",
+   "lever": 2,
+   "chapter": "operations",
+   "model": "B2B",
+   "desc": "Remplace les plannings de production gérés dans des fichiers Excel. Le système lit les fichiers existants, tient compte des machines disponibles, des équipes et des contraintes de process, et propose un planning Gantt modifiable.",
+   "flow": "Usine : <b>abandonne Excel</b> → DriveX planifie et apprend des résultats réels → abonnement récurrent",
+   "facts": [
+    "Intégration ERP et MES",
+    "Apprend des résultats réels pour ajuster ses prévisions",
+    "Levée : 150 M¥"
+   ],
+   "lesson": "Le tableur invisible est partout. Dans chaque PME industrielle, il y a un fichier Excel qui tient un processus critique. Quand l'entreprise grandit, il craque. DriveX arrive juste à ce moment-là.",
+   "sources": [
+    {
+     "label": "TechStartups, 02/10/2026",
+     "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+    }
+   ],
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "logiciel de planification industrielle b2b",
+    "outil de scheduling production pour pme",
+    "solution remplacement planning excel usine",
+    "software gestion de planning gantt industriel",
+    "application optimisation production machines",
+    "programme automatisé planning équipes industrielles",
+    "système de planification production sans tableur",
+    "outil informatique contraintes process manufacturing",
+    "solution digitale planning production industrielle",
+    "logiciel industrial planning sans excel"
+   ]
+  },
+  {
+   "name": "Armadin",
+   "place": "États-Unis",
+   "sector": "cybersécurité",
+   "lever": 3,
+   "chapter": "revenus",
+   "model": "B2B",
+   "desc": "Des essaims d'agents IA testent en permanence les défenses d'une entreprise, cherchent les failles exploitables et remontent des rapports détaillés — avant qu'un vrai pirate ne les trouve.",
+   "flow": "Entreprise : paie pour <b>ne pas être piratée</b> → Armadin lance 26 000 agents → rapport des chemins d'attaque trouvés",
+   "facts": [
+    "Fondé par le fondateur de Mandiant",
+    "Valorisation : +2,5 Md$",
+    "Total levé : 445 M$",
+    "Levée Série B : 255,5 M$"
+   ],
+   "lesson": "Vendre ce qui ne se voit pas. Un client qui n'a jamais été piraté ne sait pas s'il est bien protégé. Armadin lui montre les portes ouvertes — et les referme. La preuve du problème est le produit.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "cybersécurité b2b test automatisé des failles",
+    "agents ia pour tester la sécurité informatique d'entreprise",
+    "détection proactive des vulnérabilités réseau",
+    "solution de tests continus des défenses cyber",
+    "audit automatique des points faibles informatiques",
+    "service de simulation d'attaques internes pour entreprises",
+    "outil d'analyse des portes ouvertes en cybersécurité",
+    "prévention des piratages grâce à ia",
+    "rapport détaillé des failles exploitées avant intrusion",
+    "sécurisation proactive des systèmes d'information b2b"
+   ]
+  },
+  {
+   "name": "Seeds Fincap",
+   "place": "Inde",
+   "sector": "fintech",
+   "lever": 4,
+   "chapter": "marche",
+   "model": "B2C",
+   "desc": "Prête aux très petites entreprises indiennes — vendeurs de rue, artisans, micro-commerçants — sur base de leurs flux de trésorerie réels, pas de leurs bilans comptables qu'ils n'ont souvent pas.",
+   "flow": "Nano-entrepreneur : <b>pas de bilan</b> → Seeds analyse les flux → prêt de 50 000 à 1 M de roupies",
+   "facts": [
+    "164 agences en Inde",
+    "70 000 emprunteurs actifs",
+    "722 crore INR d'actifs",
+    "Rentable",
+    "Levée Série B : ~10,4 M$"
+   ],
+   "lesson": "La banque regarde hier. Seeds Fincap regarde aujourd'hui. Quand les données de flux remplacent les bilans, un milliard de personnes deviennent solvables aux yeux d'un prêteur.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "prêt micro-entrepreneur indien sans bilan",
+    "financement street vendor inde cash flow",
+    "crédit b2c petites entreprises indiennes",
+    "solution fintech prêt flux de trésorerie",
+    "micro-crédit artisans inde modèle basé sur cash flow",
+    "prêt aux commerçants informels en inde",
+    "finance alternative pour vendeurs de rue",
+    "prêt sans garantie comptable inde",
+    "fintech solvabilité basée sur flux réels",
+    "crédit instantané micro-commerçants inde"
+   ]
+  },
+  {
+   "name": "1club",
+   "place": "Bulgarie",
+   "sector": "sports",
+   "lever": 5,
+   "chapter": "marche",
+   "model": "B2B + Place de marché",
+   "desc": "Un logiciel tout-en-un pour les petits clubs de sport, studios de yoga et salles de fitness : membres, paiements, planning, marketing, application mobile — plus une marketplace de réservation en ligne (1club.me) qui amène de nouveaux clients.",
+   "flow": "Club : <b>abonnement mensuel</b> → 1club gère tout → marketplace 1club.me amène des clients",
+   "facts": [
+    "Fondé par le créateur de OfficeRnD",
+    "Clients dans 10+ pays",
+    "Utilisateurs dans 40+ pays",
+    "Seed : 2,2 M€"
+   ],
+   "lesson": "Les grandes chaînes avaient tout. Les petits clubs bricolaient. 1club donne aux indépendants les outils des franchises — et ajoute un canal d'acquisition de clients qu'ils n'auraient jamais pu se payer seuls.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele innovant",
+   "kw": [
+    "logiciel de gestion pour clubs de sport",
+    "outil tout-en-un pour studios de yoga",
+    "solution b2b marketplace réservations fitness",
+    "application mobile gestion membres salle de sport",
+    "plateforme d'acquisition clients pour petits clubs sportifs",
+    "software gestion planning paiement club fitness",
+    "système de marketing et réservation en ligne pour gymnases",
+    "outil économique pour indépendants du secteur sportif",
+    "solution digitale pour petites structures sportives",
+    "marketplace réservation cours yoga belgique"
+   ]
+  },
+  {
+   "name": "Osavul",
+   "place": "Luxembourg",
+   "sector": "renseignement",
+   "model": "B2G",
+   "chapter": "marche",
+   "desc": "Une plateforme qui analyse plus d'un milliard de points de données par mois dans plus de 100 pays pour détecter des signaux géopolitiques — mouvements de troupes, désinformation, cybermenaces — avant qu'ils ne deviennent des attaques.",
+   "facts": [
+    "Fondée par des entrepreneurs ukrainiens",
+    "Clients : gouvernements de 10 pays dont des membres de l'OTAN",
+    "Revenus ×4 en un an",
+    "Total levé : ~12 M€",
+    "Levée Série A : 8,5 M€"
+   ],
+   "lesson": "Le contexte géopolitique crée des marchés. Depuis 2022, les gouvernements européens cherchent des outils d'anticipation. Osavul a construit le sien depuis l'Ukraine — et l'a vendu depuis le Luxembourg.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Luxembourg",
+    "secteur": "Défense",
+    "levee": "8,5 M€",
+    "mot": "Anticiper avant l'attaque"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "plateforme d'analyse de données géopolitiques b2g",
+    "solution de renseignement stratégique pour l'état",
+    "système d'alerte précoce contre attaques cybernétiques b2g",
+    "solution d'intelligence économique gouvernementale"
+   ]
+  },
+  {
+   "name": "Foundational",
+   "place": "Royaume-Uni",
+   "sector": "spatial",
+   "model": "B2G + B2B",
+   "chapter": "financement",
+   "desc": "Construit un réseau commercial de stations de télémétrie laser par satellite — pour positionner les satellites avec une précision millimétrique et suivre les débris spatiaux, à 30 fois moins cher que les méthodes classiques.",
+   "facts": [
+    "Fondée en 2025",
+    "Clients : ESA, gouvernement britannique",
+    "Précision millimétrique à 30x moins cher",
+    "Pré-seed : 9,6 M€"
+   ],
+   "lesson": "Un problème bien défini attire les capitaux tôt. Foundational a levé 9,6 M€ avant même d'avoir un service en production, parce que le problème — trop peu de stations de tracking spatial — est documenté, chiffré et coûteux.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Royaume-Uni",
+    "secteur": "Spatial",
+    "levee": "9,6 M€",
+    "mot": "Un problème bien défini attire les capitaux tôt"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "stations de tracking spatial coût réduit",
+    "solution b2g b2b pour précision orbitale",
+    "suivi des débris en orbite à moindre prix",
+    "services de localisation satellite haute précision",
+    "problème manque de stations de tracking spatial",
+    "technologie laser satellitaire pour positionnement exact",
+    "entreprise offrant suivi des débris spatiaux économique"
+   ]
+  },
+  {
+   "name": "Deepslate",
+   "place": "Allemagne",
+   "sector": "voix IA",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Des modèles d'IA vocale entraînés à reproduire le ton, la prosodie et les caractéristiques d'une voix — pour des assistants téléphoniques, des centres d'appels et des applications d'assurance — avec déploiement possible sur les propres serveurs du client.",
+   "facts": [
+    "0,44 seconde jusqu'au premier mot",
+    "250 ms de réponse après la fin de l'interlocuteur",
+    "ISO 27001",
+    "Déploiement on-premise et air-gapped disponible",
+    "Seed : 7,7 M€"
+   ],
+   "lesson": "La souveraineté des données est un argument commercial. Les banques et assurances européennes hésitent à envoyer les voix de leurs clients dans des serveurs américains. Deepslate leur offre l'IA sans le risque réglementaire.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Allemagne",
+    "secteur": "IA vocale",
+    "levee": "7,7 M€",
+    "mot": "La souveraineté comme argument commercial"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "voix ia souveraineté des données b2b",
+    "assistant vocal ia pour banques et assurances",
+    "modèle d'intelligence artificielle vocale sur serveur local",
+    "solution ia voix personnalisée centre d'appels europe",
+    "technologie de synthèse vocale sécurisée pour assurance",
+    "ia vocale conformité rgpd entreprises téléphoniques",
+    "service ia voix propriétaire déploiement on‑premise",
+    "système vocal ia sans risque réglementaire",
+    "reproduction ton et prosodie voix ia b2b",
+    "solution ia vocale pour services clients européens"
+   ]
+  },
+  {
+   "name": "FRANK",
+   "place": "Portugal",
+   "sector": "assurance",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Une plateforme IA pour les courtiers en assurance : elle lit les documents, remplit les formulaires, accède aux portails des assureurs et saisit les données à la place du courtier. Résultat : 10 heures administratives économisées par semaine et par courtier.",
+   "facts": [
+    "350+ agences",
+    "1 500 utilisateurs actifs",
+    "70 000 tâches automatisées par mois",
+    "Seed : 2,9 M€"
+   ],
+   "lesson": "Le travail ennuyeux est un marché. Les courtiers passent des heures à remplir des formulaires identiques sur des portails différents. FRANK fait ça à leur place — et ils paient pour ne plus le faire.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Portugal",
+    "secteur": "Assurance",
+    "levee": "2,9 M€",
+    "mot": "Le travail ennuyeux est un marché"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "plateforme ia assurance pour courtiers",
+    "automatisation remplissage formulaires d'assurance b2b",
+    "solution numérique pour courtiers en assurances",
+    "réduction tâches administratives courtier assurance",
+    "outil ia saisie données portails assureurs",
+    "gain de temps administratif courtier assurance",
+    "logiciel d'aide à la souscription d'assurance",
+    "service automatisé remplissage dossiers d'assurance",
+    "technologie ia pour gestion paperwork assurance",
+    "optimisation processus administratif courtiers"
+   ]
+  },
+  {
+   "name": "Certo Aerospace",
+   "place": "Royaume-Uni",
+   "sector": "défense",
+   "model": "B2G",
+   "chapter": "strategie",
+   "desc": "Un aéronef autonome à décollage vertical de 600 kg, en vol depuis 2023, pour la logistique militaire, l'évacuation sanitaire, le maritime et la réponse aux catastrophes. Participe aux essais du ministère de la Défense britannique.",
+   "facts": [
+    "En vol depuis 2023",
+    "Autorisé par la Civil Aviation Authority",
+    "Partenariat BAE Systems (programme FalconWorks)",
+    "Levée : 5 M£"
+   ],
+   "lesson": "Un produit physique qui vole est plus difficile à copier qu'un logiciel. Certo a trois ans de vols derrière lui. Dans la défense, l'historique de fiabilité vaut autant que la technologie.",
+   "sources": [
+    {
+     "label": "TechStartups, 02/10/2026",
+     "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Royaume-Uni",
+    "secteur": "Défense",
+    "levee": "5 M£",
+    "mot": "Un historique est une barrière à l'entrée"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "aéronef autonome logistique militaire",
+    "drone vertical b2g défense",
+    "véhicule aérien d'évacuation sanitaire",
+    "solution de transport aérien pour catastrophes",
+    "produit physique volant difficile à copier",
+    "fiabilité historique drone militaire",
+    "aéronef de secours maritime autonome",
+    "système de livraison aérienne en zone de conflit",
+    "véhicule aérien non piloté logistique défense"
+   ]
+  },
+  {
+   "name": "OSCP",
+   "place": "Canada",
+   "sector": "défense",
+   "model": "B2G",
+   "chapter": "strategie",
+   "desc": "Des gyroscopes photoniques qui permettent à des drones et engins militaires de naviguer sans GPS — même quand le signal est brouillé ou coupé. Fabriqués au Canada, certifiés ITAR-free.",
+   "facts": [
+    "Qualification comme fournisseur du programme canadien Defence Drone Initiative",
+    "ITAR-free — sans restrictions d'exportation américaines",
+    "Série A (montant non divulgué, clôturée en août 2026)"
+   ],
+   "lesson": "Quand le GPS ne fonctionne plus, ce qui navigue gagne. Les conflits en Ukraine ont montré que le brouillage GPS est désormais courant. OSCP construit la solution au problème que tout le monde a vu mais que peu ont résolu.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Canada",
+    "secteur": "Défense",
+    "levee": "N.D.",
+    "mot": "Naviguer sans GPS"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "gyroscopes photoniques navigation sans gps défense",
+    "drones militaires anti-brouillage gps canada",
+    "solution b2g navigation drone sans satellite",
+    "système de navigation inertielle pour drones de défense",
+    "produit itar-free pour forces armées canadiennes",
+    "innovation belge en navigation militaire sans gps",
+    "comment naviguer quand le gps est coupé",
+    "défense anti-jamming gps pour véhicules aériens"
+   ]
+  },
+  {
+   "name": "Gwanak Research Institute",
+   "place": "Corée du Sud",
+   "sector": "IA financière",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Un moteur de décision IA pour les institutions financières qui croise données structurées (scores, historiques) et données non structurées (notes de conseillers, logs de consultations) pour recommander quels clients prioriser.",
+   "facts": [
+    "Fondé en 2023",
+    "Investisseur : Seoul National University Technology Holdings",
+    "Cible : banques, assureurs, institutions publiques de financement",
+    "Levée : 300 M KRW"
+   ],
+   "lesson": "Les notes d'un conseiller valent parfois plus que le score de crédit. Gwanak exploite les données textuelles que les banques ignorent parce qu'elles ne savent pas les analyser. La donnée non structurée est encore un territoire presque vierge.",
+   "sources": [
+    {
+     "label": "TechStartups, 02/10/2026",
+     "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Corée du Sud",
+    "secteur": "Fintech",
+    "levee": "300 M KRW",
+    "mot": "Exploiter la donnée que les autres ignorent"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Fiche de la semaine",
+   "kw": [
+    "ia financière pour banques b2b",
+    "moteur de décision ia pour institutions financières",
+    "analyse de données non structurées en finance",
+    "recommandation de clients prioritaires banque ia",
+    "outil d'ia croisant scores crédit et notes conseillers",
+    "solution ia pour prioriser les dossiers bancaires",
+    "exploitation des logs de consultations bancaires ia",
+    "technologie ia pour améliorer la sélection client bancaire",
+    "analyse textuelle des conseils financiers ia",
+    "optimisation du scoring client avec données non structurées"
+   ]
+  },
+  {
+   "name": "R2Crete",
+   "place": "Melbourne",
+   "sector": "matériaux",
+   "model": "B2B",
+   "chapter": "offre",
+   "desc": "Une technologie issue de l'Université de Melbourne qui sépare le béton de démolition en agrégats réutilisables et en substitut de ciment. 75 % du ciment récupéré, émissions de CO₂ réduites de moitié. L'Australie génère 7 millions de tonnes de béton usagé par an.",
+   "facts": [
+    "Spin-out Université de Melbourne",
+    "Pilote industriel prévu fin 2026",
+    "7 M de tonnes de béton usagé/an en Australie",
+    "Pré-seed : 750 000 A$"
+   ],
+   "lesson": "Un déchet bien traité devient une matière première. R2Crete fait pour le béton ce que Too Good To Go fait pour les invendus alimentaires. Et ça aussi, ça peut partir d'une université.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Australie",
+    "secteur": "Matériaux",
+    "levee": "750 K A$",
+    "mot": "Spin-out universitaire"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Petite pousse",
+   "kw": [
+    "recyclage du béton b2b",
+    "technologie de récupération d'agrégats pour construction",
+    "solution de réutilisation des déchets de chantier",
+    "substitut de ciment à faible empreinte carbone",
+    "industrie du matériau de construction durable",
+    "comment réduire les émissions co2 du béton",
+    "entreprise universitaire recyclage béton",
+    "valorisation des débris de démolition",
+    "matière première issue du béton usagé",
+    "modèle économique de récupération de ciment"
+   ]
+  },
+  {
+   "name": "Aignosis",
+   "place": "Inde",
+   "sector": "santé",
+   "model": "B2G",
+   "chapter": "marche",
+   "desc": "Un outil de dépistage de l'autisme et des troubles du développement par vision par ordinateur, utilisable sur un simple ordinateur portable avec webcam standard. Déjà déployé dans plus de 20 centres de santé gouvernementaux au Rajasthan.",
+   "facts": [
+    "Certification CDSCO Classe B",
+    "Partenariat Mankind Pharma (1 300 représentants)",
+    "8 000 dépistages réalisés",
+    "Objectif : 100 000 dépistages d'ici fin FY27",
+    "Seed : ~417 K$"
+   ],
+   "lesson": "Réduire le coût d'un diagnostic, c'est ouvrir l'accès à des millions de personnes. Aignosis ne remplace pas le médecin — il l'amène là où il n'y en a pas. Et il n'a eu besoin que d'un ordinateur portable pour commencer.",
+   "sources": [
+    {
+     "label": "TechStartups, 01/10/2026",
+     "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
+    }
+   ],
+   "recap": {
+    "pays": "Inde",
+    "secteur": "Santé",
+    "levee": "~417 K$",
+    "mot": "Grand impact, petit budget"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Petite pousse",
+   "kw": [
+    "outil de dépistage autismé en santé publique",
+    "diagnostic autismé à faible coût pour gouvernements",
+    "solution b2g pour troubles du développement",
+    "détection autismes via webcam ordinateur portable",
+    "réduction du coût diagnostic autisme secteur public",
+    "logiciel d'analyse vidéo pour identifier l'autisme",
+    "système de dépistage autismé accessible aux zones rurales"
+   ]
+  },
+  {
+   "name": "GAT, le café par un trou dans le mur",
+   "place": "Ixelles",
+   "sector": "café à emporter",
+   "model": "B2C",
+   "chapter": "operations",
+   "desc": "Un local de 10 m² rue Lesbroussart, un mur gris, un QR code pour commander et un trou par lequel sort la boisson. Pas de salle, pas de serveur : une seule personne suffit pour faire tourner le lieu.",
+   "flow": "Client : <b>commande par QR code</b> → une personne prépare → <b>la boisson sort par le trou</b>",
+   "facts": [
+    "Ouvert le 24 mai 2026",
+    "10 m², une seule personne",
+    "Limonades, eau de coco et friandises pour chiens en plus du café"
+   ],
+   "lesson": "Supprimer la salle, c'est supprimer le loyer, le personnel et la vaisselle. Le concept devient le décor : on dessine sur le mur en attendant. Un modèle à copier pour qui a un pas-de-porte minuscule et une recette qui tient dans un gobelet.",
+   "sources": [
+    {
+     "label": "Paris Match Belgique, 27/05/2026",
+     "url": "https://www.parismatch.be/lifestyle/food/2026/05/27/gat-la-nouvelle-adresse-bruxelloise-ou-le-cafe-surgit-dun-trou-un-concept-minimaliste-et-legerement-provocateur-TSO7LA64KZGBRHT5O3LPTKKQKE/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Horeca",
+    "levee": "—",
+    "mot": "Supprimer la salle"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "café à emporter petit local ixelles sans salle",
+    "concept café sans serveur qr code commande",
+    "business model micro-café mur trou boisson",
+    "comment ouvrir un café minimaliste pas de salle",
+    "idée café ultra-compact location réduite",
+    "service café automatisé sans personnel",
+    "réduire loyer et vaisselle dans un café à emporter",
+    "café rapide qr code commande sans salle ixelles",
+    "modèle économique micro-café sans personnel ni vaisselle",
+    "café à emporter petit espace mur décoratif"
+   ]
+  },
+  {
+   "name": "Cotti Coffee, le café à 1 euro",
+   "place": "Bruxelles",
+   "sector": "café en franchise",
+   "model": "B2C",
+   "chapter": "revenus",
+   "desc": "Chaîne chinoise créée en 2022, 18 000 points de vente dans 28 pays. Première boutique dans le quartier européen, puis Grand-Place, Anvers, Gand, Namur : au moins 10 adresses en Belgique fin 2026. Commande sur l'application, petite surface, pas de fauteuils.",
+   "flow": "Client : <b>0,99 à 4 €</b> par boisson → volume élevé, surface réduite → <b>marge par le nombre</b>",
+   "facts": [
+    "Prix de 0,99 à 4 € maximum",
+    "Franchise : le franchisé investit, la marque fournit",
+    "Objectif : 10 boutiques en Belgique fin 2026"
+   ],
+   "lesson": "Un prix cassé n'est tenable que si tout le reste est réduit : surface, personnel, temps passé par client. La franchise permet à un indépendant de démarrer avec une marque connue, contre une redevance et peu de liberté.",
+   "sources": [
+    {
+     "label": "RTBF, 08/06/2026",
+     "url": "https://www.rtbf.be/article/le-cafe-a-un-euro-debarque-en-belgique-certains-vont-ils-boire-la-tasse-11734962"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Horeca",
+    "levee": "—",
+    "mot": "Le volume fait la marge"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "café pas cher franchise bruxelles",
+    "chaîne de cafés low cost modèle b2c belgique",
+    "franchise café 1 euro problème réduction coûts",
+    "point de vente café petit format sans sièges",
+    "application commande café à prix cassé",
+    "modèle économique café ultra discount",
+    "comment ouvrir un coffee shop à 1 euro en franchise",
+    "café à bas prix stratégie réduction surface personnel",
+    "business plan café low cost belgique",
+    "franchise café économique petite surface bruxelles"
+   ]
+  },
+  {
+   "name": "La boulangerie",
+   "place": "France / Belgique",
+   "sector": "artisanat alimentaire",
+   "model": "B2C",
+   "chapter": "financement",
+   "desc": "Le commerce de proximité par excellence : des clients qui reviennent chaque jour, un produit frais, une marge connue. Mais le ticket d'entrée est lourd : four, pétrin, chambre de pousse, aménagement du local.",
+   "flow": "Client : <b>pain et viennoiseries</b> → matières premières (~32 % du chiffre), personnel (35 à 41 %) → <b>marge</b>",
+   "facts": [
+    "Budget total : 120 000 à 200 000 €",
+    "Matériel : 50 000 à 100 000 €",
+    "Aménagement : ~30 000 €",
+    "Loyer : 600 à 1 500 €/mois",
+    "En franchise : 80 000 à 120 000 €"
+   ],
+   "lesson": "Quand le matériel coûte plus que le chiffre d'affaires de la première année, le point mort se calcule avant de signer le bail. La reprise d'une boulangerie existante, avec son four et sa clientèle, coûte souvent moins cher que la création.",
+   "sources": [
+    {
+     "label": "Square, 22/11/2024",
+     "url": "https://squareup.com/fr/fr/townsquare/budget-ouverture-boulangerie"
+    }
+   ],
+   "recap": {
+    "pays": "France",
+    "secteur": "Artisanat",
+    "levee": "—",
+    "mot": "Calculer le point mort avant le bail"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "artisanat alimentaire boutique de proximité",
+    "boulangerie modèle b2c point mort",
+    "coût matériel four pétrin première année",
+    "reprise boulangerie existante investissement",
+    "commerce de pain frais marge connue",
+    "ouverture boutique pain frais coût d'entrée élevé",
+    "calcul du seuil de rentabilité boulangerie",
+    "investissement initial four chambre de pousse",
+    "clientèle quotidienne boulangerie locale",
+    "création vs reprise boulangerie coûts"
+   ]
+  },
+  {
+   "name": "L'entreprise de titres-services",
+   "place": "Bruxelles",
+   "sector": "aide-ménagère",
+   "model": "B2C + B2G",
+   "chapter": "revenus",
+   "desc": "Le client bruxellois paie 11,40 € le titre pour une heure de ménage ; la Région ajoute 18,54 € d'intervention. L'entreprise agréée encaisse donc près de 30 € par heure prestée et emploie les aides-ménagères.",
+   "flow": "Client : <b>11,40 €</b> + Région : <b>18,54 €</b> → salaire de l'aide-ménagère, encadrement → <b>marge</b>",
+   "facts": [
+    "11,40 € le titre pour les 300 premiers, 14 € ensuite (2026)",
+    "Intervention régionale : 18,54 € par titre",
+    "+0,77 € brut/heure pour les travailleuses depuis l'accord de décembre 2025",
+    "Agrément régional obligatoire"
+   ],
+   "lesson": "Quand l'État paie plus que le client, le vrai client est l'État : la marge dépend d'une décision politique, pas du marché. Un modèle stable tant que le subside tient, fragile le jour où il change.",
+   "sources": [
+    {
+     "label": "DH, 26/12/2025",
+     "url": "https://www.dhnet.be/regions/bruxelles/2025/12/26/titres-services-120-euro-en-plus-pour-les-clients-077-euro-brut-en-plus-pour-les-aides-menageres-VQOV2H27WBHDRMLNCIS6ZBKWSA/"
+    },
+    {
+     "label": "Test Achats, dossier titres-services",
+     "url": "https://www.test-achats.be/famille-prive/droits-des-consommateurs/dossier/titres-services"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Services",
+    "levee": "—",
+    "mot": "Le vrai client est l'État"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "aide ménagère subventionnée bruxelles",
+    "titre-service paiement état client privé",
+    "service de ménage financé par la région bruxelloise",
+    "modèle économique titres‑services b2c b2g",
+    "subsidie ménage belgique problème viabilité",
+    "revenu horaire aide ménagère subvention étatique",
+    "comment l’état finance le ménage à domicile",
+    "titre‑service prix client + subside régional",
+    "entreprise de services ménagers subventionnés modèle stable",
+    "impact du changement de subvention sur les titres‑services"
+   ]
+  },
+  {
+   "name": "Le pop-up store",
+   "place": "Bruxelles",
+   "sector": "mode",
+   "model": "B2C",
+   "chapter": "marche",
+   "desc": "La marque liégeoise Sé-ach, lancée en 2016 grâce à un financement participatif et vendue en ligne, a ouvert sa première boutique physique pour neuf jours seulement, rue Dansaert. La collection, six pièces exclusives, et pas de bail.",
+   "flow": "Client : <b>achat en boutique éphémère</b> → location courte, stock limité → <b>test du commerce physique</b>",
+   "facts": [
+    "Neuf jours rue Dansaert",
+    "Marque née en ligne, première collection financée par crowdfunding",
+    "Six pièces exclusives pour créer l'événement"
+   ],
+   "lesson": "Un pop-up répond à la question qui coûte le plus cher en commerce : les gens viennent-ils ? Neuf jours de loyer suffisent pour le savoir. Si oui, on signe un bail ; sinon, on retourne en ligne sans dette.",
+   "sources": [
+    {
+     "label": "ELLE Belgique, 09/10/2018",
+     "url": "https://www.elle.be/fr/235845-le-label-liegeois-se-ach-ouvre-son-pop-up-store-a-bruxelles.html"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Commerce",
+    "levee": "—",
+    "mot": "Tester avant de signer un bail"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "pop‑up store mode bruxelles b2c",
+    "boutique éphémère vêtements sans bail",
+    "test marché pop up neuf jours location",
+    "vente en ligne puis magasin temporaire",
+    "financement participatif lancement marque mode",
+    "comment savoir si les clients viennent boutique éphémère",
+    "modèle commercial pop‑up store pour créateurs de mode",
+    "location courte durée boutique mode bruxelles",
+    "solution test demande client boutique physique",
+    "magasin temporaire mode sans engagement locatif"
+   ]
+  },
+  {
+   "name": "Le professeur freelance",
+   "place": "Belgique",
+   "sector": "cours particuliers",
+   "model": "B2C + Place de marché",
+   "chapter": "financement",
+   "desc": "Donner des cours, du soutien scolaire ou des formations via des plateformes comme Superprof, ListMinut ou Ring Twice. Zéro investissement : le capital, c'est ce qu'on sait déjà.",
+   "flow": "Élève : <b>paiement par heure</b> → commission de la plateforme → <b>revenu du professeur</b>",
+   "facts": [
+    "Plateformes : Superprof, ListMinut, Ring Twice",
+    "Jusqu'à 7 640 €/an (2024) via l'économie collaborative sans statut d'indépendant",
+    "Au-delà : statut d'indépendant complémentaire"
+   ],
+   "lesson": "La première entreprise de beaucoup d'étudiants : vendre son temps et ses compétences. La plateforme apporte les clients et prend sa commission ; à vous de garder ceux qui reviennent, et de passer au statut d'indépendant quand le plafond est atteint.",
+   "sources": [
+    {
+     "label": "Accountable, 26/11/2024",
+     "url": "https://www.accountable.eu/fr-be/blog/devenir-professeur-freelance/"
+    }
+   ],
+   "recap": {
+    "pays": "Belgique",
+    "secteur": "Formation",
+    "levee": "—",
+    "mot": "Vendre ce que vous savez"
+   },
+   "issue": 2,
+   "issueId": "n02",
+   "issueLabel": "semaine du 1er octobre 2026",
+   "rubrique": "Modele simple",
+   "kw": [
+    "cours particuliers en ligne plateforme commission",
+    "soutien scolaire freelance belgique b2c marketplace",
+    "trouver prof particulier sur superprof commission",
+    "vente de temps et compétences cours privés marketplace",
+    "gagner sa vie avec cours particuliers commission site belge",
+    "business model cours particuliers marketplace b2c",
+    "réussir comme enseignant freelance sans capital initial"
+   ]
+  }
+ ]
+}

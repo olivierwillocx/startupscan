@@ -34,6 +34,10 @@
 </article>`;
   }
 
+  function exemplesFor(key, fiches) {
+    return fiches.filter(f => modelClass(f.model) === key).map(f => f.name).join(', ');
+  }
+
   function render(d) {
     document.title = `StartupScan — N° ${d.number} · ${d.weekLabel}`;
     const allFiches = [...d.levers.cases, ...d.fiches, ...d.pousses.list, ...d.simples.list];
@@ -46,7 +50,7 @@
 </div></header>
 <div class="ai-banner"><b>Site préparé avec l'aide de l'IA.</b> Chiffres déclarés par les entreprises ou la presse, relus contre leur source le ${esc(d.reviewedOn)} — vérifiez avant de réutiliser.</div>
 <nav class="topnav"><div class="wrap">
-  <a href="#innovants">Modèles innovants</a><a href="#modeles">Qui paie ?</a><a href="#ia">IA</a><a href="#fiches">Fiches</a><a href="#pousses">Petites pousses</a><a href="#simples">Modèles simples</a><a href="#sans-argent">Sans argent</a><a href="#quiz">Quiz</a><a href="#glossaire">Glossaire</a><a href="#parcours">Parcours</a><a href="#recap">Récap</a><a href="#idee">Idée à prendre</a><a href="#archives">Archives</a>
+  <a href="#innovants">Modèles innovants</a><a href="#modeles">Qui paie ?</a><a href="#ia">IA</a><a href="#fiches">Fiches</a><a href="#pousses">Petites pousses</a><a href="#simples">Modèles simples</a><a href="#sans-argent">Sans argent</a><a href="#quiz">Quiz</a><a href="#glossaire">Glossaire</a><a href="#parcours">Parcours</a><a href="#recap">Récap</a><a href="#idee">Idée à prendre</a><a href="${B}fiches.html" class="nav-lib">Toutes les fiches</a><a href="#archives">Archives</a>
 </div></nav>
 
 <main>
@@ -75,7 +79,7 @@
   <p class="intro">${esc(d.models.intro)}</p>
   <div class="models">${d.models.list.map(m => `
     <div class="model ${m.key}"><h3>${esc(m.title)}</h3><p>${esc(m.desc)}</p>
-      <dl><dt>Prix</dt><dd>${esc(m.prix)}</dd><dt>Vente</dt><dd>${esc(m.vente)}</dd><dt>Atout</dt><dd>${esc(m.atout)}</dd><dt>Piège</dt><dd>${esc(m.piege)}</dd><dt>Ce numéro</dt><dd class="ex">${esc(m.exemples)}</dd></dl>
+      <dl><dt>Prix</dt><dd>${esc(m.prix)}</dd><dt>Vente</dt><dd>${esc(m.vente)}</dd><dt>Atout</dt><dd>${esc(m.atout)}</dd><dt>Piège</dt><dd>${esc(m.piege)}</dd><dt>Ce numéro</dt><dd class="ex">${esc(exemplesFor(m.key, allFiches) || '—')}</dd></dl>
     </div>`).join('')}</div>
   <h3 style="font-size:16px;color:var(--navy);margin:6px 0 8px">Et les autres</h3>
   <div class="others">${d.models.others.map(o => `<div><b>${esc(o.title)}</b> — ${esc(o.text)}</div>`).join('')}</div>
@@ -204,7 +208,8 @@
 <section class="block" id="archives"><div class="wrap">
   <h2>Archives</h2>
   <div class="archives" id="archives-list"></div>
-  <p>Chaque numéro est conservé à son adresse propre. La page d'accueil montre toujours le dernier.</p>
+  <p>Chaque numéro est conservé à son adresse propre. La page d'accueil montre toujours le dernier.<br>
+  <a class="lib-link" href="${B}fiches.html">Parcourir les ${esc(String(manifestTotal()))} fiches de tous les numéros →</a></p>
 </div></section>
 </main>
 
@@ -281,10 +286,15 @@
     });
 
     // Active nav on scroll
-    const links = [...document.querySelectorAll('.topnav a')];
+    const links = [...document.querySelectorAll('.topnav a')].filter(a => a.getAttribute('href').startsWith('#'));
     const secs = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
     const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id)); } }); }, { rootMargin: '-40% 0px -55% 0px' });
     secs.forEach(s => io.observe(s));
+  }
+
+  let MANIFEST = null;
+  function manifestTotal() {
+    return MANIFEST ? MANIFEST.issues.reduce((a, i) => a + (i.fiches || 0), 0) : '';
   }
 
   async function renderArchives(manifest) {
@@ -296,9 +306,12 @@
   async function init() {
     try {
       const manifestP = fetch(B + 'data/manifest.json').then(r => r.json());
+      const siteP = fetch(B + 'data/site.json').then(r => r.json());
       const id = SS.issue || (await manifestP).latest;
       const issue = await (await fetch(B + 'data/issues/' + id + '.json')).json();
       const manifest = await manifestP;
+      Object.assign(issue, await siteP);
+      MANIFEST = manifest;
       render(issue);
       renderArchives(manifest);
     } catch (e) {

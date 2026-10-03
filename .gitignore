@@ -1,0 +1,3 @@
+build/log*.txt
+build/err*.txt
+build/probe.py
