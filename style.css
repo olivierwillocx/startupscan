@@ -294,3 +294,53 @@ p.more { margin: 18px 0 0 }
   border: 1.5px solid var(--line); border-radius: 10px; margin-bottom: 18px; color: var(--navy) }
 #glo-q:focus { outline: none; border-color: var(--accent) }
 .glossary dt.hidden, .glossary dd.hidden { display: none }
+
+/* ---- Jeux de rôle (jeux-de-role.html) ---- */
+.game > .wrap > h3, #debrief > .wrap > h3 { font-size: 17px; color: var(--navy); margin: 30px 0 8px; padding-top: 14px; border-top: 1px solid var(--line) }
+.tag { font-style: normal; font-weight: 700; background: var(--navy); color: #fff; border-radius: 4px; padding: 0 6px; font-size: 12px }
+.rolecards, .crises { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 10px 0 22px }
+.rolecard, .crise { background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; border-top: 5px solid var(--navy-2); font-size: 13.5px; break-inside: avoid }
+.rolecard h4, .crise h4 { font-size: 16px; color: var(--navy); margin: 2px 0 8px; line-height: 1.25 }
+.rolecard p, .crise p { margin-bottom: 8px }
+.rc-top { font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: .7px }
+.rc-top a { color: inherit }
+.rc-secret { background: var(--soft); border-radius: 6px; padding: 8px 10px }
+.rc-say { font-style: italic; color: var(--navy-2); font-weight: 600; margin-top: 4px }
+.rc-obs { border-top-color: var(--b2g) }
+.crise { border-top-color: var(--red) }
+.crise ol { padding-left: 22px; margin: 4px 0 8px } .crise li { margin-bottom: 4px }
+.crise-fiche { font-size: 12.5px; color: var(--muted) }
+.cr-opts { display: flex; flex-direction: column; gap: 6px }
+.btn-opt, .btn-sm { font: inherit; font-size: 13.5px; text-align: left; cursor: pointer; border-radius: 8px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: #fff }
+.btn-opt:hover:not([disabled]), .btn-sm:hover { background: rgba(255,255,255,.18) }
+.btn-opt.on { background: var(--red); border-color: var(--red) }
+.btn-opt[disabled]:not(.on) { opacity: .45; cursor: default }
+section:not(.block) .btn-sm, .block > .wrap > p > .btn-sm { background: var(--navy); border-color: var(--navy) }
+.tool select, .tool textarea { width: 100%; padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: #fff; font: inherit; font-size: 15px }
+.tool select option { color: var(--ink) }
+.cr-text { font-size: 14.5px; margin: 0 0 14px; max-width: 760px }
+.cr-effect { font-size: 14px; background: rgba(255,255,255,.08); border-radius: 8px; padding: 10px 12px; margin: 12px 0; line-height: 1.55 }
+.cr-effect .hot, .tool-out b.hot { color: #ff8fa3 }
+.gauges { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px }
+.gauge { display: grid; grid-template-columns: 90px 1fr 46px; align-items: center; gap: 8px; font-size: 13px }
+.gauge b { text-align: right }
+.bar-o { height: 10px; background: rgba(255,255,255,.15); border-radius: 999px; overflow: hidden }
+.bar-i { height: 100%; background: #6fcf97; transition: width .3s }
+.gauge.alert .bar-i { background: var(--red) } .gauge.alert b { color: #ff8fa3 }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px }
+.dr-out { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 6px }
+.dr-group { background: rgba(255,255,255,.06); border-radius: 8px; padding: 10px }
+.dr-group h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: #ff8fa3; margin-bottom: 6px }
+.dr-item { display: flex; justify-content: space-between; gap: 8px; width: 100%; font: inherit; font-size: 13.5px; text-align: left; color: #fff; background: transparent; border: 1px solid transparent; border-radius: 6px; padding: 5px 8px; cursor: pointer }
+.dr-item:hover { border-color: rgba(255,255,255,.3) } .dr-item.on { background: var(--red) }
+.dr-item span { opacity: .8 }
+.carnet td:nth-child(3), .carnet td:nth-child(4) { min-width: 140px }
+.src-list li { font-size: 13.5px }
+.rp-rules i.tag { font-style: normal }
+@media print {
+  .subnav, .tool, #tirage, footer { display: none !important }
+  .rolecard, .crise, .step, .ideas div { box-shadow: none; border: 1px solid #bbb; break-inside: avoid }
+  section.block { break-inside: auto }
+  body { background: #fff }
+}
+.hero p.lead + p.lead { margin-top: 12px }

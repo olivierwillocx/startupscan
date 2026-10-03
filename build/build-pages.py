@@ -41,7 +41,7 @@ def model_class(m):
 NAV = [("index.html", "Dernier numéro"), ("fiches.html", "Toutes les fiches"),
        ("modeles.html", "Qui paie ?"), ("outils.html", "Outils"),
        ("glossaire.html", "Glossaire"), ("sans-argent.html", "Sans argent"),
-       ("jeux.html", "Les jeux"), ("archives.html", "Archives")]
+       ("jeux.html", "Les jeux"), ("jeux-de-role.html", "Jeux de rôle"), ("archives.html", "Archives")]
 
 
 def page(path, title, desc, tag, body, depth=0):
@@ -352,7 +352,7 @@ def main():
                   ensure_ascii=False, indent=2)
 
     # sitemap
-    pages = ["index.html", "fiches.html", "jeux.html"] + [p for p in written] \
+    pages = ["index.html", "fiches.html", "jeux.html", "jeux-de-role.html"] + [p for p in written] \
             + ["archives/%s.html" % i["id"] for i in manifest["issues"]]
     today = date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',

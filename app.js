@@ -79,7 +79,7 @@
 </div></header>
 <div class="ai-banner"><b>Site préparé avec l'aide de l'IA.</b> Chiffres déclarés par les entreprises ou la presse, relus contre leur source le ${esc(d.reviewedOn)} — vérifiez avant de réutiliser.</div>
 <nav class="topnav"><div class="wrap">
-  <a href="${B}index.html" class="active">Dernier numéro</a><a href="${B}fiches.html">Toutes les fiches</a><a href="${B}modeles.html">Qui paie ?</a><a href="${B}outils.html">Outils</a><a href="${B}glossaire.html">Glossaire</a><a href="${B}sans-argent.html">Sans argent</a><a href="${B}jeux.html">Les jeux</a><a href="${B}archives.html">Archives</a>
+  <a href="${B}index.html" class="active">Dernier numéro</a><a href="${B}fiches.html">Toutes les fiches</a><a href="${B}modeles.html">Qui paie ?</a><a href="${B}outils.html">Outils</a><a href="${B}glossaire.html">Glossaire</a><a href="${B}sans-argent.html">Sans argent</a><a href="${B}jeux.html">Les jeux</a><a href="${B}jeux-de-role.html">Jeux de rôle</a><a href="${B}archives.html">Archives</a>
 </div></nav>
 <nav class="subnav"><div class="wrap">
   <span>Dans ce numéro</span><a href="#innovants">Modèles innovants</a><a href="#ia">IA</a><a href="#fiches">Fiches</a><a href="#pousses">Petites pousses</a><a href="#simples">Modèles simples</a><a href="#quiz">Quiz</a><a href="#recap">Récap</a><a href="#idee">Idée à prendre</a>
