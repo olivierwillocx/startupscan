@@ -66,7 +66,8 @@
             "label": "TechStartups, 02/10/2026",
             "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
           }
-        ]
+        ],
+        "url": "f/palebluedot-ai.html"
       },
       {
         "name": "DriveX",
@@ -88,7 +89,8 @@
             "label": "TechStartups, 02/10/2026",
             "url": "https://techstartups.com/2026/10/02/startup-funding-news-today-october-2-2026-palebluedot-ai-certo-aerospace-drivex-more/"
           }
-        ]
+        ],
+        "url": "f/drivex.html"
       },
       {
         "name": "Armadin",
@@ -111,7 +113,8 @@
             "label": "TechStartups, 01/10/2026",
             "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
           }
-        ]
+        ],
+        "url": "f/armadin.html"
       },
       {
         "name": "Seeds Fincap",
@@ -135,7 +138,8 @@
             "label": "TechStartups, 01/10/2026",
             "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
           }
-        ]
+        ],
+        "url": "f/seeds-fincap.html"
       },
       {
         "name": "1club",
@@ -158,7 +162,8 @@
             "label": "TechStartups, 01/10/2026",
             "url": "https://techstartups.com/2026/10/01/startup-funding-news-today-october-1-2026-armadin-foundational-frank-1club-osavul-more/"
           }
-        ]
+        ],
+        "url": "f/1club.html"
       }
     ]
   },
@@ -233,7 +238,8 @@
         "secteur": "Défense",
         "levee": "8,5 M€",
         "mot": "Anticiper avant l'attaque"
-      }
+      },
+      "url": "f/osavul.html"
     },
     {
       "name": "Foundational",
@@ -260,7 +266,8 @@
         "secteur": "Spatial",
         "levee": "9,6 M€",
         "mot": "Un problème bien défini attire les capitaux tôt"
-      }
+      },
+      "url": "f/foundational.html"
     },
     {
       "name": "Deepslate",
@@ -288,7 +295,8 @@
         "secteur": "IA vocale",
         "levee": "7,7 M€",
         "mot": "La souveraineté comme argument commercial"
-      }
+      },
+      "url": "f/deepslate.html"
     },
     {
       "name": "FRANK",
@@ -315,7 +323,8 @@
         "secteur": "Assurance",
         "levee": "2,9 M€",
         "mot": "Le travail ennuyeux est un marché"
-      }
+      },
+      "url": "f/frank.html"
     },
     {
       "name": "Certo Aerospace",
@@ -342,7 +351,8 @@
         "secteur": "Défense",
         "levee": "5 M£",
         "mot": "Un historique est une barrière à l'entrée"
-      }
+      },
+      "url": "f/certo-aerospace.html"
     },
     {
       "name": "OSCP",
@@ -368,7 +378,8 @@
         "secteur": "Défense",
         "levee": "N.D.",
         "mot": "Naviguer sans GPS"
-      }
+      },
+      "url": "f/oscp.html"
     },
     {
       "name": "Gwanak Research Institute",
@@ -395,7 +406,8 @@
         "secteur": "Fintech",
         "levee": "300 M KRW",
         "mot": "Exploiter la donnée que les autres ignorent"
-      }
+      },
+      "url": "f/gwanak-research-institute.html"
     }
   ],
   "pousses": {
@@ -426,7 +438,8 @@
           "secteur": "Matériaux",
           "levee": "750 K A$",
           "mot": "Spin-out universitaire"
-        }
+        },
+        "url": "f/r2crete.html"
       },
       {
         "name": "Aignosis",
@@ -454,7 +467,8 @@
           "secteur": "Santé",
           "levee": "~417 K$",
           "mot": "Grand impact, petit budget"
-        }
+        },
+        "url": "f/aignosis.html"
       }
     ]
   },
@@ -486,7 +500,8 @@
           "secteur": "Horeca",
           "levee": "—",
           "mot": "Supprimer la salle"
-        }
+        },
+        "url": "f/gat-le-cafe-par-un-trou-dans-le-mur.html"
       },
       {
         "name": "Cotti Coffee, le café à 1 euro",
@@ -513,7 +528,8 @@
           "secteur": "Horeca",
           "levee": "—",
           "mot": "Le volume fait la marge"
-        }
+        },
+        "url": "f/cotti-coffee-le-cafe-a-1-euro.html"
       },
       {
         "name": "La boulangerie",
@@ -542,7 +558,8 @@
           "secteur": "Artisanat",
           "levee": "—",
           "mot": "Calculer le point mort avant le bail"
-        }
+        },
+        "url": "f/la-boulangerie.html"
       },
       {
         "name": "L'entreprise de titres-services",
@@ -574,7 +591,8 @@
           "secteur": "Services",
           "levee": "—",
           "mot": "Le vrai client est l'État"
-        }
+        },
+        "url": "f/l-entreprise-de-titres-services.html"
       },
       {
         "name": "Le pop-up store",
@@ -601,7 +619,8 @@
           "secteur": "Commerce",
           "levee": "—",
           "mot": "Tester avant de signer un bail"
-        }
+        },
+        "url": "f/le-pop-up-store.html"
       },
       {
         "name": "Le professeur freelance",
@@ -628,7 +647,8 @@
           "secteur": "Formation",
           "levee": "—",
           "mot": "Vendre ce que vous savez"
-        }
+        },
+        "url": "f/le-professeur-freelance.html"
       }
     ]
   },

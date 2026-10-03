@@ -15,7 +15,9 @@
   const sources = list => (list || []).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ');
   const uniq = a => [...new Set(a.filter(Boolean))].sort((x, y) => x.localeCompare(y, 'fr'));
 
-  let FICHES = [], CH = [], state = { q: '', ch: '', model: '', pays: '', secteur: '', issue: '' };
+  const PAGE = 24;              // fiches posees d'un coup
+  let FICHES = [], CH = [], shown = PAGE, hits = [];
+  let state = { q: '', ch: '', model: '', pays: '', secteur: '', issue: '' };
 
   // Mots que le lecteur emploie et qui ne figurent pas tels quels dans les fiches
   const SYN = {
@@ -40,7 +42,7 @@
 <article class="card ${mc} fiche" id="f-${slug(f.name)}">
   <div class="bar"></div>
   <div class="body">
-    <div class="head"><h3>${esc(f.name)}</h3><span class="tag ${mc}">${esc(f.model)}</span></div>
+    <div class="head"><h3>${f.url ? `<a href="${B}${esc(f.url)}">${esc(f.name)}</a>` : esc(f.name)}</h3><span class="tag ${mc}">${esc(f.model)}</span></div>
     <div class="meta">${esc(f.place)} · ${esc(f.sector)} · <a href="${B}archives/${esc(f.issueId)}.html">N° ${f.issue}</a></div>
     <p class="desc">${esc(f.desc)}</p>
     ${f.flow ? `<div class="flow">${f.flow}</div>` : ''}
@@ -79,19 +81,27 @@
     return n;
   }
 
-  function apply() {
-    let hits = FICHES.filter(passesFilters);
-    const toks = tokens(state.q);
-    if (toks.length) {
-      const need = Math.max(1, Math.ceil(toks.length * 0.6));
-      hits = hits.map(f => [f, score(f, toks)]).filter(([, n]) => n >= need)
-                 .sort((a, b) => b[1] - a[1] || b[0].issue - a[0].issue).map(([f]) => f);
+  function apply(reset = true) {
+    if (reset) {
+      shown = PAGE;
+      hits = FICHES.filter(passesFilters);
+      const toks = tokens(state.q);
+      if (toks.length) {
+        const need = Math.max(1, Math.ceil(toks.length * 0.6));
+        hits = hits.map(f => [f, score(f, toks)]).filter(([, n]) => n >= need)
+                   .sort((a, b) => b[1] - a[1] || b[0].issue - a[0].issue).map(([f]) => f);
+      }
     }
+    const page = hits.slice(0, shown);
     document.getElementById('lib-grid').innerHTML =
-      hits.length ? hits.map(card).join('')
+      page.length ? page.map(card).join('')
                   : `<p class="lib-empty">Aucune fiche ne correspond. Essayez un mot plus large, ou retirez un filtre.</p>`;
     document.getElementById('lib-count').textContent =
-      `${hits.length} fiche${hits.length > 1 ? 's' : ''} sur ${FICHES.length}`;
+      `${hits.length} fiche${hits.length > 1 ? 's' : ''} sur ${FICHES.length}`
+      + (hits.length > page.length ? ` · ${page.length} affichées` : '');
+    const more = document.getElementById('lib-more');
+    more.classList.toggle('hidden', hits.length <= shown);
+    more.textContent = `Afficher ${Math.min(PAGE, hits.length - shown)} fiches de plus`;
     const active = Object.entries(state).filter(([k, v]) => v && k !== 'q').length + (state.q ? 1 : 0);
     document.getElementById('lib-reset').classList.toggle('hidden', !active);
   }
@@ -116,7 +126,7 @@
   <div class="issue-tag"><b>Bibliothèque</b><br>${FICHES.length} fiches · ${issues.length} numéro${issues.length > 1 ? 's' : ''}</div>
 </div></header>
 <nav class="topnav"><div class="wrap">
-  <a href="${B}index.html">Dernier numéro</a><a href="#lib" class="active">Toutes les fiches</a><a href="${B}jeux.html">Les jeux</a>${issues.map(i => `<a href="${B}archives/${i.id}.html">N° ${i.number}</a>`).join('')}
+  <a href="${B}index.html">Dernier numéro</a><a href="${B}fiches.html" class="active">Toutes les fiches</a><a href="${B}modeles.html">Qui paie ?</a><a href="${B}outils.html">Outils</a><a href="${B}glossaire.html">Glossaire</a><a href="${B}sans-argent.html">Sans argent</a><a href="${B}jeux.html">Les jeux</a><a href="${B}archives.html">Archives</a>
 </div></nav>
 <main>
 <div class="hero lib-hero"><div class="wrap">
@@ -139,6 +149,7 @@
     <div class="lib-count" id="lib-count"></div>
   </div>
   <div class="grid" id="lib-grid"></div>
+  <p class="more"><button class="btn ghost hidden" id="lib-more"></button></p>
 </div></section>
 </main>
 <footer><div class="wrap">
@@ -154,6 +165,7 @@
     Object.entries(binds).forEach(([id, key]) => {
       document.getElementById(id).addEventListener('change', e => { state[key] = e.target.value; apply(); sync(); });
     });
+    document.getElementById('lib-more').addEventListener('click', () => { shown += PAGE; apply(false); });
     document.getElementById('lib-reset').addEventListener('click', () => {
       state = { q: '', ch: '', model: '', pays: '', secteur: '', issue: '' };
       q.value = ''; Object.keys(binds).forEach(id => document.getElementById(id).value = '');

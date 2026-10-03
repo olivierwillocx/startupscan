@@ -76,7 +76,8 @@
             "label": "Retail Insight Network",
             "url": "https://www.retail-insight-network.com/features/the-business-model-behind-vinteds-success/"
           }
-        ]
+        ],
+        "url": "f/vinted.html"
       },
       {
         "name": "Too Good To Go",
@@ -99,7 +100,8 @@
             "label": "Wikipédia, consulté le 01/10/2026",
             "url": "https://en.wikipedia.org/wiki/Too_Good_To_Go"
           }
-        ]
+        ],
+        "url": "f/too-good-to-go.html"
       },
       {
         "name": "heata",
@@ -120,7 +122,8 @@
             "label": "heata, 04/07/2025",
             "url": "https://www.heata.co/post/from-ray-workloads-to-hot-water-the-heata-model-in-action"
           }
-        ]
+        ],
+        "url": "f/heata.html"
       },
       {
         "name": "Swapfiets",
@@ -142,7 +145,8 @@
             "label": "The Micromobility Newsletter, 27/03/2025",
             "url": "https://micromobility.substack.com/p/swapfiets-revenue-up-19-to-853m-in"
           }
-        ]
+        ],
+        "url": "f/swapfiets.html"
       },
       {
         "name": "Quilt",
@@ -164,7 +168,8 @@
             "label": "CleanTechnica, 29/05/2026",
             "url": "https://cleantechnica.com/2026/05/29/heat-pumps-us-startup-quilt-lease-finance/"
           }
-        ]
+        ],
+        "url": "f/quilt.html"
       },
       {
         "name": "Le paiement au résultat",
@@ -185,7 +190,8 @@
             "label": "The Pricing Conundrum, 09/06/2026",
             "url": "https://thepricingconundrum.substack.com/p/outcome-based-pricing-in-practice"
           }
-        ]
+        ],
+        "url": "f/le-paiement-au-resultat.html"
       },
       {
         "name": "Cohabs",
@@ -208,7 +214,8 @@
             "label": "Immobilier 2.0, nov. 2022",
             "url": "https://immo2.pro/actualite-immobilier/cohabs-leve-plus-de-100-millions-deuros-et-vise-5000-chambres-en-coliving-dici-2026/"
           }
-        ]
+        ],
+        "url": "f/cohabs.html"
       }
     ]
   },
@@ -288,7 +295,8 @@
         "secteur": "Services publics",
         "levee": "25,0 M$",
         "mot": "Référence publique"
-      }
+      },
+      "url": "f/govwell.html"
     },
     {
       "name": "KHOY",
@@ -316,7 +324,8 @@
         "secteur": "Meubles",
         "levee": "2,0 M€",
         "mot": "Coût structurel"
-      }
+      },
+      "url": "f/khoy.html"
     },
     {
       "name": "Chift",
@@ -343,7 +352,8 @@
         "secteur": "Fintech",
         "levee": "10,5 M€",
         "mot": "Plomberie"
-      }
+      },
+      "url": "f/chift.html"
     },
     {
       "name": "Ahron",
@@ -369,7 +379,8 @@
         "secteur": "RH",
         "levee": "2,2 M€",
         "mot": "Vendre d'abord"
-      }
+      },
+      "url": "f/ahron.html"
     },
     {
       "name": "Kyndred",
@@ -395,7 +406,8 @@
         "secteur": "Grand public",
         "levee": "0,5 M€",
         "mot": "Tester en faisant payer"
-      }
+      },
+      "url": "f/kyndred.html"
     },
     {
       "name": "Atomic",
@@ -421,7 +433,8 @@
         "secteur": "Logistique",
         "levee": "12,5 M$",
         "mot": "Douleur vécue"
-      }
+      },
+      "url": "f/atomic.html"
     },
     {
       "name": "Arivihan",
@@ -446,7 +459,8 @@
         "secteur": "Éducation",
         "levee": "10,0 M$",
         "mot": "Marché oublié"
-      }
+      },
+      "url": "f/arivihan.html"
     },
     {
       "name": "Blue Health",
@@ -473,7 +487,8 @@
         "secteur": "Santé",
         "levee": "3,4 M€",
         "mot": "Offre simple"
-      }
+      },
+      "url": "f/blue-health.html"
     },
     {
       "name": "ArkeaBio",
@@ -500,7 +515,8 @@
         "secteur": "Climat",
         "levee": "15,0 M$",
         "mot": "Concentration"
-      }
+      },
+      "url": "f/arkeabio.html"
     },
     {
       "name": "Rayon",
@@ -527,7 +543,8 @@
         "secteur": "Design",
         "levee": "10,0 M€",
         "mot": "Économie chiffrée"
-      }
+      },
+      "url": "f/rayon.html"
     },
     {
       "name": "ANote Music",
@@ -554,7 +571,8 @@
         "secteur": "Musique",
         "levee": "2,0 M€",
         "mot": "Marché ouvert"
-      }
+      },
+      "url": "f/anote-music.html"
     },
     {
       "name": "Qupital",
@@ -580,7 +598,8 @@
         "secteur": "Fintech",
         "levee": "300 M$",
         "mot": "Utilisez la donnée que les autres ignorent"
-      }
+      },
+      "url": "f/qupital.html"
     },
     {
       "name": "Tandem Health",
@@ -606,7 +625,8 @@
         "secteur": "Santé",
         "levee": "100 M$",
         "mot": "Entrer par une petite douleur, puis s'étendre"
-      }
+      },
+      "url": "f/tandem-health.html"
     },
     {
       "name": "Fortaegis",
@@ -632,7 +652,8 @@
         "secteur": "Cybersécurité",
         "levee": "50 M$",
         "mot": "Aller là où les autres ne regardent pas"
-      }
+      },
+      "url": "f/fortaegis.html"
     },
     {
       "name": "Aeon",
@@ -658,7 +679,8 @@
         "secteur": "Santé",
         "levee": "> 12 M€",
         "mot": "Racheter plutôt que construire"
-      }
+      },
+      "url": "f/aeon.html"
     },
     {
       "name": "UniqYou",
@@ -683,7 +705,8 @@
         "secteur": "Mode",
         "levee": "1,65 M$",
         "mot": "En commerce, une erreur se paie en stock"
-      }
+      },
+      "url": "f/uniqyou.html"
     },
     {
       "name": "General Intuition",
@@ -709,7 +732,8 @@
         "secteur": "IA",
         "levee": "220 M$",
         "mot": "Une donnée que personne d'autre n'a"
-      }
+      },
+      "url": "f/general-intuition.html"
     },
     {
       "name": "Gravity",
@@ -733,7 +757,8 @@
         "secteur": "Aménagement",
         "levee": "15 M$",
         "mot": "Votre ancien emploi est une école"
-      }
+      },
+      "url": "f/gravity.html"
     },
     {
       "name": "Zenithon",
@@ -759,7 +784,8 @@
         "secteur": "Simulation",
         "levee": "10 M$",
         "mot": "Dites où va chaque euro"
-      }
+      },
+      "url": "f/zenithon.html"
     },
     {
       "name": "Destro AI",
@@ -784,7 +810,8 @@
         "secteur": "Robotique",
         "levee": "8 M$",
         "mot": "Être neutre peut être un avantage"
-      }
+      },
+      "url": "f/destro-ai.html"
     },
     {
       "name": "EDT",
@@ -809,7 +836,8 @@
         "secteur": "Électroménager",
         "levee": "2,4 M$",
         "mot": "Choisir ses investisseurs pour leur expérience"
-      }
+      },
+      "url": "f/edt.html"
     },
     {
       "name": "Reverion",
@@ -835,7 +863,8 @@
         "secteur": "Énergie",
         "levee": "175 M$",
         "mot": "Le laboratoire peut mener à l'usine"
-      }
+      },
+      "url": "f/reverion.html"
     },
     {
       "name": "Aptadir",
@@ -860,7 +889,8 @@
         "secteur": "Biotech",
         "levee": "40 M€",
         "mot": "Connaître les besoins en capital de son secteur"
-      }
+      },
+      "url": "f/aptadir.html"
     },
     {
       "name": "Marble",
@@ -887,7 +917,8 @@
         "secteur": "Fintech",
         "levee": "6,5 M€",
         "mot": "Ouvrir son code pour gagner la confiance"
-      }
+      },
+      "url": "f/marble.html"
     },
     {
       "name": "Quartermaster",
@@ -911,7 +942,8 @@
         "secteur": "Sécurité",
         "levee": "140 M$",
         "mot": "La géopolitique crée des marchés"
-      }
+      },
+      "url": "f/quartermaster.html"
     },
     {
       "name": "SiMa.ai",
@@ -936,7 +968,8 @@
         "secteur": "Puces",
         "levee": "150 M$",
         "mot": "Pas le plus gros, le plus adapté"
-      }
+      },
+      "url": "f/sima-ai.html"
     },
     {
       "name": "Outmarket",
@@ -962,7 +995,8 @@
         "secteur": "Assurance",
         "levee": "34,5 M$",
         "mot": "Les métiers ennuyeux sont des mines d'or"
-      }
+      },
+      "url": "f/outmarket.html"
     },
     {
       "name": "CargoX",
@@ -987,7 +1021,8 @@
         "secteur": "Logistique",
         "levee": "250 M$",
         "mot": "Les grands industriels préparent leur avenir"
-      }
+      },
+      "url": "f/cargox.html"
     },
     {
       "name": "Kasvu Therapeutics",
@@ -1013,7 +1048,8 @@
         "secteur": "Biotech",
         "levee": "30 M€",
         "mot": "L'université peut être un investisseur"
-      }
+      },
+      "url": "f/kasvu-therapeutics.html"
     },
     {
       "name": "Clastix",
@@ -1038,7 +1074,8 @@
         "secteur": "Cloud",
         "levee": "2,9 M€",
         "mot": "Un client peut devenir investisseur"
-      }
+      },
+      "url": "f/clastix.html"
     },
     {
       "name": "Prevision Medicine",
@@ -1063,7 +1100,8 @@
         "secteur": "Santé",
         "levee": "5,4 M$",
         "mot": "Partir d'un chiffre qui frappe"
-      }
+      },
+      "url": "f/prevision-medicine.html"
     },
     {
       "name": "Pilgrim",
@@ -1088,7 +1126,8 @@
         "secteur": "Biosécurité",
         "levee": "25 M$",
         "mot": "Préparer la prochaine crise"
-      }
+      },
+      "url": "f/pilgrim.html"
     },
     {
       "name": "Puxi Optoelectronics",
@@ -1113,7 +1152,8 @@
         "secteur": "Puces",
         "levee": "—",
         "mot": "Être rentable avant de lever"
-      }
+      },
+      "url": "f/puxi-optoelectronics.html"
     },
     {
       "name": "Langxi Technology",
@@ -1137,7 +1177,8 @@
         "secteur": "Composants",
         "levee": "~200 M RMB",
         "mot": "Fournir la pièce discrète"
-      }
+      },
+      "url": "f/langxi-technology.html"
     },
     {
       "name": "Wealthcome",
@@ -1163,7 +1204,8 @@
         "secteur": "Fintech",
         "levee": "15 M€",
         "mot": "Équiper les pros plutôt que les remplacer"
-      }
+      },
+      "url": "f/wealthcome.html"
     },
     {
       "name": "50skills",
@@ -1189,7 +1231,8 @@
         "secteur": "RH",
         "levee": "5,3 M€",
         "mot": "Un petit marché peut servir de rampe"
-      }
+      },
+      "url": "f/50skills.html"
     },
     {
       "name": "ByteAsk",
@@ -1215,7 +1258,8 @@
         "secteur": "Logiciel",
         "levee": "1 M$",
         "mot": "Choisir une niche exigeante"
-      }
+      },
+      "url": "f/byteask.html"
     },
     {
       "name": "AIONA",
@@ -1240,7 +1284,8 @@
         "secteur": "Industrie",
         "levee": "140 M¥",
         "mot": "Combiner capital et prêt bancaire"
-      }
+      },
+      "url": "f/aiona.html"
     },
     {
       "name": "Backbone",
@@ -1266,7 +1311,8 @@
         "secteur": "Agroalimentaire",
         "levee": "4 M€",
         "mot": "Faire entrer le secteur dans son capital"
-      }
+      },
+      "url": "f/backbone.html"
     },
     {
       "name": "Simple Energy",
@@ -1290,7 +1336,8 @@
         "secteur": "Mobilité",
         "levee": "1 750 Cr INR",
         "mot": "Les entrepreneurs réinvestissent"
-      }
+      },
+      "url": "f/simple-energy.html"
     }
   ],
   "pousses": {
@@ -1321,7 +1368,8 @@
           "secteur": "Applications",
           "levee": "0,6 M€",
           "mot": "Hackathon"
-        }
+        },
+        "url": "f/bilt-me.html"
       },
       {
         "name": "Maurice & Nora",
@@ -1352,7 +1400,8 @@
           "secteur": "Services",
           "levee": "1,0 M€",
           "mot": "Double besoin"
-        }
+        },
+        "url": "f/maurice-nora.html"
       },
       {
         "name": "Tout Bien",
@@ -1382,7 +1431,8 @@
           "secteur": "Bière",
           "levee": "—",
           "mot": "Communauté"
-        }
+        },
+        "url": "f/tout-bien.html"
       }
     ]
   },
@@ -1415,7 +1465,8 @@
           "secteur": "Restauration",
           "levee": "—",
           "mot": "Louer avant d'acheter"
-        }
+        },
+        "url": "f/le-food-truck.html"
       },
       {
         "name": "La Taverne des Dresseurs",
@@ -1441,7 +1492,8 @@
           "secteur": "Commerce",
           "levee": "—",
           "mot": "La communauté fait revenir"
-        }
+        },
+        "url": "f/la-taverne-des-dresseurs.html"
       },
       {
         "name": "La Cuisine",
@@ -1467,7 +1519,8 @@
           "secteur": "Commerce",
           "levee": "—",
           "mot": "Deux activités qui se nourrissent"
-        }
+        },
+        "url": "f/la-cuisine.html"
       },
       {
         "name": "Best Man Barbershop",
@@ -1493,7 +1546,8 @@
           "secteur": "Service",
           "levee": "—",
           "mot": "Le revenu qui revient"
-        }
+        },
+        "url": "f/best-man-barbershop.html"
       },
       {
         "name": "Tournevie",
@@ -1520,7 +1574,8 @@
           "secteur": "Service",
           "levee": "—",
           "mot": "Cotisation simple"
-        }
+        },
+        "url": "f/tournevie.html"
       },
       {
         "name": "Meditații.ro",
@@ -1545,7 +1600,8 @@
           "secteur": "Éducation",
           "levee": "—",
           "mot": "Un besoin éternel"
-        }
+        },
+        "url": "f/meditatii-ro.html"
       }
     ]
   },

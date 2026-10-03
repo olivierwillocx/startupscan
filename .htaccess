@@ -21,3 +21,9 @@ AddType application/json .json
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+# Le sitemap et robots.txt pour les moteurs de recherche
+<IfModule mod_expires.c>
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>

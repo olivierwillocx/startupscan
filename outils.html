@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outils : point mort et grille de fiche — StartupScan</title>
+  <meta name="description" content="Calculez combien de clients par jour couvrent vos frais fixes, et écrivez votre projet dans la grille StartupScan.">
+  <link rel="canonical" href="https://startupscan.eu/outils.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=5">
+</head>
+<body>
+<div id="app">
+<header class="masthead"><div class="wrap">
+  <a class="logo" href="./index.html"><span class="logo-icon">S</span><span class="logo-text">Startup<span>Scan</span></span></a>
+  <div class="issue-tag"><b>Outils</b><br>Point mort · votre fiche</div>
+</div></header>
+<nav class="topnav"><div class="wrap"><a href="./index.html">Dernier numéro</a><a href="./fiches.html">Toutes les fiches</a><a href="./modeles.html">Qui paie ?</a><a href="./outils.html" class="active">Outils</a><a href="./glossaire.html">Glossaire</a><a href="./sans-argent.html">Sans argent</a><a href="./jeux.html">Les jeux</a><a href="./archives.html">Archives</a></div></nav>
+<main>
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Outils</div><h1>Deux outils pour votre projet</h1>
+  <p class="lead">Le point mort répond à la seule question qui compte avant d'ouvrir : combien de clients par jour pour tenir. La grille de fiche vous fait écrire votre projet dans le même format que les entreprises du site — c'est le meilleur test de clarté qui soit.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="tool" id="point-mort">
+    <div class="kicker-sm">Outil · le point mort</div>
+    <h3>Combien de clients par jour pour couvrir vos frais ?</h3>
+    <div class="tool-grid">
+      <div><label>Frais fixes par mois (€)</label><input type="number" id="be-fixed" value="2500" min="0"></div>
+      <div><label>Prix moyen d'une vente (€)</label><input type="number" id="be-price" value="3.5" min="0" step="0.5"></div>
+      <div><label>Coût de cette vente (€)</label><input type="number" id="be-cost" value="0.9" min="0" step="0.5"></div>
+      <div><label>Jours ouverts par mois</label><input type="number" id="be-days" value="26" min="1" max="31"></div>
+    </div>
+    <div class="tool-out">
+      <div><b id="be-margin">—</b><span>Marge par vente</span></div>
+      <div><b id="be-sales">—</b><span>Ventes par mois</span></div>
+      <div><b id="be-daily" class="hot">—</b><span>Clients par jour</span></div>
+    </div>
+    <p class="note">Valeurs d'exemple inspirées d'un café à emporter comme GAT : 2 500 € de frais fixes (loyer d'un petit local, assurance, électricité, votre salaire), 3,50 € le café, 0,90 € de gobelet et de grains. Remplacez par vos chiffres. Au-dessus du point mort, chaque vente rapporte sa marge.</p>
+  </div>
+</div></section>
+
+<section class="block" id="parcours"><div class="wrap">
+  <h2>Parcours business plan</h2>
+  <p class="intro">Chaque fiche du numéro est rangée dans un chapitre du business plan. Choisissez le chapitre que vous travaillez : seules les fiches qui l'illustrent restent affichées, dans toutes les rubriques.</p>
+  <ul class="rules"><li><b>Marché et clients</b> — <a href="./fiches.html?ch=marche">voir les fiches</a></li><li><b>Offre et produit</b> — <a href="./fiches.html?ch=offre">voir les fiches</a></li><li><b>Modèle de revenus et prix</b> — <a href="./fiches.html?ch=revenus">voir les fiches</a></li><li><b>Opérations et logistique</b> — <a href="./fiches.html?ch=operations">voir les fiches</a></li><li><b>Équipe et fondateurs</b> — <a href="./fiches.html?ch=equipe">voir les fiches</a></li><li><b>Financement</b> — <a href="./fiches.html?ch=financement">voir les fiches</a></li><li><b>Stratégie et positionnement</b> — <a href="./fiches.html?ch=strategie">voir les fiches</a></li></ul>
+  <div class="myfiche">
+    <div class="kicker-sm">Votre fiche · même grille que les autres</div>
+    <h3>Décrivez votre projet comme une fiche StartupScan</h3>
+    <div class="row">
+      <div><label>Nom du projet</label><input id="mf-name"></div>
+      <div><label>Lieu · secteur</label><input id="mf-place"></div>
+      <div><label>Modèle</label><select id="mf-model"><option>B2B</option><option>B2C</option><option>B2G</option><option>Place de marché</option><option>B2B2C</option><option>Freemium</option><option>Autre</option></select></div>
+    </div>
+    <label>En deux phrases : que vendez-vous, à qui ?</label><textarea id="mf-desc"></textarea>
+    <label>Flux d'argent : qui paie quoi à qui ?</label><textarea id="mf-flow"></textarea>
+    <label>Trois faits chiffrés (clients visés, prix, coût de départ)</label><textarea id="mf-facts"></textarea>
+    <label>Ce qui est difficile à copier dans votre projet</label><textarea id="mf-moat"></textarea>
+    <button class="btn secondary" id="mf-copy">Copier ma fiche</button> <span id="mf-status" style="font-size:13px;color:var(--muted)"></span>
+    <p class="note">Le texte reste dans votre navigateur. Copiez-le pour le coller dans votre business plan ou l'envoyer.</p>
+  </div>
+</div></section>
+<script src="./outils.js?v=5"></script>
+</main>
+<footer><div class="wrap">
+  <b>StartupScan</b> est préparé par Olivier Willocx, enseignant en entrepreneuriat et business plan à l'EPFC · <a href="mailto:olwillocx@epfc.eu">olwillocx@epfc.eu</a><br>
+  Montants et chiffres tels qu'annoncés par les entreprises ou la presse ; ce sont des données déclarées, pas des comptes audités.
+</div></footer>
+</div>
+</body>
+</html>

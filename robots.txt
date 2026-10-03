@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://startupscan.eu/sitemap.xml
