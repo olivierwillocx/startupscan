@@ -80,7 +80,7 @@
 </div></header>
 <div class="ai-banner"><b>Site préparé avec l'aide de l'IA.</b> Chiffres déclarés par les entreprises ou la presse, relus contre leur source le ${esc(d.reviewedOn)} — vérifiez avant de réutiliser.</div>
 <nav class="topnav"><div class="wrap">
-  <a href="#innovants">Modèles innovants</a><a href="#modeles">Qui paie ?</a><a href="#ia">IA</a><a href="#fiches">Fiches</a><a href="#pousses">Petites pousses</a><a href="#simples">Modèles simples</a><a href="#sans-argent">Sans argent</a><a href="#quiz">Quiz</a><a href="#glossaire">Glossaire</a><a href="#parcours">Parcours</a><a href="#recap">Récap</a><a href="#idee">Idée à prendre</a><a href="${B}fiches.html" class="nav-lib">Toutes les fiches</a><a href="#archives">Archives</a>
+  <a href="#innovants">Modèles innovants</a><a href="#modeles">Qui paie ?</a><a href="#ia">IA</a><a href="#fiches">Fiches</a><a href="#pousses">Petites pousses</a><a href="#simples">Modèles simples</a><a href="#sans-argent">Sans argent</a><a href="#quiz">Quiz</a><a href="#glossaire">Glossaire</a><a href="#parcours">Parcours</a><a href="#recap">Récap</a><a href="#idee">Idée à prendre</a><a href="${B}fiches.html" class="nav-lib">Toutes les fiches</a><a href="${B}jeux.html" class="nav-lib">Les jeux</a><a href="#archives">Archives</a>
 </div></nav>
 
 <main>

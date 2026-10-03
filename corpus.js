@@ -116,7 +116,7 @@
   <div class="issue-tag"><b>Bibliothèque</b><br>${FICHES.length} fiches · ${issues.length} numéro${issues.length > 1 ? 's' : ''}</div>
 </div></header>
 <nav class="topnav"><div class="wrap">
-  <a href="${B}index.html">Dernier numéro</a><a href="#lib" class="active">Toutes les fiches</a>${issues.map(i => `<a href="${B}archives/${i.id}.html">N° ${i.number}</a>`).join('')}
+  <a href="${B}index.html">Dernier numéro</a><a href="#lib" class="active">Toutes les fiches</a><a href="${B}jeux.html">Les jeux</a>${issues.map(i => `<a href="${B}archives/${i.id}.html">N° ${i.number}</a>`).join('')}
 </div></nav>
 <main>
 <div class="hero lib-hero"><div class="wrap">

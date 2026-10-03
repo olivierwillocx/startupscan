@@ -246,3 +246,24 @@ footer .next { margin-top: 8px; color: var(--red); font-weight: 700; }
 .nav-lib { font-weight: 800 }
 .hidden { display: none !important }
 @media (max-width: 640px) { .lib-sel select { min-width: 0; width: 100% } .lib-sel { flex: 1 1 140px } }
+
+/* ---- Les jeux (jeux.html) ---- */
+.game-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px }
+.game-meta span {
+  font-size: 12px; font-weight: 700; color: var(--navy); background: #fff;
+  border: 1.5px solid var(--line); border-radius: 999px; padding: 5px 12px;
+}
+ol.rules, ul.rules { margin: 8px 0 20px; padding-left: 22px; max-width: 760px }
+ol.rules > li, ul.rules > li { margin-bottom: 10px; line-height: 1.6 }
+ol.rules ul { margin: 8px 0 0; padding-left: 20px }
+ol.rules ul li { margin-bottom: 5px }
+.terrain { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 22px }
+.terrain span {
+  font-size: 13.5px; color: var(--navy); background: var(--sand, #f6f3ee);
+  border: 1px dashed var(--line); border-radius: 8px; padding: 8px 12px;
+}
+#jeux .recap td:first-child, #animer .ideas b { font-weight: 800 }
+#ecole > .wrap > h3, #universite > .wrap > h3, #famille > .wrap > h3 {
+  font-size: 17px; color: var(--navy); margin: 30px 0 6px;
+  padding-top: 14px; border-top: 1px solid var(--line);
+}
