@@ -34,6 +34,36 @@
 </article>`;
   }
 
+  // Si une rubrique manque (donnees incompletes, fichier non deploye, cache),
+  // on la remplit a vide : la page s'affiche amputee plutot que blanche.
+  const FALLBACK = {
+    breakeven: { title: '', defaults: { fixed: 0, price: 0, cost: 0, days: 1 }, note: '' },
+    models: { intro: '', list: [], others: [] },
+    noMoney: { intro: '', ideas: [], steps: [], avoid: '', brussels: { title: '', text: '', source: { label: '', url: '#' } } },
+    glossary: { intro: '', terms: [] },
+    parcours: { intro: '', chapters: [], form: { title: '', note: '' } },
+    quiz: { intro: '', questions: [] },
+    simples: { intro: '', list: [] },
+    pousses: { intro: '', list: [] },
+    levers: { intro: '', list: [], cases: [] },
+    ai: { intro: '', stats: [], statsSource: { label: '', url: '#' }, points: [], trap: '', exercise: { title: '', steps: [] } },
+    idea: { title: '', text: '' },
+    threeQuestions: { kicker: '', title: '', list: [] },
+    ideaToTake: { kicker: '', title: '', constat: '', existing: '', model: '', flow: '', test: [], risks: [], warning: '', sources: [] },
+    stats: { fiches: 0, pays: 0, innovants: 0, simples: 0 },
+    fiches: [], fichesIntro: '', intro: '', reviewedOn: '', nextIssue: '', weekLabel: '', number: ''
+  };
+  function withDefaults(d) {
+    const fill = (dst, src) => {
+      Object.keys(src).forEach(k => {
+        if (dst[k] == null) dst[k] = JSON.parse(JSON.stringify(src[k]));
+        else if (!Array.isArray(src[k]) && typeof src[k] === 'object') fill(dst[k], src[k]);
+      });
+      return dst;
+    };
+    return fill(d, FALLBACK);
+  }
+
   function exemplesFor(key, fiches) {
     return fiches.filter(f => modelClass(f.model) === key).map(f => f.name).join(', ');
   }
@@ -220,7 +250,7 @@
 </div></footer>`;
 
     document.getElementById('app').innerHTML = html;
-    wire(d, allFiches);
+    try { wire(d, allFiches); } catch (e) { console.error(e); }
   }
 
   function wire(d, allFiches) {
@@ -304,20 +334,22 @@
   }
 
   async function init() {
+    let issue, manifest;
     try {
       const manifestP = fetch(B + 'data/manifest.json').then(r => r.json());
-      const siteP = fetch(B + 'data/site.json').then(r => r.json());
-      const id = SS.issue || (await manifestP).latest;
-      const issue = await (await fetch(B + 'data/issues/' + id + '.json')).json();
-      const manifest = await manifestP;
+      const siteP = fetch(B + 'data/site.json').then(r => r.json()).catch(e => (console.error(e), {}));
+      manifest = await manifestP;
+      const id = SS.issue || manifest.latest;
+      issue = await (await fetch(B + 'data/issues/' + id + '.json')).json();
       Object.assign(issue, await siteP);
-      MANIFEST = manifest;
-      render(issue);
-      renderArchives(manifest);
     } catch (e) {
       document.getElementById('app').innerHTML = '<div id="loading">Impossible de charger ce numéro. Réessayez dans un instant.</div>';
       console.error(e);
+      return;
     }
+    MANIFEST = manifest;
+    render(withDefaults(issue));
+    try { renderArchives(manifest); } catch (e) { console.error(e); }
   }
   init();
 })();

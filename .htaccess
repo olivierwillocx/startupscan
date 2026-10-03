@@ -6,10 +6,18 @@
 # Cache : les fichiers statiques longtemps, les données du numéro 5 minutes
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/css "access plus 1 day"
-  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/svg+xml "access plus 7 days"
   ExpiresByType application/json "access plus 5 minutes"
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 AddType application/json .json
+
+# Les pages HTML ne sont jamais gardees en cache : elles portent le numero de
+# version des scripts (?v=N), c'est ce qui permet de livrer un correctif tout de suite.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
