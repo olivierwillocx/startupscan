@@ -6,19 +6,19 @@
   <title>StartupScan — Jeux de rôle pour apprendre à entreprendre</title>
   <meta name="description" content="Cinq jeux de rôle pour adultes en formation : le comité de direction, la plateforme digitale, le parcours du créateur à Bruxelles, le premier client, la table des financeurs. Rôles, cartes, barèmes, outils de jeu et débriefing.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=7">
 </head>
 <body>
 <div id="app">
 
 <header class="masthead"><div class="wrap">
   <a class="logo" href="./index.html"><span class="logo-icon">S</span><span class="logo-text">Startup<span>Scan</span></span></a>
-  <div class="issue-tag"><b>Jeux de rôle</b><br>5 jeux · adultes en formation</div>
+  <div class="issue-tag"><b>Jeux de rôle</b><br>5 jeux · avec ou sans dés</div>
 </div></header>
 
 <nav class="topnav"><div class="wrap"><a href="./index.html">Dernier numéro</a><a href="./fiches.html">Toutes les fiches</a><a href="./modeles.html">Qui paie ?</a><a href="./outils.html">Outils</a><a href="./glossaire.html">Glossaire</a><a href="./sans-argent.html">Sans argent</a><a href="./jeux.html">Les jeux</a><a href="./jeux-de-role.html" class="active">Jeux de rôle</a><a href="./archives.html">Archives</a></div></nav>
 
-<div class="subnav"><div class="wrap"><span>Sur cette page</span><a href="#cadre">Le cadre</a><a href="#apercu">Les cinq jeux</a><a href="#comite">Le comité</a><a href="#plateforme">La plateforme</a><a href="#parcours">Le parcours</a><a href="#client">Premier client</a><a href="#financeurs">Les financeurs</a><a href="#debrief">Débriefing</a><a href="#carnet">Carnet</a><a href="#tirage">Tirage des rôles</a></div></div>
+<div class="subnav"><div class="wrap"><span>Sur cette page</span><a href="#cadre">Le cadre</a><a href="#apercu">Les cinq jeux</a><a href="#comite">Le comité</a><a href="#plateforme">La plateforme</a><a href="#parcours">Le parcours</a><a href="#client">Premier client</a><a href="#financeurs">Les financeurs</a><a href="#des">Avec des dés</a><a href="#debrief">Débriefing</a><a href="#carnet">Carnet</a><a href="#tirage">Tirage des rôles</a></div></div>
 
 <main>
 <div class="hero"><div class="wrap">
@@ -65,7 +65,7 @@
   <div class="kicker-sm">Jeu de rôle 1 · les fonctions de l'entreprise</div>
   <h2>Le comité</h2>
   <p class="intro">Brikolo est un atelier de réparation d'électroménager et de vente d'appareils reconditionnés, installé à Schaerbeek depuis trois ans. Quatre personnes y travaillent ; le chiffre d'affaires tourne autour de 280 000 € par an. Chaque lundi, le comité se réunit. Cette semaine, six crises l'attendent. Chaque joueur tient <b>une fonction</b> et défend <b>son indicateur</b> — mais il n'y a qu'une entreprise, et elle doit survivre aux six.</p>
-  <div class="game-meta"><span>90 minutes</span><span>6 à 30 joueurs</span><span>Comités de 5 à 7</span><span>Plusieurs comités en parallèle</span></div>
+  <div class="game-meta"><span>90 minutes</span><span>6 à 30 joueurs</span><span>Comités de 5 à 7</span><span>Plusieurs comités en parallèle</span><span>Variante aux dés</span></div>
 
   <h3>Matériel</h3>
   <p>Les cartes de rôle ci-dessous, une par joueur. Les six cartes crise. Le <a href="#tableau-comite">tableau de bord</a> en bas de section, projeté ou ouvert sur un téléphone par comité : il applique les conséquences de chaque décision. À défaut, quatre jauges dessinées au tableau, de 0 à 10.</p>
@@ -98,7 +98,18 @@
   <p>Chaque crise renvoie à une fiche du site qui a affronté le même dilemme. Ne la montrez qu'après le vote : c'est elle qui sert de correction, comme la ligne « flux d'argent » dans <a href="./jeux.html#ecole">Qui paie ?</a></p>
   <div class="crises" id="crises-list"></div>
 
-  <h3>Barème</h3>
+  
+  <div class="dicebox" id="des-comite">
+    <div class="dice-head"><span class="die-ico" aria-hidden="true">⚂</span><div><div class="kicker-sm">Variante aux dés</div><h3>Le dé du marché</h3></div></div>
+    <p>Après chaque vote, et seulement après, un joueur lance un dé. Il ne remplace jamais la décision : il dit dans quel contexte elle tombe. Le tableau de bord ci-dessous l'applique tout seul avec le bouton « Dé du marché ».</p>
+    <div class="table-wrap"><table class="recap dice-table"><thead><tr><th class="num">Dé</th><th>Ce qui se passe</th></tr></thead><tbody>
+      <tr><td class="num"><b>1–2</b></td><td><b>Marché difficile.</b> Les effets négatifs de la décision comptent double. Le comité dit à voix haute quelle fonction l'avait prévu.</td></tr>
+      <tr><td class="num"><b>3–5</b></td><td><b>Marché normal.</b> Les effets s'appliquent tels quels.</td></tr>
+      <tr><td class="num"><b>6</b></td><td><b>Coup de pouce.</b> +1 sur la jauge que la décision voulait protéger — celle qui gagnait le plus. Le comité dit qui avait défendu cette option.</td></tr>
+    </tbody></table></div>
+    <div class="dice-roll" data-dice="comite"><button type="button" class="btn-die">Lancer le dé</button><span class="die-face" aria-live="polite"></span><span class="die-out"></span></div>
+  </div>
+<h3>Barème</h3>
   <ul class="rules">
     <li>Le comité marque <b>la somme de ses quatre jauges</b> à la fin des six crises (départ : 5 partout, soit 20).</li>
     <li><b>+3 points</b> si aucune jauge n'est jamais tombée à 0. Une jauge à zéro n'élimine personne : elle déclenche une alerte, et la crise suivante se joue avec cette contrainte en tête.</li>
@@ -117,7 +128,7 @@
     <p id="cr-text" class="cr-text"></p>
     <div class="gauges" id="gauges"></div>
     <p id="cr-effect" class="cr-effect"></p>
-    <div class="btns"><button class="btn-sm" id="cr-undo" type="button">Carte « Rejouer » : annuler la dernière décision</button><button class="btn-sm" id="cr-reset" type="button">Recommencer la partie</button></div>
+    <div class="btns"><button class="btn-sm btn-hot" id="cr-dice" type="button">⚂ Dé du marché</button><button class="btn-sm" id="cr-undo" type="button">Carte « Rejouer » : annuler la dernière décision</button><button class="btn-sm" id="cr-reset" type="button">Recommencer la partie</button></div>
     <p class="note">Le tableau garde l'historique dans ce navigateur. Un comité, un appareil.</p>
   </div>
 </div></section>
@@ -127,7 +138,7 @@
   <div class="kicker-sm">Jeu de rôle 2 · plateformes digitales</div>
   <h2>La plateforme</h2>
   <p class="intro">Marmite est une application bruxelloise qui met en relation des cuisiniers et cuisinières du quartier — souvent des gens qui cuisinent très bien et n'ont jamais vendu — avec des voisins qui veulent manger un plat fait maison. Panier moyen : 20 €. Une équipe lance la plateforme ; les autres joueurs sont les cuisiniers, les clients, l'investisseur et le contrôle. Le jeu fait vivre le problème que toutes les plateformes connaissent : <b>sans cuisiniers, pas de clients ; sans clients, pas de cuisiniers</b>. Et une fois que ça marche, chacun est tenté de se passer de l'intermédiaire.</p>
-  <div class="game-meta"><span>2 × 45 minutes</span><span>10 à 24 joueurs</span><span>5 mois de jeu</span><span>Calculateur intégré</span></div>
+  <div class="game-meta"><span>2 × 45 minutes</span><span>10 à 24 joueurs</span><span>5 mois de jeu</span><span>Calculateur intégré</span><span>Variante aux dés</span></div>
 
   <p>Marmite est inventée, mais elle est construite avec les mécanismes des <a href="./modeles.html">places de marché</a> du site : la protection payée par l'acheteur de <a href="./f/vinted.html">Vinted</a>, les deux besoins reliés de <a href="./f/maurice-nora.html">Maurice &amp; Nora</a>, la part prélevée sur chaque cours de <a href="./f/meditatii-ro.html">Meditații.ro</a>. Les joueurs qui ont lu ces fiches avant la séance partent avec une longueur d'avance — c'est voulu.</p>
 
@@ -159,7 +170,21 @@
     <div class="step"><h3>Le vendeur inconnu</h3>Le règlement européen sur les services numériques (DSA) impose aux places de marché de savoir qui vend chez elles. Trois cuisiniers n'ont donné qu'un prénom. La plateforme les suspend-elle, au risque de perdre de l'offre ?</div>
   </div>
 
-  <div class="tool" id="calc-plateforme">
+  
+  <div class="dicebox" id="des-plateforme">
+    <div class="dice-head"><span class="die-ico" aria-hidden="true">⚂</span><div><div class="kicker-sm">Variante aux dés</div><h3>Le dé du bouche-à-oreille et le dé des événements</h3></div></div>
+    <p>Deux dés par mois, à partir du mois 2. Le premier dit combien de clients arrivent sans publicité, parce qu'on leur a parlé de Marmite. Le second tire la carte événement : un 4 tire « Les faux avis ». Une carte déjà jouée se relance.</p>
+    <div class="table-wrap"><table class="recap dice-table"><thead><tr><th class="num">Dé</th><th>Ce qui se passe</th></tr></thead><tbody>
+      <tr><td class="num"><b>1–2</b></td><td><b>Bouche-à-oreille nul.</b> Aucun groupe de clients en plus.</td></tr>
+      <tr><td class="num"><b>3–4</b></td><td><b>Ça commence à parler.</b> 1 groupe de clients non joueurs en plus ce mois-ci.</td></tr>
+      <tr><td class="num"><b>5–6</b></td><td><b>Le quartier en parle.</b> 2 groupes de clients en plus.</td></tr>
+      <tr><td class="num"><b>Bonus</b></td><td><b>+1 groupe</b> si la plateforme a adopté au moins une règle de protection (avis vérifiés, assurance, paiement garanti). La confiance se transmet.</td></tr>
+      <tr><td class="num"><b>Événement</b></td><td>1 Le contournement · 2 L'intoxication · 3 Le fisc reçoit tout · 4 Les faux avis · 5 Le concurrent à 0 % · 6 Le vendeur inconnu</td></tr>
+    </tbody></table></div>
+    <label class="dice-opt"><input type="checkbox" id="pf-trust"> La plateforme a adopté au moins une règle de protection</label>
+    <div class="dice-roll" data-dice="plateforme"><button type="button" class="btn-die">Lancer le dé</button><span class="die-face" aria-live="polite"></span><span class="die-out"></span></div>
+  </div>
+<div class="tool" id="calc-plateforme">
     <div class="kicker-sm">Outil de jeu</div>
     <h3>Calculateur du mois — Marmite</h3>
     <div class="tool-grid">
@@ -169,6 +194,7 @@
       <div><label for="pf-fee">Frais de service client (€ par commande)</label><input id="pf-fee" type="number" min="0" step="0.5" value="1"></div>
       <div><label for="pf-coupon">Bon de réduction client (€ par commande)</label><input id="pf-coupon" type="number" min="0" step="0.5" value="0"></div>
       <div><label for="pf-guar">Garantie de revenu par cuisinier (€ / mois)</label><input id="pf-guar" type="number" min="0" step="10" value="0"></div>
+      <div><label for="pf-wom">Clients venus du bouche-à-oreille (dé)</label><input id="pf-wom" type="number" min="0" value="0"></div>
       <div><label for="pf-ads">Budget publicité du mois (€)</label><input id="pf-ads" type="number" min="0" step="250" value="0"></div>
       <div><label for="pf-cash">Trésorerie en début de mois (€)</label><input id="pf-cash" type="number" step="100" value="6000"></div>
     </div>
@@ -180,8 +206,8 @@
       <div><b id="pf-endcash">–</b><span>trésorerie en fin de mois</span></div>
     </div>
     <p id="pf-diag" class="cr-effect"></p>
-    <div class="btns"><button class="btn-sm" id="pf-next" type="button">Mois suivant : reporter la trésorerie</button></div>
-    <p class="note">Règles du calcul : chaque groupe de clients commande 10 repas par mois si le prix payé reste à 22 € ou moins, 7 jusqu'à 25 €, 4 au-delà. Chaque tranche de 250 € de publicité amène un groupe de clients non joueurs, pour le mois seulement. Chaque cuisinier prépare au maximum 30 repas. Les commandes sont réparties également. La plateforme paie les bons, complète les revenus sous la garantie et supporte 1 500 € de coûts fixes.</p>
+    <div class="btns"><button class="btn-sm btn-hot" id="pf-dice" type="button">⚂ Dé du bouche-à-oreille</button><button class="btn-sm btn-hot" id="pf-event" type="button">⚂ Dé de l'événement</button><button class="btn-sm" id="pf-next" type="button">Mois suivant : reporter la trésorerie</button></div>
+    <p class="note">Règles du calcul : chaque groupe de clients commande 10 repas par mois si le prix payé reste à 22 € ou moins, 7 jusqu'à 25 €, 4 au-delà. Chaque tranche de 250 € de publicité amène un groupe de clients non joueurs, pour le mois seulement ; le dé du bouche-à-oreille en ajoute de 0 à 3. Chaque cuisinier prépare au maximum 30 repas. Les commandes sont réparties également. La plateforme paie les bons, complète les revenus sous la garantie et supporte 1 500 € de coûts fixes.</p>
   </div>
 
   <div class="callout"><b>La leçon à faire émerger.</b> Trois mécanismes, que les joueurs découvrent généralement dans cet ordre. D'abord, il faut <b>subventionner le côté rare</b> : au début, ce sont les cuisiniers, et c'est la garantie de revenu qui débloque tout. Ensuite, une commission trop haute fait partir l'offre, une commission trop basse fait mourir la plateforme : le bon niveau dépend de ce qu'elle apporte <b>en plus</b> de la mise en relation. Enfin, <b>une plateforme qui ne fait que présenter les gens se fait contourner</b> ; celle qui garantit le paiement, assure, vérifie et protège, ne se contourne pas. Faites relire aux joueurs la leçon de <a href="./f/vinted.html">Vinted</a> — « faites payer celui qui a le plus à perdre » — et celle de <a href="./f/too-good-to-go.html">Too Good To Go</a>, où les deux côtés gagnent et l'appli prend sa part : ils y reconnaîtront leurs propres décisions. Les mots du débriefing sont dans le <a href="./glossaire.html">glossaire</a> : place de marché, volume d'affaires (GMV), point mort.</div>
@@ -201,7 +227,7 @@
   <div class="kicker-sm">Jeu de rôle 3 · créer son activité à Bruxelles</div>
   <h2>Le parcours du créateur</h2>
   <p class="intro">La moitié de la classe tient des <b>guichets</b> ; l'autre moitié est faite de <b>porteurs de projet</b> qui doivent obtenir, en 35 minutes, tout ce qu'il faut pour démarrer légalement. Puis on inverse. Le jeu a un effet que l'on n'obtient avec aucun cours magistral : ceux qui tiennent un guichet deviennent, pour une heure, <b>les experts de la salle</b>. Ils ont préparé leur station, on vient les consulter, et ils corrigent les erreurs des autres. Pour des personnes qu'on a rarement traitées en experts, c'est souvent la première fois.</p>
-  <div class="game-meta"><span>90 minutes</span><span>8 à 24 joueurs</span><span>6 stations</span><span>Deux manches inversées</span></div>
+  <div class="game-meta"><span>90 minutes</span><span>8 à 24 joueurs</span><span>6 stations</span><span>Deux manches inversées</span><span>Variante aux dés</span></div>
 
   <h3>Mise en place</h3>
   <ol class="rules">
@@ -235,7 +261,19 @@
 
   <div class="callout"><b>Deux précautions.</b> Les montants et règles des cartes station sont vérifiés à la date de mise en ligne de cette page (octobre 2026) ; les liens officiels sont <a href="#sources">en bas de page</a>. Ils changent : faites vérifier par la station elle-même, pendant la préparation, sur le site officiel. C'est en soi une compétence. Et certaines professions restent réglementées (architecte, comptable, professions de santé…) : la carte guichet ne vaut que pour les activités libres.</div>
 
-  <h3>Barème</h3>
+  
+  <div class="dicebox" id="des-parcours">
+    <div class="dice-head"><span class="die-ico" aria-hidden="true">⚂</span><div><div class="kicker-sm">Variante aux dés</div><h3>Le dé du guichet</h3></div></div>
+    <p>Chaque station a un dé. Quand un porteur arrive, il le lance avant de parler. Le jeu montre qu'une démarche bien préparée résiste mieux aux aléas qu'une démarche faite vite.</p>
+    <div class="table-wrap"><table class="recap dice-table"><thead><tr><th class="num">Dé</th><th>Ce qui se passe</th></tr></thead><tbody>
+      <tr><td class="num"><b>1</b></td><td><b>File d'attente.</b> Le porteur laisse passer un autre porteur avant d'être reçu. S'il a préparé sa question par écrit, il passe quand même.</td></tr>
+      <tr><td class="num"><b>2</b></td><td><b>Pièce manquante.</b> La station nomme une information précise qui manque (adresse, activité exacte, statut). Le porteur revient avec.</td></tr>
+      <tr><td class="num"><b>3–5</b></td><td><b>Traitement normal.</b></td></tr>
+      <tr><td class="num"><b>6</b></td><td><b>Guichet libre et conseil en plus.</b> La station révèle au porteur le piège d'une <i>autre</i> station.</td></tr>
+    </tbody></table></div>
+    <div class="dice-roll" data-dice="parcours"><button type="button" class="btn-die">Lancer le dé</button><span class="die-face" aria-live="polite"></span><span class="die-out"></span></div>
+  </div>
+<h3>Barème</h3>
   <ul class="rules">
     <li><b>1 point</b> par tampon obtenu.</li>
     <li><b>2 points</b> par piège déjoué — le porteur a dit, avec la bonne raison, que l'affirmation était fausse.</li>
@@ -249,7 +287,7 @@
   <div class="kicker-sm">Jeu de rôle 4 · vente et négociation</div>
   <h2>Premier client</h2>
   <p class="intro">Le premier client est le moment où un projet devient une entreprise, et celui que les créateurs redoutent le plus. Le jeu se joue en trios : un <b>vendeur</b>, un <b>acheteur</b> qui a une carte secrète, un <b>observateur</b> qui tient la grille. Trois manches, et chacun passe par les trois rôles. Personne n'est seul devant la classe : tout se passe à trois, en même temps, dans le bruit.</p>
-  <div class="game-meta"><span>60 minutes</span><span>3 à 30 joueurs</span><span>Trios</span><span>Rotation des trois rôles</span></div>
+  <div class="game-meta"><span>60 minutes</span><span>3 à 30 joueurs</span><span>Trios</span><span>Rotation des trois rôles</span><span>Variante aux dés</span></div>
 
   <h3>Déroulé d'une manche (15 minutes)</h3>
   <ol class="rules">
@@ -279,7 +317,21 @@
     </tbody>
   </table></div>
   <div class="callout"><b>La phrase d'or.</b> C'est le geste le plus important du jeu. L'observateur note mot pour mot la meilleure phrase du vendeur, et la lui lit à la fin. Le vendeur la recopie dans son carnet. Beaucoup de gens n'ont jamais entendu quelqu'un leur répéter, avec précision, quelque chose de bien qu'ils ont dit. Ils s'en souviennent longtemps — et ils la réutilisent face à leur vrai premier client.</div>
-  <h3>Pour finir : sa propre manche</h3>
+  
+  <div class="dicebox" id="des-client">
+    <div class="dice-head"><span class="die-ico" aria-hidden="true">⚂</span><div><div class="kicker-sm">Variante aux dés</div><h3>Le dé du souci caché</h3></div></div>
+    <p>Pour la quatrième manche — chacun vend son propre projet —, l'acheteur ne sait pas quoi improviser ? Il lance le dé et garde le résultat secret. Le vendeur ne peut pas le deviner : il doit le trouver en posant des questions.</p>
+    <div class="table-wrap"><table class="recap dice-table"><thead><tr><th class="num">Dé</th><th>Ce qui se passe</th></tr></thead><tbody>
+      <tr><td class="num"><b>1</b></td><td><b>Déjà déçu.</b> Un prestataire l'a mal servi l'an dernier. Il dit oui à une période d'essai avec un résultat vérifiable.</td></tr>
+      <tr><td class="num"><b>2</b></td><td><b>Budget bloqué.</b> Pas d'argent avant le mois prochain. Il dit oui à un démarrage maintenant, paiement à 30 jours.</td></tr>
+      <tr><td class="num"><b>3</b></td><td><b>Pas seul à décider.</b> Il doit convaincre son associé. Il dit oui si on lui donne une page à montrer.</td></tr>
+      <tr><td class="num"><b>4</b></td><td><b>Peur de dépendre.</b> Il craint de ne plus pouvoir changer. Il dit oui à un engagement court, sans exclusivité.</td></tr>
+      <tr><td class="num"><b>5</b></td><td><b>Réflexe de négociation.</b> Il demande 20 % de moins, sans en avoir besoin. Il dit oui si le prix tient et qu'on lui offre autre chose qu'une remise.</td></tr>
+      <tr><td class="num"><b>6</b></td><td><b>Pressé.</b> Il lui faut une solution dans dix jours. Il dit oui à qui s'engage sur une date.</td></tr>
+    </tbody></table></div>
+    <div class="dice-roll" data-dice="client"><button type="button" class="btn-die">Lancer le dé</button><span class="die-face" aria-live="polite"></span><span class="die-out"></span></div>
+  </div>
+<h3>Pour finir : sa propre manche</h3>
   <p>Quatrième manche, facultative et fortement conseillée : chacun vend <b>son propre projet</b>, celui de son business plan. L'acheteur improvise un souci réaliste. La trace : le prix, les trois arguments, la phrase d'or — et le prix va dans le <a href="./outils.html">calculateur de point mort</a> pour vérifier qu'il tient.</p>
 </div></section>
 
@@ -288,7 +340,7 @@
   <div class="kicker-sm">Jeu de rôle 5 · le financement</div>
   <h2>La table des financeurs</h2>
   <p class="intro">Chaque équipe reprend un projet du <a href="#parcours">parcours du créateur</a> et doit financer son démarrage. Face à elle, une table de quatre financeurs qui ne veulent pas du tout la même chose. Le jeu ne récompense pas l'équipe qui lève le plus : il récompense celle qui sait <b>ce que chaque euro lui coûte</b> — en intérêts, en part de son entreprise, en garanties ou en relations familiales.</p>
-  <div class="game-meta"><span>90 minutes</span><span>8 à 24 joueurs</span><span>Équipes de 3</span><span>4 financeurs</span></div>
+  <div class="game-meta"><span>90 minutes</span><span>8 à 24 joueurs</span><span>Équipes de 3</span><span>4 financeurs</span><span>Variante aux dés</span></div>
 
   <h3>Les financeurs</h3>
   <div class="rolecards">
@@ -314,7 +366,34 @@
     <li><b>2 points</b> — le remboursement mensuel tient dans le point mort calculé.</li>
     <li><b>0 point</b> pour le montant levé lui-même. Ce n'est pas ce qui compte.</li>
   </ul>
-  <div class="callout"><b>Le calcul à faire faire.</b> 20 000 € pour 25 % du capital, cela veut dire que l'investisseur estime l'entreprise à 80 000 € une fois l'argent apporté, et à 60 000 € juste avant. À 35 %, l'entreprise ne vaut plus qu'environ 37 000 € avant l'apport. Faites calculer cette différence à voix haute : on ne l'oublie plus. Les mots sont dans le <a href="./glossaire.html">glossaire</a> : valorisation, business angel, pré-amorçage, dette. Pour la suite, deux fiches : <a href="./f/backbone.html">Backbone</a>, qui a fait entrer des familles de l'agroalimentaire belge dans son capital, et <a href="./f/le-pop-up-store.html">Le pop-up store</a>, dont la première collection a été payée par le financement participatif. Et pour ceux qui n'ont rien : <a href="./sans-argent.html">Sans argent</a> — faire payer le client avant de dépenser.</div>
+  
+  <div class="dicebox" id="des-financeurs">
+    <div class="dice-head"><span class="die-ico" aria-hidden="true">⚂</span><div><div class="kicker-sm">Variante aux dés</div><h3>Le dé de l'imprévu</h3></div></div>
+    <p>Une fois le plan de financement composé, chaque équipe lance un dé : il simule les six premiers mois. L'équipe a cinq minutes pour montrer comment son plan encaisse le choc — réserve de trésorerie, délai négocié, financeur à rappeler. Elle peut demander l'aide d'une autre équipe : c'est permis, et ça rapporte.</p>
+    <div class="table-wrap"><table class="recap dice-table"><thead><tr><th class="num">Dé</th><th>Ce qui se passe</th></tr></thead><tbody>
+      <tr><td class="num"><b>1</b></td><td><b>Client en retard.</b> Une grosse facture est payée avec 90 jours de retard : 3 000 € manquent pendant trois mois.</td></tr>
+      <tr><td class="num"><b>2</b></td><td><b>Panne.</b> Le matériel principal lâche : 2 500 € de réparation, tout de suite.</td></tr>
+      <tr><td class="num"><b>3</b></td><td><b>Mois creux.</b> Le chiffre d'affaires est 30 % plus bas que prévu pendant deux mois.</td></tr>
+      <tr><td class="num"><b>4</b></td><td><b>Charges en hausse.</b> Loyer et énergie : +15 % sur les frais fixes.</td></tr>
+      <tr><td class="num"><b>5</b></td><td><b>Rien de spécial.</b> Le plan tient tel quel — l'équipe dit quand même ce qu'elle ferait sur un 1.</td></tr>
+      <tr><td class="num"><b>6</b></td><td><b>Grosse commande.</b> Un client commande pour 4 000 €, mais il faut acheter avant d'être payé.</td></tr>
+    </tbody></table></div>
+    <p class="dice-note"><b>Barème du dé :</b> +2 points si le plan absorbe le choc sans nouvel emprunt, +1 point pour l'équipe qui a aidé une autre à trouver la solution.</p>
+    <div class="dice-roll" data-dice="financeurs"><button type="button" class="btn-die">Lancer le dé</button><span class="die-face" aria-live="polite"></span><span class="die-out"></span></div>
+  </div>
+<div class="callout"><b>Le calcul à faire faire.</b> 20 000 € pour 25 % du capital, cela veut dire que l'investisseur estime l'entreprise à 80 000 € une fois l'argent apporté, et à 60 000 € juste avant. À 35 %, l'entreprise ne vaut plus qu'environ 37 000 € avant l'apport. Faites calculer cette différence à voix haute : on ne l'oublie plus. Les mots sont dans le <a href="./glossaire.html">glossaire</a> : valorisation, business angel, pré-amorçage, dette. Pour la suite, deux fiches : <a href="./f/backbone.html">Backbone</a>, qui a fait entrer des familles de l'agroalimentaire belge dans son capital, et <a href="./f/le-pop-up-store.html">Le pop-up store</a>, dont la première collection a été payée par le financement participatif. Et pour ceux qui n'ont rien : <a href="./sans-argent.html">Sans argent</a> — faire payer le client avant de dépenser.</div>
+</div></section>
+
+<section class="block" id="des"><div class="wrap">
+  <h2>Jouer avec des dés</h2>
+  <p class="intro">Chaque jeu a sa variante aux dés, présentée dans sa section. Un dé à six faces ordinaire suffit ; les boutons « Lancer le dé » de la page font la même chose, et le tableau du comité comme le calculateur de la plateforme appliquent directement le résultat. Le hasard fait entrer dans le jeu ce qu'aucun business plan ne contrôle : le marché, les délais, l'imprévu.</p>
+  <div class="ideas">
+    <div><b>Le dé complique, il n'élimine pas</b>Aucun lancer ne fait perdre une personne ou une équipe. Il crée une situation nouvelle, et c'est la réponse à cette situation qui est notée.</div>
+    <div><b>On sépare la chance du mérite</b>Au débriefing, on demande toujours : « Qu'est-ce qui venait du dé, et qu'est-ce qui venait de vous ? » Pour qui a longtemps pris ses échecs pour des fautes personnelles, cette distinction compte.</div>
+    <div><b>La carte « Rejouer » reste valable</b>Après un lancer cruel, l'équipe peut utiliser sa carte pour revoir sa décision, ou demander l'aide d'une autre équipe. Aider rapporte des points.</div>
+    <div><b>Le dé après la décision, jamais avant</b>On décide d'abord, on lance ensuite. Sinon le dé devient une excuse pour ne pas décider.</div>
+  </div>
+  <p class="note">Pour imprimer : les tables des dés s'impriment avec les cartes. Un dé par comité, par station et par équipe financeurs suffit.</p>
 </div></section>
 
 <!-- ============ DEBRIEF ============ -->
@@ -399,6 +478,6 @@
 </div></footer>
 
 </div>
-<script src="./jeux-de-role.js?v=2"></script>
+<script src="./jeux-de-role.js?v=3"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
   };
 
   /* ---------- Jeu 1 : le comité ---------- */
+  const FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
   const G = ['Trésorerie', 'Clients', 'Équipe', 'Réputation'];
   const CRISES = [
     { t: 'La grosse commande', fiche: ['l-entreprise-de-titres-services', 'Titres-services : quand le vrai client est le public'],
@@ -73,6 +74,18 @@
         renderCr(`<b>${esc(c.o[j][0])}</b> — ${esc(c.o[j][2])}<br>${eff}`);
       }));
     }
+    $('cr-dice').addEventListener('click', () => {
+      const h = st.hist[st.hist.length - 1];
+      if (!h) { renderCr('Le dé se lance après une décision : votez d\'abord.'); return; }
+      if (h.dice) { renderCr(`Le dé a déjà été lancé pour cette décision (${h.dice}).`); return; }
+      const d = 1 + Math.floor(Math.random() * 6); let extra = [0, 0, 0, 0], txt;
+      if (d <= 2) { extra = h.e.map(x => x < 0 ? x : 0); txt = extra.some(x => x) ? 'Marché difficile : les effets négatifs comptent double. Quelle fonction l\'avait prévu ?' : 'Marché difficile, mais la décision n\'avait aucun effet négatif : rien ne change.'; }
+      else if (d <= 5) txt = 'Marché normal : les effets s\'appliquent tels quels.';
+      else { const m = Math.max(...h.e); const k = m > 0 ? h.e.indexOf(m) : st.g.indexOf(Math.min(...st.g)); extra[k] = 1; txt = `Coup de pouce : +1 en ${G[k]}. Qui avait défendu cette option ?`; }
+      st.g = st.g.map((v, k) => Math.max(0, Math.min(10, v + extra[k])));
+      h.e = h.e.map((x, k) => x + extra[k]); h.dice = d; store.set(KEY, st);
+      renderCr(`<span class="die-big">${FACES[d]}</span> <b>Dé : ${d}</b> — ${txt}`);
+    });
     sel.addEventListener('change', () => renderCr());
     $('cr-undo').addEventListener('click', () => {
       const h = st.hist.pop(); if (!h) return;
@@ -89,13 +102,13 @@
 
   /* ---------- Jeu 2 : calculateur Marmite ---------- */
   if ($('pf-cooks')) {
-    const ids = ['pf-cooks', 'pf-clients', 'pf-comm', 'pf-fee', 'pf-coupon', 'pf-guar', 'pf-ads', 'pf-cash'];
+    const ids = ['pf-cooks', 'pf-clients', 'pf-comm', 'pf-fee', 'pf-coupon', 'pf-guar', 'pf-wom', 'pf-ads', 'pf-cash'];
     const BASKET = 20, CAP = 30, FIXED = 1500, AD_UNIT = 250;
     let last = null;
     function calc() {
       const v = {}; ids.forEach(i => v[i] = Math.max(0, +$(i).value || 0));
       v['pf-cash'] = +$('pf-cash').value || 0;
-      const C = Math.floor(v['pf-cooks']), K = Math.floor(v['pf-clients']) + Math.floor(v['pf-ads'] / AD_UNIT);
+      const C = Math.floor(v['pf-cooks']), K = Math.floor(v['pf-clients']) + Math.floor(v['pf-wom']) + Math.floor(v['pf-ads'] / AD_UNIT);
       const comm = Math.min(60, v['pf-comm']) / 100;
       const price = Math.max(0, BASKET + v['pf-fee'] - v['pf-coupon']);
       const perClient = price <= 22 ? 10 : price <= 25 ? 7 : 4;
@@ -126,9 +139,42 @@
       last = end;
     }
     ids.forEach(i => $(i).addEventListener('input', calc));
-    $('pf-next').addEventListener('click', () => { if (last !== null) { $('pf-cash').value = Math.round(last); $('pf-ads').value = 0; calc(); } });
+    $('pf-next').addEventListener('click', () => { if (last !== null) { $('pf-cash').value = Math.round(last); $('pf-ads').value = 0; $('pf-wom').value = 0; calc(); } });
+    const EVENTS = ['Le contournement', "L'intoxication", 'Le fisc reçoit tout', 'Les faux avis', 'Le concurrent à 0 %', 'Le vendeur inconnu'];
+    let played = [];
+    $('pf-dice').addEventListener('click', () => {
+      const d = 1 + Math.floor(Math.random() * 6), base = d <= 2 ? 0 : d <= 4 ? 1 : 2, bonus = $('pf-trust') && $('pf-trust').checked ? 1 : 0;
+      $('pf-wom').value = base + bonus; calc();
+      $('pf-diag').textContent = `${FACES[d]} Dé du bouche-à-oreille : ${d} → ${base} groupe(s) de clients${bonus ? ' + 1 grâce à la confiance' : ''}. ` + $('pf-diag').textContent;
+    });
+    $('pf-event').addEventListener('click', () => {
+      if (played.length >= 6) played = [];
+      let d; do { d = 1 + Math.floor(Math.random() * 6); } while (played.includes(d));
+      played.push(d);
+      $('pf-diag').textContent = `${FACES[d]} Dé de l'événement : ${d} → carte « ${EVENTS[d - 1]} ». Le contrôle la lit, la plateforme répond publiquement.`;
+    });
     calc();
   }
+
+  /* ---------- Dés génériques ---------- */
+  const DICE = {
+    comite: d => d <= 2 ? 'Marché difficile : les effets négatifs comptent double.' : d <= 5 ? 'Marché normal.' : 'Coup de pouce : +1 sur la jauge que la décision voulait protéger.',
+    plateforme: d => (d <= 2 ? 'Aucun groupe de clients en plus.' : d <= 4 ? '1 groupe de clients en plus.' : '2 groupes de clients en plus.') + ' (+1 si une règle de protection est en place.)',
+    parcours: d => ['', "File d'attente : laissez passer un porteur — sauf si votre question est écrite.", 'Pièce manquante : la station vous dit laquelle.', 'Traitement normal.', 'Traitement normal.', 'Traitement normal.', "Guichet libre : la station vous révèle le piège d'une autre station."][d],
+    client: d => ['', 'Déjà déçu par un prestataire.', 'Budget bloqué jusqu\'au mois prochain.', 'Doit convaincre son associé.', 'Peur de dépendre de vous.', 'Réflexe de négociation : −20 %.', 'Pressé : dix jours.'][d] + ' (Acheteur : gardez-le secret.)',
+    financeurs: d => ['', 'Client en retard : 3 000 € manquent pendant trois mois.', 'Panne : 2 500 € tout de suite.', 'Mois creux : −30 % pendant deux mois.', 'Charges en hausse : +15 % sur les frais fixes.', 'Rien de spécial — que feriez-vous sur un 1 ?', 'Grosse commande de 4 000 €, à préfinancer.'][d]
+  };
+  document.querySelectorAll('.dice-roll').forEach(box => {
+    const f = DICE[box.dataset.dice]; if (!f) return;
+    box.querySelector('.btn-die').addEventListener('click', () => {
+      const face = box.querySelector('.die-face'), out = box.querySelector('.die-out');
+      let n = 0; out.textContent = '';
+      const spin = setInterval(() => {
+        face.textContent = FACES[1 + Math.floor(Math.random() * 6)];
+        if (++n >= 8) { clearInterval(spin); const d = 1 + Math.floor(Math.random() * 6); face.textContent = FACES[d]; out.textContent = d + ' — ' + f(d); }
+      }, 60);
+    });
+  });
 
   /* ---------- Tirage des rôles ---------- */
   const ROLES = {
