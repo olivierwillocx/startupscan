@@ -162,6 +162,8 @@
     plateforme: d => (d <= 2 ? 'Aucun groupe de clients en plus.' : d <= 4 ? '1 groupe de clients en plus.' : '2 groupes de clients en plus.') + ' (+1 si une règle de protection est en place.)',
     parcours: d => ['', "File d'attente : laissez passer un porteur — sauf si votre question est écrite.", 'Pièce manquante : la station vous dit laquelle.', 'Traitement normal.', 'Traitement normal.', 'Traitement normal.', "Guichet libre : la station vous révèle le piège d'une autre station."][d],
     client: d => ['', 'Déjà déçu par un prestataire.', 'Budget bloqué jusqu\'au mois prochain.', 'Doit convaincre son associé.', 'Peur de dépendre de vous.', 'Réflexe de négociation : −20 %.', 'Pressé : dix jours.'][d] + ' (Acheteur : gardez-le secret.)',
+    entourage: d => ['', 'Pas d\'affiliation à la caisse sociale au démarrage.', 'Pas de mutualité : incapacité sans couverture.', 'Compte privé et professionnel mélangés depuis six mois.', 'Premier salarié sans Dimona ni assurance accidents du travail.', 'Factures confiées au comptable une fois par an, en vrac.', 'Aucun oubli : dites ce qui vous a protégés.'][d],
+    relance: d => ['', 'Mise en demeure du fournisseur principal : 15 jours.', 'La banque réduit la ligne de crédit de moitié.', 'Le plus gros client paie avec 60 jours de retard.', 'Majorations de la caisse d\'assurances sociales.', 'Rien de nouveau ce trimestre.', 'Un client fidèle prépaie trois mois.'][d] + ' (Annulé si vous aviez déjà parlé à ce créancier.)',
     financeurs: d => ['', 'Client en retard : 3 000 € manquent pendant trois mois.', 'Panne : 2 500 € tout de suite.', 'Mois creux : −30 % pendant deux mois.', 'Charges en hausse : +15 % sur les frais fixes.', 'Rien de spécial — que feriez-vous sur un 1 ?', 'Grosse commande de 4 000 €, à préfinancer.'][d]
   };
   document.querySelectorAll('.dice-roll').forEach(box => {
@@ -182,7 +184,9 @@
     plateforme: { whole: true, label: 'Partie' },
     parcours: { half: true, label: 'Manche 1' },
     client: { size: 3, min: 2, roles: ['Vendeur', 'Acheteur', 'Observateur'], label: 'Trio' },
-    financeurs: { teams: 3, label: 'Équipe' }
+    financeurs: { teams: 3, label: 'Équipe' },
+    entourage: { label: 'Partie' },
+    relance: { size: 8, min: 4, roles: ['La direction', 'La direction', 'Duo d\'experts · comptable', 'Duo d\'experts · avocat', 'Créancier · TVA', 'Créancier · caisse sociale', 'Créancier · fournisseur', 'Chambre des entreprises en difficulté'], label: 'Table' }
   };
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   function chunk(arr, size) {
@@ -208,6 +212,11 @@
       const half = Math.ceil(sh.length / 2);
       groups.push({ name: 'Stations (manche 1)', items: sh.slice(0, half).map((p, i) => ({ p, r: st[i % 6] })) });
       groups.push({ name: 'Porteurs (manche 1)', items: sh.slice(half).map((p, i) => ({ p, r: pr[i % 6] })) });
+    } else if (g === 'entourage') {
+      const pros = ['Le comptable', "L'expert-comptable", 'Le notaire', "Le guichet d'entreprises", "La caisse d'assurances sociales", 'La mutualité', 'Le secrétariat social', 'La banque', "L'assureur", "L'avocat"];
+      const np = Math.min(10, Math.max(3, Math.floor(sh.length / 2)));
+      groups.push({ name: 'Les métiers', items: sh.slice(0, np).map((p, i) => ({ p, r: pros[i] })) });
+      chunk(sh.slice(np), 3).forEach((t, i) => groups.push({ name: 'Porteurs ' + (i + 1), items: t.map(p => ({ p, r: 'Porteur·euse' })) }));
     } else if (g === 'financeurs') {
       const fin = ['La banque', 'Le microcrédit', "L'investisseur privé", 'La famille et les amis'];
       const nf = Math.min(4, Math.max(1, Math.floor(sh.length / 4)));
