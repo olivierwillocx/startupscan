@@ -41,7 +41,7 @@ def model_class(m):
 NAV = [("index.html", "Dernier numéro"), ("fiches.html", "Toutes les fiches"),
        ("modeles.html", "Qui paie ?"), ("outils.html", "Outils"),
        ("glossaire.html", "Glossaire"), ("sans-argent.html", "Sans argent"),
-       ("jeux.html", "Les jeux"), ("jeux-de-role.html", "Jeux de rôle"), ("archives.html", "Archives")]
+       ("jeux.html", "Les jeux"), ("jeux-de-role.html", "Jeux de rôle"), ("archives.html", "Archives"), ("cours-ecommerce/", "Cours e-commerce")]
 
 
 def page(path, title, desc, tag, body, depth=0):
