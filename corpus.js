@@ -126,7 +126,7 @@
   <div class="issue-tag"><b>Bibliothèque</b><br>${FICHES.length} fiches · ${issues.length} numéro${issues.length > 1 ? 's' : ''}</div>
 </div></header>
 <nav class="topnav"><div class="wrap">
-  <a href="${B}index.html">Dernier numéro</a><a href="${B}fiches.html" class="active">Toutes les fiches</a><a href="${B}modeles.html">Qui paie ?</a><a href="${B}outils.html">Outils</a><a href="${B}glossaire.html">Glossaire</a><a href="${B}sans-argent.html">Sans argent</a><a href="${B}jeux.html">Les jeux</a><a href="${B}archives.html">Archives</a><a href="${B}cours-ecommerce/">Cours e-commerce</a>
+  <a href="${B}index.html">Dernier numéro</a><a href="${B}fiches.html" class="active">Toutes les fiches</a><a href="${B}modeles.html">Qui paie ?</a><a href="${B}outils.html">Outils</a><a href="${B}glossaire.html">Glossaire</a><a href="${B}sans-argent.html">Sans argent</a><a href="${B}jeux.html">Les jeux</a><a href="${B}archives.html">Archives</a><a href="${B}cours-ecommerce/" style="color:#004a93;font-weight:700">Cours e-commerce</a>
 </div></nav>
 <main>
 <div class="hero lib-hero"><div class="wrap">

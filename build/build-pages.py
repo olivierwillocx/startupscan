@@ -47,7 +47,7 @@ NAV = [("index.html", "Dernier numéro"), ("fiches.html", "Toutes les fiches"),
 def page(path, title, desc, tag, body, depth=0):
     """Ecrit une page complete. depth = nombre de dossiers de profondeur."""
     b = "../" * depth or "./"
-    nav = "".join('<a href="%s%s"%s>%s</a>' % (b, h, ' class="active"' if h == os.path.basename(path) else "", esc(l))
+    nav = "".join('<a href="%s%s"%s%s>%s</a>' % (b, h, ' class="active"' if h == os.path.basename(path) else "", ' style="color:#004a93;font-weight:700"' if h == "cours-ecommerce/" else "", esc(l))
                   for h, l in NAV)
     html = """<!DOCTYPE html>
 <html lang="fr">

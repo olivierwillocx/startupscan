@@ -13,7 +13,7 @@
 :root{
   --bg:#FBFAF8; --surface:#FFFFFF; --surface-2:#F3F0EA; --code:#F0EDE6;
   --fg:#1A2130; --muted:#5C6676; --line:#E6E0D6; --line-2:#EFEAE1;
-  --navy:#1F3864; --blue:#2E75B6; --orange:#E35E27;
+  --navy:#1F3864; --blue:#2E75B6; --orange:#E35E27; --epfc:#004A93;
   --accent:var(--orange);
   --warn:#C2410C; --projet:#0E8F63; --jalon:#2E75B6;
   --sidebar:#17233B; --sidebar-fg:#C9D2E0; --sidebar-muted:#7E8CA6; --sidebar-line:#263650;
@@ -26,7 +26,7 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#10151F; --surface:#171E2B; --surface-2:#1E2636; --code:#1C2433;
   --fg:#E8EBF0; --muted:#9AA6B8; --line:#2A3347; --line-2:#222B3C;
-  --navy:#7FA8D9; --blue:#6FA3DC; --orange:#F0794A;
+  --navy:#7FA8D9; --blue:#6FA3DC; --orange:#F0794A; --epfc:#6FA3DC;
   --warn:#F0794A; --projet:#34C799; --jalon:#6FA3DC;
   --sidebar:#0D1420; --sidebar-fg:#C3CCDB; --sidebar-muted:#6F7E98; --sidebar-line:#1E2A40;
   color-scheme:dark;
@@ -34,7 +34,7 @@
 :root[data-theme="dark"]{
   --bg:#10151F; --surface:#171E2B; --surface-2:#1E2636; --code:#1C2433;
   --fg:#E8EBF0; --muted:#9AA6B8; --line:#2A3347; --line-2:#222B3C;
-  --navy:#7FA8D9; --blue:#6FA3DC; --orange:#F0794A;
+  --navy:#7FA8D9; --blue:#6FA3DC; --orange:#F0794A; --epfc:#6FA3DC;
   --warn:#F0794A; --projet:#34C799; --jalon:#6FA3DC;
   --sidebar:#0D1420; --sidebar-fg:#C3CCDB; --sidebar-muted:#6F7E98; --sidebar-line:#1E2A40;
   color-scheme:dark;
@@ -51,8 +51,7 @@ a{color:var(--blue)}
   padding-left:env(safe-area-inset-left,0px)}
 .sb-brand{display:flex;align-items:center;gap:.65rem;padding:1.1rem 1.1rem .9rem;
   border-bottom:1px solid var(--sidebar-line);text-decoration:none}
-.sb-badge{flex:none;font-family:var(--f-ui);font-weight:800;font-size:.86rem;letter-spacing:.06em;
-  color:#fff;background:var(--blue);padding:.32rem .5rem;border-radius:7px}
+.sb-badge{flex:none;height:28px;width:auto;border-radius:5px;display:block}
 .sb-brand .sb-name{font-family:var(--f-ui);font-weight:700;font-size:.84rem;line-height:1.25;color:#fff}
 .sb-brand .sb-name small{display:block;font-weight:500;color:var(--sidebar-muted);font-size:.7rem;
   font-family:var(--f-mono);letter-spacing:.01em;margin-top:.1rem}
@@ -78,8 +77,7 @@ a{color:var(--blue)}
 .topbar{display:none}
 /* hero */
 .hero{padding:1rem 0 1.6rem;border-bottom:1px solid var(--line)}
-.hero-logo{height:46px;width:auto;margin-bottom:1.4rem;
-  background:#fff;padding:3px 6px;border-radius:6px;border:1px solid var(--line)}
+.hero-logo{height:56px;width:auto;margin-bottom:1.4rem;border-radius:6px;display:block}
 .hero-eyebrow{font-family:var(--f-ui);text-transform:uppercase;letter-spacing:.12em;
   font-size:.74rem;font-weight:700;color:var(--blue)}
 .hero-title{font-family:var(--f-disp);font-weight:800;line-height:.98;
@@ -210,8 +208,7 @@ h3.fun-head::before{content:"▶ ";}
     padding-right:max(1rem,env(safe-area-inset-right,0px))}
   .topbar .tb-title{font-family:var(--f-ui);font-weight:700;font-size:.92rem;
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tb-badge{flex:none;font-family:var(--f-ui);font-weight:800;font-size:.76rem;letter-spacing:.05em;
-    color:#fff;background:var(--blue);padding:.25rem .45rem;border-radius:6px}
+  .tb-badge{flex:none;height:24px;width:auto;border-radius:4px;display:block}
   .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
     background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;
     font-size:1.2rem;cursor:pointer}
@@ -225,6 +222,23 @@ h3.fun-head::before{content:"▶ ";}
   body{font-size:1rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* resource lists */
+.reslist{list-style:none;padding-left:0;margin:.8rem 0}
+.reslist li{padding:.5rem 0 .5rem .9rem;border-left:2px solid var(--line);margin:.2rem 0}
+.reslist li strong{color:var(--fg)}
+/* feedback form */
+.fb-form{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;
+  padding:1.3rem;margin:1.4rem 0;max-width:640px;display:flex;flex-direction:column;gap:1rem}
+.fb-row{display:flex;flex-direction:column;gap:.35rem}
+.fb-row label{font-family:var(--f-ui);font-weight:600;font-size:.82rem;color:var(--muted)}
+.fb-form input,.fb-form select,.fb-form textarea{font-family:var(--f-ui);font-size:.95rem;
+  padding:.6rem .7rem;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--fg);width:100%}
+.fb-form textarea{resize:vertical;line-height:1.5}
+.fb-form input:focus,.fb-form select:focus,.fb-form textarea:focus{border-color:var(--blue);outline:none}
+.fb-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.2rem}
+.fb-actions .btn{cursor:pointer}
+.fb-hint{font-family:var(--f-ui);font-size:.8rem;color:var(--muted);margin:0}
 :focus-visible{outline:2.5px solid var(--blue);outline-offset:2px;border-radius:3px}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}html{height:100%}</style>
@@ -234,7 +248,7 @@ h3.fun-head::before{content:"▶ ";}
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <a class="sb-brand" href="#accueil">
-      <span class="sb-badge">EPFC</span>
+      <img class="sb-badge" src="img/epfc_logo.svg" alt="EPFC">
       <div class="sb-name">E-commerce à l’international<small>UE 714508U32D1 · 2026-2027</small></div>
     </a>
     <nav class="nav" aria-label="Sommaire du cours"><div class="nav-group"><div class="nav-grp-title">Le cours</div><ul>
@@ -271,26 +285,31 @@ h3.fun-head::before{content:"▶ ";}
 </ul></div>
 <div class="nav-group"><div class="nav-grp-title">Annexes</div><ul>
 <li><a href="#annexe-a" data-sid="annexe-a"><span class="n-k">Annexe A</span><span class="n-t">Le cadre juridique de l&#x27;e-commerce en bref</span></a></li>
-<li><a href="#annexe-b" data-sid="annexe-b"><span class="n-k">Annexe B</span><span class="n-t">Cinq entreprises, cinq leçons</span></a></li>
+<li><a href="#annexe-b" data-sid="annexe-b"><span class="n-k">Annexe B</span><span class="n-t">Dix entreprises, dix leçons</span></a></li>
 <li><a href="#annexe-c" data-sid="annexe-c"><span class="n-k">Annexe C</span><span class="n-t">Cas d&#x27;entraînement — BELGA CRAFT, de zéro à l&#x27;épreuve</span></a></li>
 <li><a href="#annexe-d" data-sid="annexe-d"><span class="n-k">Annexe D</span><span class="n-t">Modèles à remplir</span></a></li>
 <li><a href="#annexe-e" data-sid="annexe-e"><span class="n-k">Annexe E</span><span class="n-t">Boîte à outils gratuite</span></a></li>
 <li><a href="#annexe-f" data-sid="annexe-f"><span class="n-k">Annexe F</span><span class="n-t">Lexique</span></a></li>
 <li><a href="#annexe-g" data-sid="annexe-g"><span class="n-k">Annexe G</span><span class="n-t">Sources</span></a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-grp-title">Ressources</div><ul>
+<li><a href="#inspiration" data-sid="inspiration"><span class="n-t">Sources d’inspiration</span></a></li>
+<li><a href="#idees-business" data-sid="idees-business"><span class="n-t">Idées de business &amp; StartupScan</span></a></li>
+<li><a href="#contribuer" data-sid="contribuer"><span class="n-t">Contribuer / signaler</span></a></li>
 </ul></div></nav>
   </aside>
   <div class="scrim"></div>
   <div class="main">
     <div class="topbar">
       <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le sommaire">☰</button>
-      <span class="tb-badge">EPFC</span>
+      <img class="tb-badge" src="img/epfc_logo.svg" alt="EPFC">
       <span class="tb-title" id="tb-title">Accueil</span>
     </div>
     <button class="theme-btn" id="theme-btn" aria-label="Basculer clair/sombre">◐</button>
     <div class="content">
       <article class="page" id="accueil" data-home>
 <header class="hero">
-  <img class="hero-logo" src="img/epfc_logo.jpg" alt="EPFC — Enseignement de Promotion et de Formation Continue">
+  <img class="hero-logo" src="img/epfc_logo.svg" alt="EPFC — Enseignement de Promotion et de Formation Continue">
   <div class="hero-eyebrow">Section économique · Bachelier en International Business</div>
   <h1 class="hero-title">E-commerce<br>à l’international</h1>
   <p class="hero-tag">Choisir ses marchés, comprendre ses clients, vendre, livrer, encaisser : du modèle d’affaires au business plan et au cahier des charges.</p>
@@ -374,12 +393,23 @@ h3.fun-head::before{content:"▶ ";}
   <h2>Annexes &amp; outils</h2>
   <div class="annx-grid">
     <a href="#annexe-a">Cadre juridique</a>
-    <a href="#annexe-b">Cinq études de cas</a>
+    <a href="#annexe-b">Dix études de cas</a>
     <a href="#annexe-c">Cas d’entraînement BELGA CRAFT</a>
     <a href="#annexe-d">Modèles à remplir</a>
     <a href="#annexe-e">Boîte à outils gratuite</a>
     <a href="#annexe-f">Lexique</a>
     <a href="#annexe-g">Sources</a>
+  </div>
+</section>
+
+<section class="home-sec alt">
+  <div class="sec-eyebrow">Ressources &amp; communauté</div>
+  <h2>Un cours vivant</h2>
+  <p class="lead">Des vidéos et des médias pour continuer à apprendre, des idées de business à explorer, et un moyen simple de me faire remonter tes retours.</p>
+  <div class="annx-grid">
+    <a href="#inspiration">Sources d’inspiration</a>
+    <a href="#idees-business">Idées de business &amp; StartupScan</a>
+    <a href="#contribuer">Contribuer / signaler</a>
   </div>
 </section>
 </article>
@@ -887,7 +917,7 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <article class="page" id="comment-lire-ce-syllabus" hidden><div class="page-head"><div class="page-kicker">Le cours</div><h1 class="page-title">Comment lire ce syllabus</h1></div><div class="prose"><p>Le cours est organisé en cinq modules, qui suivent l’ordre du
 programme officiel de l’unité d’enseignement, et en douze chapitres, un
 par séance (le module 5 en compte quatre, dont l’épreuve finale). Les
-annexes rassemblent le cadre juridique, cinq études de cas, un cas
+annexes rassemblent le cadre juridique, dix études de cas, un cas
 d’entraînement, les modèles à remplir, une boîte à outils, le lexique et
 les sources.</p>
 <p>Chaque chapitre suit la même construction :</p>
@@ -7054,9 +7084,11 @@ href="https://www.autoriteprotectiondonnees.be/professionnel">site
 professionnel</a>.</li>
 </ul>
 </div><div class="page-foot"><a class="to-top" href="#top">↑ Haut de page</a></div></article>
-<article class="page" id="annexe-b" hidden><div class="page-head"><div class="page-kicker">Annexe · Annexe B</div><h1 class="page-title">Cinq entreprises, cinq leçons</h1></div><div class="prose"><p>Trois échecs et deux réussites. Pour chaque cas : les faits, puis ce
-qu’ils signifient pour votre projet. Les chiffres viennent de sources
-publiques citées ; vérifiez-les si vous les réutilisez.</p>
+<article class="page" id="annexe-b" hidden><div class="page-head"><div class="page-kicker">Annexe · Annexe B</div><h1 class="page-title">Dix entreprises, dix leçons</h1></div><div class="prose"><p>Dix entreprises — belges, européennes et mondiales : des échecs
+retentissants, des consolidations, et de vraies réussites. Pour chaque
+cas, les faits, puis ce qu’ils signifient pour votre projet. Les
+chiffres viennent de sources publiques citées et datées ; vérifiez-les
+avant de les réutiliser.</p>
 <p><img src="img/ill_cas.jpg" /></p>
 <figure>
 <img src="img/fig_ann_echecs.png"
@@ -7205,51 +7237,191 @@ peuvent ouvrir un pays plus vite et à moindre risque. Le site devient
 ensuite le lieu de la relation directe et de la marge.</p>
 <p><em>Source : Montecristo Magazine, février 2014 ; vérifiez la
 situation actuelle de la marque avant de l’utiliser.</em></p>
-<h2 id="b.6-les-cinq-cas-en-un-tableau">B.6 Les cinq cas en un
+<h2 id="b.6-back-market-vendre-la-confiance-pas-seulement-loccasion">B.6
+Back Market : vendre la confiance, pas seulement l’occasion</h2>
+<p><strong>Secteur</strong> : électronique reconditionnée (place de
+marché). <strong>Modèle</strong> : marketplace qui met en relation des
+reconditionneurs professionnels et des consommateurs, avec garantie et
+contrôle qualité. <strong>Période</strong> : depuis 2014.</p>
+<p><strong>Les faits.</strong> Fondée en 2014 à Paris par Thibaud Hug de
+Larauze, Quentin Le Brouster et Vianney Vaute. Elle vend des smartphones
+(environ 60 % des ventes), ordinateurs, tablettes et consoles
+reconditionnés, présente dans plus de 18 pays. En 2025, le volume
+d’affaires (GMV) est estimé à 3,5 milliards de dollars et le chiffre
+d’affaires propre à environ 495 millions ; l’entreprise est valorisée
+autour de 5,1 milliards d’euros — l’une des rares licornes européennes
+de l’e-commerce.</p>
+<p><strong>Pour votre projet.</strong> Sur un marché d’occasion, le vrai
+produit, c’est la confiance : garantie, contrôle qualité et droit de
+retour transforment un achat risqué en achat rassurant. Une proposition
+de valeur claire — moins cher, plus écologique, et garanti — peut créer
+une catégorie entière. L’économie circulaire est un positionnement
+porteur en Europe.</p>
+<p><em>Source : Sacra, profil Back Market, 2025.</em></p>
+<h2 id="b.7-coolblue-gagner-par-le-service-pas-par-le-prix">B.7 Coolblue
+: gagner par le service, pas par le prix</h2>
+<p><strong>Secteur</strong> : électronique grand public.
+<strong>Modèle</strong> : détaillant en ligne (et magasins) obsédé par
+le service client, avec livraison assurée en propre.
+<strong>Période</strong> : depuis 1999.</p>
+<p><strong>Les faits.</strong> Fondée en 1999 à Rotterdam par Pieter
+Zwart. Présente aux Pays-Bas, en Belgique et en Allemagne. En 2024,
+chiffre d’affaires record de 2,46 milliards d’euros (+2,1 %), EBITDA de
+97,8 millions (+10,8 %), et un Net Promoter Score de 72 — le plus élevé
+de son histoire. L’entreprise livre elle-même (vélos et camionnettes
+Coolblue) et soigne chaque détail de l’expérience, de l’emballage à
+l’humour du service client.</p>
+<p><strong>Pour votre projet.</strong> Là où le prix est transparent et
+la concurrence féroce (Amazon, bol), Coolblue se différencie par le
+service et la relation — mesurés et pilotés au quotidien grâce au NPS.
+Maîtriser sa livraison, c’est maîtriser le moment de vérité. Un
+e-commerce peut gagner sans être le moins cher.</p>
+<p><em>Source : Coolblue / Dutch IT Channel, résultats 2024 ;
+RetailDetail.</em></p>
+<h2 id="b.8-zalando-de-détaillant-à-plateforme">B.8 Zalando : de
+détaillant à plateforme</h2>
+<p><strong>Secteur</strong> : mode en ligne. <strong>Modèle</strong> :
+détaillant devenu plateforme (marketplace, logistique et services pour
+les marques). <strong>Période</strong> : depuis 2008.</p>
+<p><strong>Les faits.</strong> Fondée en 2008 à Berlin par Robert Gentz
+et David Schneider, d’abord sur le modèle de Zappos (chaussures livrées
+et retournées gratuitement). Devenue le leader européen de la mode en
+ligne, présente dans environ 25 pays. En 2023, chiffre d’affaires
+d’environ 10,1 milliards d’euros (en léger recul, -1,9 %) pour un volume
+d’affaires d’environ 14,6 milliards ; l’entreprise vise 15 % du marché
+européen de la mode et se transforme en plateforme, ouverte à des
+marques et distributeurs tiers auxquels elle loue audience, logistique
+et publicité.</p>
+<p><strong>Pour votre projet.</strong> Un détaillant peut devenir une
+plateforme : au lieu de seulement vendre, il met son audience, sa
+logistique et sa technologie à la disposition d’autres. La livraison et
+les retours gratuits ont fait la croissance… et pèsent sur la marge : à
+grande échelle, la question devient la rentabilité, pas seulement le
+volume.</p>
+<p><em>Sources : Zalando, rapport annuel 2023 ; Just-Style,
+2024.</em></p>
+<h2 id="b.9-shein-la-donnée-contre-la-réglementation">B.9 Shein : la
+donnée contre la réglementation</h2>
+<p><strong>Secteur</strong> : mode ultra-rapide
+(<em>ultra-fast-fashion</em>). <strong>Modèle</strong> : conception et
+production chinoises pilotées par les données, vente directe mondiale
+via une application. <strong>Période</strong> : depuis 2012.</p>
+<p><strong>Les faits.</strong> Fondée en 2012 (Chris Xu), siège déplacé
+à Singapour. Shein teste des milliers de nouveaux modèles par jour,
+produit en très petites séries puis réapprovisionne les succès ; prix
+très bas et marketing massif sur les réseaux sociaux. Valorisée environ
+66 milliards de dollars en 2023. En Europe, elle est sous forte pression
+: conformité des produits, impact environnemental, conditions de
+travail, et fin de l’exonération douanière des petits colis (droit de 3
+euros depuis juillet 2026 — voir annexe A).</p>
+<p><strong>Pour votre projet.</strong> La donnée peut remplacer
+l’intuition : produire petit, mesurer, réapprovisionner ce qui marche
+réduit le risque de stock. Mais un modèle fondé sur le volume et le prix
+très bas s’expose frontalement à la réglementation européenne ; un
+avantage réglementaire (petits colis détaxés) peut disparaître du jour
+au lendemain.</p>
+<p><em>Sources : presse économique 2023-2026 ; annexe A pour le cadre
+douanier.</em></p>
+<h2
+id="b.10-vente-exclusive-un-pionnier-belge-absorbé-par-un-leader-européen">B.10
+Vente-Exclusive : un pionnier belge absorbé par un leader européen</h2>
+<p><strong>Secteur</strong> : ventes événementielles (déstockage de
+grandes marques à prix réduits). <strong>Modèle</strong> : ventes à
+durée limitée réservées aux membres. <strong>Période</strong> :
+2006-2019 (sous ce nom).</p>
+<p><strong>Les faits.</strong> Fondée en 2006 en Belgique par Stefan
+Tournoy et Léon Seynave, sur le modèle des ventes privées (remises de 30
+à 70 %, accès réservé aux membres). En 2014, environ 4 millions de
+membres et 90 millions d’euros de chiffre d’affaires. En septembre 2015,
+le français vente-privee.com prend une participation majoritaire, les
+actionnaires belges conservant 49,9 % ; l’ensemble est rebaptisé Veepee
+en 2019.</p>
+<p><strong>Pour votre projet.</strong> Un pionnier national peut
+réussir… puis être absorbé par un leader européen du même modèle : dans
+l’e-commerce, l’échelle compte (achats, logistique, technologie,
+notoriété). Pour une PME, être rachetée ou s’adosser à plus grand est
+une sortie possible, pas un échec. Le modèle « membres + offre limitée
+dans le temps » reste un levier puissant — à condition de rester honnête
+sur la rareté (voir annexe A, pratiques trompeuses).</p>
+<p><em>Sources : BME.be et RetailDetail, 2015 ; La Libre, janvier
+2019.</em></p>
+<h2 id="b.11-les-dix-cas-en-un-tableau">B.11 Les dix cas en un
 tableau</h2>
 <div class="tblwrap"><table class="tbl">
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>Groupon</th>
-<th>VanMoof</th>
-<th>Wish</th>
-<th>Torfs</th>
-<th>Komono</th>
+<th>Entreprise</th>
+<th>Secteur</th>
+<th>Trajectoire</th>
+<th>La leçon pour vous</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Ce qui a fait la différence</td>
-<td>Expansion trop rapide</td>
-<td>Service après-vente absent</td>
-<td>Qualité et conformité négligées</td>
-<td>Intégration magasins et web</td>
-<td>Design et réseau de revendeurs</td>
+<td>Groupon</td>
+<td>Bons de réduction</td>
+<td>Sommet (12,7 Md$) puis long déclin</td>
+<td>N’ouvrez pas plus de marchés que vous ne savez gérer</td>
 </tr>
 <tr class="even">
-<td>Signal à surveiller</td>
-<td>Commerçants qui ne reviennent pas</td>
-<td>Plaintes en hausse</td>
-<td>Retours, litiges, contrôles</td>
-<td>Marge en ligne qui fond</td>
-<td>Dépendance aux revendeurs</td>
+<td>VanMoof</td>
+<td>Vélos électriques</td>
+<td>Faillite (2023)</td>
+<td>Vendre en direct, c’est assurer le SAV partout</td>
 </tr>
 <tr class="odd">
-<td>Question pour vous</td>
-<td>Combien de marchés pouvons-nous vraiment gérer ?</td>
-<td>Qui assure le service après-vente dans chaque pays ?</td>
-<td>Nos produits sont-ils conformes partout ?</td>
-<td>Que coûtent nos livraisons et retours offerts ?</td>
-<td>Quel canal ouvre le pays le plus vite ?</td>
+<td>Wish</td>
+<td>Marketplace low-cost</td>
+<td>Effondrement puis revente</td>
+<td>La conformité et la confiance valent le trafic</td>
+</tr>
+<tr class="even">
+<td>Shein</td>
+<td>Mode ultra-rapide</td>
+<td>Succès mondial contesté</td>
+<td>Le volume + prix bas s’expose à la réglementation</td>
+</tr>
+<tr class="odd">
+<td>Zalando</td>
+<td>Mode en ligne</td>
+<td>De détaillant à plateforme</td>
+<td>Un détaillant peut louer audience, logistique, techno</td>
+</tr>
+<tr class="even">
+<td>Back Market</td>
+<td>Électronique reconditionnée</td>
+<td>Licorne européenne</td>
+<td>Vendez la confiance ; créez une catégorie</td>
+</tr>
+<tr class="odd">
+<td>Coolblue</td>
+<td>Électronique</td>
+<td>Croissance rentable (NPS 72)</td>
+<td>On peut gagner par le service, pas par le prix</td>
+</tr>
+<tr class="even">
+<td>Vente-Exclusive</td>
+<td>Ventes événementielles</td>
+<td>Pionnier belge racheté</td>
+<td>L’échelle compte ; être racheté est une sortie</td>
+</tr>
+<tr class="odd">
+<td>Torfs</td>
+<td>Chaussures</td>
+<td>Omnicanal rentable</td>
+<td>Mesurez le coût réel du web (livraison, retours)</td>
+</tr>
+<tr class="even">
+<td>Komono</td>
+<td>Montres et lunettes</td>
+<td>Marque belge mondiale</td>
+<td>Les revendeurs ouvrent un pays plus vite que le site</td>
 </tr>
 </tbody>
 </table></div>
@@ -7278,7 +7450,7 @@ tableau</h2>
 Groupon : le site qui a failli tuer la pub</a></td>
 <td>Sébastien Koubar</td>
 <td style="text-align: right;">11 min</td>
-<td>Le cas B.1 raconté</td>
+<td>Le cas Groupon raconté</td>
 </tr>
 <tr class="even">
 <td>★</td>
@@ -7286,23 +7458,55 @@ Groupon : le site qui a failli tuer la pub</a></td>
 Wish : le site qui a tout perdu</a></td>
 <td>Sébastien Koubar</td>
 <td style="text-align: right;">13 min</td>
-<td>Le cas B.3 raconté</td>
+<td>Le cas Wish raconté</td>
 </tr>
 <tr class="odd">
 <td>★</td>
+<td><a href="https://www.youtube.com/watch?v=FK5mbIjj8PY" target="_blank" rel="noopener">J’ouvre des
+iPhone reconditionnés : arnaque ?!</a></td>
+<td>Jojol</td>
+<td style="text-align: right;">14 min</td>
+<td>Le reconditionné à l’épreuve (Back Market &amp; co)</td>
+</tr>
+<tr class="even">
+<td>★</td>
+<td><a href="https://www.youtube.com/watch?v=gWotBPtsulo" target="_blank" rel="noopener">How Shein
+Built a $66B Fast-Fashion Empire</a></td>
+<td>WSJ (en anglais)</td>
+<td style="text-align: right;">8 min</td>
+<td>Le modèle Shein décortiqué</td>
+</tr>
+<tr class="odd">
+<td></td>
 <td><a href="https://www.youtube.com/watch?v=EvLeSlhBakU" target="_blank" rel="noopener">VanMoof :
 comment la marque de vélos connectés compte se relancer</a></td>
 <td>BFM Tech</td>
 <td style="text-align: right;">24 min</td>
-<td>Le cas B.2, après la reprise</td>
+<td>Le cas VanMoof, après la reprise</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><a href="https://www.youtube.com/watch?v=xvXVh5zuC0k" target="_blank" rel="noopener">Angell,
-VanMoof : le rêve des smart vélos déraille</a></td>
-<td>obsionstech</td>
-<td style="text-align: right;">24 min</td>
-<td>Deux marques D2C, deux faillites</td>
+<td><a href="https://www.youtube.com/watch?v=WzJW4iBS2eo" target="_blank" rel="noopener">Comment
+Zalando gagne-t-il de l’argent ?</a></td>
+<td>Geo Statology</td>
+<td style="text-align: right;">3 min</td>
+<td>Le modèle économique de Zalando</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=PWzBBUuxH_0" target="_blank" rel="noopener">Coolblue : le
+secret derrière « alles voor een glimlach »</a></td>
+<td>BNR (en néerlandais)</td>
+<td style="text-align: right;">43 min</td>
+<td>L’obsession du service client</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=kcwvt1q7umw" target="_blank" rel="noopener">Smartphone
+neuf ou reconditionné ?</a></td>
+<td>ARTE</td>
+<td style="text-align: right;">12 min</td>
+<td>L’économie circulaire en pratique</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -8079,6 +8283,108 @@ la vente en ligne, prix, accessibilité.</li>
 protection des données</a>.</li>
 </ul>
 </div><div class="page-foot"><a class="to-top" href="#top">↑ Haut de page</a></div></article>
+<article class="page" id="inspiration" hidden><div class="page-head"><div class="page-kicker">Ressources</div><h1 class="page-title">Sources d’inspiration</h1></div><div class="prose">
+<p>Un cours imprimé se termine à la dernière page. Un cours en ligne, non : voici où continuer à apprendre, te tenir au courant et t’inspirer. Tout est gratuit. Et si tu trouves mieux, <a href="#contribuer">dis-le-moi</a> — ces listes grandiront avec vous.</p>
+
+<h2>Chaînes et créateurs à suivre</h2>
+<p>Des YouTubeurs qui parlent business, tech et consommation — à regarder avec le même esprit critique que le reste du cours.</p>
+<ul class="reslist">
+<li><strong>Léo Duff</strong> — décrypte les modèles tech et e-commerce avec humour. <a href="https://www.youtube.com/watch?v=QVZGOT8l1qA" target="_blank" rel="noopener">exemple : le plan de Temu</a></li>
+<li><strong>HugoDécrypte</strong> — l’actu business et conso en format court. <a href="https://www.youtube.com/watch?v=PoNCOzn4_tU" target="_blank" rel="noopener">exemple : l’appli Temu</a></li>
+<li><strong>Léo – TechMaker</strong> — analyses tech et plateformes. <a href="https://www.youtube.com/watch?v=tyFL65fD48c" target="_blank" rel="noopener">exemple : Amazon</a></li>
+<li><strong>Micode</strong> — cybersécurité, arnaques et dessous du web. <a href="https://www.youtube.com/watch?v=1HoU17dIEos" target="_blank" rel="noopener">exemple : les escrocs du téléphone</a></li>
+<li><strong>Underscore_</strong> — tech, startups et enquêtes. <a href="https://www.youtube.com/watch?v=F6V3jipo3y4" target="_blank" rel="noopener">exemple : les coulisses d’un arnaqueur</a></li>
+<li><strong>Finary</strong> — finances perso et pièges (paiement en 3×). <a href="https://www.youtube.com/watch?v=jADxVMhSUYE" target="_blank" rel="noopener">exemple : le piège du 3 fois</a></li>
+<li><strong>Qui veut être mon associé ? (M6)</strong> — de vrais pitchs devant des investisseurs. <a href="https://www.youtube.com/watch?v=0uJr6Clbfno" target="_blank" rel="noopener">exemple : un pitch qui touche juste</a></li>
+<li><strong>Culture Pub</strong> — la publicité qui marque (et qui rate). <a href="https://www.youtube.com/watch?v=jF2ueu0szbA" target="_blank" rel="noopener">exemple : petites erreurs, grandes conséquences</a></li>
+</ul>
+
+<h2>Médias, fédérations et guides</h2>
+<ul class="reslist">
+<li><a href="https://becom.digital/" target="_blank" rel="noopener">Becom</a> — la fédération belge de l’e-commerce : chiffres, wiki, podcasts.</li>
+<li><a href="https://ecommerce-europe.eu/" target="_blank" rel="noopener">Ecommerce Europe</a> — le rapport européen annuel et les tendances cross-border.</li>
+<li><a href="https://www.retaildetail.eu/" target="_blank" rel="noopener">RetailDetail</a> — l’actu du retail et de l’e-commerce en Belgique et aux Pays-Bas.</li>
+<li><a href="https://www.fevad.com/" target="_blank" rel="noopener">FEVAD</a> — la fédération française de la vente à distance : études et chiffres.</li>
+<li><a href="https://www.shopify.com/blog" target="_blank" rel="noopener">Shopify Blog</a> — guides pratiques pour lancer et faire grandir une boutique.</li>
+<li><a href="https://stripe.com/en-be/guides" target="_blank" rel="noopener">Stripe Guides</a> — paiements, conversion, fraude, expliqués clairement.</li>
+<li><a href="https://hub.brussels/fr/" target="_blank" rel="noopener">hub.brussels</a> et <a href="https://1819.brussels/" target="_blank" rel="noopener">1819.brussels</a> — l’accompagnement des entrepreneurs bruxellois.</li>
+</ul>
+
+<h2>Podcasts</h2>
+<ul class="reslist">
+<li><a href="https://open.spotify.com/search/Le%20Panier%20ecommerce" target="_blank" rel="noopener">Le Panier</a> — des patrons d’e-commerce racontent leurs coulisses.</li>
+<li><a href="https://open.spotify.com/search/G%C3%A9n%C3%A9ration%20Do%20It%20Yourself" target="_blank" rel="noopener">Génération Do It Yourself</a> — de longues interviews d’entrepreneurs.</li>
+<li><a href="https://open.spotify.com/search/The%20Diary%20of%20a%20CEO" target="_blank" rel="noopener">The Diary of a CEO</a> — parcours de fondateurs (en anglais).</li>
+</ul>
+
+<blockquote class="callout projet"><p><strong>Pour votre projet.</strong> Choisissez une chaîne et une newsletter à suivre pendant tout le cours : dix minutes par semaine suffisent pour repérer une tendance ou un concurrent avant les autres.</p></blockquote>
+</div><div class="page-foot"><a class="to-top" href="#top">↑ Haut de page</a></div></article>
+<article class="page" id="idees-business" hidden><div class="page-head"><div class="page-kicker">Ressources</div><h1 class="page-title">Idées de business &amp; StartupScan</h1></div><div class="prose">
+<p>Le cours vous donne la <strong>méthode</strong> : choisir un marché, comprendre ses clients, vendre, livrer, encaisser. Pour les <strong>idées</strong> et l’inspiration entrepreneuriale, j’ai un média à part, <a href="https://startupscan.eu/" target="_blank" rel="noopener">StartupScan</a>, qui raconte chaque semaine des modèles d’affaires du monde entier. Servez-vous-en pour nourrir votre projet fil rouge — sans copier, en vous inspirant.</p>
+
+<h2>Où chercher sur StartupScan</h2>
+<ul class="reslist">
+<li><a href="https://startupscan.eu/" target="_blank" rel="noopener">Le dernier numéro</a> — des entreprises décortiquées, avec la leçon à en tirer.</li>
+<li><a href="https://startupscan.eu/fiches.html" target="_blank" rel="noopener">Toutes les fiches</a> — la bibliothèque complète, à filtrer par modèle (B2C, B2B, B2G…).</li>
+<li><a href="https://startupscan.eu/modeles.html" target="_blank" rel="noopener">« Qui paie ? »</a> — les modèles de revenus expliqués : qui paie, pour quoi, comment.</li>
+<li><a href="https://startupscan.eu/sans-argent.html" target="_blank" rel="noopener">Lancer sans argent</a> — démarrer avec très peu de moyens.</li>
+<li><a href="https://startupscan.eu/outils.html" target="_blank" rel="noopener">Les outils</a> — calculer son point mort, écrire son projet dans la grille StartupScan.</li>
+<li><a href="https://startupscan.eu/jeux.html" target="_blank" rel="noopener">Les jeux</a> — tester une idée et des rôles d’entreprise en s’amusant.</li>
+</ul>
+
+<h2>Comment vous en servir pour votre projet</h2>
+<ul class="reslist">
+<li>Repérez une fiche proche de votre secteur et notez <em>son</em> modèle de revenus — puis demandez-vous ce qui changerait à l’international.</li>
+<li>Utilisez « Qui paie ? » pour vérifier que, dans votre projet, quelqu’un a vraiment une raison de payer.</li>
+<li>Avant d’investir, calculez votre point mort avec l’outil de StartupScan : combien de commandes par jour pour couvrir vos frais ?</li>
+</ul>
+
+<h2>Trouver une idée (si vous en cherchez encore)</h2>
+<ul class="reslist">
+<li>Partez d’un <strong>problème que vous vivez</strong> ou que vit votre entourage — les meilleures idées viennent d’une frustration réelle.</li>
+<li>Repérez une <strong>friction</strong> dans un achat en ligne récent : lenteur, manque de confiance, paiement absent. Chaque friction est une opportunité.</li>
+<li><strong>Importez un modèle</strong> qui marche ailleurs mais pas encore chez nous — c’est tout l’intérêt du regard international.</li>
+<li>Visez une <strong>niche mal servie</strong> : un public précis, mal compris par les gros acteurs.</li>
+</ul>
+
+<blockquote class="callout note"><p><strong>Sans double usage.</strong> Pas de contenu recopié ici : StartupScan reste la source des idées, ce cours reste la méthode. Les deux se complètent.</p></blockquote>
+</div><div class="page-foot"><a class="to-top" href="#top">↑ Haut de page</a></div></article>
+<article class="page" id="contribuer" hidden><div class="page-head"><div class="page-kicker">Communauté</div><h1 class="page-title">Contribuer / signaler</h1></div><div class="prose">
+<p>Ce cours est vivant et s’améliore avec vos retours. Vous avez repéré une erreur ? trouvé une vidéo géniale ? pensé à une entreprise qui ferait une bonne étude de cas ? Une question sur un chapitre ? Dites-le — c’est comme ça qu’on construit quelque chose ensemble plutôt qu’un simple document figé.</p>
+
+<form id="feedback-form" class="fb-form" novalidate>
+  <div class="fb-row">
+    <label for="fb-type">Type de message</label>
+    <select id="fb-type">
+      <option>Signaler une erreur</option>
+      <option>Proposer une vidéo ou un lien</option>
+      <option>Proposer une étude de cas</option>
+      <option>Poser une question</option>
+      <option>Une suggestion / autre</option>
+    </select>
+  </div>
+  <div class="fb-row">
+    <label for="fb-chap">Chapitre ou section concerné (facultatif)</label>
+    <input id="fb-chap" type="text" placeholder="ex. Chapitre 7, Annexe B…">
+  </div>
+  <div class="fb-row">
+    <label for="fb-msg">Votre message</label>
+    <textarea id="fb-msg" rows="5" placeholder="Décrivez l’erreur, collez le lien de la vidéo, proposez le cas…"></textarea>
+  </div>
+  <div class="fb-row">
+    <label for="fb-name">Votre nom (facultatif)</label>
+    <input id="fb-name" type="text">
+  </div>
+  <div class="fb-actions">
+    <button type="submit" class="btn primary">Envoyer par email</button>
+    <button type="button" class="btn" id="fb-copy">Copier l’adresse</button>
+  </div>
+  <p class="fb-hint">Le bouton ouvre votre messagerie avec un email prérempli vers <strong>olwillocx@epfc.eu</strong>. Si rien ne s’ouvre, copiez l’adresse et écrivez-moi directement.</p>
+</form>
+
+<h2>Envie d’aller plus loin ?</h2>
+<p>Si vous lancez votre projet pendant ou après le cours, parlez-m’en : les meilleurs deviennent des études de cas pour les promotions suivantes, et certains trouvent leur place dans <a href="https://startupscan.eu/" target="_blank" rel="noopener">StartupScan</a>. Ce qui compte, ce n’est pas de finir le cours — c’est de créer quelque chose.</p>
+</div><div class="page-foot"><a class="to-top" href="#top">↑ Haut de page</a></div></article>
     </div>
   </div>
 </div>
@@ -8127,6 +8433,20 @@ protection des données</a>.</li>
     document.documentElement.setAttribute('data-theme',next);
     try{localStorage.setItem('ec-theme',next);}catch(e){}
   });
+  // feedback form -> mailto
+  var fb=document.getElementById('feedback-form');
+  if(fb){fb.addEventListener('submit',function(e){e.preventDefault();
+    var g=function(id){var el=document.getElementById(id);return el?el.value:'';};
+    var t=g('fb-type'),c=g('fb-chap'),m=g('fb-msg'),n=g('fb-name');
+    var subj='[Cours e-commerce] '+t;
+    var body=(c?('Section : '+c+'\n'):'')+(n?('De : '+n+'\n'):'')+'\n'+m;
+    window.location.href='mailto:olwillocx@epfc.eu?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  });}
+  var cp=document.getElementById('fb-copy');
+  if(cp){cp.addEventListener('click',function(){
+    var done=function(){var o=cp.textContent;cp.textContent='Adresse copiée ✓';setTimeout(function(){cp.textContent=o;},1800);};
+    try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('olwillocx@epfc.eu').then(done,done);}else{done();}}catch(e){done();}
+  });}
   fromHash();
 })();
 </script>
