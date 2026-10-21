@@ -284,6 +284,44 @@ h3.fun-head::before{content:"▶ ";}
 .open-model::before{content:"Corrigé";display:block;font-family:var(--f-ui);font-size:.68rem;
   text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--projet);margin-bottom:.3rem}
 html[lang="en"] .open-model::before{content:"Model answer"}
+/* ---- progression (suivi) ---- */
+.prog-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem;margin:1.2rem 0;max-width:var(--maxw)}
+.prog-card h2{font-family:var(--f-disp);color:var(--navy);font-size:1.3rem}
+.opt{font-family:var(--f-ui);font-size:.8rem;font-weight:600;color:var(--muted)}
+.prog-consent{display:flex;align-items:flex-start;gap:.5rem;font-family:var(--f-ui);font-size:.9rem;color:var(--fg);cursor:pointer}
+.prog-consent input{margin-top:.2rem}
+.prog-notice{margin-top:1rem;font-family:var(--f-ui);font-size:.86rem}
+.prog-notice summary{cursor:pointer;font-weight:700;color:var(--navy);padding:.4rem 0}
+.prog-notice ul{padding-left:1.1rem;color:var(--muted)}
+.prog-notice li{margin:.35rem 0}
+.prog-notice strong{color:var(--fg)}
+.btn.danger{background:transparent;border:1.5px solid var(--warn);color:var(--warn)}
+.btn.danger:hover{background:color-mix(in srgb,var(--warn) 10%,var(--surface))}
+.prog-top{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap;
+  font-family:var(--f-ui);font-size:.9rem;padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid var(--line-2)}
+.prog-top-btns{display:flex;gap:.5rem;flex-wrap:wrap}
+.prog-top-btns .btn{font-size:.78rem;padding:.4rem .8rem}
+.prog-ringrow{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap}
+.ring{--p:0;width:130px;height:130px;border-radius:50%;flex:none;
+  background:conic-gradient(var(--blue) calc(var(--p)*1%), var(--line-2) 0);
+  display:flex;align-items:center;justify-content:center}
+.ring-in{width:100px;height:100px;border-radius:50%;background:var(--surface);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ring-in span{font-family:var(--f-disp);font-weight:800;font-size:1.9rem;color:var(--navy);line-height:1}
+.ring-in small{font-family:var(--f-ui);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:.2rem}
+.prog-stats{display:flex;gap:1.4rem}
+.ps b{font-family:var(--f-disp);font-size:1.6rem;color:var(--fg);display:block;line-height:1}
+.ps small{font-family:var(--f-ui);font-size:.78rem;color:var(--muted)}
+.prog-rank{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line-2)}
+.rank-head{font-family:var(--f-ui);font-weight:700;color:var(--navy);margin:0 0 .2rem}
+.rank-sub{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);margin:0 0 .8rem}
+.rank-dist{display:flex;align-items:flex-end;gap:.5rem;height:90px}
+.rank-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:.3rem;height:100%;justify-content:flex-end}
+.rank-bar{width:100%;background:var(--line);border-radius:6px 6px 0 0;min-height:3px}
+.rank-col.you .rank-bar{background:var(--orange)}
+.rank-col small{font-family:var(--f-mono);font-size:.64rem;color:var(--muted)}
+.rank-col.you small{color:var(--orange);font-weight:700}
+.rank-you-tag{font-family:var(--f-ui);font-size:.7rem;font-weight:700;color:var(--orange)}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}html{height:100%}</style>
 </head>
@@ -300,6 +338,7 @@ html[lang="en"] .open-model::before{content:"Model answer"}
 <li><a href="#accueil" data-sid="accueil"><span class="n-t">Accueil</span></a></li>
 <li><a href="#presentation-du-cours" data-sid="presentation-du-cours"><span class="n-t">Présentation du cours</span></a></li>
 <li><a href="#comment-lire-ce-syllabus" data-sid="comment-lire-ce-syllabus"><span class="n-t">Comment lire ce syllabus</span></a></li>
+<li><a href="#ma-progression" data-sid="ma-progression"><span class="n-t">Ma progression</span></a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-grp-title">Module 1</div><ul>
 <li><a href="#module-1" data-sid="module-1"><span class="n-k">Module 1</span><span class="n-t">Les fondamentaux de l&#x27;e-commerce international</span></a></li>
@@ -342,7 +381,6 @@ html[lang="en"] .open-model::before{content:"Model answer"}
 <li><a href="#inspiration" data-sid="inspiration"><span class="n-t">Sources d’inspiration</span></a></li>
 <li><a href="#idees-business" data-sid="idees-business"><span class="n-t">Idées de business &amp; StartupScan</span></a></li>
 <li><a href="#contribuer" data-sid="contribuer"><span class="n-t">Contribuer / signaler</span></a></li>
-<li><a href="#evolutions" data-sid="evolutions"><span class="n-t">Évolutions du site</span></a></li>
 </ul></div></nav>
   </aside>
   <div class="scrim"></div>
@@ -439,7 +477,7 @@ html[lang="en"] .open-model::before{content:"Model answer"}
   <div class="sec-eyebrow">Ressources &amp; communauté</div>
   <h2>Un cours vivant</h2>
   <p class="lead">Des vidéos et des médias pour continuer à apprendre, des idées de business à explorer, et un moyen simple de me faire remonter tes retours.</p>
-  <div class="annx-grid"><a href="#inspiration">Sources d’inspiration</a><a href="#idees-business">Idées de business &amp; StartupScan</a><a href="#contribuer">Contribuer / signaler</a><a href="#evolutions">Évolutions du site</a></div>
+  <div class="annx-grid"><a href="#inspiration">Sources d’inspiration</a><a href="#idees-business">Idées de business &amp; StartupScan</a><a href="#contribuer">Contribuer / signaler</a></div>
 </section>
 </article>
 <article class="page" id="presentation-du-cours" hidden><div class="page-head"><div class="page-kicker">Le cours · <span class="page-rt">~8 min de lecture</span></div><h1 class="page-title">Présentation du cours</h1></div><div class="prose"><h2 id="identification">Identification</h2>
@@ -4101,8 +4139,15 @@ d’Amazon pour gonfler les prix partout</a></td>
 </table></div>
 <h3 id="à-lire">À lire</h3>
 <ul>
-<li>★ Union européenne, <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32018R0302" target="_blank" rel="noopener">règlement (UE) 2018/302 contre le blocage géographique injustifié</a> (EUR-Lex) : le texte officiel, pour savoir ce que vous pouvez et ne pouvez pas faire en matière de prix et d’accès par pays.</li>
-<li>SPF Économie, <a href="https://news.economie.fgov.be/215879-soldes-fini-les-fausses-promos/" target="_blank" rel="noopener">« Soldes : fini les fausses promos »</a> (communiqué de juin 2022) : la règle des 30 jours expliquée par l’autorité belge de contrôle. 5 minutes.</li>
+<li>★ Commission européenne, <a
+href="https://europa.eu/youreurope/business/selling-in-eu/selling-goods-services/geo-blocking/">«
+Géoblocage : vos droits en tant qu’entreprise »</a> (Your Europe) : ce
+que vous pouvez et ne pouvez pas faire en matière de prix et d’accès par
+pays. 10 minutes.</li>
+<li>SPF Économie, <a
+href="https://economie.fgov.be/fr/themes/ventes/reglementation/prix/annonces-de-reduction-de-prix">«
+Annonces de réduction de prix »</a> : la règle des 30 jours expliquée
+par l’autorité belge de contrôle. 10 minutes.</li>
 <li>Shopify, <a
 href="https://www.shopify.com/fr/blog/46765125-vendre-sur-amazon-et-ebay-avantages-et-inconvenients">«
 Vendre sur Amazon et eBay : avantages et inconvénients »</a> : le P de
@@ -4696,7 +4741,10 @@ balise hreflang, avec exemples. 15 minutes.</li>
 href="https://baymard.com/lists/cart-abandonment-rate">« Cart
 abandonment rate statistics »</a> : la synthèse de référence sur les
 causes d’abandon de panier (en anglais, 10 minutes).</li>
-<li>Shopify, <a href="https://www.shopify.com/fr/blog/customer-lifetime-value" target="_blank" rel="noopener">« Customer Lifetime Value : guide complet de la CLV »</a> : le calcul, pas à pas.</li>
+<li>Shopify, <a
+href="https://www.shopify.com/fr/blog/valeur-vie-client">« Qu’est-ce que
+la valeur vie client (CLV) et comment la calculer »</a> : le calcul, pas
+à pas.</li>
 </ul>
 </div><section class="quiz" aria-label="Auto-évaluation">
 <h2 class="quiz-head">Auto-évaluation</h2>
@@ -5269,10 +5317,10 @@ href="https://trade.ec.europa.eu/access-to-markets/fr/home">Access2Markets</a>
 : l’outil officiel pour connaître droits et formalités pays par pays. À
 utiliser pour le calcul du prix rendu de la situation-problème 7.</li>
 <li>Commission européenne, <a
-href="https://taxation-customs.ec.europa.eu/customs/eu-customs-reform_fr">«
+href="https://taxation-customs.ec.europa.eu/customs-4/eu-customs-reform_fr">«
 Réforme douanière : fin de l’exonération pour les envois de faible
 valeur »</a> : la réforme de 2026 à la source.</li>
-<li>bpost, <a href="https://www.bpost.be/fr/tarifs" target="_blank" rel="noopener">grilles
+<li>bpost, <a href="https://www.bpost.be/fr/envoyer-colis" target="_blank" rel="noopener">grilles
 tarifaires et solutions e-commerce</a> : pour chiffrer vos envois.</li>
 </ul>
 </div><section class="quiz" aria-label="Auto-évaluation">
@@ -5849,9 +5897,11 @@ href="https://bancontact-company.prezly.com/bancontact-payconiq-company-opens-a-
 changements de 2026. 10 minutes.</li>
 <li>★ Stripe, <a href="https://stripe.com/fr-be/pricing" target="_blank" rel="noopener">tarifs
 Belgique</a> et Mollie, <a
-href="https://www.mollie.com/fr/pricing">tarifs</a> : à comparer pour
+href="https://www.mollie.com/fr-be/pricing">tarifs</a> : à comparer pour
 la situation-problème 8.</li>
-<li>Autorité de protection des données, <a href="https://www.autoriteprotectiondonnees.be/professionnel/actions/violation-de-donnees-personnelles" target="_blank" rel="noopener">« Notifier et gérer une violation de données »</a> : la procédure belge.</li>
+<li>Autorité de protection des données, <a
+href="https://www.autoriteprotectiondonnees.be/professionnel/actions/notifier-une-fuite-de-donnees">«
+Notifier une fuite de données »</a> : la procédure belge.</li>
 <li>Banque nationale de Belgique, statistiques de paiement : pour suivre
 l’évolution des usages.</li>
 </ul>
@@ -6844,9 +6894,12 @@ href="https://eur-lex.europa.eu/eli/dir/2023/2673/oj?locale=fr">«
 Fonction de rétractation en ligne : directive (UE) 2023/2673 »</a> : le
 texte, dont l’article sur le bouton de rétractation. 15 minutes pour
 l’essentiel.</li>
-<li>SPF Économie, <a href="https://news.economie.fgov.be/251714-directive-sur-l-accessibilite-un-pas-en-avant-pour-une-societe-plus-inclusive/" target="_blank" rel="noopener">« Directive sur l’accessibilité : un pas en avant pour une société plus inclusive »</a> (communiqué de juillet 2025) : la mise en œuvre belge de l’European Accessibility Act.</li>
+<li>SPF Économie, <a
+href="https://economie.fgov.be/fr/themes/entreprises/accessibilite-des-produits-et">«
+Accessibilité des produits et services »</a> : la mise en œuvre belge de
+l’European Accessibility Act.</li>
 <li>Autorité de protection des données, <a
-href="https://www.autoriteprotectiondonnees.be/professionnel/themes/internet/cookies">«
+href="https://www.autoriteprotectiondonnees.be/professionnel/themes/cookies">«
 Cookies et autres traceurs »</a> : ce qu’une bannière conforme doit
 faire.</li>
 <li>Shopify, <a href="https://www.shopify.com/fr/markets" target="_blank" rel="noopener">« Shopify
@@ -7976,7 +8029,9 @@ plateformes : marketplaces et dropshipping</a></td>
 href="https://europa.eu/youreurope/business/selling-in-eu/">Your Europe,
 « Vendre dans l’UE »</a> : le portail officiel, en français, qui couvre
 la plupart des points de cette annexe.</li>
-<li>SPF Économie, <a href="https://news.economie.fgov.be/203681-informations-obligatoires-sur-le-site-web-de-votre-entreprise/" target="_blank" rel="noopener">« Informations obligatoires sur le site web de votre entreprise »</a> (communiqué d’octobre 2021) : les mentions de base à afficher, à compléter pour la vente en ligne.</li>
+<li>SPF Économie, <a
+href="https://economie.fgov.be/fr/themes/ventes/vente-en-ligne">« Vendre
+en ligne »</a> : les obligations belges.</li>
 <li>Autorité de protection des données, <a
 href="https://www.autoriteprotectiondonnees.be/professionnel">site
 professionnel</a>.</li>
@@ -9560,44 +9615,49 @@ impliquait.</p>
 <p>Si vous lancez votre projet pendant ou après le cours, parlez-m’en : les meilleurs deviennent des études de cas pour les promotions suivantes, et certains trouvent leur place dans <a href="https://startupscan.eu/" target="_blank" rel="noopener">StartupScan</a>. Ce qui compte, ce n’est pas de finir le cours — c’est de créer quelque chose.</p>
 </div><div class="page-foot"><nav class="pager">
 <a class="pager-prev" href="#idees-business"><span class="pager-dir">← Précédent</span><span class="pager-ttl">Idées de business &amp; StartupScan</span></a>
-<a class="pager-next" href="#evolutions"><span class="pager-dir">Suivant →</span><span class="pager-ttl">Évolutions du site</span></a>
+<a class="pager-next" href="#ma-progression"><span class="pager-dir">Suivant →</span><span class="pager-ttl">Ma progression</span></a>
 </nav><a class="to-top" href="#top">↑ Haut de page</a></div></article>
-<article class="page" id="evolutions" hidden><div class="page-head"><div class="page-kicker">Communauté</div><h1 class="page-title">Évolutions du site</h1></div><div class="prose">
-<p>Cette page garde la trace des améliorations proposées par les étudiants à la suite de l’exercice de critique du site du 20 octobre 2026 (13 participants). Chaque suggestion est notée de 1 à 5 en priorité et en difficulté. Rien n’est supprimé : une suggestion réalisée passe au statut « Fait » avec sa date, et le journal ci-dessous conserve toutes les étapes.</p>
-<p><strong>Priorité</strong> : 5 = à traiter en premier, 1 = peut attendre. <strong>Difficulté</strong> : 1 = quelques heures de travail, 5 = projet de plusieurs semaines. Sous chaque suggestion figurent son statut et le nombre d’étudiants qui l’ont proposée.</p>
-<h2>Suggestions</h2>
-<div class="tblwrap"><table class="tbl"><colgroup><col style="width:64%"><col style="width:18%"><col style="width:18%"></colgroup><thead><tr><th>Suggestion</th><th style="text-align:right">Priorité (1–5)</th><th style="text-align:right">Difficulté (1–5)</th></tr></thead><tbody>
-<tr><td><strong>S01</strong> Revérifier à la main les 3 liens externes qui ne répondaient pas lors du test du 20/10/2026 (les 8 liens en erreur 404 ont été corrigés le 21/10/2026, liste ci-dessous)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">En cours · demandé par 2 étudiants</span></td><td style="text-align:right">5</td><td style="text-align:right">1</td></tr>
-<tr><td><strong>S02</strong> Ajouter un encadré « À retenir » de 3 à 5 points en tête de chaque chapitre<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 4 étudiants</span></td><td style="text-align:right">5</td><td style="text-align:right">2</td></tr>
-<tr><td><strong>S03</strong> Garder « Commencer le cours » et le lexique accessibles depuis toutes les pages (bouton fixe, lien dans le sommaire)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 2 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">1</td></tr>
-<tr><td><strong>S04</strong> Tester l’affichage sur au moins trois smartphones différents et corriger les défauts<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 3 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">2</td></tr>
-<tr><td><strong>S05</strong> Mettre à jour les chiffres, liens et réglementations, avec une date de dernière vérification par chapitre<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 3 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">2</td></tr>
-<tr><td><strong>S06</strong> Transformer l’auto-évaluation en QCM cliquables avec correction immédiate, explication et score (aujourd’hui : corrigé à afficher)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 4 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">3</td></tr>
-<tr><td><strong>S07</strong> Ajouter des réponses types après les situations-problèmes, et un exemple de livrable réussi<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 4 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">3</td></tr>
-<tr><td><strong>S08</strong> Ajouter, à côté du fil rouge BELGA CRAFT, un cas à faible marge, un cas B2B et un cas d’échec<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 3 étudiants</span></td><td style="text-align:right">4</td><td style="text-align:right">4</td></tr>
-<tr><td><strong>S09</strong> Ajouter un lien « Signaler » dans chaque chapitre, qui préremplit la section concernée du formulaire existant<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 1 étudiant</span></td><td style="text-align:right">3</td><td style="text-align:right">2</td></tr>
-<tr><td><strong>S10</strong> Distinguer visuellement l’essentiel et le complémentaire (badges, blocs repliables « pour aller plus loin »)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 2 étudiants</span></td><td style="text-align:right">3</td><td style="text-align:right">2</td></tr>
-<tr><td><strong>S11</strong> Mémoriser les chapitres terminés (cases à cocher, sans compte) et afficher l’avancement dans le sommaire<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 3 étudiants</span></td><td style="text-align:right">3</td><td style="text-align:right">3</td></tr>
-<tr><td><strong>S12</strong> Ajouter de courts ateliers sur des outils réels (fiche produit, référencement, Google Analytics)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 4 étudiants</span></td><td style="text-align:right">3</td><td style="text-align:right">3</td></tr>
-<tr><td><strong>S13</strong> Produire des vidéos « Je retiens l’essentiel » de 3 à 5 minutes par module<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 3 étudiants</span></td><td style="text-align:right">3</td><td style="text-align:right">4</td></tr>
-<tr><td><strong>S14</strong> Ajouter des témoignages d’e-commerçants belges, y compris sur ce qui n’a pas marché<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 2 étudiants</span></td><td style="text-align:right">3</td><td style="text-align:right">4</td></tr>
-<tr><td><strong>S15</strong> Poursuivre la modernisation visuelle (identité graphique, icônes, cartes)<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 2 étudiants</span></td><td style="text-align:right">2</td><td style="text-align:right">3</td></tr>
-<tr><td><strong>S16</strong> Créer une simulation de lancement de boutique, avec décisions et événements imprévus<span style="display:block;font-size:.78rem;opacity:.7;margin-top:.15rem">À faire · demandé par 2 étudiants</span></td><td style="text-align:right">2</td><td style="text-align:right">5</td></tr>
-</tbody></table></div>
-<h2>Liens à corriger</h2>
-<p>Test automatique du 20/10/2026 : 215 liens externes testés, 8 renvoyaient une erreur 404 et 5 ne répondaient pas. Les 8 liens en erreur 404 et 2 des liens sans réponse ont été corrigés le 21/10/2026 ; 3 liens restent à revérifier à la main.</p>
-<h3>Sans réponse lors du test (à vérifier à la main)</h3>
-<ul>
-<li><code>https://1819.brussels/</code></li>
-<li><code>https://www.autoriteprotectiondonnees.be/</code></li>
-<li><code>https://www.autoriteprotectiondonnees.be/professionnel</code></li>
-</ul>
-<h2>Journal des modifications</h2>
-<div class="tblwrap"><table class="tbl"><thead><tr><th>Date</th><th>Changement</th><th>Réf.</th></tr></thead><tbody>
-<tr><td style="white-space:nowrap">20/10/2026</td><td>Création de la page : 16 suggestions issues de l’exercice de critique du site (13 participants).</td><td style="white-space:nowrap">S01–S16</td></tr>
-<tr><td style="white-space:nowrap">20/10/2026</td><td>Test des liens externes : 215 liens testés, 8 en erreur 404, 5 sans réponse.</td><td style="white-space:nowrap">S01</td></tr>
-<tr><td style="white-space:nowrap">21/10/2026</td><td>Correction de 10 liens externes : 8 liens en erreur 404 remplacés (SPF Économie ×3, Union européenne ×2, bpost, Mollie, Shopify) et 2 liens de l’Autorité de protection des données mis à jour. 3 liens restent à revérifier.</td><td style="white-space:nowrap">S01</td></tr>
-</tbody></table></div>
+<article class="page" id="ma-progression" hidden><div class="page-head"><div class="page-kicker">Le cours</div><h1 class="page-title">Ma progression</h1></div><div class="prose">
+<div id="prog-off" hidden><div class="prog-card"><p>Le suivi de progression est disponible sur <a href="https://ecomlabo.be/#ma-progression">ecomlabo.be</a>.</p></div></div>
+<div id="prog-login">
+  <div class="prog-card">
+    <h2 style="margin-top:0">Suivre ma progression <span class="opt">(optionnel)</span></h2>
+    <p>Connecte-toi avec ton <strong>matricule</strong> pour suivre ton avancement, tes scores aux QCM, et te situer (anonymement) dans le groupe. Le cours fonctionne très bien sans compte — c'est toi qui choisis.</p>
+    <form id="prog-form" class="fb-form" novalidate>
+      <div class="fb-row"><label for="pg-mat">Matricule EPFC</label><input id="pg-mat" type="text" inputmode="numeric" autocomplete="off" placeholder="ex. 123456"></div>
+      <div class="fb-row"><label for="pg-pin">Code PIN (tu le choisis, 4 à 32 caractères)</label><input id="pg-pin" type="password" autocomplete="off" placeholder="à retenir pour tes prochaines connexions"></div>
+      <label class="prog-consent"><input type="checkbox" id="pg-consent"> J'ai lu la note d'information ci-dessous et j'accepte le suivi de ma progression.</label>
+      <div class="fb-actions"><button type="submit" class="btn primary">Créer mon suivi / me connecter</button></div>
+      <p id="pg-status" class="fb-status" hidden></p>
+    </form>
+    <details class="prog-notice"><summary>Note d'information — données personnelles (RGPD)</summary>
+      <ul>
+        <li><strong>Pourquoi ?</strong> Te permettre de suivre ta progression et de te situer anonymement dans le groupe, et permettre à l'enseignant de voir l'avancement de la classe.</li>
+        <li><strong>Données traitées :</strong> ton matricule et ton activité sur le cours (chapitres lus, scores aux QCM). Rien d'autre : ni nom, ni email.</li>
+        <li><strong>Base légale :</strong> ton consentement. C'est optionnel et réversible.</li>
+        <li><strong>Responsable :</strong> Olivier Willocx — olwillocx@epfc.eu.</li>
+        <li><strong>Hébergement :</strong> serveur OVH en Europe ; base de données non accessible publiquement ; connexion protégée par ton PIN.</li>
+        <li><strong>Classement :</strong> tu vois ta position, jamais le nom ni le score des autres. Aucune note, aucun effet sur la réussite de l'unité d'enseignement.</li>
+        <li><strong>Conservation :</strong> effacement en fin d'année académique. Tu peux supprimer tes données à tout moment (bouton une fois connecté) ou écrire à olwillocx@epfc.eu.</li>
+      </ul>
+    </details>
+  </div>
+</div>
+<div id="prog-dash" hidden>
+  <div class="prog-card">
+    <div class="prog-top"><span>Connecté : <strong id="pg-who"></strong></span>
+      <span class="prog-top-btns"><button class="btn ghost" id="pg-logout" type="button">Se déconnecter</button> <button class="btn danger" id="pg-forget" type="button">Effacer mes données</button></span></div>
+    <div class="prog-ringrow">
+      <div class="ring" id="pg-ring"><div class="ring-in"><span id="pg-global">–</span><small>score global</small></div></div>
+      <div class="prog-stats">
+        <div class="ps"><b id="pg-chap">–</b><small>chapitres lus</small></div>
+        <div class="ps"><b id="pg-qcm">–</b><small>QCM moyenne</small></div>
+      </div>
+    </div>
+    <div id="pg-rank" class="prog-rank"></div>
+    <p class="fb-hint">Suivi formatif, non noté. Données effaçables à tout moment.</p>
+  </div>
+</div>
 </div><div class="page-foot"><nav class="pager">
 <a class="pager-prev" href="#contribuer"><span class="pager-dir">← Précédent</span><span class="pager-ttl">Contribuer / signaler</span></a>
 <span></span>
@@ -9605,11 +9665,24 @@ impliquait.</p>
     </div>
   </div>
 </div>
-<script>window.__L={"fb_empty": "Écris d’abord un message.", "fb_send": "Envoi…", "fb_ok": "Merci ! Ton message est bien parti. ✓", "fb_mail": "J’ouvre ta messagerie…", "quiz_show": "Voir le corrigé", "quiz_hide": "Masquer le corrigé"};</script>
+<script>window.__L={"fb_empty": "Écris d’abord un message.", "fb_send": "Envoi…", "fb_ok": "Merci ! Ton message est bien parti. ✓", "fb_mail": "J’ouvre ta messagerie…", "quiz_show": "Voir le corrigé", "quiz_hide": "Masquer le corrigé", "prog": {"better": "Tu fais mieux que {p} % du groupe", "participants": "{n} participants", "median": "Médiane de la classe : {m} %", "wait": "Le classement s’affichera dès qu’au moins 5 étudiants participeront.", "you": "toi", "ok": "Suivi activé. Bon travail !", "bad_pin": "PIN incorrect pour ce matricule.", "consent": "Coche le consentement pour continuer.", "bad_mat": "Matricule invalide (3 à 32 caractères).", "bad_pin_len": "Choisis un PIN de 4 à 32 caractères.", "neterr": "Connexion impossible, réessaie.", "confirm_forget": "Effacer définitivement toutes tes données de progression ?", "forgotten": "Tes données ont été effacées."}};</script>
 <script>
 (function(){
   try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
   var L=window.__L||{};
+  // ----- progress tracking (optional, enabled everywhere except StartupScan) -----
+  var PROG=!/startupscan/i.test(location.hostname);
+  var PK=L.prog||{};
+  var apiTok=null, sentRead={};
+  try{apiTok=localStorage.getItem('ec-tok')||null;}catch(e){}
+  function api(path,data){return fetch('api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data||{})}).then(function(r){return r.json();});}
+  function fmt(s,o){return (s||'').replace(/\{(\w+)\}/g,function(_,k){return o[k];});}
+  function trackRead(id){
+    if(!PROG||!apiTok)return;
+    if(!/^(chapitre|module|annexe)-/.test(id))return;
+    if(sentRead[id])return; sentRead[id]=true;
+    api('track.php',{token:apiTok,events:[{kind:'read',sid:id}]}).catch(function(){});
+  }
   var pages=[].slice.call(document.querySelectorAll('.page'));
   var links=[].slice.call(document.querySelectorAll('.nav a[data-sid]'));
   var def='accueil';
@@ -9625,6 +9698,8 @@ impliquait.</p>
     document.body.classList.remove('nav-open');
     window.scrollTo(0,0);
     requestAnimationFrame(function(){window.scrollTo(0,0);updProg();});
+    trackRead(id);
+    if(id==='ma-progression')renderProg();
     syncLang();
   }
   function fromHash(){
@@ -9680,6 +9755,19 @@ impliquait.</p>
       if(i===ans){opt.classList.add('correct');}
       else{opt.classList.add('wrong');var ok=item.querySelector('.qcm-opt[data-i="'+ans+'"]');if(ok)ok.classList.add('correct');}
       var ex=item.querySelector('.qcm-explain');if(ex)ex.hidden=false;
+      item.setAttribute('data-uc',(i===ans)?'1':'0');
+      if(PROG&&apiTok){
+        var page=opt.closest('.page'); var psid=page?page.id:'';
+        var items=[].slice.call(page.querySelectorAll('.qcm-item'));
+        var qidx=items.indexOf(item);
+        var evs=[{kind:'answer',sid:psid,qidx:qidx,correct:(i===ans)}];
+        var done=items.filter(function(x){return x.getAttribute('data-uc')!==null;});
+        if(done.length===items.length){
+          var sc=items.reduce(function(a,x){return a+(x.getAttribute('data-uc')==='1'?1:0);},0);
+          evs.push({kind:'quiz',sid:psid,score:sc,max:items.length});
+        }
+        api('track.php',{token:apiTok,events:evs}).catch(function(){});
+      }
       return;
     }
     var tg=e.target.closest&&e.target.closest('.open-toggle');
@@ -9696,6 +9784,68 @@ impliquait.</p>
   }
   window.addEventListener('scroll',updProg,{passive:true});
   window.addEventListener('resize',updProg);
+  // ----- progress page rendering + account actions -----
+  function showPane(login){
+    var off=document.getElementById('prog-off'); if(off)off.hidden=PROG;
+    var lg=document.getElementById('prog-login'), dh=document.getElementById('prog-dash');
+    if(!PROG){ if(lg)lg.hidden=true; if(dh)dh.hidden=true; return; }
+    if(lg)lg.hidden=!login; if(dh)dh.hidden=login;
+  }
+  function renderRank(r){
+    var el=document.getElementById('pg-rank'); if(!el)return;
+    if(!r){ el.innerHTML='<p class="rank-sub">'+(PK.wait||'')+'</p>'; return; }
+    var labels=['0-20','20-40','40-60','60-80','80-100'];
+    var maxb=Math.max.apply(null,r.buckets)||1, cols='';
+    for(var i=0;i<5;i++){
+      var hh=Math.round(r.buckets[i]/maxb*70)+3, you=(i===r.your_bucket);
+      cols+='<div class="rank-col'+(you?' you':'')+'">'+(you?'<span class="rank-you-tag">'+(PK.you||'')+'</span>':'')+
+        '<div class="rank-bar" style="height:'+hh+'px"></div><small>'+labels[i]+'</small></div>';
+    }
+    el.innerHTML='<p class="rank-head">'+fmt(PK.better,{p:r.percentile})+'</p>'+
+      '<p class="rank-sub">'+fmt(PK.participants,{n:r.n})+' · '+fmt(PK.median,{m:r.median})+'</p>'+
+      '<div class="rank-dist">'+cols+'</div>';
+  }
+  function renderProg(){
+    if(!PROG||!apiTok){showPane(true);return;}
+    showPane(false);
+    api('me.php',{token:apiTok}).then(function(d){
+      if(!d||!d.ok){ apiTok=null; try{localStorage.removeItem('ec-tok');}catch(e){} showPane(true); return; }
+      var set=function(id,v){var el=document.getElementById(id);if(el)el.textContent=v;};
+      set('pg-who',d.matricule);
+      var me=d.me||{};
+      set('pg-global',me.global+'%'); set('pg-chap',me.chapitres_lus+'/12');
+      set('pg-qcm',me.has_quiz?(me.qcm_moyenne+'%'):'—');
+      var ring=document.getElementById('pg-ring'); if(ring)ring.style.setProperty('--p',me.global);
+      renderRank(d.ranking);
+    }).catch(function(){});
+  }
+  var pform=document.getElementById('prog-form');
+  if(pform&&PROG){pform.addEventListener('submit',function(e){e.preventDefault();
+    var mat=(document.getElementById('pg-mat').value||'').trim();
+    var pin=document.getElementById('pg-pin').value||'';
+    var consent=document.getElementById('pg-consent').checked;
+    var st=document.getElementById('pg-status');
+    var say=function(x){if(st){st.hidden=false;st.textContent=x;}};
+    if(!/^[A-Za-z0-9._-]{3,32}$/.test(mat)){say(PK.bad_mat);return;}
+    if(pin.length<4||pin.length>32){say(PK.bad_pin_len);return;}
+    if(!consent){say(PK.consent);return;}
+    say(L.fb_send);
+    api('auth.php',{matricule:mat,pin:pin,consent:consent}).then(function(d){
+      if(d&&d.ok){ apiTok=d.token; try{localStorage.setItem('ec-tok',apiTok);}catch(e){} say(PK.ok); renderProg(); }
+      else if(d&&d.error==='bad_pin'){ say(PK.bad_pin); }
+      else if(d&&d.error==='consent_required'){ say(PK.consent); }
+      else { say(PK.neterr); }
+    }).catch(function(){say(PK.neterr);});
+  });}
+  var plogout=document.getElementById('pg-logout');
+  if(plogout)plogout.addEventListener('click',function(){apiTok=null;try{localStorage.removeItem('ec-tok');}catch(e){} sentRead={}; showPane(true);});
+  var pforget=document.getElementById('pg-forget');
+  if(pforget)pforget.addEventListener('click',function(){
+    if(!apiTok)return; if(!window.confirm(PK.confirm_forget))return;
+    api('forget.php',{token:apiTok}).then(function(){apiTok=null;try{localStorage.removeItem('ec-tok');}catch(e){} sentRead={};
+      var st=document.getElementById('pg-status'); if(st){st.hidden=false;st.textContent=PK.forgotten;} showPane(true);}).catch(function(){});
+  });
+  if(!PROG){var nl=document.querySelector('.nav a[data-sid="ma-progression"]'); if(nl&&nl.parentElement)nl.parentElement.style.display='none';}
   syncLang();
   fromHash();
   updProg();
