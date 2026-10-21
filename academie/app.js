@@ -128,7 +128,9 @@ function findSec(sid) {
 }
 function missionDone(num) { var c = 0; for (var j = 1; j <= 5; j++) if (d("ent-mi-" + num + "-" + j)) c++; return c; }
 function modProgress(m) {
-  var p = setProgress(m.sections); var ms = missionDone(m.num);
+  var p = setProgress(m.sections);
+  if (!m.mission) return { pct: p.pct, acq: p.acq, n: p.n, mission: null };
+  var ms = missionDone(m.num);
   return { pct: Math.round(p.pct * 0.8 + ms / 5 * 20), acq: p.acq, n: p.n, mission: ms };
 }
 function voieProgress(v) {
@@ -153,8 +155,8 @@ function badges() {
   var anyRead = Object.keys(DETAIL).some(function (k) { return k.indexOf("ent-lr-") === 0; });
   add("start", "Premiers pas", I.user, PROFILE.voie, "Choisir ta voie");
   add("read", "Première leçon", I.book, anyRead, "Lire une leçon");
-  var names = ["Idée cadrée", "Terrain validé", "Premier euro", "Chiffres maîtrisés", "Prêt·e pour le jury"];
-  var icons = [I.bulb, I.talk, I.coin, I.chart, I.mic];
+  var names = ["Idée cadrée", "Terrain validé", "Premier euro", "Chiffres maîtrisés", "Prêt·e pour le jury", "Pilote de sa boîte"];
+  var icons = [I.bulb, I.talk, I.coin, I.chart, I.mic, I.flag];
   A.modules.forEach(function (m, i) { var p = setProgress(m.sections); add(m.id, names[i], icons[i], p.acq === p.n, "Acquérir tout le module " + m.num); });
   var v = myVoie(), vp = voieProgress(v);
   add("voie", "Ta voie", I.road, v && (v.id === "digital" ? vp.pct >= 50 : vp.acq === vp.n && vp.n > 0), "Valider les sections de ta voie");
@@ -171,7 +173,7 @@ function badges() {
 function header(route) {
   var nav = [
     logged() ? ["espace", "Mon espace"] : ["accueil", "Présentation"],
-    ["cours", "Le parcours"], ["voies", "Les voies"], ["calendrier", "Calendrier"], ["examens", "Examens"], ["ressources", "Ressources"], ["temoignages", "Témoignages"]
+    ["cours", "Le parcours"], ["voies", "Les voies"], ["calendrier", "Calendrier"], ["reperes", "Repères"], ["examens", "Examens"], ["ressources", "Ressources"], ["temoignages", "Témoignages"]
   ];
   var r = route.split("/")[0];
   var h = '<div class="wrap">' +
@@ -206,7 +208,7 @@ function logout() { SES = {}; saveSes(); ME = null; DETAIL = {}; PROFILE = {}; M
 function footer() {
   $("#ftr").innerHTML = '<div class="wrap">' +
     '<div><img src="' + IMG + 'epfc_logo.svg" alt="EPFC" style="height:40px;border-radius:6px;margin-bottom:14px"><p>L’Académie StartupScan est l’espace d’apprentissage du cours Entrepreneuriat de l’EPFC (Bruxelles) : un parcours unique, de l’idée aux premiers clients. Coordination : Olivier Willocx & Diego Mommaerts.</p></div>' +
-    '<div><b>Apprendre</b><a href="#/cours">Le parcours</a><a href="#/voies">Les voies</a><a href="#/examens">Examens</a><a href="#/banc">Banc d’essai</a><a href="' + ECOM_URL + '" target="_blank" rel="noopener">Cours e-commerce ↗</a></div>' +
+    '<div><b>Apprendre</b><a href="#/cours">Le parcours</a><a href="#/voies">Les voies</a><a href="#/reperes">Les repères</a><a href="#/examens">Examens</a><a href="#/banc">Banc d’essai</a><a href="' + ECOM_URL + '" target="_blank" rel="noopener">Cours e-commerce ↗</a></div>' +
     '<div><b>S’inspirer</b><a href="fiches.html">Toutes les fiches d’entreprises</a><a href="revue.html">Le dernier numéro StartupScan</a><a href="modeles.html">Qui paie ? Les modèles</a><a href="jeux-de-role.html">Jeux de rôle</a><a href="glossaire.html">Glossaire</a></div>' +
     '<div class="bot">Suivi de progression optionnel · données minimales hébergées en Europe, hors du dossier web, effaçables à tout moment depuis ton profil · ta photo reste sur ton appareil.</div></div>';
 }
@@ -230,6 +232,7 @@ var ROUTES = {
   temoignages: function () { return vTemoignages(); },
   profil: function () { return logged() ? vProfil() : (location.hash = "#/connexion", ""); },
   calendrier: function () { return vCalendrier(); },
+  reperes: function (a) { return vReperes(a); },
   attestation: function () { return logged() ? vAttestation() : (location.hash = "#/connexion", ""); }
 };
 var CUR = "";
@@ -300,7 +303,7 @@ function vLanding() {
     '<div class="hero-meta"><span><b>12 nov. 2026 → 13 mai 2027</b> · 25 journées</span><span><b>160 périodes</b></span><span><b>EPFC</b> · Bruxelles</span><a href="#/calendrier" style="color:#fff;font-weight:700">Voir le calendrier →</a></div>' +
     '</div><div class="hero-img"><img src="' + img("hero") + '" alt="Trois jeunes entrepreneurs lancent leur projet"></div></div></section>';
   h += '<section class="statbar"><div class="wrap">' +
-    '<div class="s"><b>5</b><span>modules de tronc commun</span></div><div class="s"><b>4</b><span>voies au choix</span></div><div class="s"><b>' + nSec + '</b><span>leçons + QCM</span></div><div class="s"><b>5</b><span>missions terrain</span></div><div class="s"><b>3</b><span>examens à volonté</span></div></div></section>';
+    '<div class="s"><b>' + A.modules.length + '</b><span>modules de tronc commun</span></div><div class="s"><b>4</b><span>voies au choix</span></div><div class="s"><b>' + nSec + '</b><span>leçons + QCM</span></div><div class="s"><b>5</b><span>missions terrain</span></div><div class="s"><b>3</b><span>examens à volonté</span></div></div></section>';
   h += '<section class="sec"><div class="wrap how"><div><span class="eyebrow">Comment ça marche</span><h2 class="h2">Un parcours qui s’adapte à toi</h2>' +
     '<div class="steps">' +
     '<div class="step"><span class="n">1</span><div><b>Crée ton profil en 2 minutes</b><span>Ton matricule EPFC, un code PIN, ta photo si tu veux. Le même compte vaut pour le cours e-commerce.</span></div></div>' +
@@ -308,7 +311,7 @@ function vLanding() {
     '<div class="step"><span class="n">3</span><div><b>Apprends, puis passe à l’action</b><span>Chaque leçon se termine par un QCM de compétence et chaque module par une mission sur le terrain.</span></div></div>' +
     '<div class="step"><span class="n">4</span><div><b>Suis tes progrès, gagne des points</b><span>Niveaux, badges, classement anonyme — et 3 examens à repasser autant que tu veux avant le jury final.</span></div></div>' +
     '</div></div><div><img src="' + img("methode") + '" alt="Apprentissage par problèmes en équipe" style="border-radius:18px"></div></div></section>';
-  h += '<section class="sec alt"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Le tronc commun</span><h2 class="h2">5 modules pour passer de l’idée aux premiers clients</h2><p class="lead">Obligatoires pour tous, dans l’ordre conseillé — mais tu restes libre de naviguer.</p></div><a class="btn ghost" href="#/cours">Voir tout le parcours</a></div>' +
+  h += '<section class="sec alt"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Le tronc commun</span><h2 class="h2">' + A.modules.length + ' modules pour passer de l’idée aux premiers clients — et piloter ta boîte</h2><p class="lead">Obligatoires pour tous, dans l’ordre conseillé — mais tu restes libre de naviguer.</p></div><a class="btn ghost" href="#/cours">Voir tout le parcours</a></div>' +
     '<div class="grid g3">' + A.modules.map(moduleCard).join("") + "</div></div></section>";
   h += '<section class="sec"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Ta voie</span><h2 class="h2">Plusieurs chemins pour entreprendre</h2><p class="lead">Tu n’es pas obligé·e de tout faire : choisis la voie qui correspond à ton projet. Tu peux en explorer d’autres quand tu veux.</p></div></div>' +
     '<div class="grid g2">' + A.voies.map(function (v) { return voieCard(v); }).join("") + "</div></div></section>";
@@ -318,7 +321,8 @@ function vLanding() {
     '<div class="step"><span class="n"><span style="width:20px;height:20px;display:block">' + I.star + '</span></span><div><b>Points, niveaux et badges</b><span>De « Explorateur » à « Mentor ». Tes points se cumulent avec le cours e-commerce.</span></div></div>' +
     '<div class="step"><span class="n"><span style="width:20px;height:20px;display:block">' + I.user + '</span></span><div><b>Un profil à ton image</b><span>Ta photo ou tes initiales, ta voie, ton statut, ton idée en une ligne — modifiables à tout moment.</span></div></div>' +
     "</div></div></div></section>";
-  h += '<section class="sec"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Témoignages</span><h2 class="h2">Ils et elles ont suivi le parcours</h2></div><a class="btn ghost" href="#/temoignages">Tous les témoignages</a></div><div id="testi-land"><div class="loading">Chargement…</div></div></div></section>';
+  h += '<section class="sec"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Repères</span><h2 class="h2">À relire quand tu doutes</h2></div><a class="btn ghost" href="#/reperes">Tous les repères</a></div><div class="grid g3">' + (A.reperes || []).map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
+  h += '<section class="sec alt"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Témoignages</span><h2 class="h2">Ils et elles ont suivi le parcours</h2></div><a class="btn ghost" href="#/temoignages">Tous les témoignages</a></div><div id="testi-land"><div class="loading">Chargement…</div></div></div></section>';
   h += '<section class="sec alt"><div class="wrap"><div class="grid g2" style="align-items:start"><div><span class="eyebrow">L’équipe</span><h2 class="h2">Des praticiens, pas seulement des profs</h2>' +
     '<div class="card pad" style="margin-top:20px"><div class="team"><span class="av" style="width:56px;height:56px;font-size:20px;background:var(--epfc)">OW</span><div><b>Olivier Willocx</b><div class="sub">Coordination · vente, modèles, pilotage, jury. Ancien CEO de BECI, près de 20 ans d’enseignement du business plan.</div></div></div></div>' +
     '<div class="card pad" style="margin-top:12px"><div class="team"><span class="av" style="width:56px;height:56px;font-size:20px;background:var(--blue)">DM</span><div><b>Diego Mommaerts</b><div class="sub">Co-coordination · cadre juridique et création d’entreprise.</div></div></div></div>' +
@@ -499,6 +503,26 @@ function vCalendrier() {
   return h;
 }
 
+/* ============ Repères (pages de référence) ============ */
+function vReperes(which) {
+  var R = A.reperes || [];
+  var cur = null; R.forEach(function (r) { if (r.id === which) cur = r; });
+  var h = '<section class="pagehead"><div class="wrap"><div class="crumbs"><a href="#/">Accueil</a> · Repères' + (cur ? " · " + esc(cur.titre) : "") + "</div><h1>" + (cur ? esc(cur.titre) : "Les repères") + "</h1><p>" + (cur ? esc(cur.sous) : "Trois pages à relire quand tu doutes : les erreurs qui tuent les boîtes, ce qui fait réussir les entrepreneurs bruxellois, et ce qui arrive en 2027.") + "</p></div></section>";
+  if (!cur) {
+    h += '<section class="sec tight"><div class="wrap"><div class="grid g3">' + R.map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
+    return h;
+  }
+  h += '<section class="sec tight"><div class="wrap"><div class="rep-grid"><div>';
+  h += '<img src="' + img(cur.img) + '" alt="" style="border-radius:16px;margin-bottom:22px">';
+  if (cur.intro) h += '<p class="lead" style="margin:0 0 18px">' + cur.intro + "</p>";
+  cur.items.forEach(function (it, i) {
+    h += '<div class="rep-item"><span class="rep-n">' + (i + 1) + '</span><div><h3>' + esc(it.t) + "</h3><p>" + it.d + "</p>" + (it.src ? '<p class="rep-src">' + it.src + "</p>" : "") + "</div></div>";
+  });
+  if (cur.sources && cur.sources.length) h += '<div class="card pad" style="margin-top:22px"><span class="eyebrow">Sources</span><ul class="rep-sources">' + cur.sources.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div>";
+  h += '</div><aside><div class="card pad" style="position:sticky;top:88px"><span class="eyebrow">Les autres repères</span>' + R.filter(function (r) { return r.id !== cur.id; }).map(function (r) { return '<a class="rep-side" href="#/reperes/' + r.id + '"><b>' + esc(r.titre) + "</b><span>" + esc(r.k) + "</span></a>"; }).join("") + '<a class="btn ghost sm" style="margin-top:14px" href="#/module/m6">Module 6 · Piloter sa boîte</a></div></aside></div></div></section>';
+  return h;
+}
+
 /* ============ Attestation ============ */
 function attestationOk() {
   var p = setProgress(A.modules.reduce(function (a, m) { return a.concat(m.sections); }, []));
@@ -529,7 +553,7 @@ function roadmap() {
   A.modules.forEach(function (m) {
     var p = logged() ? modProgress(m) : { pct: 0, acq: 0, n: m.sections.length, mission: 0 };
     var st = p.pct >= 100 ? "done" : p.pct > 0 ? "doing" : "";
-    h += '<a class="rn ' + st + '" href="#/module/' + m.id + '"><span class="dot">' + (st === "done" ? '<span style="width:20px;height:20px">' + I.check + "</span>" : m.num) + '</span><div class="t"><b>' + esc(m.titre) + "</b><span>" + p.acq + "/" + p.n + " leçons acquises · mission " + p.mission + "/5</span>" +
+    h += '<a class="rn ' + st + '" href="#/module/' + m.id + '"><span class="dot">' + (st === "done" ? '<span style="width:20px;height:20px">' + I.check + "</span>" : m.num) + '</span><div class="t"><b>' + esc(m.titre) + "</b><span>" + p.acq + "/" + p.n + " leçons acquises" + (p.mission === null ? "" : " · mission " + p.mission + "/5") + "</span>" +
       '<div class="pbar"><i style="width:' + p.pct + '%"></i></div></div><span class="r">' + p.pct + " %</span></a>";
   });
   h += '<div class="fork">Ta voie</div>';
@@ -613,16 +637,16 @@ function vModule(id) {
   var p = logged() ? modProgress(m) : null;
   var h = '<section class="mhead"><div class="wrap"><div><div class="crumbs"><a href="#/">Accueil</a> · <a href="#/cours">Le parcours</a> · Module ' + m.num + "</div>" +
     '<span class="eyebrow" style="color:#9CC7F0">Module ' + m.num + " · " + esc(m.sprint) + "</span><h1>" + esc(m.titre) + '</h1><p style="margin-top:10px;font-size:17px">' + esc(m.accroche) + "</p>" +
-    (p ? '<div class="prog"><div class="pbar big"><i style="width:' + p.pct + '%"></i></div><span>' + p.pct + " % · " + p.acq + "/" + p.n + " leçons acquises · mission " + p.mission + "/5</span></div>" : '<div style="margin-top:20px"><a class="btn white" href="#/inscription">Créer mon profil pour suivre ma progression</a></div>') +
+    (p ? '<div class="prog"><div class="pbar big"><i style="width:' + p.pct + '%"></i></div><span>' + p.pct + " % · " + p.acq + "/" + p.n + " leçons acquises" + (p.mission === null ? "" : " · mission " + p.mission + "/5") + "</span></div>" : '<div style="margin-top:20px"><a class="btn white" href="#/inscription">Créer mon profil pour suivre ma progression</a></div>') +
     '</div><div class="ph"><img src="' + img(m.img) + '" alt=""></div></div></section>';
   h += '<section class="sec tight"><div class="wrap mod"><div>' +
     '<div class="card"><div class="pad" style="border-bottom:1px solid var(--line-2)"><span class="eyebrow">Contenu du module</span><h2 class="h3" style="margin-top:4px">' + m.sections.length + ' leçons · chaque leçon se valide par un QCM</h2></div><div class="items">' + m.sections.map(function (s) { return itemRow(s); }).join("") + "</div></div>" +
-    missionCard(m) + questionsBlock(m.id) + "</div>" +
+    (m.mission ? missionCard(m) : "") + questionsBlock(m.id) + "</div>" +
     '<div style="display:grid;gap:20px"><div class="card pad"><span class="eyebrow">À la fin de ce module</span><ul class="obj" style="margin-top:12px">' + m.objectifs.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + "</ul></div>" +
     '<div class="card pad"><span class="eyebrow">Compétences</span><div class="chips" style="margin-top:10px">' + m.competences.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + '</div><p class="note">' + esc(m.duree) + "</p></div>" +
     '<div class="card pad"><span class="eyebrow">Navigation</span><div style="display:grid;gap:8px;margin-top:10px">' +
     (m.num > 1 ? '<a class="btn ghost sm" href="#/module/m' + (m.num - 1) + '">← Module ' + (m.num - 1) + "</a>" : "") +
-    (m.num < 5 ? '<a class="btn sm" href="#/module/m' + (m.num + 1) + '">Module ' + (m.num + 1) + " →</a>" : '<a class="btn sm" href="#/voies">Choisir / suivre ma voie →</a>') + "</div></div></div></div></section>";
+    (m.num < A.modules.length ? '<a class="btn sm" href="#/module/m' + (m.num + 1) + '">Module ' + (m.num + 1) + " →</a>" : '<a class="btn sm" href="#/voies">Choisir / suivre ma voie →</a>') + "</div></div></div></div></section>";
   after(wireMission);
   return h;
 }
@@ -694,7 +718,7 @@ function vLecon(sid) {
   var s = f.sec, par = f.parent, list = par.sections, isMod = f.kind === "module";
   var href = isMod ? "#/module/" + par.id : "#/voie/" + par.id;
   var prev = list[f.i - 1], next = list[f.i + 1];
-  var nextHref = next ? "#/lecon/" + next.sid : (isMod ? (par.num < 5 ? "#/module/m" + (par.num + 1) : "#/voies") : "#/examens");
+  var nextHref = next ? "#/lecon/" + next.sid : (isMod ? (par.num < A.modules.length ? "#/module/m" + (par.num + 1) : "#/voies") : "#/examens");
   var aside = '<aside><div class="card"><div class="pad" style="padding:16px 16px 12px"><a class="link" href="' + href + '">← ' + (isMod ? "Module " + par.num : "Voie") + "</a><b style=\"display:block;margin-top:6px;font-size:15px\">" + esc(par.titre) + '</b></div><div class="items">' +
     list.map(function (x) { var a = acq(x.sid), r = read(x.sid); return '<a class="item ' + (a ? "done" : r ? "half" : "") + (x.sid === sid ? " cur" : "") + '" href="#/lecon/' + x.sid + '"><span class="st">' + (a ? I.check : "") + '</span><div class="t"><b>' + esc(x.titre) + "</b><span>" + esc(x.duree) + "</span></div></a>"; }).join("") + "</div></div></aside>";
   var b = best(sid), r = read(sid);
@@ -865,6 +889,7 @@ function vBanc() {
 function vRessources() {
   var cards = [
     ["#/banc", "m4", "Outil", "Le banc d’essai", "Combien de ventes pour couvrir tes charges et te payer ? Le calcul en direct."],
+    ["#/reperes", "rep_erreurs", "Repères", "10 erreurs, 10 facteurs de succès, tendances 2027", "Trois pages chiffrées et sourcées, à relire quand tu doutes."],
     ["fiches.html", "m1", "Inspiration", "Toutes les fiches d’entreprises", "Des dizaines d’entreprises décortiquées : de quoi trouver et cadrer ton idée."],
     ["revue.html", "hero", "Chaque semaine", "Le dernier numéro StartupScan", "La revue hebdo des modèles qui inspirent."],
     ["modeles.html", "voie_digital", "Modèles", "Qui paie ? Les modèles d’affaires", "Comprendre qui paie quoi, et pourquoi."],
@@ -959,7 +984,7 @@ function vProfil() {
       L.push("Voie : " + (myVoie() ? myVoie().titre : "non choisie"));
       L.push("");
       L.push("Progression : " + ME.global + " % · Compétence : " + ME.competence + " % · Niveau : " + ME.niveau.nom + " (" + ME.points + " points)");
-      A.modules.forEach(function (m) { var p = modProgress(m); L.push("  Module " + m.num + " — " + m.titre + " : " + p.pct + " % (" + p.acq + "/" + p.n + " leçons, mission " + p.mission + "/5)"); });
+      A.modules.forEach(function (m) { var p = modProgress(m); L.push("  Module " + m.num + " — " + m.titre + " : " + p.pct + " % (" + p.acq + "/" + p.n + " leçons" + (p.mission === null ? "" : ", mission " + p.mission + "/5") + ")"); });
       var v = myVoie(); if (v) L.push("  Voie — " + v.titre + " : " + voieProgress(v).pct + " %");
       [1, 2, 3].forEach(function (n) { var b = examBest(n); L.push("  Examen " + n + " : " + (b !== null ? b + " %" : "non passé")); });
       L.push("");

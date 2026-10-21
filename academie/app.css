@@ -462,3 +462,32 @@ details.pform .btn{margin-top:8px}
 .attest .d{margin-top:22px;font-size:14px;color:var(--muted)}
 .attest .sg{margin-top:26px;font-weight:700;color:var(--ink)}
 @media print{.hdr,.ftr,.pagehead,.toast,.grid.g4,.btn{display:none!important}body{background:#fff}.attest{box-shadow:none;border-width:4px}}
+
+/* ---------- Tableaux chiffrés dans les leçons ---------- */
+.prose table.t{width:100%;border-collapse:collapse;font-family:var(--f-ui);font-size:14.5px;margin:12px 0 16px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.prose table.t th{background:var(--sky);color:var(--epfc);text-align:left;padding:9px 12px;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+.prose table.t td{padding:8px 12px;border-top:1px solid var(--line-2)}
+.prose table.t td.n,.prose table.t th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.prose table.t tr.tot td{font-weight:800;border-top:2px solid var(--line)}
+.prose .tscroll{overflow-x:auto;margin:12px 0 16px;-webkit-overflow-scrolling:touch}
+.prose .tscroll table.t{margin:0;min-width:420px}
+.reader{min-width:0}
+.lesson>*{min-width:0}
+
+/* ---------- Repères ---------- */
+.rep-grid{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+@media (max-width:980px){.rep-grid{grid-template-columns:1fr}}
+.rep-item{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px;box-shadow:var(--sh)}
+.rep-n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--epfc);color:#fff;font-weight:800;font-size:18px;display:grid;place-items:center}
+.rep-item h3{font-size:18px;font-weight:800;line-height:1.25}
+.rep-item p{font-size:15.5px;color:var(--ink-2);margin-top:6px;line-height:1.55}
+.rep-item p.rep-src{font-size:12.5px;color:var(--muted);margin-top:6px}
+.rep-item p.rep-src a{color:var(--blue)}
+.rep-sources{margin:10px 0 0 18px;font-size:13.5px;color:var(--ink-2)}
+.rep-sources li{margin-bottom:4px}
+.rep-side{display:block;text-decoration:none;color:inherit;padding:10px 0;border-bottom:1px solid var(--line-2)}
+.rep-side b{display:block;font-size:14.5px}
+.rep-side span{font-size:12.5px;color:var(--muted)}
+.rep-side:hover b{color:var(--epfc)}
+.nextprev .btn{white-space:normal;text-align:center;max-width:100%}
+@media (max-width:620px){.nextprev{flex-direction:column}.nextprev .btn{width:100%}}
