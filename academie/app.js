@@ -63,7 +63,7 @@ var SES = {};
 try { SES = JSON.parse(lsGet("acad_session") || "{}") || {}; } catch (e) { SES = {}; }
 function saveSes() { lsSet("acad_session", JSON.stringify(SES)); }
 function logged() { return !!SES.token; }
-var ME = null, DETAIL = {}, PROFILE = {}, MYT = null, POOLED = { ecom: 0, entr: 0, total: 0 };
+var ME = null, DETAIL = {}, PROFILE = {}, MYT = null, POOLED = { ecom: 0, entr: 0, total: 0 }, PROOFS = {}, MYQ = [];
 
 function api(path, body) {
   var opt = body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {};
@@ -71,10 +71,11 @@ function api(path, body) {
     .catch(function () { return { ok: false, error: "network" }; });
 }
 function refresh() {
-  if (!logged()) { ME = null; DETAIL = {}; PROFILE = {}; MYT = null; return Promise.resolve(); }
+  if (!logged()) { ME = null; DETAIL = {}; PROFILE = {}; MYT = null; PROOFS = {}; MYQ = []; return Promise.resolve(); }
   return api("me.php", { token: SES.token, course: COURSE }).then(function (r) {
     if (r && r.ok) {
       ME = r.me; PROFILE = r.profile || {}; MYT = r.my_testimonial; POOLED = r.pooled || POOLED; ME.ranking = r.ranking; ME.participants = r.participants;
+      PROOFS = {}; (r.proofs || []).forEach(function (p) { PROOFS[p.mission + "-" + p.step] = p; }); MYQ = r.my_questions || [];
       DETAIL = {}; (r.detail || []).forEach(function (d) { DETAIL[d.sid] = d; });
     } else if (r && (r.error === "bad_token" || r.error === "no_token")) {
       SES = {}; saveSes(); ME = null; DETAIL = {}; PROFILE = {};
@@ -170,7 +171,7 @@ function badges() {
 function header(route) {
   var nav = [
     logged() ? ["espace", "Mon espace"] : ["accueil", "Présentation"],
-    ["cours", "Le parcours"], ["voies", "Les voies"], ["examens", "Examens"], ["ressources", "Ressources"], ["temoignages", "Témoignages"]
+    ["cours", "Le parcours"], ["voies", "Les voies"], ["calendrier", "Calendrier"], ["examens", "Examens"], ["ressources", "Ressources"], ["temoignages", "Témoignages"]
   ];
   var r = route.split("/")[0];
   var h = '<div class="wrap">' +
@@ -227,15 +228,25 @@ var ROUTES = {
   banc: function () { return vBanc(); },
   ressources: function () { return vRessources(); },
   temoignages: function () { return vTemoignages(); },
-  profil: function () { return logged() ? vProfil() : (location.hash = "#/connexion", ""); }
+  profil: function () { return logged() ? vProfil() : (location.hash = "#/connexion", ""); },
+  calendrier: function () { return vCalendrier(); },
+  attestation: function () { return logged() ? vAttestation() : (location.hash = "#/connexion", ""); }
 };
 var CUR = "";
+var LASTR = 0;
 function route() {
   var h = (location.hash || "").replace(/^#\/?/, "");
+  if (logged() && h !== CUR && Date.now() - LASTR > 1500) {
+    // données fraîches à chaque changement de page (preuves validées, réponses du prof, points)
+    LASTR = Date.now(); CUR = h;
+    refresh().then(function () { CUR = ""; route(); });
+    return;
+  }
   var parts = h.split("/"), key = parts[0] || "", arg = parts.slice(1).join("/");
   if (!ROUTES.hasOwnProperty(key)) key = "";
   CUR = h;
   header(key === "banc" ? "ressources" : h);
+  PUBQ = null;
   var out = ROUTES[key](decodeURIComponent(arg || ""));
   if (typeof out === "string" && out) {
     $("#main").innerHTML = out;
@@ -286,7 +297,7 @@ function vLanding() {
     '<h1 class="h1" style="margin-top:14px">Crée ton business.<br>Trouve tes premiers clients.</h1>' +
     '<p class="lead">Un vrai parcours, à ton rythme : tu apprends, tu passes à l’action sur ton propre projet, tu valides tes compétences — et tu choisis ta voie : commerce, activité indépendante, plateforme digitale ou reprise d’entreprise.</p>' +
     '<div class="hero-ctas">' + (logged() ? '<a class="btn white lg" href="#/espace">Continuer mon parcours</a>' : '<a class="btn white lg" href="#/inscription">Commencer mon parcours</a><a class="btn outline-w lg" href="#/connexion">J’ai déjà un compte</a>') + "</div>" +
-    '<div class="hero-meta"><span><b>Novembre → mai</b> · 25 journées</span><span><b>160 périodes</b></span><span><b>EPFC</b> · Bruxelles</span></div>' +
+    '<div class="hero-meta"><span><b>12 nov. 2026 → 13 mai 2027</b> · 25 journées</span><span><b>160 périodes</b></span><span><b>EPFC</b> · Bruxelles</span><a href="#/calendrier" style="color:#fff;font-weight:700">Voir le calendrier →</a></div>' +
     '</div><div class="hero-img"><img src="' + img("hero") + '" alt="Trois jeunes entrepreneurs lancent leur projet"></div></div></section>';
   h += '<section class="statbar"><div class="wrap">' +
     '<div class="s"><b>5</b><span>modules de tronc commun</span></div><div class="s"><b>4</b><span>voies au choix</span></div><div class="s"><b>' + nSec + '</b><span>leçons + QCM</span></div><div class="s"><b>5</b><span>missions terrain</span></div><div class="s"><b>3</b><span>examens à volonté</span></div></div></section>';
@@ -462,6 +473,56 @@ function loadPhoto(file, done) {
   fr.readAsDataURL(file);
 }
 
+/* ============ Calendrier de cohorte ============ */
+var MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+function fdate(iso) { var p = iso.split("-"); return parseInt(p[2], 10) + " " + MOIS[parseInt(p[1], 10) - 1] + " " + p[0]; }
+function today() { var t = new Date(); return t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0"); }
+function nextSession() { var t = today(); for (var i = 0; i < A.calendrier.length; i++) if (A.calendrier[i].date >= t) return A.calendrier[i]; return null; }
+function daysUntil(iso) { var a = new Date(iso + "T12:00:00"), b = new Date(); b.setHours(12, 0, 0, 0); return Math.round((a - b) / 86400000); }
+function weekBanner() {
+  var s = nextSession(); if (!s) return "";
+  var m = modById(s.module), n = daysUntil(s.date);
+  var when = n === 0 ? "aujourd’hui" : n === 1 ? "demain" : "dans " + n + " jours";
+  return '<div class="card pad week"><div><span class="eyebrow">Prochaine séance · ' + when + '</span><h2 class="h3" style="margin-top:4px">Journée ' + s.n + "/25 — " + esc(s.titre) + '</h2><p class="sub" style="margin-top:4px">' + s.jour + " " + fdate(s.date) + " · Sprint " + s.sprint + (m ? " · " + esc(m.titre) : "") + '</p><p style="margin-top:8px;font-size:14.5px"><b>Avant la séance :</b> ' + esc(s.avant) + '</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">' + (m ? '<a class="btn sm" href="#/module/' + m.id + '">Ouvrir le module ' + m.num + "</a>" : "") + '<a class="btn ghost sm" href="#/calendrier">Tout le calendrier</a></div></div>';
+}
+function vCalendrier() {
+  var t = today(), nx = nextSession();
+  var h = '<section class="pagehead"><div class="wrap"><div class="crumbs"><a href="#/">Accueil</a> · Calendrier</div><h1>Le calendrier de la promotion 2026-2027</h1><p>25 journées, de novembre à mai, surtout le jeudi et quelques samedis. Chaque séance s’appuie sur les leçons à lire avant, et avance la mission du sprint.</p></div></section>';
+  h += '<section class="sec tight"><div class="wrap">' + (logged() ? weekBanner() : "") + '<p class="note" style="margin:14px 0 18px">Dates prévisionnelles — l’horaire officiel de l’EPFC fait foi.</p>';
+  var cur = 0;
+  A.calendrier.forEach(function (s) {
+    if (s.sprint !== cur) { if (cur) h += "</div>"; cur = s.sprint; var m = modById(s.module); h += '<div class="chap"><span class="eyebrow">Sprint ' + s.sprint + '</span><h2 class="h3" style="margin:4px 0 10px">' + (m ? esc(m.titre) : "") + " · " + (m ? '<a class="link" href="#/module/' + m.id + '">module ' + m.num + "</a>" : "") + "</h2>"; }
+    var past = s.date < t, isNext = nx && nx.n === s.n;
+    h += '<div class="cal' + (past ? " past" : "") + (isNext ? " next" : "") + '"><div class="cd"><b>' + fdate(s.date).split(" ")[0] + "</b><span>" + fdate(s.date).split(" ")[1] + "</span></div><div class=\"ct\"><b>Journée " + s.n + " — " + esc(s.titre) + "</b><span>" + s.jour + " · avant la séance : " + esc(s.avant) + "</span></div>" + (isNext ? '<span class="chip solid">prochaine</span>' : past ? '<span class="chip grey">passée</span>' : "") + "</div>";
+  });
+  h += "</div></div></section>";
+  return h;
+}
+
+/* ============ Attestation ============ */
+function attestationOk() {
+  var p = setProgress(A.modules.reduce(function (a, m) { return a.concat(m.sections); }, []));
+  var v = myVoie(), vp = voieProgress(v);
+  var ex = [1, 2, 3].filter(function (n) { return (examBest(n) || 0) >= 70; }).length;
+  return { trunk: p.acq === p.n, voie: !!v && (v.id === "digital" ? vp.pct >= 50 : vp.acq === vp.n && vp.n > 0), exams: ex === 3, missions: ME ? ME.mission_steps >= 20 : false, exN: ex };
+}
+function vAttestation() {
+  var ok = attestationOk(), all = ok.trunk && ok.voie && ok.exams && ok.missions;
+  var v = myVoie();
+  var h = '<section class="pagehead"><div class="wrap"><div class="crumbs"><a href="#/espace">Mon espace</a> · Attestation</div><h1>Ton attestation de parcours</h1><p>Délivrée quand le tronc commun, ta voie, les 3 examens et au moins 20 étapes de mission sont validés. Elle atteste du parcours suivi sur l’Académie ; l’évaluation officielle reste celle du jury de l’EPFC.</p></div></section><section class="sec tight"><div class="wrap">';
+  h += '<div class="grid g4" style="margin-bottom:24px">' + [["Tronc commun", ok.trunk], ["Ta voie", ok.voie], ["3 examens ≥ 70 %", ok.exams], ["20 étapes de mission", ok.missions]].map(function (c) { return '<div class="card pad" style="display:flex;gap:12px;align-items:center"><span class="st ' + (c[1] ? "on" : "") + '">' + (c[1] ? I.check : "") + "</span><b>" + c[0] + "</b></div>"; }).join("") + "</div>";
+  if (all) {
+    h += '<div class="attest" id="attest"><img src="' + IMG + 'epfc_logo.svg" alt="EPFC"><span class="eyebrow">Académie StartupScan · EPFC</span><h2>Attestation de parcours</h2><p>Ce document atteste que</p><div class="nm">' + esc(PROFILE.prenom || '') + ' <span>matricule ' + esc(SES.matricule) + '</span></div>'
+      + '<p>a suivi l’intégralité du parcours <b>Entrepreneuriat — de l’idée aux premiers clients</b>, voie « ' + esc(v.titre) + ' », et validé ses compétences par les 3 examens de l’Académie.</p>'
+      + '<p class="d">Bruxelles, le ' + new Date().toLocaleDateString('fr-BE') + ' · ' + ME.points + ' points · niveau ' + esc(ME.niveau.nom) + '</p><p class="sg">Olivier Willocx & Diego Mommaerts — coordination du cours</p></div>'
+      + '<div style="margin-top:16px;display:flex;gap:10px"><button class="btn" id="att-print">Imprimer / enregistrer en PDF</button></div>';
+  } else {
+    h += '<div class="card pad empty"><img src="' + img("m5") + '" alt="" style="max-width:420px;margin:0 auto 14px;border-radius:12px"><h2 class="h3">Encore un peu de chemin</h2><p class="sub" style="margin-top:6px">Continue ton parcours : ton attestation apparaîtra ici dès que les quatre conditions seront remplies.</p><a class="btn" style="margin-top:14px" href="#/espace">Retour à mon espace</a></div>';
+  }
+  after(function () { var b = $("#att-print"); if (b) b.onclick = function () { window.print(); }; });
+  return h + "</div></section>";
+}
+
 /* ============ Feuille de route ============ */
 function roadmap() {
   var h = '<div class="road">';
@@ -483,6 +544,7 @@ function roadmap() {
   var ep = [1, 2, 3].filter(function (n) { return (examBest(n) || 0) >= 70; }).length;
   h += '<a class="rn ' + (ep === 3 ? "done" : ed ? "doing" : "") + '" href="#/examens"><span class="dot"><span style="width:22px;height:22px">' + I.trophy + '</span></span><div class="t"><b>Les 3 examens</b><span>' + ep + "/3 réussis (70 %) · " + ed + '/3 passés</span></div><span class="r">' + ep + "/3</span></a>";
   h += '<div class="rn"><span class="dot"><span style="width:22px;height:22px">' + I.mic + '</span></span><div class="t"><b>Jury final</b><span>Présente ton projet — création ou reprise — devant profs et professionnels</span></div></div>';
+  if (logged()) { var ao = attestationOk(), aok = ao.trunk && ao.voie && ao.exams && ao.missions; h += '<a class="rn ' + (aok ? "done" : "") + '" href="#/attestation"><span class="dot"><span style="width:22px;height:22px">' + I.flag + '</span></span><div class="t"><b>Attestation de parcours</b><span>' + (aok ? "Disponible — imprime-la" : "Tronc commun + voie + 3 examens + 20 étapes de mission") + "</span></div></a>"; }
   return h + "</div>";
 }
 
@@ -497,7 +559,7 @@ function vEspace() {
     '<div class="lvl"><span>Niveau</span><br><b>' + esc(lv.nom) + '</b> · <span class="num">' + fmt(ME.points) + " points</span>" +
     '<div class="pbar"><i style="width:' + Math.max(3, toNext) + '%"></i></div><span>' + (lv.next_nom ? fmt(lv.next_min - ME.points) + " points avant « " + esc(lv.next_nom) + " »" : "Niveau maximum atteint") + "</span></div></div></section>";
   var nx = nextItem();
-  var left = "";
+  var left = weekBanner();
   if (nx) {
     left += '<div class="card resume"><div class="ph"><img src="' + img(nx.parent.img) + '" alt=""></div><div class="bd"><span class="eyebrow">Reprendre là où tu t’es arrêté·e</span>' +
       '<h2 class="h3" style="margin-top:6px">' + esc(nx.sec.titre) + '</h2><p class="sub" style="margin-top:4px">' + (nx.kind === "module" ? "Module " + nx.parent.num + " · " : "Ta voie · ") + esc(nx.parent.titre) + " · " + esc(nx.sec.duree) + "</p>" +
@@ -521,6 +583,8 @@ function vEspace() {
   } else {
     right += '<div class="card pad"><span class="eyebrow">Où tu te situes</span><p class="sub" style="margin-top:8px">Le classement anonyme apparaîtra dès que 5 étudiant·es auront commencé (' + (ME.participants || 1) + " pour l’instant).</p></div>";
   }
+  var ao = attestationOk();
+  right += '<div class="card pad"><span class="eyebrow">Attestation de parcours</span><p class="sub" style="margin-top:8px">' + [ao.trunk, ao.voie, ao.exams, ao.missions].filter(Boolean).length + '/4 conditions remplies.</p><a class="btn ghost sm" style="margin-top:12px" href="#/attestation">Voir les conditions</a></div>';
   right += '<div class="card pad"><span class="eyebrow">Ton témoignage</span><p class="sub" style="margin-top:8px">' + (MYT ? (MYT.status === "approved" ? "Ton témoignage est publié. Merci !" : MYT.status === "pending" ? "Ton témoignage est en attente de relecture." : "Ton témoignage n’a pas été retenu — tu peux le reformuler.") : "Partage ce que le parcours t’apporte (+30 points une fois publié).") + '</p><a class="btn ghost sm" style="margin-top:12px" href="#/temoignages">' + (MYT ? "Voir / modifier" : "Écrire mon témoignage") + "</a></div>";
   return h + '<section class="sec tight"><div class="wrap dash"><div>' + left + "</div><div>" + right + "</div></div></section>";
 }
@@ -553,7 +617,7 @@ function vModule(id) {
     '</div><div class="ph"><img src="' + img(m.img) + '" alt=""></div></div></section>';
   h += '<section class="sec tight"><div class="wrap mod"><div>' +
     '<div class="card"><div class="pad" style="border-bottom:1px solid var(--line-2)"><span class="eyebrow">Contenu du module</span><h2 class="h3" style="margin-top:4px">' + m.sections.length + ' leçons · chaque leçon se valide par un QCM</h2></div><div class="items">' + m.sections.map(function (s) { return itemRow(s); }).join("") + "</div></div>" +
-    missionCard(m) + "</div>" +
+    missionCard(m) + questionsBlock(m.id) + "</div>" +
     '<div style="display:grid;gap:20px"><div class="card pad"><span class="eyebrow">À la fin de ce module</span><ul class="obj" style="margin-top:12px">' + m.objectifs.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + "</ul></div>" +
     '<div class="card pad"><span class="eyebrow">Compétences</span><div class="chips" style="margin-top:10px">' + m.competences.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + '</div><p class="note">' + esc(m.duree) + "</p></div>" +
     '<div class="card pad"><span class="eyebrow">Navigation</span><div style="display:grid;gap:8px;margin-top:10px">' +
@@ -567,17 +631,58 @@ function missionCard(m) {
   return '<div class="card pad mission" style="margin-top:20px"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div><span class="eyebrow">Mission terrain · ' + esc(mi.escalier) + '</span><h2 class="h3" style="margin-top:4px">' + esc(mi.titre) + "</h2></div>" +
     '<span class="chip ' + (n === 5 ? "solid" : "") + '">' + n + "/5 étapes</span></div>" +
     '<div class="prob"><b>Le problème.</b> ' + esc(mi.probleme) + '</div><p style="margin-top:10px;font-size:14.5px"><b style="color:var(--epfc)">Preuve attendue :</b> ' + esc(mi.preuve) + "</p>" +
-    mi.etapes.map(function (e, j) { var ok = !!d("ent-mi-" + m.num + "-" + (j + 1)); return '<label class="step-c' + (ok ? " d" : "") + '"><input type="checkbox" data-mi="' + m.num + "-" + (j + 1) + '"' + (ok ? " checked disabled" : "") + "><span>" + esc(e) + "</span></label>"; }).join("") +
-    '<p class="note">Coche une étape quand elle est réellement faite (+20 points). Ta preuve sera demandée en séance.</p></div>';
+    mi.etapes.map(function (e, j) {
+      var key = m.num + "-" + (j + 1), ok = !!d("ent-mi-" + key), p = PROOFS[key];
+      var st = ok ? '<span class="chip ok">Validée · +20</span>' : p ? (p.status === "pending" ? '<span class="chip">En relecture</span>' : '<span class="chip" style="background:var(--ko-bg);color:var(--ko)">À refaire</span>') : '<span class="chip grey">À déposer</span>';
+      return '<div class="pstep' + (ok ? " d" : "") + '"><div class="pstep-h"><b>' + (j + 1) + ". " + esc(e) + "</b>" + st + "</div>" +
+        (p && p.comment ? '<p class="pcmt' + (p.status === "rejected" ? " rej" : "") + '">Commentaire du prof : « ' + esc(p.comment) + " »</p>" : "") +
+        (ok ? '<p class="sub" style="font-size:13px">' + esc(p ? p.texte : "Validée en séance.") + "</p>" :
+          '<details class="pform"' + (p && p.status === "rejected" ? " open" : "") + "><summary>" + (p ? "Modifier ma preuve" : "Déposer ma preuve") + '</summary><textarea class="inp" data-ptxt="' + key + '" maxlength="1500" placeholder="Qu’as-tu fait concrètement ? Avec qui, quand, quel résultat ?">' + esc(p ? p.texte : "") + '</textarea><input class="inp" data-plink="' + key + '" placeholder="Lien facultatif (document, photo, page…)" value="' + esc(p ? p.lien || "" : "") + '"><button class="btn sm" data-psend="' + key + '">Envoyer pour validation</button></details>') + "</div>";
+    }).join("") +
+    '<p class="note">Chaque étape se valide par une preuve que ton professeur relit (+20 points une fois validée). Les preuves sont aussi discutées en séance.</p></div>';
 }
 function wireMission() {
-  $$("input[data-mi]").forEach(function (c) {
-    c.onchange = function () {
-      if (!logged()) { c.checked = false; needAccount(); return; }
-      c.disabled = true;
-      track([{ kind: "read", sid: "ent-mi-" + c.getAttribute("data-mi") }]).then(function () { toast("+20 points · étape de mission validée"); route(); });
+  $$("button[data-psend]").forEach(function (b) {
+    b.onclick = function () {
+      if (!logged()) { needAccount(); return; }
+      var key = b.getAttribute("data-psend"), tx = $('[data-ptxt="' + key + '"]').value.trim(), ln = $('[data-plink="' + key + '"]').value.trim();
+      if (tx.length < 15) { toast("Décris ce que tu as fait (15 caractères minimum)."); return; }
+      b.disabled = true;
+      api("proof.php", { token: SES.token, mission: +key.split("-")[0], step: +key.split("-")[1], texte: tx, lien: ln }).then(function (r) {
+        if (r && r.ok) { refresh().then(function () { toast("Preuve envoyée — ton professeur la relit."); route(); }); }
+        else { b.disabled = false; toast(r && r.error === "lien" ? "Le lien doit commencer par http(s)://" : "Envoi impossible pour l’instant."); }
+      });
     };
   });
+  wireQuestions();
+}
+function questionsBlock(moduleId) {
+  var mine = MYQ.filter(function (q) { return q.module === moduleId; });
+  return '<div class="card pad" style="margin-top:20px" id="qa"><div class="sec-head" style="margin-bottom:10px"><div><span class="eyebrow">Questions au professeur</span><h2 class="h3" style="margin-top:4px">Un point pas clair ? Demande.</h2></div></div>' +
+    '<div id="qa-pub"><p class="sub">Chargement des réponses publiées…</p></div>' +
+    (logged() ? (mine.length ? '<div class="qa-mine">' + mine.map(function (q) { return '<div class="qa-item mine"><b>Ta question</b><p>' + esc(q.texte) + "</p>" + (q.status === "answered" ? '<div class="qa-a"><b>Réponse</b><p>' + esc(q.reponse) + "</p></div>" : '<span class="chip">En attente de réponse</span>') + "</div>"; }).join("") + "</div>" : "") +
+      '<div style="margin-top:12px"><textarea class="inp" id="qa-txt" maxlength="800" placeholder="Ta question sur ce module (10 à 800 caractères)"></textarea><button class="btn sm" id="qa-send" data-mod="' + moduleId + '" style="margin-top:8px">Poser ma question</button><p class="note">Le professeur répond depuis son tableau de bord ; s’il publie la réponse, elle apparaît ici pour tous, sans ton nom.</p></div>' :
+      '<p class="sub"><a href="#/connexion">Connecte-toi</a> pour poser une question.</p>') + "</div>";
+}
+var PUBQ = null;
+function wireQuestions() {
+  var box = $("#qa-pub"); if (!box) return;
+  var modId = $("#qa-send") ? $("#qa-send").getAttribute("data-mod") : box.getAttribute("data-mod");
+  function render(list) {
+    var mineTxt = MYQ.map(function (q) { return q.texte; });
+    var l = list.filter(function (q) { return (!modId || q.module === modId) && mineTxt.indexOf(q.q) < 0; });
+    box.innerHTML = l.length ? l.map(function (q) { return '<div class="qa-item"><b>Q.</b><p>' + esc(q.q) + '</p><div class="qa-a"><b>R.</b><p>' + esc(q.a) + "</p></div></div>"; }).join("") : '<p class="sub">Pas encore de réponse publiée pour ce module.</p>';
+  }
+  if (PUBQ) render(PUBQ); else api("questions.php").then(function (r) { PUBQ = (r && r.ok) ? r.questions : []; render(PUBQ); });
+  var s = $("#qa-send");
+  if (s) s.onclick = function () {
+    var tx = $("#qa-txt").value.trim(); if (tx.length < 10) { toast("Écris au moins 10 caractères."); return; }
+    s.disabled = true;
+    api("question.php", { token: SES.token, module: s.getAttribute("data-mod"), texte: tx }).then(function (r) {
+      if (r && r.ok) refresh().then(function () { toast("Question envoyée au professeur."); route(); });
+      else { s.disabled = false; toast(r && r.error === "trop" ? "Tu as déjà 5 questions en attente." : "Envoi impossible."); }
+    });
+  };
 }
 function needAccount() { toast('Crée ton profil pour enregistrer ta progression — <a href="#/inscription" style="color:#fff;font-weight:800">S’inscrire</a>'); }
 
@@ -596,7 +701,7 @@ function vLecon(sid) {
   var reader = '<article class="card reader"><div class="meta"><span class="chip">' + (isMod ? "Module " + par.num : "Voie · " + esc(par.titre)) + '</span><span class="chip grey">Leçon ' + (f.i + 1) + "/" + list.length + " · " + esc(s.duree) + "</span>" + (acq(sid) ? '<span class="chip ok">Compétence acquise</span>' : "") + "</div>" +
     "<h1>" + esc(s.titre) + '</h1><div class="prose">' + s.lecon_html + "</div>" +
     '<div class="box keep"><h4>À retenir</h4><ul>' + s.a_retenir.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
-    '<div class="box act"><h4>Passe à l’action sur ton projet</h4><p>' + esc(s.action) + "</p></div>" +
+    '<div class="box act"><h4>Passe à l’action sur ton projet</h4><p>' + esc(s.action) + "</p></div>" + mediaBlock(sid) +
     '<div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">' + (r ? '<span class="chip ok">Leçon lue ✓</span>' : '<button class="btn ghost" id="mark-read">Marquer comme lue (+10 points)</button>') + "</div>" +
     '<div class="quiz" id="quiz"><span class="eyebrow">Valide ta compétence</span><h2 class="h3" style="margin-top:4px">QCM — 3 questions</h2><p class="sub" style="margin-top:4px">2 bonnes réponses sur 3 pour acquérir la compétence (+50 points). Tu peux recommencer autant de fois que tu veux' + (b !== null ? " · ton meilleur score : " + b + " %" : "") + ".</p>" +
     qcmHtml(s.qcm, sid) + '<div id="qres"></div><button class="btn lg" id="qgo" style="margin-top:18px">Valider mes réponses</button></div>' +
@@ -610,7 +715,25 @@ function vLecon(sid) {
       mr.disabled = true; track([{ kind: "read", sid: "ent-lr-" + sid }]).then(function () { toast("+10 points · leçon lue"); mr.outerHTML = '<span class="chip ok">Leçon lue ✓</span>'; header(CUR); });
     };
     wireQcm(sid, s.qcm, false);
+    $$("input[data-res]").forEach(function (c) { c.onchange = function () { if (!logged()) { c.checked = false; needAccount(); return; } c.disabled = true; track([{ kind: "video", sid: "ent-res-" + c.getAttribute("data-res") }]).then(function () { toast("+10 points · ressource vue"); header(CUR); }); }; });
   });
+  return h;
+}
+function mediaBlock(sid) {
+  var md = (A.media || {})[sid]; if (!md) return "";
+  var h = "";
+  if (md.videos && md.videos.length) {
+    h += '<div class="media"><span class="eyebrow">À regarder</span>' + md.videos.map(function (v) {
+      var seen = !!d("ent-res-" + v[3]);
+      var frame = v[1] === "yt" ? '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/' + v[2] + '" title="' + esc(v[0]) + '" loading="lazy" allowfullscreen allow="encrypted-media; picture-in-picture"></iframe></div>'
+        : v[1] === "ted" ? '<div class="vid"><iframe src="https://embed.ted.com/talks/' + v[2] + '" title="' + esc(v[0]) + '" loading="lazy" allowfullscreen></iframe></div>'
+        : '<a class="btn ghost sm" href="' + esc(v[2]) + '" target="_blank" rel="noopener">Ouvrir la lecture ↗</a>';
+      return '<div class="media-item"><b>' + esc(v[0]) + "</b>" + frame + '<label class="check" style="margin-top:8px"><input type="checkbox" data-res="' + v[3] + '"' + (seen ? " checked disabled" : "") + "><span>" + (seen ? "Vu ✓" : "J’ai regardé (+10 points)") + "</span></label></div>";
+    }).join("") + "</div>";
+  }
+  if (md.fiches && md.fiches.length) {
+    h += '<div class="box fiches"><h4>À lire sur StartupScan</h4><div class="chips">' + md.fiches.map(function (f) { return '<a class="chip" href="f/' + f[0] + '.html" target="_blank" rel="noopener">' + esc(f[1]) + " ↗</a>"; }).join("") + "</div></div>";
+  }
   return h;
 }
 function qcmHtml(qcm, sid) {
@@ -682,8 +805,9 @@ function vVoie(id) {
   } else {
     h += '<div class="card"><div class="pad" style="border-bottom:1px solid var(--line-2)"><span class="eyebrow">Contenu de la voie</span><h2 class="h3" style="margin-top:4px">' + v.sections.length + ' leçons spécifiques</h2></div><div class="items">' + v.sections.map(function (s) { return itemRow(s); }).join("") + "</div></div>";
   }
+  h += questionsBlock(v.id);
   h += '</div><div style="display:grid;gap:20px"><div class="card pad"><span class="eyebrow">Pour qui ?</span><p style="margin-top:8px">' + esc(v.pour_qui) + '</p></div><div class="card pad"><span class="eyebrow">Ce que tu feras</span><ul class="obj" style="margin-top:12px">' + v.ce_que_tu_feras.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div><div class="card pad"><span class="eyebrow">Exemples de projets</span><div class="chips" style="margin-top:10px">' + v.exemples.map(function (x) { return '<span class="chip">' + esc(x) + "</span>"; }).join("") + "</div></div></div></div></section>";
-  after(function () { var p = $("#pick"); if (p) p.onclick = function () { saveProfile({ voie: v.id }).then(refresh).then(function () { toast("C’est noté : " + esc(v.titre)); route(); }); }; });
+  after(function () { wireQuestions(); var p = $("#pick"); if (p) p.onclick = function () { saveProfile({ voie: v.id }).then(refresh).then(function () { toast("C’est noté : " + esc(v.titre)); route(); }); }; });
   return h;
 }
 

@@ -402,3 +402,63 @@ details.faq p{padding:0 18px 16px;color:var(--ink-2);font-size:15px}
 .toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .loading{padding:80px 0;text-align:center;color:var(--muted)}
 .empty{text-align:center;padding:30px 20px;color:var(--muted)}
+
+/* ---------- Calendrier & cette semaine ---------- */
+.week{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap;border-left:5px solid var(--epfc)}
+.chap{margin-top:26px}
+.cal{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px}
+.cal.past{opacity:.62}
+.cal.next{border:2px solid var(--epfc);box-shadow:var(--sh)}
+.cal .cd{flex:none;width:58px;text-align:center;background:var(--sky);border-radius:10px;padding:6px 0}
+.cal .cd b{display:block;font-size:20px;color:var(--epfc);line-height:1.1}
+.cal .cd span{font-size:11.5px;color:var(--muted);font-weight:700}
+.cal .ct{flex:1;min-width:0}
+.cal .ct b{display:block;font-size:15px}
+.cal .ct span{font-size:13px;color:var(--muted)}
+
+/* ---------- Preuves de mission ---------- */
+.pstep{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:10px;background:#fff}
+.pstep.d{background:var(--ok-bg);border-color:#BFE3D0}
+.pstep-h{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap;font-size:14.5px}
+.pcmt{font-size:13.5px;color:var(--epfc);margin-top:6px;font-style:italic}
+.pcmt.rej{color:var(--ko)}
+details.pform{margin-top:8px}
+details.pform summary{cursor:pointer;font-weight:700;color:var(--epfc);font-size:14px;list-style:none}
+details.pform summary::before{content:"+ "}
+details.pform[open] summary::before{content:"– "}
+details.pform textarea,details.pform input{margin-top:8px;font-size:14.5px}
+details.pform textarea{min-height:84px}
+details.pform .btn{margin-top:8px}
+
+/* ---------- Questions au professeur ---------- */
+.qa-item{border-left:4px solid var(--line);padding:4px 0 4px 14px;margin-top:12px}
+.qa-item.mine{border-left-color:var(--epfc)}
+.qa-item b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.qa-item p{font-size:15px;margin:3px 0 6px}
+.qa-a{background:var(--sky);border-radius:8px;padding:8px 12px;margin-top:4px}
+.qa-a b{color:var(--epfc)}
+#qa-txt{min-height:70px}
+
+/* ---------- Médias dans la leçon ---------- */
+.media{margin-top:22px;display:grid;gap:16px}
+.media-item b{display:block;font-size:15px;margin-bottom:8px}
+.vid{position:relative;aspect-ratio:16/9;background:var(--sky);border-radius:12px;overflow:hidden;max-width:68ch}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.box.fiches{background:#fff;border:1px solid var(--line)}
+.box.fiches h4{color:var(--epfc)}
+.box.fiches .chip{text-decoration:none}
+.box.fiches .chip:hover{background:var(--epfc);color:#fff}
+
+/* ---------- Attestation ---------- */
+.st.on{background:var(--epfc);border-color:var(--epfc)}
+.st{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;color:#fff}
+.st svg{width:16px;height:16px}
+.attest{background:#fff;border:3px double var(--epfc);border-radius:6px;padding:48px 56px;text-align:center;max-width:820px;margin:0 auto;box-shadow:var(--sh)}
+.attest img{height:46px;margin:0 auto 18px}
+.attest h2{font-size:34px;font-weight:800;color:var(--epfc);margin:6px 0 18px}
+.attest p{font-size:16px;color:var(--ink-2);margin:0 0 8px}
+.attest .nm{font-family:var(--f-read);font-size:30px;color:var(--ink);margin:10px 0 16px}
+.attest .nm span{display:block;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.attest .d{margin-top:22px;font-size:14px;color:var(--muted)}
+.attest .sg{margin-top:26px;font-weight:700;color:var(--ink)}
+@media print{.hdr,.ftr,.pagehead,.toast,.grid.g4,.btn{display:none!important}body{background:#fff}.attest{box-shadow:none;border-width:4px}}
