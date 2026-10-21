@@ -322,6 +322,23 @@ html[lang="en"] .open-model::before{content:"Model answer"}
 .rank-col small{font-family:var(--f-mono);font-size:.64rem;color:var(--muted)}
 .rank-col.you small{color:var(--orange);font-weight:700}
 .rank-you-tag{font-family:var(--f-ui);font-size:.7rem;font-weight:700;color:var(--orange)}
+/* home progress strip */
+.home-prog{padding:0;border:none;margin-top:1.4rem}
+.hp-card{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 8%,var(--surface)),var(--surface));
+  border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.3rem}
+.hp-card.invite{display:block}
+.hp-card.invite .hp-txt{margin-bottom:.7rem}
+.hp-ring{--p:0;width:62px;height:62px;border-radius:50%;flex:none;
+  background:conic-gradient(var(--blue) calc(var(--p)*1%), var(--line-2) 0);display:flex;align-items:center;justify-content:center}
+.hp-ring span{background:var(--surface);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--f-disp);font-weight:800;font-size:.9rem;color:var(--navy)}
+.hp-txt{flex:1;min-width:150px}
+.hp-txt strong{font-family:var(--f-disp);color:var(--navy);font-size:1.1rem}
+.hp-txt p{font-family:var(--f-ui);font-size:.9rem;color:var(--muted);margin:.25rem 0 0}
+.hp-meta{font-family:var(--f-ui);font-size:.85rem;color:var(--muted);margin-top:.15rem}
+.hp-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.hp-actions .btn{font-size:.82rem;padding:.5rem .9rem}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}html{height:100%}</style>
 </head>
@@ -381,6 +398,11 @@ html[lang="en"] .open-model::before{content:"Model answer"}
 <li><a href="#inspiration" data-sid="inspiration"><span class="n-t">Inspiration sources</span></a></li>
 <li><a href="#idees-business" data-sid="idees-business"><span class="n-t">Business ideas &amp; StartupScan</span></a></li>
 <li><a href="#contribuer" data-sid="contribuer"><span class="n-t">Contribute / report</span></a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-grp-title">Mock exams</div><ul>
+<li><a href="#examen-1" data-sid="examen-1"><span class="n-t">Mock exam 1</span></a></li>
+<li><a href="#examen-2" data-sid="examen-2"><span class="n-t">Mock exam 2</span></a></li>
+<li><a href="#examen-3" data-sid="examen-3"><span class="n-t">Mock exam 3</span></a></li>
 </ul></div></nav>
   </aside>
   <div class="scrim"></div>
@@ -407,6 +429,7 @@ html[lang="en"] .open-model::before{content:"Model answer"}
   </div>
   <p class="hero-updated">Last updated: <time datetime="2026-10-20">20 October 2026</time></p>
 </header>
+<section class="home-prog" id="home-prog" hidden></section>
 <section class="home-sec">
   <div class="sec-eyebrow">The path</div>
   <h2>Five modules, twelve sessions</h2>
@@ -9501,12 +9524,759 @@ implied.</p>
 </div>
 </div><div class="page-foot"><nav class="pager">
 <a class="pager-prev" href="#contribuer"><span class="pager-dir">← Previous</span><span class="pager-ttl">Contribute / report</span></a>
+<a class="pager-next" href="#examen-1"><span class="pager-dir">Next →</span><span class="pager-ttl">Mock exam 1</span></a>
+</nav><a class="to-top" href="#top">↑ Back to top</a></div></article>
+<article class="page" id="examen-1" hidden><div class="page-head"><div class="page-kicker">Mock exams</div><h1 class="page-title">Mock exam 1</h1></div><div class="prose"><section class="quiz" aria-label="Mock exam 1">
+<h2 class="quiz-head">Mock exam 1</h2>
+<p class="quiz-intro">30 exam-level questions covering the whole course. Harder than the self-checks: take your time, answer, then check.</p>
+<div class="quiz-qcm"><h3>Multiple-choice questions</h3><ol class="qcm-list">
+<li class="qcm-item" data-answer="2"><p class="qcm-q">In 2025, online spending by Belgians grows by 5.4%, but the turnover of Belgian webshops only rises by 3.4%. For a Brussels SME looking to launch, which reading is the most accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The Belgian market is shrinking: it is better to give up on launching online.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Belgian webshops are growing faster than inflation, a sign of a healthy domestic market.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The growth of the Belgian market is being captured by foreign players (Amazon, bol, Chinese platforms); selling internationally also means defending your position in Belgium.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The gap is due solely to a drop in prices, with the volume sold by Belgians having risen sharply.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Growth of +3.4% is equivalent to inflation: in volume terms, Belgian merchants are not selling more, and the market&#x27;s growth (+5.4%) went to foreign platforms. A is false (the market is growing), B is false (3.4% ≈ inflation, not above it), D is false (the volume of Belgian webshops did not rise).</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">Global retail e-commerce is worth about $6,420 billion in 2025 and is growing by roughly 7% per year, two to three times the pace of overall retail. Which statement is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">China, the United States and Western Europe account for about 80% of sales, with the fastest growth found in Southeast Asia and Latin America.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">About one retail purchase in two is already made online worldwide.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Forecasts anticipate a decline to around $6,000 billion in 2026.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Comparisons down to the billion between countries are perfectly reliable, as they all measure the same thing.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Three regions make up ~80% of sales, with the fastest growth being elsewhere (Southeast Asia, Latin America). B is false (one purchase in five, not one in two), C is false ($6,880 billion expected in 2026, an increase), D is false (countries do not all measure the same thing).</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">A student places the reform of e-commerce VAT and the creation of the OSS one-stop shop &quot;around 2015.&quot; What is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The reform dates from 1 July 2021: the end of the exemption for small imported consignments, a single threshold of €10,000, and the OSS/IOSS one-stop shops.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The reform dates from 2018, at the same time as the GDPR.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">They are right: the OSS one-stop shop has existed since 2015.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The reform dates from 1 July 2026, at the same time as the €3-per-item duty.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The VAT reform and the OSS/IOSS one-stop shops date from 1 July 2021. The GDPR, for its part, is from 2018; and the flat-rate duty of €3 per item is the customs reform of 1 July 2026, not to be confused with the VAT reform.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Among these statements about phase 5 (since 2024) of the history of e-commerce, which one is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Temu and Shein were designated &quot;very large platforms&quot; within the meaning of the Digital Services Act in 2024.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Since 1 July 2026, the customs duty exemption below €150 has been replaced by a flat-rate duty of €3 per item.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">AI assistants are beginning to change the way products are searched for, with the first &quot;agentic&quot; purchases.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Voice commerce and augmented reality have become the dominant channels of online sales.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The course specifies that augmented reality and voice commerce exist but remain niches: &quot;do not build a business plan on them.&quot; The other three statements are accurate.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">The figures released by Amazon on Belgium (October 2024-2025) include in particular:</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">1,400 Belgian SME sellers, €350 million in export sales in 2023, and more than one billion euros of investment announced for 2025-2027.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The opening of amazon.com.be in October 2018.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">A majority share for Amazon of the Belgian e-commerce market since 2022.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Nearly all of the turnover of the 250 Brussels SMEs generated in Belgium.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Amazon reports 1,400 SME sellers, €350M of exports in 2023, and more than one billion of investment in 2025-2027. amazon.com.be opened in October 2022 (not 2018); and 90% of the turnover of the 250 Brussels SMEs came from abroad, not from Belgium.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A Brussels furniture manufacturer sells to individuals on its website, to hotels through a professional area, and responds to tenders from municipalities for schools. Which reading is correct?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">This is impossible: a company falls under only one form of e-commerce.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It combines B2C, B2B and B2G; its business plan must specify the central form and the secondary forms.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Selling to municipalities falls under C2C.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The professional area reserved for hotels falls under B2G.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Individuals = B2C, hotels = B2B, municipalities (public procurement) = B2G. The forms most often combine. Selling to municipalities is B2G (not C2C), and the professional hotel area is B2B (not B2G).</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Since 2023, the DAC7 directive requires platforms (such as Vinted, 2ememain) to transmit to the tax authorities the data of sellers who exceed:</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">100 sales or €10,000 per year.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">10 sales or €500 per year.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">30 sales or €2,000 per year.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">50 sales or €5,000 per year.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>DAC7 sets the reporting threshold at 30 sales or €2,000 per year: C2C is no longer a tax grey area.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">In Belgium, since 1 January 2026, a B2B website that sells to VAT-liable businesses must be able to issue:</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">a paper invoice signed by hand, still always accepted.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">a structured electronic invoice via the Peppol network, mandatory between VAT-liable businesses.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">an electronic invoice, but only for sales to consumers.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">a simple purchase order in PDF format, sufficient under the law.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Structured electronic invoicing (Peppol network) has been mandatory between VAT-liable parties since 1 January 2026. Sales to consumers are not affected, and a simple PDF does not constitute a structured invoice.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">An SME opens a third-party seller store on Amazon.de (B2B2C model). Which set of drawbacks best describes this choice?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A commission (on the order of 8 to 15%), dependence on rules you do not control, and the loss of the direct relationship with the customer.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">No starting audience and no integrated payment, but a full margin.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The obligation to host the site yourself and to ensure PCI-DSS compliance.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">An audience to build country by country and a high upfront investment.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>B2B2C brings an immediate audience but costs a commission (8 to 15%), imposes rules you do not control, and deprives the brand of customer data. Answers B and D, on the contrary, describe your own website.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Why does removing the customs exemption below €150 (a €3-per-item duty since July 2026) affect Temu more than a Belgian webshop?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Because the Belgian webshop also imports all its products from China in small parcels.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Because Temu never charges VAT to its customers.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Because the €3 duty targets only platforms designated as &quot;very large platforms.&quot;</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Because Temu&#x27;s factory-to-consumer model relies on individually shipping millions of small imported parcels, previously duty-free below €150.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Temu connects Chinese factories directly with consumers via millions of small parcels, long exempt from duties below €150: it is precisely this advantage that the €3 duty reduces. The duty applies to any seller, not only to very large platforms.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">BELGA CRAFT wants to test the German market at low cost while preparing for the future. Which sequence best matches the practice recommended by the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Launch a dedicated German-language website straight away and forgo marketplaces.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Sell only on a marketplace, because you know all your customers there.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Test for 6 to 12 months on a marketplace (Etsy, Amazon.de), then open a localized version of the website when volume justifies it, and then invite loyal customers to buy direct.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Open a dedicated website and ten marketplaces simultaneously to maximize visibility.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The common practice is to test a market on a marketplace for 6 to 12 months, then open the localized website and bring loyal customers back to buying direct, where the margin is better. On a marketplace, you precisely do not know your customers (the data belongs to the platform).</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Among the seven differences of cross-border, which one does a marketplace like Amazon.de most often take on in the seller&#x27;s place?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The choice of the target market.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The value proposition and the brand story.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The consumer law applicable to the customer.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Payment in the locally expected method and part of the logistics and trust.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The marketplace carries the trust of the foreign customer, offers local payment methods, and often handles logistics. The choice of market, the value proposition, and the brand story remain the seller&#x27;s responsibility.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">In the Business Model Canvas, which box is it useful to start with, and where do the costs specific to international activity appear?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Start with the customer segments and the value proposition; the costs specific to international activity (translation, export advertising, cross-border logistics and returns) appear in the cost structure.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Start with the cost structure; international activity appears in the channels.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Start with the key partners; international activity appears nowhere.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Start with the revenue streams; international activity appears in the customer relationship.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>You fill in the canvas starting with the segments and the value proposition, and ending with the costs: that is where translation, export advertising, cross-border delivery and returns appear.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">According to Klarna&#x27;s typology, a &quot;security seeker&quot; (traditional, rational) will mainly be reassured by:</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">numerous visuals, novelty, and discovery via social media.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">the company&#x27;s address, the VAT number, labels, clear return conditions, and a payment method they know.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">a playful tone and impulsive pleasure purchases.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">an ultra-short journey stripped of any reassurance information.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The &quot;security seeker&quot; checks everything and prefers well-known brands: they look for the address, VAT number, labels, return conditions and a familiar payment method. Answer A instead describes the &quot;happy buyer.&quot;</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Across all surveys, in every country, what is the leading cause of cart abandonment?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A site design judged too plain.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The absence of a loyalty program.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">A fee (delivery, taxes) that only appears at the last step of payment.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">An announced delivery time of three days.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>A fee discovered late is the leading cause of cart abandonment in all surveys: the customer wants to know the total price (product, delivery, taxes) before filling out a form.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Which statement about differences in purchasing behavior is consistent with the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">People over 50 buy more often from abroad than 18-34 year-olds.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Germans return far fewer items than Belgians.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The Dutch are among the lowest online buyers in Europe per capita.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">18-34 year-olds discover brands more on Instagram, TikTok and Pinterest than on Google, and buy more often from abroad.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>18-34 year-olds buy more often from abroad and discover brands on social media. A is false (it is the opposite), B is false (Germans return far more, especially in fashion), C is false (the Dutch are among the biggest buyers per capita).</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">What distinguishes a good persona from a merely invented portrait?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It is based on real data (interviews, surveys, site statistics) and serves to settle concrete decisions.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It describes the largest possible number of customers, without any quotation.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It is purely imaginary and serves mainly to illustrate a presentation.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">You build at least ten per market to be exhaustive.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>A persona is a fictional but realistic portrait built from data, used to decide (payment method, return policy, etc.). Two or three per market are enough; beyond that, they are no longer used.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">A designer translates her Belgian slogan into German with an automatic tool, keeps the same photos, the same prices, and Bancontact as the first payment method. What is she mainly missing?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Nothing: translating the slogan is enough to localize a site.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Only a change of font.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Genuine localization: locally expected payments (PayPal, Klarna invoice), proofreading by a native speaker, visuals, calendar, and trust statements adapted.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Above all, a price increase of about 20% for the German market.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Translating is not localizing: you must adapt payment methods (in Germany PayPal and invoice, not Bancontact), have it proofread by a native speaker, and adjust visuals, calendar and trust statements (Impressum).</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">A market shows high uncertainty avoidance (as is the case for Germany and Belgium). What reassures this clientele the most on a website?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A playful tone, flash promotions, and little information.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Celebrity endorsements and a ranking of the &quot;best.&quot;</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The absence of legal notices to lighten the page.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Guarantees, labels, detailed conditions, and the possibility of paying after delivery.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>High uncertainty avoidance calls for guarantees, labels, detailed conditions and payment after delivery. Celebrity endorsements instead relate to high power distance, not uncertainty avoidance.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A site targets the Netherlands, Germany and France simultaneously. Which trio of &quot;priority&quot; payment methods absolutely must be provided, country by country?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Netherlands: Bancontact — Germany: iDEAL — France: Wero.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Netherlands: iDEAL — Germany: PayPal and payment by invoice — France: cards and payment in three installments.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Netherlands: PayPal — Germany: Bancontact — France: iDEAL.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">All three countries expect Bancontact above all.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Each market has its expectations: iDEAL in the Netherlands, PayPal and invoice in Germany, cards and payment in three installments in France. Bancontact is the Belgian method, not expected in these three countries.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">What must a site that targets Germany contain, and what do many Belgian sites forget?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The Dutch Thuiswinkel Waarborg label.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The Impressum (detailed legal notices, mandatory in Germany) and labels such as Trusted Shops.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Only the Bancontact logo at checkout.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The Belgian Becom label, specifically recognized in Germany.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The German consumer looks for the Impressum (mandatory) and labels such as Trusted Shops. Thuiswinkel Waarborg is Dutch and Becom is Belgian: neither plays that role in Germany.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Regarding documented adaptation failures, which statement is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Amazon closed its marketplace in China in 2019, never having exceeded a marginal share there against Taobao and JD.com.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">eBay withdrew from China in 2006, beaten by Taobao: it is first and foremost a business-model failure, not a site-localization failure.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">IKEA had to apologize after erasing women from its Saudi catalog in 2012.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The eBay case in China proves that a perfectly localized site always guarantees commercial success.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The eBay case shows, on the contrary, that a well-localized site is not enough: it was Taobao&#x27;s business model (free for sellers, buyer-seller messaging) that made the difference. The other three statements are accurate.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">In BELGA CRAFT&#x27;s attractiveness-feasibility matrix, why is the United Kingdom (score 2.8) set aside despite its size?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Because no one on the team is fluent in English.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Because the British never buy from abroad.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Because, since Brexit, customs, VAT and import fees make it a project of its own, with regulatory complexity scored very low.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Because the average basket there is the highest in Europe.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The United Kingdom is a large market, but since Brexit customs, VAT and import fees greatly complicate access: regulatory complexity is scored 1, which drags down the overall score.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">BELGA CRAFT displays €95 in Germany and €78 in the Netherlands, and announces &quot;-50%&quot; on a product. What is legally correct?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Different prices per national site are prohibited by the anti-geoblocking regulation.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Different prices per national site are allowed, but you can neither prevent a customer from buying on the other site nor forcibly redirect them; and any discount must refer to the lowest price of the last 30 days.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The anti-geoblocking regulation requires delivery everywhere in the EU under the same conditions.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The 30-day rule concerns only marketplaces, not dedicated websites.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The anti-geoblocking regulation allows different prices per national site but prohibits refusal of sale and forced redirection (without requiring delivery everywhere). The 30-day rule (Omnibus directive) requires that the reference price for a discount be the lowest of the preceding 30 days, for any seller.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">An e-commerce business spends €20,000 on advertising to acquire 600 new customers, who generate on average €70 of margin over three years. What can you conclude?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">CAC ≈ €33, CLV/CAC ratio ≈ 2.1: below the recommended threshold of 3, the spending is fragile.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">CAC ≈ €12, ratio ≈ 6: excellent.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">CAC ≈ €70, ratio = 1: at exact break-even.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">CAC ≈ €33, ratio ≈ 4.2: well above the threshold.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>CAC = 20,000 ÷ 600 ≈ €33, and CLV/CAC ratio = 70 ÷ 33 ≈ 2.1. The rule of thumb recommends a ratio of at least 3: the model is therefore fragile and must rely on customer retention.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">BELGA CRAFT makes €12,000 in distance sales to Dutch customers and €3,000 to German customers over the year. What VAT does it apply, and how does it declare it?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Belgian VAT everywhere, since each country taken separately stays below €10,000.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">German VAT on everything, Germany being the largest market in the EU.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">A VAT registration in each country, as the OSS does not exist for SMEs.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The €10,000 threshold is assessed on all intra-EU distance sales: with €15,000, it exceeds the threshold and applies the VAT of the customer&#x27;s country (21% NL, 19% DE), declared via the OSS one-stop shop.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The €10,000 threshold applies to all intra-EU distance sales, not country by country: 12,000 + 3,000 = €15,000 exceeds the threshold. It therefore applies the VAT of the customer&#x27;s country (21% NL, 19% DE) and declares it in a single quarterly return via the OSS, without registering in each country.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A Swiss customer orders a piece of jewelry displayed at €80 excl. VAT; delivery €12, Swiss VAT 8.1%, no industrial customs duties since 2024, carrier customs clearance fees €12. What is the order of magnitude of the landed price, and who pays what under DAP?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">About €92 in total, nothing to pay on delivery.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">About €111, of which about €19 (Swiss VAT + customs clearance fees) are claimed at the door if the sale is made under DAP.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">About €150, paid entirely in advance by BELGA CRAFT.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€80: under DAP, the Swiss VAT and the fees remain the seller&#x27;s responsibility.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>€80 + €12 delivery + €7.45 Swiss VAT (8.1%) + €0 duties + €12 customs clearance ≈ €111. Under DAP, the customer pays the ~€19 of VAT and customs clearance fees at the door; under DDP, BELGA CRAFT pays them and displays an all-inclusive price.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">On the Dutch version, 40% of customers abandon at the payment page, compared to 18% in Belgium, for pages identical in all but one detail. What is the most likely cause, and the remedy?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The Dutch site is too slow: you need to change hosting provider.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The Dutch prices are too low: you need to raise them.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">iDEAL, the dominant payment method in the Netherlands, is missing; you need to add it to the gateway.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The Dutch do not like Belgian jewelry: you need to change market.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The &quot;detail&quot; is the absence of iDEAL, the dominant payment method in the Netherlands: not offering it amounts to asking the customer to pay by card on an unknown site, which many refuse. The remedy is to enable iDEAL on the gateway.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">The site&#x27;s requirements specification covers seven sections. In the &quot;order tracking&quot; section, which recent legal requirement must absolutely be provided for?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The Becom label displayed on every page.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The online withdrawal button, mandatory since 19 June 2026 for distance sales to consumers (clearly identified function, confirmation on a durable medium).</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Payment in cryptocurrency offered by default.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Displaying the customer&#x27;s bank card number on the tracking page.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The online withdrawal button has been mandatory since 19 June 2026 (Directive (EU) 2023/2673): an identifiable function, available throughout the withdrawal period, followed by a confirmation on a durable medium. Without information about its existence, the withdrawal period is extended by twelve months.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Among these legal obligations to include in a requirements specification, which one is WRONGLY dated?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Digital Services Act applicable since 17 February 2024.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">GPSR (general product safety) applicable since 13 December 2024.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">European Accessibility Act applicable since 28 June 2025.</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">GDPR applicable since 1 July 2026.</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The GDPR has applied since 2018, not since 1 July 2026 (the date of the €3-per-item customs duty). The other three dates are accurate: DSA 17 February 2024, GPSR 13 December 2024, European Accessibility Act 28 June 2025.</p>
+</li>
+</ol></div>
+</section></div><div class="page-foot"><nav class="pager">
+<a class="pager-prev" href="#ma-progression"><span class="pager-dir">← Previous</span><span class="pager-ttl">My progress</span></a>
+<a class="pager-next" href="#examen-2"><span class="pager-dir">Next →</span><span class="pager-ttl">Mock exam 2</span></a>
+</nav><a class="to-top" href="#top">↑ Back to top</a></div></article>
+<article class="page" id="examen-2" hidden><div class="page-head"><div class="page-kicker">Mock exams</div><h1 class="page-title">Mock exam 2</h1></div><div class="prose"><section class="quiz" aria-label="Mock exam 2">
+<h2 class="quiz-head">Mock exam 2</h2>
+<p class="quiz-intro">30 exam-level questions covering the whole course. Harder than the self-checks: take your time, answer, then check.</p>
+<div class="quiz-qcm"><h3>Multiple-choice questions</h3><ol class="qcm-list">
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A Belgian merchant collects an order of €120 paid by a standard card issued in the European Economic Area, via Stripe (rate displayed for Belgium: 1.5% + €0.25 per transaction). What is the cost of this single transaction?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€1.80</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€2.05</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€0.35</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€3.78</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The rate includes a proportional part AND a fixed part: 1.5% × €120 = €1.80, plus €0.25 of fixed fees, i.e. €2.05. Forgetting the fixed part (€1.80) is the classic mistake; €0.35 is the Bancontact rate and not the card rate.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">For a payment of €100 made in Belgium, you compare a standard EEA card at the displayed Stripe rate (1.5% + €0.25) and a Bancontact payment (€0.35 per transaction). Which statement is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The card and Bancontact cost the same, about €1.75</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The card costs €1.50 and Bancontact €0.35</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Bancontact costs €0.35, i.e. €1.40 less than the card (€1.75)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Bancontact is more expensive because it adds 2% of conversion</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>EEA card: 1.5% × €100 + €0.25 = €1.75. Bancontact: €0.35 flat. The gap is therefore €1.40 in favor of Bancontact. The 2% conversion applies only to foreign currencies, not to a payment in euros.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">BELGA CRAFT makes €12,000 in distance sales to Dutch customers and €3,000 to German customers over the year. What VAT does it apply, and how does it declare it?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Belgian VAT (21%) everywhere, because each country stays below €10,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Dutch VAT (21%) and German VAT (19%), declared via the OSS one-stop shop</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Belgian VAT in the Netherlands and German VAT in Germany, each declared in the country concerned</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The VAT of the country of departure, Belgium, as long as it does not open a subsidiary abroad</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The €10,000 threshold is assessed on all intra-EU distance sales (12,000 + 3,000 = €15,000), not country by country. As the threshold is exceeded, it applies the VAT of the customer&#x27;s country — 21% in the Netherlands, 19% in Germany — and declares everything in a single quarterly return via the OSS.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A customer from Zurich orders a piece of jewelry displayed at €80 excl. VAT; delivery costs €12. On arrival, Swiss VAT of 8.1% (calculated on the goods and the transport) and €12 of carrier customs clearance fees are added; Switzerland no longer levies duties on industrial products since 2024. If BELGA CRAFT sells under DAP, how much does the customer pay extra at her door?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€12.00</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€19.45</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€7.45</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€31.45</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Under DAP, the customer bears on arrival the VAT and the customs clearance fees: VAT 8.1% × (80 + 12) = €7.45, plus €12 of customs clearance, i.e. €19.45. The €12 of delivery is already paid at the order; customs duties are nil since 2024. The total landed price is €111.45.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Since when, and in what form, has the European Union abolished the customs duty exemption for small imported parcels?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Since 1 July 2021, via a single threshold of €10,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Since 1 July 2026, replaced by a flat-rate duty of €3 per item</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Since 2024, via the obligation to use the IOSS one-stop shop</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Since 1 July 2026, via a duty of 3% of the parcel&#x27;s value</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Since 1 July 2026, the duty exemption below €150 has disappeared, replaced by a flat-rate duty of €3 per item. Not to be confused with the VAT reform of 1 July 2021 (€10,000 threshold, OSS/IOSS, end of the VAT exemption for small consignments). The duty is a flat rate per item, not a percentage.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">A Belgian customer buys an item at €25 from a Chinese seller who uses the IOSS one-stop shop. What is the landed price, excluding delivery, in 2026?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€25.00, because the IOSS exempts from duties</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€28.00</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€33.25</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€30.25</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Belgian VAT of 21% is collected at the sale via the IOSS: 21% × 25 = €5.25. Since 1 July 2026, the flat-rate duty of €3 per item is added. Landed price excluding delivery: 25 + 5.25 + 3 = €33.25. The IOSS does not exempt from the new customs duty.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Among these statements about the one-stop shops, which one is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The OSS allows VAT due in several EU countries to be declared in a single return</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The IOSS allows VAT to be collected at the time of sale for imported parcels of €150 maximum</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The IOSS removes the flat-rate duty of €3 per item since July 2026</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Above €10,000 of intra-EU distance sales, the VAT of the customer&#x27;s country is applied</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The IOSS concerns only the collection of VAT at the sale; it does not remove the flat-rate customs duty of €3 per item introduced on 1 July 2026. The other three statements are accurate.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Strong customer authentication (SCA), implemented by 3-D Secure 2, is mandatory in the EU. Which statement is correct?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It is required by the GDPR and obliges you to store cards on the site</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It is required by the PSD2 directive and shifts liability for disputes to the bank</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It replaces PCI-DSS compliance and HTTPS</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It is only mandatory for payments above €150</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>SCA stems from the PSD2 directive; 3-D Secure 2 implements it (confirmation via the banking app or a code). It reduces fraud and shifts liability for disputes to the bank. It replaces neither PCI-DSS nor HTTPS, and stores no card.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">What is tokenization, and how does it reduce your obligations?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The site itself encrypts the card numbers in its database</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The gateway replaces the card number with a token, so that the site never stores it</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The customer receives a physical token to authenticate for each purchase</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The bank tokenizes refunds to speed up payouts</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Tokenization consists of replacing the card number with a token managed by the gateway: the merchant site never stores card data, which lightens its PCI-DSS compliance burden, carried in practice by the gateway.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">On the night of Black Friday, BELGA CRAFT&#x27;s customer database is potentially compromised. What must it do, and within what timeframe?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Notify the Data Protection Authority within 72 hours and inform the individuals in case of high risk</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Notify the police within 24 hours and close the site for a week</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Inform only its payment gateway, which handles the formalities</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Wait for the end of the internal investigation before any notification</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The GDPR requires notifying the Data Protection Authority (DPA) within 72 hours of becoming aware of the breach, and informing the data subjects when the risk to them is high. A written response plan prepared in advance is better than improvisation.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">On the Dutch version of its site, BELGA CRAFT observes 40% abandonment at the payment page, compared to 18% on the Belgian version, for pages otherwise identical. What is the most likely cause, given the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The Dutch site is too slow</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">iDEAL, the payment method expected in the Netherlands, is missing</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Prices are displayed excl. VAT</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The withdrawal button is missing</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The absence of the locally expected payment method is one of the leading causes of abandonment at the final step. In the Netherlands, iDEAL comes above all; its absence explains the gap. This is precisely the answer to the opening question of chapter 8.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Why is PayPal considered almost mandatory in Germany, while it remains secondary in Belgium?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Because PayPal is the cheapest for the merchant in Germany</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Because German regulation mandates PayPal</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Because German consumers favor PayPal and payment by invoice, and often refuse to give their card to an unknown site</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Because Bancontact is not available outside Belgium</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Germans favor PayPal and payment by invoice (Klarna); many refuse to pay by card on a site they do not know. Without PayPal or invoice, a customer like Lena does not order — hence the 2.4% surcharge accepted by BELGA CRAFT for Germany. It is neither the cheapest nor a legal obligation.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Among these statements about payments in Belgium in 2026, which one is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Bancontact has disappeared in favor of Visa and Mastercard cards exclusively</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The Payconiq app has become Bancontact Pay and Belgian merchants have access to Wero</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Wero is a Chinese solution competing with Bancontact</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Bancontact can only be used in a physical store, never online</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>In spring 2026, Payconiq by Bancontact became Bancontact Pay, and Belgian merchants have access to Wero, the European payment solution launched by the EPI initiative. Bancontact remains essential online as in store (about 2.5 billion payments in 2025).</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">An e-merchant switches from direct shipping to direct injection. What does this mean, and under what condition is it worthwhile?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It stores its products at a logistics provider in each country; profitable from the first order</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It groups the parcels of a single country and hands them over at once to the local distribution network; worthwhile with regular volume (a few dozen parcels per week)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It entrusts each parcel to a different express carrier; worthwhile for large baskets</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It has customers come to collect their parcel in Belgium; worthwhile without stock</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Direct injection groups the parcels of a single country to hand them over at once to that country&#x27;s distribution network: the cost per parcel drops and the delivery time approaches the domestic one, but this requires regular volume (a few dozen parcels per week). Local stock, for its part, ties up stock and creates fixed costs.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">For the accounting valuation of stock, which statement is correct according to the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The LIFO method is the reference and FIFO is prohibited</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The FIFO method (first in, first out) is the reference, and LIFO is prohibited under IFRS</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Both methods are prohibited in the EU</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The valuation method is free and has no effect on the business plan</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The &quot;first in, first out&quot; (FIFO) method is the reference for stock valuation; the LIFO method is prohibited under IFRS. The indicators to monitor are the stockout rate, the service rate, stock turnover, and coverage in days.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">According to the course, what order of magnitude of shipping cost must appear from the very first version of the business plan for a parcel under 2 kg to Germany or the Netherlands, without a negotiated rate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">On the order of €1 to €3 per shipment, returns included</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">On the order of €7 to €12 per shipment, and as much for a return</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">On the order of €20 to €30 per shipment</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Free, because the EU mandates free delivery</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>A parcel under 2 kg to Germany or the Netherlands costs, for a small SME without a negotiated rate, on the order of €7 to €12, and a return as much. In fashion, returns can affect a third of orders, more in Germany: these costs must appear from the very first version of the business plan.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">An e-commerce business spends €20,000 on acquisition for 600 new customers; each customer generates on average €70 of margin over three years. Calculate the CAC and the CLV/CAC ratio, then assess.</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">CAC = €33.33; ratio ≈ 2.1; insufficient because below the recommended ratio of 3</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">CAC = €33.33; ratio ≈ 2.1; excellent because above 2</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">CAC = €70; ratio = 1; at break-even</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">CAC = €12; ratio ≈ 5.8; very comfortable</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>CAC = 20,000 ÷ 600 = €33.33. CLV/CAC ratio = 70 ÷ 33.33 ≈ 2.1. The rule of thumb is a ratio of at least 3: at 2.1, the acquisition spending is too high relative to customer value, the model is fragile.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">In BELGA CRAFT&#x27;s table of assumptions for Germany, the CAC is €28 and the three-year customer value is €95 of margin. What is the CLV/CAC ratio, and how should it be read?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">About 0.3; the project is not viable</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">About 3.4; acceptable, but to be monitored</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">About 28; excellent</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Impossible to calculate without the conversion rate</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>95 ÷ 28 ≈ 3.4. The ratio exceeds the rule-of-thumb threshold of 3, so it is acceptable, but close to the limit: to be monitored, especially in a new market where the repeat-purchase rate (here assumed at 20%, against 31% in Belgium) remains a prudent assumption.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">In B2C e-commerce, within what range does the conversion rate most often fall, and how does it vary?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Between 10 and 20%, lower for loyal customers</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Between 1 and 3%, higher for loyal customers, lower for cold traffic coming from advertising</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Around 50%, stable regardless of channel</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Between 1 and 3%, but always higher for cold advertising traffic</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The B2C conversion rate is often between 1 and 3%. It rises for loyal customers and falls for cold traffic from advertising. BELGA CRAFT, moreover, assumes 1.8% in Germany (cold traffic) against 2.6% in Belgium.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">For an SME launching a site in several languages, which structure does the course recommend, and what is the hreflang tag for?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">National domains (.de, .nl), because they are the simplest to manage; hreflang blocks the other countries</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Subdirectories (mysite.com/de/), simpler for an SME; hreflang tells search engines the language and country targeted by each page</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Mandatory subdomains; hreflang serves to automatically translate the content</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The structure does not matter; hreflang replaces the search for local keywords</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Subdirectories are the simplest choice for an SME: a single site, a single authority in the eyes of search engines. The hreflang tag tells search engines the language and country targeted by each page; it translates nothing and does not exempt you from researching keywords in each language.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">What is GEO (generative engine optimization), and what is its relationship to classic search engine optimization?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It is the geoblocking of search engines; it is opposed to SEO</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It is optimization to be cited by AI assistants; its recipes largely overlap with those of SEO (complete listings, reviews, mentions)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It is a geographic data format required by Google Shopping</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It is a tax on generative advertising, with no link to search engine optimization</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>GEO aims to be cited by AI assistants (ChatGPT, Perplexity, etc.), which nearly one Belgian in three consults before buying. These assistants draw on complete and structured product listings, reviews and mentions: everything that improves classic SEO and the clarity of listings also improves visibility in the assistants.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">BELGA CRAFT prefers a referral program (€10 to the referrer and the referred friend) over a points program to build loyalty in Germany. Why, according to the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Because a points program is prohibited in Germany</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Because Lena discovers brands through recommendation and the referral program is simple to manage in three languages</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Because referral always costs less than points</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Because points only work in hedonistic markets</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Loyalty mechanisms do not work the same way everywhere. BELGA CRAFT chooses the referral program because its persona (Lena) discovers brands through recommendation and because this mechanism is simple to manage in three languages — not for a reason of absolute cost or of prohibition.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">The Omnibus directive imposes a rule on discount announcements. Which one, and how does it apply to the &quot;-50%&quot; displayed by Amazon in chapter 1?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The reference price must be the manufacturer&#x27;s list price; Amazon&#x27;s &quot;-50%&quot; was therefore compliant</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The reference price must be the lowest price charged during the preceding 30 days; a &quot;-50%&quot; calculated on the list price can be misleading</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Any discount above 30% is prohibited in the EU</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The rule concerns only official sales, not e-commerce</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The 30-day rule (Omnibus directive, in force since 2022) requires indicating as the reference price the lowest price of the preceding 30 days. Amazon&#x27;s &quot;-50%,&quot; calculated on a manufacturer&#x27;s list price, illustrates why the exact wording matters — the FPS Economy monitors this.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">The European regulation against unjustified geoblocking (2018) governs price differences. Which statement is correct?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It prohibits displaying different prices on a .de site and a .be site</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It allows different prices per national site, but prohibits refusing the sale to a customer from another country or forcibly redirecting them</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It requires free delivery throughout the EU from any national site</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It imposes a single price excl. tax for the entire Union</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The regulation does not prohibit different prices between a .de site and a .be site. It prohibits refusing the sale or forcibly redirecting a customer to &quot;their&quot; national site; the customer can buy under the conditions of the chosen site, and it is up to them to arrange collection or delivery. Commercially, large gaps end up becoming known.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">BELGA CRAFT&#x27;s funnel for Germany anticipates 60,000 visitors in the first year and a conversion rate of 1.8%. How many orders does this represent?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">108 orders</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">1,080 orders</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">10,800 orders</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">600 orders</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>60,000 × 1.8% = 1,080 orders. This is the backbone of the funnel: visitors × conversion rate = orders, then orders × average basket = turnover. Each percentage is an assumption to defend before the jury.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">In 2025, online spending by Belgians rose by 5.4%, but Belgian webshops only grew by 3.4%. What does the course conclude for an SME?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Belgians buy less online than before</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Growth is captured by foreign platforms; international activity is first of all a matter of survival in your own market</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Belgian webshops must lower their prices by 2%</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The Belgian market is saturated and should be abandoned</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The market is growing (+5.4%) but Belgian webshops are stagnating (+3.4%, inflation): growth went to foreign platforms (Amazon, bol, Zalando, Shein, Temu). For an SME, selling abroad also means learning to defend your position in Belgium with the same weapons (transparent total price, fast delivery, local payments, service in the language).</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">The European e-commerce VAT reform of 1 July 2021 introduced several changes. Which one is NOT among them?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The end of the VAT exemption for small imported consignments</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">A single threshold of €10,000 for distance sales in the EU</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The creation of the OSS and IOSS one-stop shops</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The flat-rate duty of €3 per item on imported parcels</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The flat-rate duty of €3 per item dates from 1 July 2026, not 2021. The 2021 VAT reform abolished the VAT exemption for small consignments, set the single €10,000 threshold, and created the OSS and IOSS one-stop shops.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Among these correspondences between a country and the payment method the customer expects to find, which one is FALSE according to the course?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Netherlands: iDEAL above all</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Belgium: Bancontact (card and app), cards, Wero</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Germany: iDEAL above all, then Bancontact</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">France: cards, payment in three installments, PayPal</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>In Germany, the customer expects PayPal, payment by invoice (Klarna), bank transfer and cards — not iDEAL, which is the Dutch method, nor Bancontact, which is Belgian. The other three correspondences are accurate.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Belgium and Germany show high uncertainty avoidance in Hofstede&#x27;s model. What does this suggest reinforcing on a site that targets them?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A very playful tone and impulse purchases</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Guarantees, labels, detailed conditions, and payment after delivery</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Less information to lighten the page</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Celebrity endorsements rather than customer reviews</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>High uncertainty avoidance calls for reassurance: guarantees, labels, detailed conditions, clear returns, payment by invoice or after delivery. In Germany is added the expectation of an Impressum (detailed legal notices) and of labels such as Trusted Shops.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Which legal obligation, to be included in the requirements specification, came into force for distance sales to consumers from June 2026?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The accessibility of commerce sites (European Accessibility Act)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The online withdrawal button, a clearly identified function available throughout the withdrawal period</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Peppol electronic invoicing for consumers</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The obligation to display prices excl. VAT</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The online withdrawal button has been mandatory since 19 June 2026 for distance sales to consumers (Directive (EU) 2023/2673): a clearly identified function, available throughout the withdrawal period, followed by a confirmation on a durable medium. The European Accessibility Act, for its part, has applied since 28 June 2025; Peppol concerns Belgian professional customers.</p>
+</li>
+</ol></div>
+</section></div><div class="page-foot"><nav class="pager">
+<a class="pager-prev" href="#examen-1"><span class="pager-dir">← Previous</span><span class="pager-ttl">Mock exam 1</span></a>
+<a class="pager-next" href="#examen-3"><span class="pager-dir">Next →</span><span class="pager-ttl">Mock exam 3</span></a>
+</nav><a class="to-top" href="#top">↑ Back to top</a></div></article>
+<article class="page" id="examen-3" hidden><div class="page-head"><div class="page-kicker">Mock exams</div><h1 class="page-title">Mock exam 3</h1></div><div class="prose"><section class="quiz" aria-label="Mock exam 3">
+<h2 class="quiz-head">Mock exam 3</h2>
+<p class="quiz-intro">30 exam-level questions covering the whole course. Harder than the self-checks: take your time, answer, then check.</p>
+<div class="quiz-qcm"><h3>Multiple-choice questions</h3><ol class="qcm-list">
+<li class="qcm-item" data-answer="2"><p class="qcm-q">The course is built around a common thread: milestones J1 to J5 become the two documents of the final exam. Among these statements about this sequence, which one is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">J2 provides the reasoned choice of the two markets, two personas and the localization points</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">J4 quantifies delivery, returns, customs and payments market by market</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The requirements specification is an entirely new document that reuses none of the milestones J1 to J5</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The business plan assembles the milestones, makes them consistent, and adds the figures to them</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>This is the false statement: the requirements specification directly reuses the competitive analysis of J5 (each friction spotted at a competitor becomes a requirement) and the personas from module 2. The syllabus repeats that &quot;nothing is written twice&quot;: the two final deliverables are the assembly of the milestones, not documents started from scratch.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">One target market of your business plan anticipates 50,000 visitors in the first year, a conversion rate of 2% and an average basket of €90. According to the formula in chapter 11, what turnover should you record (before seasonality and repeat purchases)?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€90,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€9,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€180,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€100,000</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Turnover = visitors × conversion rate × average basket = 50,000 × 0.02 × 90 = €90,000. This is the basic mechanics of the revenue model: 50,000 × 2% gives 1,000 orders, and 1,000 × €90 = €90,000. Each factor must be a sourced and defensible assumption before the jury.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">In its financial model, a business bears €60,000 of fixed costs and generates a contribution margin of 40% of turnover excl. tax. At what turnover does it reach its break-even point?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€24,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€100,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€150,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€240,000</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The break-even point is the turnover from which the contribution margin covers the fixed costs: 60,000 ÷ 0.40 = €150,000. Below it, the margin generated (40% × turnover) is less than the €60,000 of fixed charges; above it, the business becomes profitable.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">A project owner spends €30,000 on acquisition and obtains 750 new customers; each customer generates on average €110 of margin over their entire lifetime. What can you conclude in light of the rule of thumb in chapter 6?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">CAC of €40, CLV/CAC ratio of 2.75: below the threshold of 3, the model remains fragile and depends on customer retention</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">CAC of €40, CLV/CAC ratio of 2.75: well above the threshold of 3, no concern</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">CAC of €110, CLV/CAC ratio of 0.36: the model is profitable from the first order</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">CAC of €22.5, CLV/CAC ratio of 4.9: the spending is excellent</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>CAC = 30,000 ÷ 750 = €40; CLV/CAC = 110 ÷ 40 = 2.75. The course&#x27;s rule of thumb sets a ratio of at least 3. At 2.75 you are below it: the spending is not untenable but the model remains fragile and only holds if customer retention (repeat purchases) pushes the CLV up.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">A Swiss customer orders a piece of jewelry displayed at €80 excl. VAT; delivery €12, Swiss VAT of 8.1% on the goods and the transport (€7.45), no industrial customs duty since 2024, carrier customs clearance fees €12. If BELGA CRAFT sells under DAP, how much does the customer pay extra AT THE DOOR, beyond the price already paid online?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€0, everything is included in the displayed price</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€12 (only the delivery)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€31.45</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€19.45</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Under DAP (duties borne by the customer), the customer has paid online for the product and the delivery, but not what is levied on arrival: Swiss VAT €7.45 + customs clearance fees €12 = €19.45 claimed at the door. The total landed price is €111.45. Under DDP, BELGA CRAFT would advance these €19.45 and display an all-inclusive price: that is the choice to make to avoid the one-star review.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">BELGA CRAFT makes, in distance sales, €12,000 to Dutch customers and €3,000 to German customers over the year. What is the correct VAT treatment?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It charges Belgian VAT (21%) to all, the threshold not being reached</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It exceeds the €10,000 threshold, applies the VAT of the customer&#x27;s country (21% NL, 19% DE) and declares everything via the OSS one-stop shop</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It must register for VAT separately in the Netherlands and in Germany</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It applies the IOSS, reserved for intra-EU distance sales</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The total intra-EU distance sales (12,000 + 3,000 = €15,000) exceeds the single threshold of €10,000. Above it, the VAT of the customer&#x27;s country applies: 21% in the Netherlands, 19% in Germany. The OSS precisely avoids registration in each country: a single quarterly return with the FPS Finance. The IOSS, for its part, concerns imports from third countries (parcels ≤ €150), not intra-EU sales.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">An e-commerce business makes €200,000 in sales, average basket €80, half by cards from the European Economic Area (1.5% + €0.25), half by Bancontact (€0.35 per transaction). At the displayed Stripe rate, what is the annual cost of payments?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€4,500</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€1,812.50</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€2,250</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€3,000</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>200,000 ÷ 80 = 2,500 transactions, i.e. 1,250 per method. EEA cards on €100,000: 1.5% × 100,000 = €1,500 + €0.25 × 1,250 = €312.50, i.e. €1,812.50. Bancontact: €0.35 × 1,250 = €437.50 (flat rate per transaction, no percentage). Total = €2,250. The classic mistake is to apply a percentage to Bancontact.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">The VanMoof case (appendix B): a brand of electric bikes sold direct in 32 countries, bankrupt in 2023 with ~€144M of debt. How should this lesson translate concretely into your business plan?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Multiply fundraising rounds, because they replace a positive margin per sale</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">In the Operations section, budget after-sales service and repairs country by country before opening each market direct</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Avoid any direct selling and sell only on a marketplace</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Design products with the most specific components possible to differentiate yourself</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The VanMoof lesson is that selling direct in a country also means ensuring after-sales service there: an original product without a repair network becomes a risk for the customer and the brand. This translates in the Operations section of the business plan into a quantification of after-sales service by market. The syllabus also stresses that growth financed by fundraising does not replace a positive margin per sale.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">The Wish case (appendix B) and appendix A converge on the same lesson for selling in Europe. Which one?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A low price is enough to build lasting loyalty with a European clientele</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Product compliance (GPSR) is a secondary issue as long as prices are attractive</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Product compliance can condition access to the market: Wish was delisted in France in 2021 for dangerous products</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The delisting of a platform falls solely under competition law</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Wish was delisted from search engines and app stores by the French administration in November 2021 after inspections revealed a high proportion of dangerous products. Appendix A recalls the GPSR regulation (general product safety, in force since 13 December 2024). Shared lesson: in Europe, compliance is not a detail, it can close a market; and an advantage based on price alone does not withstand a cheaper competitor.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Regarding Shopify (appendix H), which statement is FALSE and therefore must not appear in your requirements specification?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It is a SaaS solution: you manage neither servers, nor security updates, nor the HTTPS certificate</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">With Shopify Payments, Shopify&#x27;s own transaction fees are 0%</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">You own the code and the platform, which you could resell to a third party</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Migrating to another solution is heavy (lock-in effect) and costs all the more as the store has grown</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>This is the false statement: with Shopify you rent, you do not own. You own your customer data and your content (exportable), but neither the code nor the platform. The other three statements are accurate: SaaS all taken care of, 0% Shopify fees with Shopify Payments (otherwise 0.5 to 2% depending on the plan), and growing lock-in with the size of the store.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">The online withdrawal button must appear in your requirements specification. In which section, and since when has it been mandatory?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">&quot;Cart&quot; section, mandatory since 1 July 2026</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">&quot;Order tracking&quot; section, mandatory since 19 June 2026 (Directive (EU) 2023/2673)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">&quot;Visitor welcome&quot; section, mandatory since 28 June 2025</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">&quot;Purchase process&quot; section, mandatory since 17 February 2024</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The withdrawal button falls under section 7 (order tracking): a clearly identified function, available throughout the period, a form, a confirmation on a durable medium. It has been mandatory since 19 June 2026 (Directive (EU) 2023/2673). Beware of the competing dates: 28 June 2025 = accessibility (EAA), 17 February 2024 = DSA, 1 July 2026 = €3 customs duty and end of the exemption.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">The European Accessibility Act applies to e-commerce sites. Which combination is accurate for your requirements specification (ergonomics section)?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Applicable since 28 June 2025, reference standard EN 301 549 incorporating the WCAG criteria; Belgian penalties up to €200,000 or 6% of turnover</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Applicable since 1 January 2026, Peppol standard; fines of €1,500 to €5,000</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Applicable since 13 December 2024, GPSR regulation; penalties up to €20M</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Applicable since 2 August 2026, AI Act; transparency obligations only</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The EAA (Directive (EU) 2019/882) has applied to e-commerce services aimed at consumers since 28 June 2025; the reference standard is EN 301 549, which incorporates the WCAG criteria. In Belgium, penalties can reach €200,000 or 6% of turnover, and microenterprises benefit from a special regime to be checked. The other answers mix up Peppol, GPSR and the AI Act.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">BELGA CRAFT displays €95 on its German site and €78 on its Dutch site. A Belgian customer, who has spotted the German price, demands to get it. What does the anti-geoblocking regulation (2018) allow and prohibit?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It prohibits displaying different prices per national site: she must align her prices</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It requires her to deliver everywhere in the EU at the same price</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It allows different prices per national site; she can neither refuse the sale nor forcibly redirect the Belgian customer to the .be site, but is not required to deliver to Belgium from the German site</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It prohibits any cross-border sale to a consumer from another Member State</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Regulation (EU) 2018/302 does not prohibit different prices between national sites. It does, however, prohibit refusing the sale or forcibly redirecting a customer from another Member State. The Belgian customer can therefore buy on the .de site under German conditions; BELGA CRAFT is not required to deliver to Belgium from that site (the customer can arrange collection themselves). Commercially, the course warns that marked gaps between neighboring countries always end up becoming known.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">On the Dutch version of the site, 40% of customers abandon at the payment page versus 18% in Belgium, pages identical &quot;in all but one detail.&quot; By linking chapter 6 (conversion) and chapter 8 (payments), what is the most likely cause?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The payment method expected in the Netherlands, iDEAL, is not offered</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The Dutch site is translated but not localized for color</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Dutch customers do not like handcrafted jewelry</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">3-D Secure 2 strong authentication is disabled</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The absence of the expected payment method is one of the very first causes of abandonment at the final step. In the Netherlands, it is iDEAL. The syllabus settles it explicitly: the Dutch version did not offer iDEAL. This is a typical integration case: a conversion problem (ch. 6) resolved by a payment choice (ch. 8).</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">In the scoring grid of an e-commerce site (chapter 9), which criterion carries the most weight?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">International search engine optimization (8%)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Payment methods (12%)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Localization (18%)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Mobile performance (20%)</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Mobile performance carries 20%, the highest weight in the grid, ahead of localization (18%) and ergonomics/purchase funnel (15%). This is consistent with chapter 1: the smartphone is the first screen of commerce, and a slow site loses its customers before even displaying the price. Next come payment methods (12%), delivery/returns (10%), service/trust (10%), search engine optimization (8%), security/compliance (7%).</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">The official program requires analyzing an international site from SIX angles. Which of the following elements is NOT part of it?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Customer retention</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Technical</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Markets</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Payment</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The six angles of the course outline are: technical, economic, ergonomics, markets, payment and delivery. Customer retention is not a site-analysis angle: it is a section of the requirements specification (section 4) and a topic of chapter 6. Be careful not to confuse the audit grid (module 5, ch. 9) with the seven sections of the requirements specification (ch. 10).</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A banker reads your forecasts and asks: &quot;in which month is your cash at its lowest, and at how much?&quot; What should you have understood from chapter 11?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The cash low point is equal to the annual result of the central scenario</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">The cash low point is read month by month and often occurs BEFORE the sales peak, when stock and advertising must be paid for</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Cash only concerns companies that borrow</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">The low point always corresponds to the month of December, whatever the sector</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The cash low point is not the annual result: it is read month by month, and it often arrives before the sales peak, at the moment when stock and advertising costs have already been incurred without having yet collected revenue. It is precisely this gap that underlies the financing need and that must appear in the forecast income statement and the cash flow plan.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">In its export forecasts, BELGA CRAFT assumes a financing need of €50,000 (prudent scenario) rather than €35,000 (central scenario) for its loan application. Why is this the right approach?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Because a higher figure impresses the banker more</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Because the central scenario is prohibited in a business plan</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Because, if the company survives the prudent scenario (lower conversion, heavier year-1 loss), the project is credible and the financing is calibrated for the worst reasonable case</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Because the prudent scenario always gives a positive result from year 1</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The frequent mistake denounced by the course is to present a single optimistic scenario and to size the financing on it. The jury and the banker want to know what happens if conversion is half as good. In the prudent scenario, the year-1 loss goes from ~€10,000 to €23,000 and the need rises to €50,000: taking this figure guarantees that the company holds even in the bad case. A project that survives the prudent scenario is credible.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">Since 1 July 2026, the European customs reform changes competition for imported parcels under €150. Which wording is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">A flat-rate duty of €3 per item replaces the customs duty exemption, reducing the cost advantage of platforms shipping from China</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">VAT on small parcels is abolished to revive Temu and Shein</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">A duty of €150 per parcel is introduced regardless of value</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Parcels under €150 remain fully exempt as before</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Since 1 July 2026, the customs duty exemption below €150 has disappeared, replaced by a flat-rate duty of €3 per item. This reform targets first of all the factory-to-consumer model (Temu, Shein) and reduces its price advantage. Note: VAT, for its part, has been due on all parcels since July 2021 (IOSS); the 2026 reform concerns customs duties, not VAT.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">Among these statements about the &quot;platforms and marketplaces&quot; framework (appendix A), which one is accurate?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The DSA applies only to very large platforms with more than 45 million users</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">DAC7 requires platforms to transmit to the tax authorities the data of sellers exceeding 30 sales or €2,000 per year</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The DSA imposes no traceability of professional sellers</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">DAC7 concerns only marketplaces established outside the European Union</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>DAC7 requires platforms to transmit to the tax authorities the data of sellers who exceed 30 sales OR €2,000 per year: C2C is no longer a grey area. The DSA, for its part, has applied to all platforms since 17 February 2024 (traceability of professional sellers, reporting of illegal content, transparency of advertising and recommendations), with reinforced — and not exclusive — obligations for very large platforms with more than 45 million users.</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Structured electronic invoicing (Peppol network) affects your requirements specification. Which statement is correct?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It is mandatory for all sales, including to consumers, since July 2021</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It is optional and concerns only large companies</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It has been mandatory between VAT-liable businesses since 1 January 2026; sales to consumers are not affected, but a Belgian B2B site must be able to issue it</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It replaces VAT for cross-border sales in the EU</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>In Belgium, structured electronic invoicing via Peppol has been mandatory between VAT-liable businesses since 1 January 2026 (Royal Decree of 14 July 2025), with fines of €1,500 to €5,000 per infringement. Sales to consumers (B2C) are not affected. Concrete consequence: the &quot;purchase process&quot; section of a site that sells to Belgian professionals must provide for the issuing of the structured invoice.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">A requirement in the requirements specification must be &quot;verifiable on delivery.&quot; Which of the following wordings respects this rule?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The site will be ergonomic and modern</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Each product page displays in under 2.5 seconds on 4G mobile and the three Core Web Vitals are green</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">The site will offer a good user experience</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Navigation will be intuitive and pleasant</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>A verifiable requirement is tested objectively on delivery. &quot;Core Web Vitals green, display &lt; 2.5 s on 4G mobile&quot; is measured with PageSpeed Insights; &quot;ergonomic,&quot; &quot;modern,&quot; &quot;good UX,&quot; &quot;intuitive&quot; cannot be verified and will be rewritten. This is the whole point of chapter 10: what is not verifiable governs neither the quote, nor the build, nor the acceptance.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">To enter Germany, BELGA CRAFT first opens an Etsy store before launching its German-language site. How does this sequence illustrate the &quot;dedicated site or marketplace&quot; logic of chapter 2?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">It tests the market at low cost on a marketplace where the clientele is precisely looking for crafts, before investing in a localized site when volume justifies it</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">It definitively gives up its dedicated site in favor of Etsy</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">It chooses Etsy because the marketplace guarantees it ownership of customer data</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">It thereby avoids any commission and any dependence</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The recommended practice is to test a market on a marketplace (here Etsy, whose clientele is looking for crafts) for six to twelve months, to verify demand and learn local expectations at low cost, then to open a localized version of the site. The marketplace brings an immediate audience but takes a commission and keeps the customer data: it is an excellent entry channel, provided you plan for what comes next (your own site, where the margin and the relationship are better).</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">Regarding international price-setting (chapter 5), which statement is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">The customer compares the landed price (product + delivery + VAT of their country + any duties), not the displayed price</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">You must start from the landed price you want to display, then work backwards</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Simply converting the Belgian price is enough, because VAT and psychological prices are identical throughout the EU</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Any discount announcement must take as its reference the lowest price charged during the preceding 30 days</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>This is the false statement: VAT differs (19% in Germany, 21% in Belgium and the Netherlands, 20% in France), psychological prices differ (9.99 in France, 9.95 in the Netherlands), and payment and delivery fees vary. Simply converting the Belgian price is precisely the frequent mistake denounced by the course. The right method: start from the desired landed price and work backwards. The 30-day rule (Omnibus directive) is, for its part, accurate.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">For Germany, BELGA CRAFT chooses a referral program (€10 offered to the referrer and the referred friend) rather than a points program. Which justification is consistent with its personas and its operational constraint?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Points always yield more than referral</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Lena discovers brands through recommendation, and the referral program is simple to manage in three languages</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Referral is the only mechanism allowed by the GDPR</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">A points program is prohibited in Germany</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>The choice is based on the persona (Lena discovers brands through peer recommendation) and on a real operational constraint (a referral program is simple to manage in a trilingual store). The course recalls that loyalty mechanisms do not work the same way everywhere: the mechanism/market associations are starting assumptions, to be confirmed through interviews, not universal truths.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">A Belgian customer orders an item at €40 from a Chinese seller who uses the IOSS (Belgian VAT 21% collected at the sale). Since 1 July 2026, what is their landed price excluding delivery?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">€40: the IOSS removes all tax</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">€43 (only the €3 duty is added)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">€48.40 (only the VAT is added)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">€51.40</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Landed price = €40 + VAT 21% (€8.40) + flat-rate duty of €3 per item = €51.40 excluding delivery. This is case 3 of chapter 7: it concerns you as a competitor. With the end of the customs exemption below €150, the price gap with Chinese platforms has narrowed, which changes the game for a Belgian webshop.</p>
+</li>
+<li class="qcm-item" data-answer="0"><p class="qcm-q">The &quot;visitor welcome&quot; section of the requirements specification imposes a rule on language detection, which overlaps with the anti-geoblocking regulation. Which one?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Offer the language or the country version, without ever forcibly redirecting the visitor</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Automatically redirect each visitor to their country&#x27;s version on arrival</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Hide the other national versions to prevent price comparison</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Require the creation of an account before displaying the site in the right language</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>You offer the language (or the country version), you never forcibly redirect: this is both a good welcome practice and a rule of the anti-geoblocking regulation, which prohibits forced redirection. Automatically redirecting, hiding the national versions or requiring an account to display the right content are all frictions — and, for redirection, an infringement.</p>
+</li>
+<li class="qcm-item" data-answer="3"><p class="qcm-q">Among these case/lesson correspondences in appendix B, which one is FALSE?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Torfs: measure the real cost of the web (delivery, returns, advertising, technology) that physical retail did not have</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Coolblue: you can win through service (NPS 72) rather than through price</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Back Market: in a second-hand market, the real product is trust (warranty, quality control, returns)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Groupon: the key to successful expansion is to open as many markets as possible, as fast as possible</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>This is the false correspondence: the Groupon lesson is exactly the opposite — do not open more markets than you can manage, and an acquisition without technical and human integration destroys value. The other three pairs are accurate: Torfs (the real cost of omnichannel), Coolblue (service rather than price), Back Market (trust as the real product).</p>
+</li>
+<li class="qcm-item" data-answer="2"><p class="qcm-q">The final exam is assessed beyond the pass threshold according to four mastery criteria. Which one precisely designates the ability to mobilize the concepts of the five modules in a single, realistic project?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Precision</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Autonomy</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Integration</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Coherence</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Integration is the mobilization of the concepts of the five modules in a single, realistic project. To be distinguished from precision (accuracy of concepts, figures and sources), coherence (logical links between diagnosis, choice of markets, strategy and figures) and autonomy (quality of personal research, respect for the milestones, ability to defend your choices). The two learning outcomes — business plan and requirements specification — remain, for their part, the condition of the 50% threshold.</p>
+</li>
+<li class="qcm-item" data-answer="1"><p class="qcm-q">To serve the German market, BELGA CRAFT compares three logistics models (chapter 7). Which one makes it possible to lower the cost per parcel and bring the delivery time closer to the domestic one WITHOUT tying up stock in the country, provided there is a regular volume of at least a few dozen parcels per week?</p><ul class="qcm-choices">
+<li><button type="button" class="qcm-opt" data-i="0"><span class="qcm-let">A</span><span class="qcm-txt">Stock in the country (local provider or marketplace logistics)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="1"><span class="qcm-let">B</span><span class="qcm-txt">Direct injection (parcels of a single country grouped then handed over to the local distribution network)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="2"><span class="qcm-let">C</span><span class="qcm-txt">Direct shipping (each order leaves Brussels by bpost or DHL)</span></button></li>
+<li><button type="button" class="qcm-opt" data-i="3"><span class="qcm-let">D</span><span class="qcm-txt">Dropshipping from China</span></button></li>
+</ul>
+<p class="qcm-explain" hidden>Direct injection groups the parcels of a single country and hands them over at once to the local distribution network: the cost per parcel drops and the delivery time approaches the domestic one, without stock tied up on site, but it requires a regular volume (a few dozen parcels per week). Direct shipping is the starting point for any SME (simple, no investment, but more expensive and slower); local stock ties up stock and creates fixed costs, reserved for large volumes. For a made-to-order piece of jewelry, local stock is only worthwhile for the common pieces.</p>
+</li>
+</ol></div>
+</section></div><div class="page-foot"><nav class="pager">
+<a class="pager-prev" href="#examen-2"><span class="pager-dir">← Previous</span><span class="pager-ttl">Mock exam 2</span></a>
 <span></span>
 </nav><a class="to-top" href="#top">↑ Back to top</a></div></article>
     </div>
   </div>
 </div>
-<script>window.__L={"fb_empty": "Write a message first.", "fb_send": "Sending…", "fb_ok": "Thanks! Your message has been sent. ✓", "fb_mail": "Opening your mail app…", "quiz_show": "Show answer", "quiz_hide": "Hide answer", "prog": {"better": "You're ahead of {p}% of the group", "participants": "{n} participants", "median": "Class median: {m}%", "wait": "The ranking will appear once at least 5 students take part.", "you": "you", "ok": "Tracking enabled. Nice work!", "bad_pin": "Wrong PIN for this student number.", "consent": "Tick the consent box to continue.", "bad_mat": "Invalid student number (3 to 32 characters).", "bad_pin_len": "Choose a PIN of 4 to 32 characters.", "neterr": "Connection failed, please retry.", "confirm_forget": "Permanently delete all your progress data?", "forgotten": "Your data has been deleted."}};</script>
+<script>window.__L={"fb_empty": "Write a message first.", "fb_send": "Sending…", "fb_ok": "Thanks! Your message has been sent. ✓", "fb_mail": "Opening your mail app…", "quiz_show": "Show answer", "quiz_hide": "Hide answer", "prog": {"better": "You're ahead of {p}% of the group", "participants": "{n} participants", "median": "Class median: {m}%", "wait": "The ranking will appear once at least 5 students take part.", "you": "you", "ok": "Tracking enabled. Nice work!", "bad_pin": "Wrong PIN for this student number.", "consent": "Tick the consent box to continue.", "bad_mat": "Invalid student number (3 to 32 characters).", "bad_pin_len": "Choose a PIN of 4 to 32 characters.", "neterr": "Connection failed, please retry.", "confirm_forget": "Permanently delete all your progress data?", "forgotten": "Your data has been deleted.", "home_title": "Your journey", "home_resume": "Resume", "home_see": "My progress", "home_chap": "chapters read", "home_pts": "bonus pts", "home_invite": "Track your progress and earn points on every chapter, quiz and video (up to 120%). See where you stand in the group, anonymously.", "home_invite_btn": "Create my tracking"}};</script>
 <script>
 (function(){
   try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
@@ -9660,6 +10430,34 @@ implied.</p>
       renderRank(d.ranking);
     }).catch(function(){});
   }
+  function renderHome(){
+    if(!PROG)return;
+    var box=document.getElementById('home-prog'); if(!box)return;
+    if(!apiTok){
+      box.hidden=false;
+      box.innerHTML='<div class="hp-card invite"><div class="hp-txt"><strong>'+(PK.home_title||'')+'</strong><p>'+(PK.home_invite||'')+'</p></div>'+
+        '<a class="btn primary" href="#ma-progression">'+(PK.home_invite_btn||'')+'</a></div>';
+      return;
+    }
+    api('me.php',{token:apiTok}).then(function(d){
+      if(!d||!d.ok){box.hidden=true;return;}
+      var me=d.me||{}, next=d.next_ch;
+      var resume=next?('<a class="btn primary" href="#chapitre-'+next+'">'+(PK.home_resume||'')+' → ch.'+next+'</a>'):'';
+      box.hidden=false;
+      box.innerHTML='<div class="hp-card"><div class="hp-ring" style="--p:'+Math.min(100,me.global)+'"><span>'+me.global+'%</span></div>'+
+        '<div class="hp-txt"><strong>'+(PK.home_title||'')+'</strong><div class="hp-meta">'+me.chapitres_lus+'/12 '+(PK.home_chap||'')+' · +'+me.bonus+' '+(PK.home_pts||'')+'</div></div>'+
+        '<div class="hp-actions">'+resume+' <a class="btn" href="#ma-progression">'+(PK.home_see||'')+'</a></div></div>';
+    }).catch(function(){});
+  }
+  // each YouTube video opened earns points
+  document.addEventListener('click',function(e){
+    var vl=e.target.closest&&e.target.closest('a[href*="youtube.com/watch"]');
+    if(vl&&PROG&&apiTok){
+      var m=/[?&]v=([A-Za-z0-9_-]{6,})/.exec(vl.href);
+      if(m){var vid='yt:'+m[1]; if(!sentRead['V'+vid]){sentRead['V'+vid]=true;
+        api('track.php',{token:apiTok,events:[{kind:'video',sid:vid}]}).catch(function(){});}}
+    }
+  },true);
   var pform=document.getElementById('prog-form');
   if(pform&&PROG){pform.addEventListener('submit',function(e){e.preventDefault();
     var mat=(document.getElementById('pg-mat').value||'').trim();
@@ -9672,24 +10470,25 @@ implied.</p>
     if(!consent){say(PK.consent);return;}
     say(L.fb_send);
     api('auth.php',{matricule:mat,pin:pin,consent:consent}).then(function(d){
-      if(d&&d.ok){ apiTok=d.token; try{localStorage.setItem('ec-tok',apiTok);}catch(e){} say(PK.ok); renderProg(); }
+      if(d&&d.ok){ apiTok=d.token; try{localStorage.setItem('ec-tok',apiTok);}catch(e){} say(PK.ok); renderProg(); renderHome(); }
       else if(d&&d.error==='bad_pin'){ say(PK.bad_pin); }
       else if(d&&d.error==='consent_required'){ say(PK.consent); }
       else { say(PK.neterr); }
     }).catch(function(){say(PK.neterr);});
   });}
   var plogout=document.getElementById('pg-logout');
-  if(plogout)plogout.addEventListener('click',function(){apiTok=null;try{localStorage.removeItem('ec-tok');}catch(e){} sentRead={}; showPane(true);});
+  if(plogout)plogout.addEventListener('click',function(){apiTok=null;try{localStorage.removeItem('ec-tok');}catch(e){} sentRead={}; showPane(true); renderHome();});
   var pforget=document.getElementById('pg-forget');
   if(pforget)pforget.addEventListener('click',function(){
     if(!apiTok)return; if(!window.confirm(PK.confirm_forget))return;
     api('forget.php',{token:apiTok}).then(function(){apiTok=null;try{localStorage.removeItem('ec-tok');}catch(e){} sentRead={};
-      var st=document.getElementById('pg-status'); if(st){st.hidden=false;st.textContent=PK.forgotten;} showPane(true);}).catch(function(){});
+      var st=document.getElementById('pg-status'); if(st){st.hidden=false;st.textContent=PK.forgotten;} showPane(true); renderHome();}).catch(function(){});
   });
   if(!PROG){var nl=document.querySelector('.nav a[data-sid="ma-progression"]'); if(nl&&nl.parentElement)nl.parentElement.style.display='none';}
   syncLang();
   fromHash();
   updProg();
+  renderHome();
 })();
 </script>
 </body>
