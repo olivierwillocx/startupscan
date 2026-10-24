@@ -906,6 +906,7 @@ function vBanc() {
 /* ============ Vue : Ressources ============ */
 function vRessources() {
   var cards = [
+    ["jeu-kiosque.html", "jeu_kiosque", "Jeu · 20 min", "Le Kiosque", "Reprends un kiosque, gère la météo, un étudiant à 15 €/h et une dette. 15 jours pour comprendre pourquoi la caisse n’est pas le bénéfice."],
     ["#/banc", "m4", "Outil", "Le banc d’essai", "Combien de ventes pour couvrir tes charges et te payer ? Le calcul en direct."],
     ["#/reperes", "rep_erreurs", "Repères", "10 erreurs, 10 facteurs de succès, tendances 2027, 12 terrains où entreprendre", "Quatre pages chiffrées et sourcées, à relire quand tu doutes."],
     ["fiches.html", "m1", "Inspiration", "Toutes les fiches d’entreprises", "Des dizaines d’entreprises décortiquées : de quoi trouver et cadrer ton idée."],

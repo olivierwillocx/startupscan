@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Le Kiosque — jeu de gestion en 20 minutes · Académie StartupScan</title>
+  <meta name="description" content="Tu reprends un kiosque à Bruxelles : 5 produits, de la caisse, une dette, un étudiant à 15 €/h qui ne vient pas toujours, de la pluie, du soleil. 15 jours, 20 minutes, pas de bonne réponse unique.">
+  <meta name="theme-color" content="#004A93">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./academie/kiosque.css?v=1">
+  <meta property="og:title" content="Le Kiosque — le jeu de l’Académie StartupScan">
+  <meta property="og:description" content="15 jours pour faire tourner un kiosque : météo, stock, prix, étudiant, dette. Sans bonne réponse unique.">
+  <meta property="og:image" content="https://startupscan.eu/academie/img/kiosque/front.jpg">
+</head>
+<body>
+  <header class="kbar" id="kbar">
+    <div class="kwrap">
+      <a class="kback" href="./index.html#/ressources" aria-label="Retour à l’Académie">← Académie</a>
+      <div class="ktitle">Le Kiosque</div>
+      <div class="hud" id="hud" aria-live="polite"></div>
+    </div>
+  </header>
+  <main id="game" class="kwrap" tabindex="-1"><p class="kload">Chargement du kiosque…</p></main>
+  <footer class="kfoot kwrap">
+    <p>Jeu de l’Académie StartupScan · EPFC. Tous les chiffres, les événements et les personnages sont inventés pour le jeu. Aucune donnée n’est envoyée : ta partie reste dans ton navigateur.</p>
+  </footer>
+  <noscript><p style="padding:40px;text-align:center">Le Kiosque a besoin de JavaScript pour fonctionner.</p></noscript>
+  <script src="./academie/kiosque-engine.js?v=1"></script>
+  <script src="./academie/kiosque.js?v=1"></script>
+</body>
+</html>
