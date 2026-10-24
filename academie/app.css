@@ -49,7 +49,7 @@ button{font:inherit;cursor:pointer}
 .dd a,.dd button{display:block;width:100%;text-align:left;padding:9px 12px;border-radius:8px;border:0;background:none;color:var(--ink);text-decoration:none;font-size:14.5px}
 .dd a:hover,.dd button:hover{background:var(--sky)}
 
-@media (max-width:1180px){
+@media (max-width:1300px){
   .nav{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;flex-direction:column;padding:10px 16px 16px;border-bottom:1px solid var(--line);box-shadow:var(--sh)}
   .nav.open{display:flex}
   .menu-tog{display:block}
@@ -57,7 +57,7 @@ button{font:inherit;cursor:pointer}
   .pts-pill .lbl{display:none}
 }
 .nav .m-only{display:none}
-@media (max-width:1180px){.nav .m-only{display:block}}
+@media (max-width:1300px){.nav .m-only{display:block}}
 @media (max-width:560px){
   .hdr-act .btn.ghost{display:none}
   .brand img{height:28px}
@@ -491,3 +491,51 @@ details.pform .btn{margin-top:8px}
 .rep-side:hover b{color:var(--epfc)}
 .nextprev .btn{white-space:normal;text-align:center;max-width:100%}
 @media (max-width:620px){.nextprev{flex-direction:column}.nextprev .btn{width:100%}}
+
+/* ============ Repère « Verticales » ============ */
+.rep-h{font-size:24px;font-weight:800;margin:34px 0 4px;line-height:1.2;text-wrap:balance}
+.rep-note{font-size:14px;color:var(--muted);margin:6px 0 4px}
+.rep-meth p{font-size:15.5px;color:var(--ink-2);line-height:1.55;margin:0 0 14px}
+.rep-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:760px){.rep-cols{grid-template-columns:1fr}}
+.rep-cols h4{font-size:15px;font-weight:800;color:var(--epfc);margin:0 0 8px}
+.rep-cols ol{margin:0 0 0 20px;padding:0;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.rep-cols li{margin-bottom:7px}
+.vt{background:#fff;border:1px solid var(--line);border-radius:14px;margin-top:12px;box-shadow:var(--sh);overflow:hidden}
+.vt summary{display:flex;gap:14px;align-items:center;padding:14px 18px;cursor:pointer;list-style:none}
+.vt summary::-webkit-details-marker{display:none}
+.vt summary::after{content:"+";margin-left:auto;font-size:24px;font-weight:700;color:var(--epfc);flex:none}
+.vt[open] summary::after{content:"–"}
+.vt[open] summary{background:var(--sky)}
+.vt-n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--epfc);color:#fff;font-weight:800;display:grid;place-items:center}
+.vt-h{min-width:0}
+.vt-h b{display:block;font-size:17px;font-weight:800;line-height:1.25}
+.vt-h em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.vt-b{padding:6px 20px 20px}
+.vt-b h5{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:16px 0 6px}
+.vt-b p,.vt-b li{font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+.vt-b ul{margin:0 0 0 20px;padding:0}
+.vt-b li{margin-bottom:5px}
+.vt-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+@media (max-width:760px){.vt-grid{grid-template-columns:1fr}}
+.vt-box{border-radius:12px;padding:4px 16px 14px}
+.vt-box.ok{background:var(--sky)}
+.vt-box.warn{background:var(--line-2)}
+.vt-box p{margin:0}
+.vt-prof{margin-top:14px}
+.vt-cas{margin-top:16px;border:1px dashed var(--blue-l);border-radius:12px;padding:2px 16px 14px}
+.vt-cas h5{margin-top:12px}
+.vt-cas table{width:100%;border-collapse:collapse;margin:8px 0}
+.vt-cas td{padding:6px 0;border-bottom:1px solid var(--line-2);font-size:14.5px;vertical-align:top}
+.vt-cas td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;padding-left:14px}
+.vt-concl{margin:8px 0 0}
+
+/* En-tête : tient sur les portables 1280–1500 px sans déborder */
+@media (min-width:1301px) and (max-width:1640px){
+  .hdr .wrap{max-width:none;gap:12px}
+  .nav{margin-left:0;gap:0}
+  .nav a{padding:9px 8px;font-size:14px}
+  .brand .bt small{display:none}
+  .pts-pill .lbl{display:none}
+  .hdr-act{gap:8px}
+}

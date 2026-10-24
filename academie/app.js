@@ -321,7 +321,7 @@ function vLanding() {
     '<div class="step"><span class="n"><span style="width:20px;height:20px;display:block">' + I.star + '</span></span><div><b>Points, niveaux et badges</b><span>De « Explorateur » à « Mentor ». Tes points se cumulent avec le cours e-commerce.</span></div></div>' +
     '<div class="step"><span class="n"><span style="width:20px;height:20px;display:block">' + I.user + '</span></span><div><b>Un profil à ton image</b><span>Ta photo ou tes initiales, ta voie, ton statut, ton idée en une ligne — modifiables à tout moment.</span></div></div>' +
     "</div></div></div></section>";
-  h += '<section class="sec"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Repères</span><h2 class="h2">À relire quand tu doutes</h2></div><a class="btn ghost" href="#/reperes">Tous les repères</a></div><div class="grid g3">' + (A.reperes || []).map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
+  h += '<section class="sec"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Repères</span><h2 class="h2">À relire quand tu doutes</h2></div><a class="btn ghost" href="#/reperes">Tous les repères</a></div><div class="grid g' + ((A.reperes || []).length === 4 ? 2 : 3) + '">' + (A.reperes || []).map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
   h += '<section class="sec alt"><div class="wrap"><div class="sec-head"><div><span class="eyebrow">Témoignages</span><h2 class="h2">Ils et elles ont suivi le parcours</h2></div><a class="btn ghost" href="#/temoignages">Tous les témoignages</a></div><div id="testi-land"><div class="loading">Chargement…</div></div></div></section>';
   h += '<section class="sec alt"><div class="wrap"><div class="grid g2" style="align-items:start"><div><span class="eyebrow">L’équipe</span><h2 class="h2">Des praticiens, pas seulement des profs</h2>' +
     '<div class="card pad" style="margin-top:20px"><div class="team"><span class="av" style="width:56px;height:56px;font-size:20px;background:var(--epfc)">OW</span><div><b>Olivier Willocx</b><div class="sub">Coordination · vente, modèles, pilotage, jury. Ancien CEO de BECI, près de 20 ans d’enseignement du business plan.</div></div></div></div>' +
@@ -507,17 +507,35 @@ function vCalendrier() {
 function vReperes(which) {
   var R = A.reperes || [];
   var cur = null; R.forEach(function (r) { if (r.id === which) cur = r; });
-  var h = '<section class="pagehead"><div class="wrap"><div class="crumbs"><a href="#/">Accueil</a> · Repères' + (cur ? " · " + esc(cur.titre) : "") + "</div><h1>" + (cur ? esc(cur.titre) : "Les repères") + "</h1><p>" + (cur ? esc(cur.sous) : "Trois pages à relire quand tu doutes : les erreurs qui tuent les boîtes, ce qui fait réussir les entrepreneurs bruxellois, et ce qui arrive en 2027.") + "</p></div></section>";
+  var h = '<section class="pagehead"><div class="wrap"><div class="crumbs"><a href="#/">Accueil</a> · Repères' + (cur ? " · " + esc(cur.titre) : "") + "</div><h1>" + (cur ? esc(cur.titre) : "Les repères") + "</h1><p>" + (cur ? esc(cur.sous) : "Quatre pages à relire quand tu doutes : les erreurs qui tuent les boîtes, ce qui fait réussir les entrepreneurs bruxellois, ce qui arrive en 2027, et douze terrains où te lancer.") + "</p></div></section>";
   if (!cur) {
-    h += '<section class="sec tight"><div class="wrap"><div class="grid g3">' + R.map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
+    h += '<section class="sec tight"><div class="wrap"><div class="grid g' + (R.length === 4 ? 2 : 3) + '">' + R.map(function (r) { return '<a class="ccard" href="#/reperes/' + r.id + '"><div class="ph"><img src="' + img(r.img) + '" alt="" loading="lazy"></div><div class="bd"><span class="k">' + esc(r.k) + "</span><h3>" + esc(r.titre) + "</h3><p>" + esc(r.sous) + "</p></div></a>"; }).join("") + "</div></div></section>";
     return h;
   }
   h += '<section class="sec tight"><div class="wrap"><div class="rep-grid"><div>';
   h += '<img src="' + img(cur.img) + '" alt="" style="border-radius:16px;margin-bottom:22px">';
   if (cur.intro) h += '<p class="lead" style="margin:0 0 18px">' + cur.intro + "</p>";
+  if (cur.items_titre) h += '<h2 class="rep-h">' + esc(cur.items_titre) + "</h2>";
   cur.items.forEach(function (it, i) {
     h += '<div class="rep-item"><span class="rep-n">' + (i + 1) + '</span><div><h3>' + esc(it.t) + "</h3><p>" + it.d + "</p>" + (it.src ? '<p class="rep-src">' + it.src + "</p>" : "") + "</div></div>";
   });
+  if (cur.methode) {
+    var M = cur.methode;
+    h += '<h2 class="rep-h">' + esc(M.titre) + '</h2><div class="card pad rep-meth"><p>' + M.intro + '</p><div class="rep-cols"><div><h4>' + esc(M.filtres_t) + "</h4><ol>" + M.filtres.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ol></div><div><h4>" + esc(M.questions_t) + "</h4><ol>" + M.questions.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ol></div></div></div>";
+  }
+  if (cur.verticales) {
+    h += '<h2 class="rep-h">' + esc(cur.verticales_titre) + '</h2><p class="rep-note">' + esc(cur.verticales_note) + "</p>";
+    cur.verticales.forEach(function (v, i) {
+      var c = v.cas;
+      h += '<details class="vt" id="vt-' + v.id + '"><summary><span class="vt-n">' + (i + 1) + '</span><span class="vt-h"><b>' + esc(v.nom) + "</b><em>" + esc(v.pistes[0]) + "</em></span></summary><div class=\"vt-b\">";
+      h += '<p class="vt-d">' + esc(v.demande) + "</p>";
+      h += "<h5>Trois pistes pour démarrer</h5><ul>" + v.pistes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>";
+      h += '<div class="vt-grid"><div class="vt-box ok"><h5>Pour bien le faire</h5><p>' + esc(v.bien) + '</p></div><div class="vt-box warn"><h5>Le piège</h5><p>' + esc(v.piege) + "</p></div></div>";
+      h += '<p class="vt-prof"><b>Le profil qui s’y retrouve :</b> ' + esc(v.profil) + "</p>";
+      h += '<div class="vt-cas"><h5>Cas inventé · ' + esc(c.qui) + "</h5><p>" + esc(c.scenario) + "</p><table>" + c.lignes.map(function (l) { return "<tr><td>" + esc(l[0]) + "</td><td>" + esc(l[1]) + "</td></tr>"; }).join("") + '</table><p class="vt-concl">' + c.conclusion + "</p></div>";
+      h += '<p class="rep-src">Pour s’entraîner : ' + v.lecons.join(" · ") + "</p></div></details>";
+    });
+  }
   if (cur.sources && cur.sources.length) h += '<div class="card pad" style="margin-top:22px"><span class="eyebrow">Sources</span><ul class="rep-sources">' + cur.sources.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div>";
   h += '</div><aside><div class="card pad" style="position:sticky;top:88px"><span class="eyebrow">Les autres repères</span>' + R.filter(function (r) { return r.id !== cur.id; }).map(function (r) { return '<a class="rep-side" href="#/reperes/' + r.id + '"><b>' + esc(r.titre) + "</b><span>" + esc(r.k) + "</span></a>"; }).join("") + '<a class="btn ghost sm" style="margin-top:14px" href="#/module/m6">Module 6 · Piloter sa boîte</a></div></aside></div></div></section>';
   return h;
@@ -889,7 +907,7 @@ function vBanc() {
 function vRessources() {
   var cards = [
     ["#/banc", "m4", "Outil", "Le banc d’essai", "Combien de ventes pour couvrir tes charges et te payer ? Le calcul en direct."],
-    ["#/reperes", "rep_erreurs", "Repères", "10 erreurs, 10 facteurs de succès, tendances 2027", "Trois pages chiffrées et sourcées, à relire quand tu doutes."],
+    ["#/reperes", "rep_erreurs", "Repères", "10 erreurs, 10 facteurs de succès, tendances 2027, 12 terrains où entreprendre", "Quatre pages chiffrées et sourcées, à relire quand tu doutes."],
     ["fiches.html", "m1", "Inspiration", "Toutes les fiches d’entreprises", "Des dizaines d’entreprises décortiquées : de quoi trouver et cadrer ton idée."],
     ["revue.html", "hero", "Chaque semaine", "Le dernier numéro StartupScan", "La revue hebdo des modèles qui inspirent."],
     ["modeles.html", "voie_digital", "Modèles", "Qui paie ? Les modèles d’affaires", "Comprendre qui paie quoi, et pourquoi."],
