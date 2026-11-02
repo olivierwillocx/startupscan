@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Vie privée · Académie StartupScan</title>
+  <meta name="description" content="Qui est responsable de tes données, ce que le site enregistre, pourquoi, combien de temps, et tes droits. En langage clair.">
+  <meta name="theme-color" content="#004A93">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    /* Page volontairement autonome : aucune ressource externe n'est chargée (pas de polices Google, pas de scripts). */
+    :root{
+      --bleu:#004A93; --bleu-fonce:#00335f; --encre:#1a2430; --gris:#5a6775;
+      --fond:#f5f8fb; --carte:#ffffff; --filet:#dbe4ee; --ok:#0f7b4d;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--fond);color:var(--encre);
+      font:16px/1.65 -apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+    .bande{background:var(--bleu);color:#fff;}
+    .wrap{max-width:860px;margin:0 auto;
+      padding-left:max(18px, env(safe-area-inset-left, 0px));
+      padding-right:max(18px, env(safe-area-inset-right, 0px));}
+    .bande .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:14px;}
+    .retour{color:#cfe2f6;text-decoration:none;font-weight:600;font-size:.95rem;}
+    .retour:hover{color:#fff;}
+    .bande h1{font-size:1.15rem;margin:0;font-weight:800;letter-spacing:.2px;}
+    main{padding-block:28px 48px;}
+    .intro{font-size:1.06rem;max-width:62ch;}
+    h2{color:var(--bleu);font-size:1.22rem;margin:34px 0 10px;line-height:1.3;}
+    h2 .num{color:var(--gris);font-weight:600;margin-right:6px;}
+    p,li{max-width:70ch;}
+    ul{padding-left:22px;}
+    li{margin:6px 0;}
+    .carte{background:var(--carte);border:1px solid var(--filet);border-radius:12px;padding:16px 18px;margin:14px 0;}
+    .carte.ok{border-left:4px solid var(--ok);}
+    .carte.bleu{border-left:4px solid var(--bleu);}
+    table{border-collapse:collapse;width:100%;margin:12px 0;background:var(--carte);
+      border:1px solid var(--filet);border-radius:12px;overflow:hidden;font-size:.95rem;}
+    th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--filet);vertical-align:top;}
+    th{background:#eef4fa;color:var(--bleu-fonce);font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;}
+    tr:last-child td{border-bottom:none;}
+    .tableau{overflow-x:auto;}
+    a{color:var(--bleu);}
+    .adresse{white-space:pre-line;}
+    footer{border-top:1px solid var(--filet);color:var(--gris);font-size:.88rem;padding-block:18px 36px;}
+    strong{color:var(--bleu-fonce);}
+    @media (max-width:560px){ body{font-size:15px} .bande h1{font-size:1.02rem} }
+  </style>
+</head>
+<body>
+  <header class="bande">
+    <div class="wrap">
+      <a class="retour" href="./index.html">← Académie</a>
+      <h1>Vie privée — comment tes données sont traitées</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="intro">Cette page explique, en langage clair, ce que l'Académie StartupScan enregistre sur toi, pourquoi, combien de temps, et ce que tu peux faire. Elle vaut information au sens de l'article 13 du RGPD.</p>
+
+    <div class="carte ok">
+      <strong>L'essentiel en quatre phrases.</strong> Le suivi de ta progression est <strong>facultatif</strong> : si tu le refuses, tu suis le cours et tu es évalué·e exactement comme les autres. Le site n'enregistre <strong>ni ton nom, ni ton email</strong>, et n'utilise aucun outil publicitaire ou de mesure d'audience. Tes données sont hébergées <strong>en Europe</strong> et supprimées au plus tard le <strong>31 décembre 2027</strong>. Tu peux <strong>tout effacer toi-même, à tout moment</strong>, depuis ton profil.
+    </div>
+
+    <h2><span class="num">1.</span> Qui est responsable ?</h2>
+    <p>Le responsable du traitement est <strong>Olivier Willocx</strong>, enseignant, qui édite ce site comme support de ses cours à l'EPFC (enseignement de promotion sociale, Bruxelles).</p>
+    <p>Contact pour toute question sur tes données : <strong>olwillocx@epfc.eu</strong> (sujet conseillé : « Vie privée »).</p>
+
+    <h2><span class="num">2.</span> Pourquoi ces données sont-elles traitées ?</h2>
+    <p>Une seule finalité : le <strong>suivi pédagogique individuel et volontaire</strong> de ta progression dans le cours — te permettre de reprendre là où tu en étais, cumuler tes points et niveaux, faire valider tes missions par l'enseignant, et permettre à celui-ci d'adapter son accompagnement. Les données servent aussi, sous forme <strong>anonyme et agrégée</strong> (jamais individuelle), à améliorer le cours d'une année à l'autre.</p>
+    <p>Ce suivi ne sert <strong>pas</strong> à l'évaluation officielle : présences, notes et épreuve finale relèvent des systèmes de l'EPFC, pas de ce site.</p>
+    <p><strong>Base légale :</strong> ton consentement (article 6.1.a du RGPD), donné lors de la création de ton compte. Il est libre — le refus n'a aucune conséquence sur ton parcours ni sur tes notes — et tu peux le retirer à tout moment (voir point 7). Pour un témoignage publié avec ton prénom, un consentement spécifique supplémentaire t'est demandé, lui aussi retirable.</p>
+
+    <h2><span class="num">3.</span> Ce que le site enregistre</h2>
+    <div class="tableau">
+    <table>
+      <tr><th>Donnée</th><th>Détail</th></tr>
+      <tr><td>Identifiant de compte</td><td>Ton matricule EPFC et un code PIN choisi par toi, stocké uniquement sous forme chiffrée (jamais lisible)</td></tr>
+      <tr><td>Profil (facultatif)</td><td>Prénom, voie choisie, statut, point de départ, idée de projet (200 caractères max.), couleur d'avatar</td></tr>
+      <tr><td>Progression</td><td>Leçons lues, sections acquises, points, niveaux, réponses aux quiz, date de dernière activité</td></tr>
+      <tr><td>Missions</td><td>Les preuves que tu soumets (texte court et lien), validées par l'enseignant</td></tr>
+      <tr><td>Échanges</td><td>Tes questions à l'enseignant ; ton témoignage si tu choisis d'en publier un</td></tr>
+      <tr><td>Jeux en classe</td><td>Un pseudo de jeu, le temps d'une séance</td></tr>
+      <tr><td>Consentement</td><td>La date à laquelle tu as accepté le suivi</td></tr>
+    </table>
+    </div>
+    <p>Certains éléments restent <strong>uniquement sur ton appareil</strong> et ne sont jamais envoyés au serveur : ta photo de profil, ta session de connexion, tes brouillons du banc d'essai et tes parties de jeux solo (comme Le Kiosque).</p>
+
+    <h2><span class="num">4.</span> Ce que le site n'enregistre pas</h2>
+    <ul>
+      <li>Ni ton <strong>nom de famille</strong>, ni ton <strong>email</strong>, ni ton adresse, ni ton téléphone.</li>
+      <li>Aucun cookie publicitaire, aucun outil de mesure d'audience, aucun traceur.</li>
+      <li>Aucune donnée vendue, louée, partagée ou croisée avec quoi que ce soit d'autre.</li>
+    </ul>
+    <div class="carte bleu">
+      <strong>Un conseil qui vaut pour tout le cours :</strong> n'écris jamais de données personnelles sur d'autres personnes (clients, camarades, proches) dans les champs libres du site — ni d'ailleurs dans aucun outil externe ou d'intelligence artificielle utilisé pendant la formation.
+    </div>
+
+    <h2><span class="num">5.</span> Où sont les données, et qui y accède ?</h2>
+    <ul>
+      <li>Les données sont stockées sur un serveur <strong>OVH</strong>, hébergeur européen, dans l'Union européenne. Aucun transfert hors UE.</li>
+      <li>Seul <strong>l'enseignant</strong> accède aux données individuelles, pour la validation des missions, la modération et le suivi du cours.</li>
+      <li>Le classement affiché aux étudiants est <strong>anonyme</strong> et n'apparaît que lorsqu'il compte au moins cinq participants.</li>
+      <li>Les témoignages ne sont publiés qu'après ton accord explicite et une modération, avec ou sans prénom selon ton choix.</li>
+    </ul>
+
+    <h2><span class="num">6.</span> Combien de temps ?</h2>
+    <ul>
+      <li>Compte, progression, réponses, preuves et questions : conservés pendant l'année académique, puis <strong>6 mois</strong> pour couvrir d'éventuelles contestations, et supprimés au plus tard le <strong>31 décembre 2027</strong>.</li>
+      <li>Témoignages publiés : jusqu'au retrait de ton consentement.</li>
+      <li>Copies de sauvegarde : conservées au maximum 30 jours, puis écrasées — une suppression s'y propage donc d'elle-même.</li>
+      <li>Seules des statistiques agrégées et anonymes (sans matricule) peuvent être conservées au-delà, pour améliorer le cours.</li>
+    </ul>
+
+    <h2><span class="num">7.</span> Tes droits</h2>
+    <ul>
+      <li><strong>Tout effacer toi-même</strong> : bouton « Tout effacer » dans ton profil — suppression immédiate et définitive de ton compte et de toutes tes données.</li>
+      <li><strong>Accéder et recevoir une copie</strong> de tes données : demande par email, réponse au plus tard dans le mois.</li>
+      <li><strong>Rectifier</strong> : ton profil est modifiable à tout moment dans l'application.</li>
+      <li><strong>Retirer ton consentement</strong> : à tout moment, sans justification et sans conséquence sur ton parcours — l'effacement vaut retrait.</li>
+      <li><strong>Introduire une réclamation</strong> auprès de l'Autorité de protection des données :<br>
+        <span class="adresse">Autorité de protection des données
+        Rue de la Presse 35, 1000 Bruxelles
+        <a href="https://www.autoriteprotectiondonnees.be" rel="noopener">autoriteprotectiondonnees.be</a></span></li>
+    </ul>
+
+    <h2><span class="num">8.</span> Sécurité, en bref</h2>
+    <ul>
+      <li>Ton PIN n'est jamais stocké en clair (chiffrement à sens unique).</li>
+      <li>La base de données est placée hors de la zone accessible par le web.</li>
+      <li>Les échanges passent par une connexion chiffrée (HTTPS).</li>
+      <li>Cette page elle-même ne charge aucune ressource externe : aucune donnée n'est transmise à un tiers en la lisant.</li>
+    </ul>
+    <p>En cas d'incident de sécurité touchant tes données, tu serais informé·e, et l'Autorité de protection des données notifiée dans les délais légaux.</p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Version du 2 novembre 2026 · Académie StartupScan — support de cours EPFC. Toute modification importante de cette page sera signalée dans le cours.</p>
+    </div>
+  </footer>
+</body>
+</html>

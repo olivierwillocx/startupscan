@@ -210,7 +210,7 @@ function footer() {
     '<div><img src="' + IMG + 'epfc_logo.svg" alt="EPFC" style="height:40px;border-radius:6px;margin-bottom:14px"><p>L’Académie StartupScan est l’espace d’apprentissage du cours Entrepreneuriat de l’EPFC (Bruxelles) : un parcours unique, de l’idée aux premiers clients. Coordination : Olivier Willocx & Diego Mommaerts.</p></div>' +
     '<div><b>Apprendre</b><a href="#/cours">Le parcours</a><a href="#/voies">Les voies</a><a href="#/reperes">Les repères</a><a href="#/examens">Examens</a><a href="#/banc">Banc d’essai</a><a href="' + ECOM_URL + '" target="_blank" rel="noopener">Cours e-commerce ↗</a></div>' +
     '<div><b>S’inspirer</b><a href="fiches.html">Toutes les fiches d’entreprises</a><a href="revue.html">Le dernier numéro StartupScan</a><a href="modeles.html">Qui paie ? Les modèles</a><a href="jeux-de-role.html">Jeux de rôle</a><a href="glossaire.html">Glossaire</a></div>' +
-    '<div class="bot">Suivi de progression optionnel · données minimales hébergées en Europe, hors du dossier web, effaçables à tout moment depuis ton profil · ta photo reste sur ton appareil.</div></div>';
+    '<div class="bot">Suivi de progression optionnel · données minimales hébergées en Europe, hors du dossier web, effaçables à tout moment depuis ton profil · ta photo reste sur ton appareil · <a href="vie-privee.html">Vie privée</a>.</div></div>';
 }
 
 /* ============ Routeur ============ */
@@ -330,7 +330,7 @@ function vLanding() {
     '<details class="faq"><summary>Dois-je déjà avoir une idée ?</summary><p>Non. Le module 1 t’aide à en trouver une, notamment grâce aux dizaines de fiches d’entreprises de StartupScan.</p></details>' +
     '<details class="faq"><summary>Dois-je faire toutes les voies ?</summary><p>Non. Tu choisis la voie qui correspond à ton projet (commerce, activité, plateforme digitale ou reprise) et tu peux en explorer d’autres si tu le souhaites.</p></details>' +
     '<details class="faq"><summary>Les examens comptent-ils dans ma note ?</summary><p>Ce sont des tests d’entraînement, repassables autant de fois que tu veux. L’évaluation finale, c’est la présentation de ton projet devant le jury.</p></details>' +
-    '<details class="faq"><summary>Que devient mon matricule ? Et ma photo ?</summary><p>Seuls ton matricule et ta progression sont enregistrés, sur un serveur en Europe, jusqu’à la fin de l’année académique. Ta photo ne quitte jamais ton appareil. Tu peux tout effacer d’un clic depuis ton profil.</p></details>' +
+    '<details class="faq"><summary>Que devient mon matricule ? Et ma photo ?</summary><p>Seuls ton matricule et ta progression sont enregistrés, sur un serveur en Europe, et supprimés au plus tard le 31 décembre 2027. Ta photo ne quitte jamais ton appareil. Tu peux tout effacer d’un clic depuis ton profil. Tout est expliqué en langage clair sur la page <a href="vie-privee.html">Vie privée</a>.</p></details>' +
     '<details class="faq"><summary>Et l’intelligence artificielle ?</summary><p>Tu l’utiliseras comme un outil — pour préparer, chiffrer, rédiger. Mais l’IA n’est jamais le livrable : ce que tu vends, ce sont tes clients, ta marge et ta capacité à convaincre.</p></details>' +
     "</div></div></div></section>";
   h += '<section class="sec"><div class="wrap"><div class="cta-band"><div><h2 class="h2" style="margin:0">Prêt·e à te lancer ?</h2><p style="margin-top:8px">Crée ton profil et découvre ton parcours sur mesure.</p></div>' +
@@ -378,7 +378,7 @@ function vWizard() {
       '<form id="wf"><div class="fld"><label for="w-m">Matricule EPFC</label><input class="inp" id="w-m" autocomplete="username" placeholder="ex. 12-3456-78" required></div>' +
       '<div class="grid g2" style="gap:12px"><div class="fld"><label for="w-p">Code PIN <span class="hint">(4 caractères min.)</span></label><input class="inp" id="w-p" type="password" autocomplete="new-password" required></div>' +
       '<div class="fld"><label for="w-p2">Confirme ton PIN</label><input class="inp" id="w-p2" type="password" autocomplete="new-password" required></div></div>' +
-      '<label class="check"><input type="checkbox" id="w-c"><span>J’accepte que ma progression (matricule et activité, sans nom ni email) soit enregistrée pour mon suivi pédagogique, sur un serveur en Europe, jusqu’à la fin de l’année académique. Je peux tout effacer à tout moment.</span></label>' +
+      '<label class="check"><input type="checkbox" id="w-c"><span>J’accepte que ma progression (matricule et activité dans le cours, sans nom ni email) soit enregistrée pour mon suivi pédagogique, sur un serveur en Europe, au plus tard jusqu’au 31 décembre 2027. Ce suivi est facultatif et je peux tout effacer à tout moment. <a href="vie-privee.html" target="_blank" rel="noopener">Vie privée</a></span></label>' +
       '<div id="w-err"></div><div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><button class="btn lg" type="submit">Créer mon compte</button><a class="btn ghost lg" href="#/connexion">J’ai déjà un compte</a></div></form>';
   } else if (s === 2) {
     var c = PROFILE.couleur || COLORS[0];
