@@ -985,7 +985,7 @@ function vProfil() {
     '<button class="btn lg" id="p-save" style="margin-top:22px">Enregistrer</button></div>' +
     '<div style="display:grid;gap:20px"><div class="card pad"><span class="eyebrow">Mon compte</span><p style="margin-top:8px">Matricule <b>' + esc(SES.matricule) + "</b></p><p class=\"sub\">Le même compte sert pour le cours e-commerce.</p></div>" +
     '<div class="card pad"><span class="eyebrow">Mon rapport</span><p class="sub" style="margin-top:6px">Un résumé de ta progression à copier pour ton professeur.</p><button class="btn ghost sm" id="p-rep" style="margin-top:12px">Générer mon rapport</button><textarea class="inp" id="p-rtx" hidden style="margin-top:12px;font-size:13px;min-height:200px"></textarea></div>' +
-    '<div class="card pad"><span class="eyebrow">Mes données</span><p class="sub" style="margin-top:6px">Effacer définitivement ton compte, ta progression et ton témoignage (e-commerce compris).</p><button class="btn ghost sm" id="p-del" style="margin-top:12px;color:var(--ko)">Effacer mes données</button></div>' +
+    '<div class="card pad"><span class="eyebrow">Mes données</span><p class="sub" style="margin-top:6px">Télécharge une copie de tout ce que le site connaît de toi, ou efface tout définitivement (e-commerce compris). <a href="vie-privee.html" target="_blank" rel="noopener">Vie privée</a></p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><button class="btn ghost sm" id="p-exp">Télécharger mes données</button><button class="btn ghost sm" id="p-del" style="color:var(--ko)">Effacer mes données</button></div></div>' +
     '<button class="btn ghost" id="p-out">Se déconnecter</button></div></div></section>';
   after(function () {
     $$(".sw").forEach(function (b) { b.onclick = function () { PROFILE.couleur = b.getAttribute("data-c"); $$(".sw").forEach(function (x) { x.classList.toggle("on", x === b); }); $("#p-av").innerHTML = avatar(104); }; });
@@ -1014,6 +1014,18 @@ function vProfil() {
     del.onclick = function () {
       if (!del.dataset.c) { del.dataset.c = 1; del.textContent = "Confirmer : tout effacer définitivement"; return; }
       api("forget.php", { token: SES.token }).then(function () { lsSet(photoKey(), null); SES = {}; saveSes(); ME = null; DETAIL = {}; PROFILE = {}; MYT = null; toast("Tes données ont été effacées."); go("#/accueil"); });
+    };
+    $("#p-exp").onclick = function () {
+      api("export_me.php", { token: SES.token }).then(function (r) {
+        if (!r || !r.ok) { toast("Export impossible pour l’instant — réessaie, ou écris au professeur."); return; }
+        var blob = new Blob([JSON.stringify(r.data, null, 2)], { type: "application/json" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "mes-donnees-academie.json";
+        document.body.appendChild(a); a.click();
+        setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+        toast("Fichier téléchargé : mes-donnees-academie.json");
+      });
     };
     $("#p-out").onclick = logout;
   });
